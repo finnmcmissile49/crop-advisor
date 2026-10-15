@@ -33,11 +33,15 @@ def _year_path(cache_dir, year):
     return os.path.join(cache_dir, "rain", f"{year}.grd")
 
 
-def download_year(year, cache_dir, connect_timeout=20, read_timeout=90):
+def download_year(year, cache_dir, connect_timeout=90, read_timeout=120, retries=3):
     """Download one year from IMD with timeouts; keep the file only if its size is exactly right.
 
     imdlib's own downloader has no timeout and can wait forever when IMD's server stalls.
+    IMD's server is slow to answer from outside India (16 s seen from Colab), so the connect
+    timeout is generous and each year is retried.
     """
+    import time
+
     import requests
 
     path = _year_path(cache_dir, year)
@@ -45,12 +49,21 @@ def download_year(year, cache_dir, connect_timeout=20, read_timeout=90):
         return path
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp = path + ".part"
-    with requests.post(RAIN_URL, data={"rain": year}, stream=True,
-                       timeout=(connect_timeout, read_timeout)) as r:
-        r.raise_for_status()
-        with open(tmp, "wb") as f:
-            for chunk in r.iter_content(1 << 20):
-                f.write(chunk)
+    for attempt in range(retries):
+        try:
+            start = time.time()
+            with requests.post(RAIN_URL, data={"rain": year}, stream=True,
+                               timeout=(connect_timeout, read_timeout)) as r:
+                r.raise_for_status()
+                with open(tmp, "wb") as f:
+                    for chunk in r.iter_content(1 << 20):
+                        f.write(chunk)
+            print(f"IMD {year}: {os.path.getsize(tmp) / 1e6:.1f} MB in {time.time() - start:.0f} s")
+            break
+        except requests.exceptions.RequestException as e:
+            print(f"IMD {year}: attempt {attempt + 1} failed ({type(e).__name__})")
+            if attempt == retries - 1:
+                raise
     size = os.path.getsize(tmp)
     if size != expected_bytes(year):
         os.remove(tmp)

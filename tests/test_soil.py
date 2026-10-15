@@ -70,3 +70,23 @@ def test_summary_for_black_soil_like_profile():
     assert s["texture"] == "clay"
     assert s["field_capacity"] > s["wilting_point"] > 0
     assert 50 < s["awc_mm_per_m"] < 250
+
+
+def test_nearest_soil_skips_blank_urban_points(tmp_path, monkeypatch):
+    import cropadvisor.soil as soil
+    blank = parse_soilgrids({"properties": {"layers": [
+        {"name": "clay", "unit_measure": {"d_factor": 10},
+         "depths": [{"label": "0-5cm", "values": {"mean": None}}]}]}})
+    good = parse_soilgrids(SAMPLE)
+    calls = []
+
+    def fake(lat, lon, raw_path=None):
+        calls.append((lat, lon))
+        return good if len(calls) == 4 else blank   # city centre and first 2 ring points blank
+
+    monkeypatch.setattr(soil, "fetch_point", fake)
+    df, lat, lon, dist = soil.fetch_nearest_soil(18.4, 76.5, str(tmp_path), "X", pause_s=0)
+    assert len(calls) == 4 and dist == 3.0
+    assert soil.has_data(df) and not soil.has_data(blank)
+    # the third ring point (bearing 90) is due east: same latitude, larger longitude
+    assert calls[3][0] == 18.4 and calls[3][1] > 76.5

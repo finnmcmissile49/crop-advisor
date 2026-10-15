@@ -105,13 +105,52 @@ def soil_summary(long_df):
     }
 
 
+def has_data(long_df):
+    return not long_df.empty and long_df["value"].notna().any()
+
+
+def search_points(lat, lon, rings_km=(0, 3, 6, 10)):
+    """Candidate points: the location itself, then 8 compass points on rings of growing radius."""
+    import math
+    yield 0.0, lat, lon
+    for r in rings_km:
+        if r == 0:
+            continue
+        for bearing in range(0, 360, 45):
+            dlat = r / 111.0 * math.cos(math.radians(bearing))
+            dlon = r / (111.0 * math.cos(math.radians(lat))) * math.sin(math.radians(bearing))
+            yield float(r), round(lat + dlat, 5), round(lon + dlon, 5)
+
+
+def fetch_nearest_soil(lat, lon, raw_dir, name, pause_s=13):
+    """SoilGrids leaves towns, roads and water blank. Our locations are district headquarters,
+    so search outward for the nearest point with soil data.
+
+    SoilGrids asks for at most 5 requests a minute, hence the pause between live calls.
+    Returns (long_df, used_lat, used_lon, distance_km).
+    """
+    import os
+    import time
+
+    for dist, plat, plon in search_points(lat, lon):
+        raw_path = f"{raw_dir}/{name}_{plat}_{plon}.json"
+        cached = os.path.exists(raw_path)
+        long_df = fetch_point(plat, plon, raw_path=raw_path)
+        if not cached:
+            time.sleep(pause_s)
+        if has_data(long_df):
+            return long_df, plat, plon, dist
+    raise RuntimeError("no SoilGrids data within 10 km")
+
+
 def fetch_locations(locations, raw_dir="data/raw/soilgrids"):
     """Soil summary for every location (DataFrame indexed by name with lat, lon)."""
     out = []
     for name, row in locations.iterrows():
         try:
-            long_df = fetch_point(row["lat"], row["lon"], raw_path=f"{raw_dir}/{name}.json")
-            out.append({"name": name, **soil_summary(long_df), "error": None})
+            long_df, plat, plon, dist = fetch_nearest_soil(row["lat"], row["lon"], raw_dir, name)
+            out.append({"name": name, **soil_summary(long_df), "soil_lat": plat,
+                        "soil_lon": plon, "soil_distance_km": dist, "error": None})
         except Exception as e:  # SoilGrids is sometimes down; keep the other locations
             out.append({"name": name, "error": str(e)[:200]})
     return pd.DataFrame(out).set_index("name")
