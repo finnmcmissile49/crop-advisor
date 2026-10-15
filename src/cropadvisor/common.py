@@ -6,8 +6,15 @@ import time
 import requests
 
 
-def http_get_json(url, params, retries=3, timeout=60, raw_path=None):
-    """GET a JSON API with simple retry/backoff. Optionally save the raw response to disk."""
+def http_get_json(url, params, retries=3, timeout=60, raw_path=None, use_cache=True):
+    """GET a JSON API with simple retry/backoff.
+
+    If raw_path is given, the raw response is saved there, and (with use_cache) a file already at
+    raw_path is read instead of calling the API again, so nothing is downloaded twice.
+    """
+    if raw_path and use_cache and os.path.exists(raw_path):
+        with open(raw_path) as f:
+            return json.load(f)
     last_err = None
     for attempt in range(retries):
         try:
