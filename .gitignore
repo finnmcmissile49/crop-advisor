@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+# Raw API downloads can be re-fetched; keep them out of git
+data/raw/
+.pytest_cache/
