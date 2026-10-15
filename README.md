@@ -6,43 +6,62 @@ sensor station that corrects free public weather data.
 **Research question:** how much does on-farm sensing improve crop and irrigation advice compared with
 public data alone, and how often does it change the farmer's decision?
 
-## Status
+## Status: Module 1 (data pipeline)
 
-Module 1 (data pipeline), steps 1 to 4: locations table, Open-Meteo history and forecast,
-NASA POWER history, and a FAO-56 Penman-Monteith ET0 check.
+| Step | What | Status |
+|---|---|---|
+| 1 | Locations table | done |
+| 2 | Open-Meteo weather history | done, tested live |
+| 3 | NASA POWER weather history | done, tested live |
+| 4 | Open-Meteo forecast | done, tested live |
+| 5 | IMD gridded rainfall | done |
+| 6 | SoilGrids soil + water-holding capacity | done |
+| 7 | Mandi prices | code ready, needs a free data.gov.in API key |
+| 8 | District yields | code ready, needs a manual DES/UPAg download |
+| 9 | Merge, season features, quality checks | done |
+| 10 | One-command refresh, pull log, source notes | done |
+
+First findings (Latur, kharif 2023): Open-Meteo and NASA POWER disagree by 88 mm of season rain
+(623 vs 535 mm). Our FAO-56 ET0 matches Open-Meteo's to within 0.03 mm/day on average
+(RMSE 0.19 mm/day).
 
 ## Layout
 
 ```
-data/locations.csv            test districts (lat, lon, approximate elevation)
-src/cropadvisor/common.py     HTTP helper with retries and raw-response saving
-src/cropadvisor/openmeteo.py  Open-Meteo history and forecast
-src/cropadvisor/nasapower.py  NASA POWER history
-src/cropadvisor/et0.py        FAO-56 Penman-Monteith reference evapotranspiration
-tests/test_et0.py             checks ET0 against worked examples from FAO-56
-notebooks/01_weather_pipeline.ipynb   runnable walkthrough (works in Google Colab)
+data/locations.csv              test districts (lat, lon, approximate elevation)
+data/SOURCES.md                 every data source, coverage, licence and known problems
+src/cropadvisor/
+  common.py                     HTTP helper: retries, saves raw responses, never re-downloads
+  openmeteo.py, nasapower.py    weather history and forecast
+  imd.py                        IMD 0.25 degree gridded rainfall
+  soil.py                       SoilGrids + Saxton-Rawls field capacity / wilting point
+  et0.py                        FAO-56 Penman-Monteith reference evapotranspiration
+  weather.py                    merged daily table, season features, QC, source disagreement
+  prices.py, yields.py          mandi prices; yield standardisation and scale checks
+  pipeline.py                   runs everything, writes CSVs and the pull log
+scripts/refresh_data.py         one command: refresh all data
+notebooks/01_weather_pipeline   steps 1-4, self-contained walkthrough
+notebooks/02_full_pipeline      steps 5-10, runs the package from this repo
+tests/                          offline tests (no internet needed)
 ```
 
 ## Run it
 
+In Google Colab: open `notebooks/02_full_pipeline.ipynb` via File > Open notebook > GitHub.
+
+Locally:
+
 ```
 pip install -r requirements.txt
-pytest                      # ET0 tests, no internet needed
+pytest
+python scripts/refresh_data.py --start 2021 --end 2023
 ```
 
-Then open `notebooks/01_weather_pipeline.ipynb` in Google Colab (File > Open notebook > GitHub, or upload it).
-
-## Data sources
-
-| Source | What | Notes |
-|---|---|---|
-| Open-Meteo | daily weather, forecast, ET0 | no key, non-commercial use |
-| NASA POWER | daily weather since 1981 | no key, lags a few days |
-
-Elevations in `locations.csv` are approximate; replace them with surveyed values for field sites.
+Outputs land in `data/processed/`: `daily_weather.csv`, `seasons.csv`, `soil.csv`,
+`qc_report.csv`, `pull_log.csv`. Raw API responses are kept in `data/raw/` (not committed).
 
 ## Data hygiene
 
-Raw API responses are saved to `data/raw/` before any cleaning so nothing needs re-downloading.
-Keep any extended or new yield data in separate, clearly labelled files; never silently mix it with
-older datasets.
+Raw responses are saved before any cleaning, so nothing is downloaded twice. The IRIS yield
+dataset is never modified: new years go in separate files with a `source` column, and combining
+reports conflicts instead of overwriting.

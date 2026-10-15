@@ -110,3 +110,10 @@ def test_price_cleaning():
     assert len(df) == 1
     assert df.loc[0, "arrival_date"] == pd.Timestamp("2026-10-05")
     assert df.loc[0, "modal_price"] == 4450
+
+
+def test_imd_expected_file_size():
+    from cropadvisor.imd import expected_bytes
+    assert expected_bytes(2023) == 135 * 129 * 4 * 365
+    assert expected_bytes(2024) == 135 * 129 * 4 * 366
+    assert expected_bytes(1900) == 135 * 129 * 4 * 365  # century, not a leap year
