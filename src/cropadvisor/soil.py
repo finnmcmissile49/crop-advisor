@@ -145,12 +145,38 @@ def fetch_nearest_soil(lat, lon, raw_dir, name, pause_s=13):
     raise RuntimeError("no SoilGrids data within 10 km")
 
 
+def _distance_km(lat1, lon1, lat2, lon2):
+    import math
+    dlat = (lat2 - lat1) * 111.0
+    dlon = (lon2 - lon1) * 111.0 * math.cos(math.radians((lat1 + lat2) / 2))
+    return round(math.hypot(dlat, dlon), 1)
+
+
+def fetch_known_point(row, raw_dir, name):
+    """Use the soil point saved in locations.csv (soil_lat, soil_lon) if there is one with data.
+
+    Returns the same tuple as fetch_nearest_soil, or None so the caller falls back to searching.
+    """
+    slat, slon = row.get("soil_lat"), row.get("soil_lon")
+    if slat is None or slon is None or pd.isna(slat) or pd.isna(slon):
+        return None
+    long_df = fetch_point(slat, slon, raw_path=f"{raw_dir}/{name}_{slat}_{slon}.json")
+    if not has_data(long_df):
+        print(f"SoilGrids {name}: saved soil point has no data, searching again", flush=True)
+        return None
+    return long_df, slat, slon, _distance_km(row["lat"], row["lon"], slat, slon)
+
+
 def fetch_locations(locations, raw_dir="data/raw/soilgrids"):
-    """Soil summary for every location (DataFrame indexed by name with lat, lon)."""
+    """Soil summary for every location (DataFrame indexed by name with lat, lon, and optionally
+    soil_lat, soil_lon: a point already known to have soil data, which skips the slow search)."""
     out = []
     for name, row in locations.iterrows():
         try:
-            long_df, plat, plon, dist = fetch_nearest_soil(row["lat"], row["lon"], raw_dir, name)
+            found = fetch_known_point(row, raw_dir, name)
+            if found is None:
+                found = fetch_nearest_soil(row["lat"], row["lon"], raw_dir, name)
+            long_df, plat, plon, dist = found
             out.append({"name": name, **soil_summary(long_df), "soil_lat": plat,
                         "soil_lon": plon, "soil_distance_km": dist, "error": None})
         except Exception as e:  # SoilGrids is sometimes down; keep the other locations

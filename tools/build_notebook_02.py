@@ -59,6 +59,9 @@ print(res['log'][['source', 'status', 'rows', 'note']].to_string(index=False))
 
 IMD is built from rain gauges, so it is the closest thing to ground truth here. Open-Meteo (ERA5)
 and NASA POWER are model and satellite products.
+
+Watch Pune: NASA POWER's grid cell (about 55 km wide) reaches into the Western Ghats, so it reports
+2 to 4 times IMD's rain. A point 55 km east gives a value close to IMD.
 """),
     code("""
 s = res['seasons']
@@ -67,12 +70,17 @@ cols = [c for c in ['name', 'year', 'rain_total_imd', 'rain_total_om', 'rain_tot
                     'rain_diff_om_imd', 'rain_diff_pw_imd', 'sources_disagree'] if c in k]
 print(k[cols].to_string(index=False))
 """),
-    md("## Step 6: soil (0-100 cm, SoilGrids)"),
+    md("""
+## Step 6: soil (0-100 cm, SoilGrids)
+
+SoilGrids has no data for towns, so each location uses farmland nearby (saved in
+`data/locations.csv` as `soil_lat`, `soil_lon`; `soil_distance_km` is how far away it is).
+"""),
     code("""
 soil = res['soil']
 cols = [c for c in ['texture', 'clay_pct', 'sand_pct', 'silt_pct', 'ph', 'soc_g_kg',
                     'bulk_density_g_cm3', 'field_capacity', 'wilting_point', 'awc_mm_per_m',
-                    'clay_above_model_range', 'error'] if c in soil]
+                    'clay_above_model_range', 'soil_distance_km', 'error'] if c in soil]
 print(soil[cols].to_string())
 """),
     md("## Step 9: season features for Module 2"),

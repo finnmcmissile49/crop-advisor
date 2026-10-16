@@ -18,13 +18,20 @@ Every pull is recorded in `data/processed/pull_log.csv` with a UTC timestamp and
 - **Open-Meteo and NASA POWER are models, not measurements.** For Latur kharif 2023 they
   differ by 88 mm of season rain (623 vs 535 mm) and their daily rain correlates only 0.71.
   IMD, built from rain gauges, is the closest to ground truth among the free sources.
+- **NASA POWER near the Western Ghats.** POWER's 0.5 x 0.625 degree cell for Pune includes Ghats
+  slopes, so it reports 2 to 4 times IMD's kharif rain (2022: 2203 vs 1071 mm). One cell east
+  (74.4 E) gives 1026 mm. Do not use POWER rain for locations within about 60 km of the Ghats.
+- **Open-Meteo in rain-shadow areas.** For Solapur it was 62 to 76 percent above IMD in kharif
+  2022 and 2023.
 - **IMD** files arrive months after the year ends, and its server is slow. Cells with no data
   (sea, outside India) are -999 and become blank. Files are cached and never re-downloaded.
 - **NASA POWER** uses -999 for missing values; these become blank.
 - **SoilGrids** is a 250 m model estimate. Black cotton soils (Vertisols) near 50 to 60 percent
   clay sit at the edge of the Saxton-Rawls equations used for field capacity and wilting point;
   rows above 60 percent clay are flagged. The service is sometimes offline; failed locations are
-  recorded and the rest continue.
+  recorded and the rest continue. SoilGrids leaves towns blank, so each location uses the nearest farmland
+  point (all five were found 3 km from the town centre). These points are saved in
+  `locations.csv` so later runs skip the search.
 - **Mandi prices**: commodity and market names are inconsistent across years and need mapping.
   The API resource only holds recent days; older history comes from Agmarknet report downloads.
 - **Yields**: the IRIS dataset found the whole of 2007 at about 1/100 scale for area. Any new yield

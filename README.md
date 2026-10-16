@@ -14,16 +14,37 @@ public data alone, and how often does it change the farmer's decision?
 | 2 | Open-Meteo weather history | done, tested live |
 | 3 | NASA POWER weather history | done, tested live |
 | 4 | Open-Meteo forecast | done, tested live |
-| 5 | IMD gridded rainfall | done |
-| 6 | SoilGrids soil + water-holding capacity | done |
+| 5 | IMD gridded rainfall | done, tested live |
+| 6 | SoilGrids soil + water-holding capacity | done, tested live |
 | 7 | Mandi prices | code ready, needs a free data.gov.in API key |
 | 8 | District yields | code ready, needs a manual DES/UPAg download |
-| 9 | Merge, season features, quality checks | done |
-| 10 | One-command refresh, pull log, source notes | done |
+| 9 | Merge, season features, quality checks | done, tested live |
+| 10 | One-command refresh, pull log, source notes | done, tested live |
 
-First findings (Latur, kharif 2023): Open-Meteo and NASA POWER disagree by 88 mm of season rain
-(623 vs 535 mm). Our FAO-56 ET0 matches Open-Meteo's to within 0.03 mm/day on average
-(RMSE 0.19 mm/day).
+## First findings (live run, 5 locations, 2021-2023)
+
+Our FAO-56 ET0 matches Open-Meteo's to within 0.03 mm/day on average (RMSE 0.19 mm/day).
+
+Kharif rain (June to October), in mm. IMD is built from rain gauges; the others are models.
+
+| Location | Year | IMD | Open-Meteo | NASA POWER |
+|---|---|---|---|---|
+| Latur | 2023 | 582 | 623 | 535 |
+| Nagpur | 2022 | 1560 | 1966 | 1619 |
+| Pune | 2022 | 1071 | 1066 | 2203 |
+| Pune | 2023 | 484 | 702 | 1854 |
+| Solapur | 2022 | 660 | 1068 | 710 |
+| Solapur | 2023 | 358 | 631 | 439 |
+
+- **NASA POWER is unusable for Pune as is.** Its grid cell (about 55 km wide) reaches into the
+  Western Ghats, so it reports 2 to 4 times IMD's rain. Checked live for kharif 2022: 2662 mm at
+  73.4 E (in the Ghats), 2203 mm at Pune, 1026 mm at 74.4 E, against IMD's 1071 mm.
+- **Open-Meteo overestimates rain in the Solapur rain shadow**: 62 to 76 percent above IMD in
+  2022 and 2023, enough to change any irrigation decision.
+- 6 of the 15 kharif seasons have at least one pair of sources more than 30 percent apart. Free
+  data is least reliable exactly where water is scarcest, which is the case for an on-farm station.
+- All five locations' soils come out as clay or clay loam (Maharashtra) and loam (Delhi), with
+  available water 115 to 139 mm per metre of soil.
 
 ## Layout
 
@@ -56,6 +77,10 @@ pip install -r requirements.txt
 pytest
 python scripts/refresh_data.py --start 2021 --end 2023
 ```
+
+A full run for 5 locations and 3 years takes about 10 minutes in Colab (most of it IMD downloads
+and NASA POWER). Soil points are saved in `data/locations.csv`, so SoilGrids needs one call per
+location; a new location without `soil_lat`/`soil_lon` triggers a slower outward search.
 
 Outputs land in `data/processed/`: `daily_weather.csv`, `seasons.csv`, `soil.csv`,
 `qc_report.csv`, `pull_log.csv`. Raw API responses are kept in `data/raw/` (not committed).

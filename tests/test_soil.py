@@ -90,3 +90,53 @@ def test_nearest_soil_skips_blank_urban_points(tmp_path, monkeypatch):
     assert soil.has_data(df) and not soil.has_data(blank)
     # the third ring point (bearing 90) is due east: same latitude, larger longitude
     assert calls[3][0] == 18.4 and calls[3][1] > 76.5
+
+
+def _blank():
+    return parse_soilgrids({"properties": {"layers": [
+        {"name": "clay", "unit_measure": {"d_factor": 10},
+         "depths": [{"label": "0-5cm", "values": {"mean": None}}]}]}})
+
+
+def test_saved_soil_point_skips_the_search(tmp_path, monkeypatch):
+    import cropadvisor.soil as soil
+    calls = []
+
+    def fake(lat, lon, raw_path=None):
+        calls.append((lat, lon))
+        return parse_soilgrids(SAMPLE)
+
+    monkeypatch.setattr(soil, "fetch_point", fake)
+    locs = pd.DataFrame({"lat": [18.4088], "lon": [76.5604], "soil_lat": [18.43583],
+                         "soil_lon": [76.5604]}, index=pd.Index(["Latur"], name="name"))
+    out = soil.fetch_locations(locs, raw_dir=str(tmp_path))
+    assert calls == [(18.43583, 76.5604)]          # one call, straight to the saved point
+    assert out.loc["Latur", "soil_distance_km"] == 3.0
+    assert out.loc["Latur", "error"] is None
+
+
+def test_blank_saved_point_falls_back_to_search(tmp_path, monkeypatch):
+    import cropadvisor.soil as soil
+    calls = []
+
+    def fake(lat, lon, raw_path=None):
+        calls.append((lat, lon))
+        return parse_soilgrids(SAMPLE) if len(calls) == 3 else _blank()
+
+    monkeypatch.setattr(soil, "fetch_point", fake)
+    row = pd.Series({"lat": 18.4, "lon": 76.5, "soil_lat": 18.45, "soil_lon": 76.5})
+    assert soil.fetch_known_point(row, str(tmp_path), "X") is None
+    locs = pd.DataFrame([row], index=pd.Index(["X"], name="name"))
+    import time
+    monkeypatch.setattr(time, "sleep", lambda s: None)
+    calls.clear()   # now: saved point (blank), town centre (blank), first ring point (soil)
+    out = soil.fetch_locations(locs, raw_dir=str(tmp_path))
+    assert calls[0] == (18.45, 76.5) and len(calls) == 3
+    assert out.loc["X", "error"] is None and out.loc["X", "soil_distance_km"] == 3.0
+
+
+def test_no_saved_point_columns_means_search():
+    import cropadvisor.soil as soil
+    assert soil.fetch_known_point(pd.Series({"lat": 1.0, "lon": 2.0}), "x", "X") is None
+    assert soil.fetch_known_point(
+        pd.Series({"lat": 1.0, "lon": 2.0, "soil_lat": float("nan"), "soil_lon": 2.0}), "x", "X") is None
