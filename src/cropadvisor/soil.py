@@ -132,13 +132,15 @@ def fetch_nearest_soil(lat, lon, raw_dir, name, pause_s=13):
     import os
     import time
 
-    for dist, plat, plon in search_points(lat, lon):
+    for tries, (dist, plat, plon) in enumerate(search_points(lat, lon), start=1):
         raw_path = f"{raw_dir}/{name}_{plat}_{plon}.json"
         cached = os.path.exists(raw_path)
         long_df = fetch_point(plat, plon, raw_path=raw_path)
         if not cached:
             time.sleep(pause_s)
         if has_data(long_df):
+            print(f"SoilGrids {name}: soil found {dist:g} km from the town centre "
+                  f"(point {tries})", flush=True)
             return long_df, plat, plon, dist
     raise RuntimeError("no SoilGrids data within 10 km")
 

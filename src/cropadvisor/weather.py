@@ -36,6 +36,7 @@ def fetch_location(name, lat, lon, elev_m, years, raw_dir="data/raw"):
             lat, lon, s, e, raw_path=f"{raw_dir}/openmeteo/{name}_{yr}.json"))
         pw_parts.append(nasapower.fetch_history(
             lat, lon, s, e, raw_path=f"{raw_dir}/nasapower/{name}_{yr}.json"))
+    print(f"Weather {name}: {len(years)} years from Open-Meteo and NASA POWER", flush=True)
     om = _rename(pd.concat(om_parts, ignore_index=True), "om")
     pw = pd.concat(pw_parts, ignore_index=True)
     pw = _rename(add_et0(pw, lat, elev_m), "pw")
