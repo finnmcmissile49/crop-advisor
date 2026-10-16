@@ -16,7 +16,7 @@ public data alone, and how often does it change the farmer's decision?
 | 4 | Open-Meteo forecast | done, tested live |
 | 5 | IMD gridded rainfall | done, tested live |
 | 6 | SoilGrids soil + water-holding capacity | done, tested live |
-| 7 | Mandi prices | code ready, needs a free data.gov.in API key |
+| 7 | Mandi prices | key works, but data.gov.in blocks Colab; run `scripts/fetch_prices_local.py` on your own computer |
 | 8 | District yields | code ready, needs a manual DES/UPAg download |
 | 9 | Merge, season features, quality checks | done, tested live |
 | 10 | One-command refresh, pull log, source notes | done, tested live |
