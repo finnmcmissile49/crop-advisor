@@ -24,15 +24,16 @@ import pandas as pd
 import requests
 
 URL = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070"
-PAGE = 1000
+PAGE = 200                # small pages: the server is slow with big ones
+TIMEOUT = (15, 180)       # connect, read (seconds)
 OUT = Path("prices_out")
 
 
-def get_page(key, offset, retries=4):
-    params = {"api-key": key, "format": "json", "limit": PAGE, "offset": offset}
+def get_page(key, offset, retries=5, limit=None):
+    params = {"api-key": key, "format": "json", "limit": limit or PAGE, "offset": offset}
     for attempt in range(1, retries + 1):
         try:
-            r = requests.get(URL, params=params, timeout=60)
+            r = requests.get(URL, params=params, timeout=TIMEOUT)
             if r.status_code == 200:
                 return r.json()
             print(f"  HTTP {r.status_code} at offset {offset} (attempt {attempt})")
@@ -40,8 +41,8 @@ def get_page(key, offset, retries=4):
                 sys.exit("The API rejected the key. Check DATA_GOV_IN_KEY is copied in full.")
         except requests.RequestException as e:
             print(f"  {type(e).__name__} at offset {offset} (attempt {attempt})")
-        time.sleep(3 * attempt)
-    sys.exit(f"Giving up at offset {offset}. Re-run later; nothing was lost.")
+        time.sleep(5 * attempt)
+    return None
 
 
 def clean(df):
@@ -61,8 +62,17 @@ def clean(df):
 
 def download(key):
     rows, offset, total = [], 0, None
+    print("Checking the connection with a 1-row request...")
+    probe = get_page(key, 0, limit=1)
+    if probe is None:
+        sys.exit("The server did not answer. Try again in 10-15 minutes, or on another network "
+                 "(for example your phone's hotspot).")
+    print("Connected.")
     while True:
         data = get_page(key, offset)
+        if data is None:
+            print(f"Stopped at offset {offset}; keeping the {len(rows)} rows already downloaded.")
+            break
         if total is None:
             total = int(data.get("total", 0))
             print(f"Feed reports {total} records.")

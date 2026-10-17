@@ -30,7 +30,9 @@ def test_download_pages_until_total(monkeypatch):
     data = [rec(market=f"M{i}") for i in range(5)]
     calls = []
 
-    def fake(key, offset, retries=4):
+    def fake(key, offset, retries=5, limit=None):
+        if limit == 1:
+            return {"total": 5, "records": data[:1]}
         calls.append(offset)
         return {"total": 5, "records": data[offset:offset + 2]}
 
@@ -48,3 +50,24 @@ def test_merge_keeps_history_and_replaces_same_day(tmp_path):
     out = fp.merge_into_all(day2, path)
     assert len(out) == 3                                  # 15th, 16th (updated), 17th
     assert out.loc[out.arrival_date == "2026-10-16", "modal_price"].item() == 4450
+
+
+def test_partial_download_is_kept_when_server_stalls(monkeypatch):
+    monkeypatch.setattr(fp, "PAGE", 2)
+    monkeypatch.setattr(fp.time, "sleep", lambda s: None)
+    data = [rec(market=f"M{i}") for i in range(6)]
+
+    def fake(key, offset, retries=5, limit=None):
+        if limit == 1 or offset < 4:
+            return {"total": 6, "records": data[offset:offset + 2]}
+        return None                                       # server stops answering
+
+    monkeypatch.setattr(fp, "get_page", fake)
+    assert len(fp.download("k")) == 4
+
+
+def test_no_answer_at_all_exits(monkeypatch):
+    import pytest
+    monkeypatch.setattr(fp, "get_page", lambda *a, **k: None)
+    with pytest.raises(SystemExit):
+        fp.download("k")
