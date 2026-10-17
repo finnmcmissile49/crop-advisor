@@ -4,7 +4,8 @@ Why locally: data.gov.in refuses connections from Google Colab (foreign cloud ad
 from an ordinary Indian home or school connection.
 
 What it does:
-  1. Reads your API key from the environment variable DATA_GOV_IN_KEY (never typed into a file).
+  1. Reads your API key from the environment variable DATA_GOV_IN_KEY, or asks for it with the
+     typing hidden (so it never appears on screen or in a file).
   2. Downloads every record in the "current daily price" feed, 1000 rows at a time.
   3. Saves prices_out/prices_YYYY-MM-DD.csv (this run) and merges it into prices_out/prices_all.csv
      (all runs so far, duplicates removed).
@@ -98,7 +99,10 @@ def merge_into_all(today_df, path):
 def main():
     key = os.environ.get("DATA_GOV_IN_KEY", "").strip()
     if not key:
-        sys.exit("Set DATA_GOV_IN_KEY first (see the instructions).")
+        import getpass
+        key = getpass.getpass("Paste your data.gov.in API key (it stays hidden), then Enter: ").strip()
+    if not key:
+        sys.exit("No key entered.")
     OUT.mkdir(exist_ok=True)
     raw = download(key)
     if raw.empty:
