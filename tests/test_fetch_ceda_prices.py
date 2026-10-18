@@ -53,3 +53,15 @@ def test_stop_skips_remaining_work(tmp_path):
         assert n is None and not (tmp_path / "rows_prices.csv").exists()
     finally:
         fc.STOP.clear()
+
+
+def test_reverse_run_starts_from_the_end(tmp_path, monkeypatch):
+    seen = []
+    jobs = [("prices", "state", 27, 0, 13), ("prices", "district", 27, 1, 13),
+            ("prices", "district", 27, 1, 15)]
+    monkeypatch.setattr(fc, "get", lambda ep, session=None: [{"census_district_id": 1}])
+    monkeypatch.setattr(fc, "build_jobs", lambda districts: list(jobs))
+    monkeypatch.setattr(fc, "_work", lambda out, job, s, l: (seen.append(job), (job, 0))[1])
+    monkeypatch.setattr(fc, "THREADS", 1)
+    fc._run(tmp_path, None, reverse=True)
+    assert seen == list(reversed(jobs))

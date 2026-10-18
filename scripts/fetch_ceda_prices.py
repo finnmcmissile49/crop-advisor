@@ -140,7 +140,7 @@ def _work(out, job, session, files_lock):
     return job, len(rows)
 
 
-def _run(out, copy_to):
+def _run(out, copy_to, reverse=False):
     out.mkdir(parents=True, exist_ok=True)
     session = requests.Session()
     done_path = out / "done.jsonl"
@@ -154,6 +154,8 @@ def _run(out, copy_to):
     for s in ICRISAT_STATES:
         districts[s] = [x["census_district_id"] for x in get(f"districts?state_id={s}", session)]
     jobs = [j for j in build_jobs(districts) if job_key(*j) not in done]
+    if reverse:                       # work from the end, to meet a forward run in the middle
+        jobs.reverse()
     with _lock:
         _state.update(total=len(jobs) + len(done), done=len(done), running=True)
     _log(out, f"start: {len(jobs)} requests to go, {len(done)} already done")
@@ -201,14 +203,14 @@ def copy_out(out, dest):
     return True
 
 
-def run(out_dir="ceda_out", copy_to=None, background=False):
+def run(out_dir="ceda_out", copy_to=None, background=False, reverse=False):
     out = Path(out_dir)
     STOP.clear()
     if background:
-        t = threading.Thread(target=_run, args=(out, copy_to), daemon=True)
+        t = threading.Thread(target=_run, args=(out, copy_to, reverse), daemon=True)
         t.start()
         return t
-    _run(out, copy_to)
+    _run(out, copy_to, reverse)
 
 
 def stop():
@@ -222,4 +224,20 @@ def progress():
 
 
 if __name__ == "__main__":
-    run()
+    import argparse
+    ap = argparse.ArgumentParser(description="Download CEDA Agmarknet monthly prices")
+    ap.add_argument("--out", default="ceda_out", help="folder for the results")
+    ap.add_argument("--reverse", action="store_true",
+                    help="start from the end of the list (use when another run goes forwards)")
+    args = ap.parse_args()
+    print("Running. Progress is printed every minute; stop with Ctrl+C and rerun to resume.")
+    t = run(out_dir=args.out, reverse=args.reverse, background=True)
+    try:
+        while t.is_alive():
+            time.sleep(60)
+            print(time.strftime("%H:%M"), progress(), flush=True)
+    except KeyboardInterrupt:
+        stop()
+        print("Stopping after in-flight requests finish...")
+        t.join()
+    print("Done" if not STOP.is_set() else "Stopped; rerun to resume.")
