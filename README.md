@@ -16,7 +16,7 @@ public data alone, and how often does it change the farmer's decision?
 | 4 | Open-Meteo forecast | done, tested live |
 | 5 | IMD gridded rainfall | done, tested live |
 | 6 | SoilGrids soil + water-holding capacity | done, tested live |
-| 7 | Mandi prices | key works, but data.gov.in blocks Colab; run `scripts/fetch_prices_local.py` on your own computer |
+| 7 | Mandi prices | `scripts/fetch_ceda_prices.py`: monthly Agmarknet prices from CEDA Ashoka, 2001 to Oct 2025, state and district level, no key. (data.gov.in daily feed: `scripts/fetch_prices_local.py`, but the server is unreliable) |
 | 8 | District yields | code ready, needs a manual DES/UPAg download |
 | 9 | Merge, season features, quality checks | done, tested live |
 | 10 | One-command refresh, pull log, source notes | done, tested live |

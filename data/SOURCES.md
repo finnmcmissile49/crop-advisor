@@ -11,7 +11,14 @@ Every pull is recorded in `data/processed/pull_log.csv` with a UTC timestamp and
 | IMD gridded rainfall | `imd.py` | daily rain from rain gauges | 0.25 degrees | 1901 onwards | no | yearly, months behind |
 | ISRIC SoilGrids 2.0 | `soil.py` | clay, sand, silt, pH, organic carbon, bulk density, gravel, nitrogen | 250 m | static | no | rarely |
 | data.gov.in mandi prices | `prices.py` | daily min, max, modal price per market | per market | recent days only | yes (free) | daily |
-| DES / UPAg crop statistics | `yields.py` | district area, production, yield | district | about 1997 to 2023 | manual download | yearly |
+| CEDA Ashoka Agri Market Data (Agmarknet, DMI) | `scripts/fetch_ceda_prices.py` | monthly min, max, modal price (Rs/quintal); monthly arrivals | state and Census 2011 district | 2001 to Oct 2025 | no | monthly |
+| ICRISAT DLD crops (TCI-ICRISAT) | Colab download | district area, production, yield, 1990 boundaries ("unapportioned") | district, 20 states | 1990 to 2019 | no | occasional |
+| ICRISAT DLD farm harvest prices | Colab download | annual farm harvest price, 17 crops (no soybean) | district, 20 states | 1990 to 2020 | no | occasional |
+| DES / UPAg crop statistics | `yields.py` | district area, production, yield | district | about 1997 to 2023 | manual download (UPAg login is for officials only) | yearly |
+
+CEDA and ICRISAT both use Census 2011 state and district codes, so they join on those ids
+rather than on spelled names. Cite CEDA, Ashoka University and DMI (Agmarknet) for prices,
+and ICRISAT and TCI for the district database. CEDA states no licence on the site.
 
 ## Known problems
 
