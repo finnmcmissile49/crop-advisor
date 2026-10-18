@@ -39,6 +39,7 @@ DISTRICT_CROPS = [13, 15, 49, 6, 1, 2, 4, 5, 28, 10, 12, 9, 8]
 
 _state = {"done": 0, "total": 0, "rows": 0, "failed": 0, "running": False, "phase": ""}
 _lock = threading.Lock()
+STOP = threading.Event()          # call stop() to end a background run cleanly
 
 
 def post(endpoint, body, retries=4, session=requests):
@@ -127,6 +128,8 @@ def _log(out, msg):
 
 def _work(out, job, session, files_lock):
     kind, level, s, d, c = job
+    if STOP.is_set():
+        return job, None
     body = {"state_id": s, "district_id": d, "commodity_id": c, "calculation_type": "m",
             "start_date": START, "end_date": END}
     data = post("prices" if kind == "prices" else "quantities", body, session=session)
@@ -160,6 +163,8 @@ def _run(out, copy_to):
         futures = [ex.submit(_work, out, j, session, files_lock) for j in jobs]
         for f in as_completed(futures):
             job, n = f.result()
+            if STOP.is_set():
+                continue                     # not recorded, so a rerun picks it up
             with files_lock:
                 with open(done_path, "a") as fh:
                     fh.write(json.dumps({"key": job_key(*job), "n": n}) + "\n")
@@ -198,11 +203,17 @@ def copy_out(out, dest):
 
 def run(out_dir="ceda_out", copy_to=None, background=False):
     out = Path(out_dir)
+    STOP.clear()
     if background:
         t = threading.Thread(target=_run, args=(out, copy_to), daemon=True)
         t.start()
         return t
     _run(out, copy_to)
+
+
+def stop():
+    """Ask a background run to finish; requests already in flight complete first."""
+    STOP.set()
 
 
 def progress():

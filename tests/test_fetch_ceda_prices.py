@@ -44,3 +44,12 @@ def test_post_returns_none_on_bad_request(monkeypatch):
             return R()
     monkeypatch.setattr(fc.time, "sleep", lambda s: None)
     assert fc.post("prices", {}, session=S()) is None
+
+
+def test_stop_skips_remaining_work(tmp_path):
+    fc.STOP.set()
+    try:
+        job, n = fc._work(tmp_path, ("prices", "state", 27, 0, 13), None, threading.Lock())
+        assert n is None and not (tmp_path / "rows_prices.csv").exists()
+    finally:
+        fc.STOP.clear()
