@@ -52,7 +52,7 @@ et al. (2021). data.gov.in: Government Open Data Licence India.
 
 ## Multi-state table (`src/cropadvisor/multistate.py`)
 
-Built in Colab from the full files; outputs go to Google Drive (MyDrive):
+Built in Colab from the full files; outputs go to Google Drive, `crop-advisor/03_data_processed/` (raw inputs in `01_data_raw/`, lookups in `02_data_reference/`, notebooks in `04_notebooks/`):
 
 | File | What |
 |---|---|
