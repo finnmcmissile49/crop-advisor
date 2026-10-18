@@ -4,9 +4,12 @@ Sources
 - Daily district rainfall, 2009 to Jul 2024 (`daily-rainfall-data-district-level.csv`, IMD via
   data.gov.in). District ids are LGD codes, not Census codes, so districts are matched by name.
 - ICRISAT District Level Database, unapportioned (about 2015 boundaries), 1990-2019.
-  Area in 1000 ha, production in 1000 t, yield in kg/ha; -1 means missing.
+  Area in 1000 ha, production in 1000 t, yield in kg/ha; -1 means missing. Cotton is lint;
+  sugarcane is gur equivalent (about 6,800 kg/ha, a tenth of cane weight).
 - All-India crop production (data.gov.in / DES), 1997-2015. Area in ha, production in tonnes,
-  except cotton and jute/mesta (bales) and coconut (nuts).
+  except cotton and jute/mesta (bales) and coconut (nuts). Checked against ICRISAT for 2009-2014:
+  state totals agree (median ratio 0.94-1.0) where both cover the same districts, and cotton at
+  170 kg per bale matches ICRISAT's lint tonnes (5.7 bales per tonne).
 
 Main steps
 1. `clean_rainfall`   remove duplicate district-days (only Leh Ladakh has them; the copies disagree,
@@ -410,8 +413,16 @@ def icrisat_long(icrisat):
     for c in ("area_ha", "production_t", "yield_kg_ha"):
         out[c] = pd.to_numeric(out[c], errors="coerce")
         out.loc[out[c] < 0, c] = float("nan")
+    # contradictions: a yield with no area, or zero yield on a sown area -> missing, flagged
+    bad = ((out["area_ha"].fillna(0) == 0) & (out["yield_kg_ha"] > 0)) | \
+          ((out["area_ha"] > 0) & (out["yield_kg_ha"] == 0))
+    out["flag"] = bad.map({True: "area/yield contradict", False: ""})
+    out.loc[bad, "yield_kg_ha"] = float("nan")
+    out.loc[out["area_ha"].fillna(0) == 0, "yield_kg_ha"] = float("nan")
     calc = 1000 * out["production_t"] / out["area_ha"].where(out["area_ha"] > 0)
     out["yield_check"] = out["yield_kg_ha"] / calc.where(calc > 0)
+    # ICRISAT reports sugarcane as gur (jaggery), about a tenth of cane weight
+    out["unit_note"] = out["crop"].map({"Sugarcane": "gur equivalent, not cane"}).fillna("")
     return out
 
 

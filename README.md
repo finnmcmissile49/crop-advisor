@@ -59,6 +59,7 @@ src/cropadvisor/
   et0.py                        FAO-56 Penman-Monteith reference evapotranspiration
   weather.py                    merged daily table, season features, QC, source disagreement
   prices.py, yields.py          mandi prices; yield standardisation and scale checks
+  multistate.py                 all-state rainfall + ICRISAT yields, district matching (see data/SOURCES.md)
   pipeline.py                   runs everything, writes CSVs and the pull log
 scripts/refresh_data.py         one command: refresh all data
 notebooks/01_weather_pipeline   steps 1-4, self-contained walkthrough

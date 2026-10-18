@@ -49,3 +49,31 @@ and ICRISAT and TCI for the district database. CEDA states no licence on the sit
 Open-Meteo: CC BY 4.0, free for non-commercial use. NASA POWER: public, cite NASA LaRC POWER.
 IMD gridded data: free for research, cite Pai et al. (2014). SoilGrids: CC BY 4.0, cite Poggio
 et al. (2021). data.gov.in: Government Open Data Licence India.
+
+## Multi-state table (`src/cropadvisor/multistate.py`)
+
+Built in Colab from the full files; outputs go to Google Drive (MyDrive):
+
+| File | What |
+|---|---|
+| `rainfall_district_monthly_2009_2024.csv` | rain, normal, days with data and coverage per district-month (628 districts) |
+| `rainfall_district_seasons_2009_2024.csv` | kharif (Jun-Sep), rabi (Oct-Feb), agri year (Jun-May) totals and departure from normal |
+| `multistate_yield_rain_2009_2019.csv` | ICRISAT district yields joined to that district's seasonal rain, 20 states, 29 crops |
+
+Matching (`data/reference/district_match_icrisat_to_rain.csv`): the rainfall file uses LGD
+district codes, ICRISAT uses its own and Census codes, so districts are matched by name within
+each state: 409 exact, 91 alias (spellings such as Yeotmal/Yavatmal), 36 fuzzy (all checked by
+hand), and 66 "parent": districts created after about 2012 (most of Telangana's 33, new
+Chhattisgarh and Gujarat districts) have no rainfall series, so they use the district they were
+carved from. Undivided Burdwan uses Paschim Bardhaman, the only Bardhaman in the rainfall file.
+
+Data fixes, all flagged rather than silent:
+- Rainfall: Leh Ladakh has two disagreeing copies of 3,451 days (correlation 0.35); averaged,
+  `dup_averaged = True`. No other district has duplicates. Months with missing days are scaled
+  up by 1/coverage, and a season is `complete` only if every month has at least 80 percent of days.
+- ICRISAT: -1 means missing. About 7,300 rows have a yield with no area, or zero yield on a sown
+  area; their yield is set to missing with `flag = "area/yield contradict"`. 1.2 percent of rows
+  have a yield more than 25 percent away from production / area (`yield_check`).
+- Sugarcane in ICRISAT is gur equivalent (about 6,800 kg/ha), not cane (about 70,000 kg/ha).
+- All-India file: cotton (lint) and jute/mesta are in bales and are converted at 170 and 180 kg;
+  coconut is in nuts and its production is dropped.

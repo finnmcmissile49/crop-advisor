@@ -105,3 +105,19 @@ def test_new_district_borrows_parent_rainfall():
     m = ms.match_districts(icr, rain).set_index("icrisat_dist")
     assert m.loc[1, "method"] == "exact"
     assert m.loc[2, "method"] == "parent" and m.loc[2, "district_code"] == 513
+
+
+def test_icrisat_long_flags_contradictions_and_sugarcane_units():
+    w = pd.DataFrame({"Dist Code": [1, 2], "Year": [2015, 2015],
+                      "SUGARCANE AREA [1000 ha]": [10.0, 0.0],
+                      "SUGARCANE PRODUCTION [1000 tons]": [68.0, 0.0],
+                      "SUGARCANE YIELD [Kg per ha]": [6800.0, 5000.0],
+                      "WHEAT AREA [1000 ha]": [5.0, 1.0],
+                      "WHEAT PRODUCTION [1000 tons]": [0.0, 2.4],
+                      "WHEAT YIELD [Kg per ha]": [0.0, 2400.0]})
+    out = ms.icrisat_long(w).set_index(["icrisat_dist", "crop"])
+    assert out.loc[(1, "Sugarcane"), "unit_note"].startswith("gur")
+    assert pd.isna(out.loc[(2, "Sugarcane"), "yield_kg_ha"])          # yield with no area
+    assert out.loc[(2, "Sugarcane"), "flag"] == "area/yield contradict"
+    assert pd.isna(out.loc[(1, "Wheat"), "yield_kg_ha"])              # zero yield on sown area
+    assert out.loc[(2, "Wheat"), "yield_kg_ha"] == 2400
