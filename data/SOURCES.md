@@ -14,7 +14,8 @@ Every pull is recorded in `data/processed/pull_log.csv` with a UTC timestamp and
 | CEDA Ashoka Agri Market Data (Agmarknet, DMI) | `scripts/fetch_ceda_prices.py` | monthly min, max, modal price (Rs/quintal); monthly arrivals | state and Census 2011 district | 2001 to Oct 2025 | no | monthly |
 | ICRISAT DLD crops (TCI-ICRISAT) | Colab download | district area, production, yield, 1990 boundaries ("unapportioned") | district, 20 states | 1990 to 2019 | no | occasional |
 | ICRISAT DLD farm harvest prices | Colab download | annual farm harvest price, 17 crops (no soybean) | district, 20 states | 1990 to 2020 | no | occasional |
-| DES / UPAg crop statistics | `yields.py` | district area, production, yield | district | about 1997 to 2023 | manual download (UPAg login is for officials only) | yearly |
+| DES Area, Production & Yield report (data.desagri.gov.in) | browser download, see agri-project README | district area, production, yield, all crops and seasons | district (names, no codes) | 1997-98 to 2022-23 (downloaded 2015-16 to 2022-23) | no login | yearly |
+| Soil Health Card nutrient dashboard (soilhealth.dac.gov.in) | browser download, see agri-project README | samples rated low/medium/high for N, P, K, OC; deficient/sufficient for S, Zn, Fe, Cu, B, Mn; pH and EC classes | district (LGD codes) | cycles 2023-24 to 2026-27 | no login | continuous |
 
 CEDA and ICRISAT both use Census 2011 state and district codes, so they join on those ids
 rather than on spelled names. Cite CEDA, Ashoka University and DMI (Agmarknet) for prices,
@@ -77,3 +78,7 @@ Data fixes, all flagged rather than silent:
 - Sugarcane in ICRISAT is gur equivalent (about 6,800 kg/ha), not cane (about 70,000 kg/ha).
 - All-India file: cotton (lint) and jute/mesta are in bales and are converted at 170 and 180 kg;
   coconut is in nuts and its production is dropped.
+
+## Post-2019 yields and soil nutrients
+
+DES district yields match ICRISAT exactly where both exist (Latur soybean 2015-16: 340,800 ha, 0.32 t/ha in both), so DES extends the ICRISAT series to 2022-23. The public Soil Health Card dashboard gives counts of samples per rating class for each district, not individual sample values.
