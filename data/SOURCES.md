@@ -82,3 +82,33 @@ Data fixes, all flagged rather than silent:
 ## Post-2019 yields and soil nutrients
 
 DES district yields match ICRISAT exactly where both exist (Latur soybean 2015-16: 340,800 ha, 0.32 t/ha in both), so DES extends the ICRISAT series to 2022-23. The public Soil Health Card dashboard gives counts of samples per rating class for each district, not individual sample values.
+
+## North India pilot (Haryana, Punjab)
+
+`src/cropadvisor/northindia.py` and `scripts/build_north_india_table.py` build `north_india_*.csv`
+from the files above (45 districts, wheat, rice, cotton, 2009 to 2022); `north_india_NOTES.md` next
+to the output lists the caveats. Pilot districts (`PILOT`): Sirsa, Hisar, Kurukshetra, Bathinda,
+Sangrur, Tarn Taran. Their weather and soil pull is
+`python scripts/refresh_data.py --start 2021 --end 2023 --locations data/locations_north_india.csv --data-dir data_north_india`.
+
+Pilot coordinates are the district town, not a farm: Wikipedia infoboxes for Sirsa, Kurukshetra,
+Bathinda and Sangrur; latlong.net for Hisar (Wikipedia's Hisar page gives two inconsistent sets);
+worldatlas.com for Tarn Taran. Elevations: Wikipedia for Sirsa, Hisar, Bathinda and
+Sangrur; kurukshetra.gov.in (district figure) for Kurukshetra; worldatlas.com for Tarn Taran. Two
+elevations are uncertain by a few metres, which does not matter for ET0: Sirsa (201 m infobox, 205 m
+article text) and Bathinda (210 m infobox, 201 m article text). Replace them with the real farm's
+coordinates and elevation when a station is placed.
+
+Known problems:
+- **DES Haryana cotton 2020-21** has production about 1,000 times too small (likely a thousand-bales
+  unit slip); excluded with a note, not rescaled. `northindia.yield_scale_flags` catches this kind of error.
+- **Cotton bale weight.** DES is converted at 170 kg per bale; ICRISAT cotton is about 5 percent higher
+  (implied about 180 kg per bale) and rounded to the nearest 1,000. Joining them shows a false step at 2014-15.
+- **Soil Health Card is sparse and unstable in Haryana and Punjab**: 9 of 45 districts have a cycle with
+  500 or more samples, and Bathinda potassium rated low goes 96, 40, 8 percent over three cycles.
+  Use as background only.
+- **Delhi** has no district yields (ICRISAT none, DES one state total) and no usable Soil Health Card samples.
+- **IMD July 2020** has 16 of 31 days for every district, so kharif 2020 season rain is scaled up.
+- **Season definitions differ.** The district rainfall file uses rabi = Oct to Feb; `weather.py` uses
+  rabi = Nov to Mar. For wheat, `season_rain_mm` in the North India table (Oct to Feb) misses March rain,
+  so do not compare it directly with `seasons.csv` from the weather pipeline.

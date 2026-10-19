@@ -75,6 +75,13 @@ DISTRICTS = [
      "Sri Muktsar Sahib", "own"),
     ("Punjab", "Tarn Taran", "Tarn taran", "Taran Taran", "Tarn Taran", "Tarn Taran", "own"),
 ]
+# Pilot districts, chosen on data coverage (19 Oct 2026): every one has a complete 14-year wheat
+# and rice series and its own IMD rainfall series, and together they span both states and both
+# farming systems: south-west cotton-wheat belt (Sirsa, Hisar, Bathinda, with 13 to 14 years of cotton)
+# and rice-wheat districts (Kurukshetra, Sangrur, Tarn Taran). To be revisited once Digital Green
+# names the districts it can deploy in.
+PILOT = ["Sirsa", "Hisar", "Kurukshetra", "Bathinda", "Sangrur", "Tarn Taran"]
+
 DISTRICT_MAP = pd.DataFrame(DISTRICTS, columns=[
     "state", "district", "des_name", "icrisat_name", "shc_name", "rain_name", "rain_basis"])
 
@@ -271,7 +278,7 @@ def district_summary(yields, shc_best, last_years=8):
     last = y["year"].max() - last_years + 1
     rows = []
     for (state, district), g in DISTRICT_MAP.groupby(["state", "district"]):
-        r = {"state": state, "district": district,
+        r = {"state": state, "district": district, "pilot": district in PILOT,
              "rain_basis": g["rain_basis"].iloc[0]}
         sub = y[(y["state"] == state) & (y["district"] == district)]
         for crop in CROPS:

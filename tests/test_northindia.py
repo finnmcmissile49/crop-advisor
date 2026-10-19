@@ -80,6 +80,30 @@ def test_cotton_rows_carry_the_bale_weight_note_and_other_crops_do_not():
     assert notes["Rice"] == ""
 
 
+def test_pilot_locations_file_matches_the_pilot_districts_and_sits_in_haryana_punjab():
+    import os
+    path = os.path.join(os.path.dirname(__file__), "..", "data", "locations_north_india.csv")
+    loc = pd.read_csv(path)
+    assert set(loc["name"]) == set(ni.PILOT)
+    assert {"name", "state", "lat", "lon", "elevation_m"} <= set(loc.columns)
+    # same state as the district map says, and inside a box that covers Haryana and Punjab
+    states = ni.DISTRICT_MAP.set_index("district")["state"]
+    assert all(states[n] == s for n, s in zip(loc["name"], loc["state"]))
+    assert loc["lat"].between(27.5, 32.6).all() and loc["lon"].between(74.0, 77.6).all()
+    assert loc["elevation_m"].between(100, 400).all()
+    assert not loc["name"].duplicated().any()
+    assert {"Haryana", "Punjab"} == set(loc["state"])
+
+
+def test_district_summary_marks_exactly_the_pilot_districts():
+    yields = pd.DataFrame({"state": ["Punjab"], "district": ["Moga"], "crop": ["Wheat"], "year": [2016],
+                           "area_ha": [100.0], "yield_t_ha": [5.0]})
+    shc = pd.DataFrame({"state": ["Punjab"], "district": ["Moga"], "shc_reliable": [False]})
+    s = ni.district_summary(yields, shc).set_index("district")
+    assert set(s.index[s["pilot"]]) == set(ni.PILOT)
+    assert len(s) == 45
+
+
 def test_overlap_check_and_icrisat_wins_when_both_report():
     base = {"state": "Punjab", "district": "Moga", "crop": "Wheat", "season": "Rabi", "year": 2016,
             "area_ha": 100.0, "production_t": 500.0}
