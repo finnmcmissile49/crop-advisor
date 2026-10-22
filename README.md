@@ -61,6 +61,10 @@ src/cropadvisor/
   prices.py, yields.py          mandi prices; yield standardisation and scale checks
   multistate.py                 all-state rainfall + ICRISAT yields, district matching (see data/SOURCES.md)
   pipeline.py                   runs everything, writes CSVs and the pull log
+  irrigation.py                 FAO-56 wheat soil water balance + FAO trigger and PAU calendar rules
+  irrigation_eval.py            compare irrigation advice between runs, stress tests
+scripts/run_irrigation_baseline.py  irrigation baseline on the pipeline output (see notes/)
+notes/irrigation_baseline.md    first baseline results, six North India districts
 scripts/refresh_data.py         one command: refresh all data
 notebooks/01_weather_pipeline   steps 1-4, self-contained walkthrough
 notebooks/02_full_pipeline      steps 5-10, runs the package from this repo
