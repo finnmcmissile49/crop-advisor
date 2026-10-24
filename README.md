@@ -65,6 +65,8 @@ src/cropadvisor/
   irrigation_eval.py            compare irrigation advice between runs, stress tests
 scripts/run_irrigation_baseline.py  irrigation baseline on the pipeline output (see notes/)
 notes/irrigation_baseline.md    first baseline results, six North India districts
+notes/irrigation_10_states.md   baseline for 27 districts in 10 wheat states (ICAR zones)
+data/locations_wheat_10states.csv  the 27 districts, with state and ICAR wheat zone
 scripts/refresh_data.py         one command: refresh all data
 notebooks/01_weather_pipeline   steps 1-4, self-contained walkthrough
 notebooks/02_full_pipeline      steps 5-10, runs the package from this repo
