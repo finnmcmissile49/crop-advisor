@@ -1,0 +1,28 @@
+name,state,zone,lat,lon,elevation_m,soil_lat,soil_lon,coord_source
+Sirsa,Haryana,NWPZ,29.533,75.017,201,29.56003,75.017,town (pilot)
+Hisar,Haryana,NWPZ,29.152,75.721,215,29.17903,75.721,town (pilot)
+Kurukshetra,Haryana,NWPZ,29.966,76.837,260,29.99303,76.837,town (pilot)
+Bathinda,Punjab,NWPZ,30.230,74.952,210,30.25703,74.952,town (pilot)
+Sangrur,Punjab,NWPZ,30.251,75.844,237,30.27803,75.844,town (pilot)
+Tarn Taran,Punjab,NWPZ,31.451,74.925,218,31.47803,74.925,town (pilot)
+Shahjahanpur,Uttar Pradesh,NWPZ,27.976,79.845,,,,district centroid
+Aligarh,Uttar Pradesh,NWPZ,27.927,78.079,,,,district centroid
+Azamgarh,Uttar Pradesh,NEPZ,26.047,83.070,,,,district centroid
+Gorakhpur,Uttar Pradesh,NEPZ,26.658,83.361,,,,district centroid
+Jhansi,Uttar Pradesh,CZ,25.505,78.954,,,,district centroid
+Ujjain,Madhya Pradesh,CZ,23.332,75.668,,,,district centroid
+Vidisha,Madhya Pradesh,CZ,23.893,77.813,,,,district centroid
+Rewa,Madhya Pradesh,CZ,24.755,81.590,,,,district centroid
+Ganganagar,Rajasthan,NWPZ,29.395,73.563,,,,district centroid
+Alwar,Rajasthan,NWPZ,27.591,76.606,,,,district centroid
+Bundi,Rajasthan,CZ,25.470,75.777,,,,district centroid
+Rohtas,Bihar,NEPZ,24.979,84.028,,,,district centroid
+Muzaffarpur,Bihar,NEPZ,26.151,85.331,,,,district centroid
+Ahmadabad,Gujarat,CZ,22.710,72.196,,,,district centroid
+Rajkot,Gujarat,CZ,22.263,70.775,,,,district centroid
+Udham Singh Nagar,Uttarakhand,NWPZ,29.027,79.523,,,,district centroid
+Haridwar,Uttarakhand,NWPZ,29.872,78.001,,,,district centroid
+Jammu,Jammu and Kashmir,NWPZ,32.763,74.788,,,,district centroid
+Kathua,Jammu and Kashmir,NWPZ,32.385,75.517,393,,,town (centroid is in the hills)
+Murshidabad,West Bengal,NEPZ,24.161,88.231,,,,district centroid
+Dakshin Dinajpur,West Bengal,NEPZ,25.364,88.588,,,,district centroid

@@ -9,7 +9,7 @@ import pandas as pd
 
 from cropadvisor import irrigation as ir
 
-DEFAULT_SOWING = (11, 10)    # 10 November: inside PAU's optimum first fortnight of November
+DEFAULT_SOWING = (11, 10)    # NWPZ default, kept for callers that pass no zone
 
 
 def compare_events(dates_a, dates_b, tol_days=3):
@@ -47,19 +47,27 @@ def make_rule(name):
         return ir.FaoTriggerRule(mode="fixed", depth_mm=75.0)
     if name == "pau_calendar":
         return ir.PauCalendarRule(depth_mm=75.0)
+    if name == "iiwbr_calendar":
+        return ir.IiwbrCalendarRule()
     raise ValueError(name)
 
 
 def run_one(daily, name, awc, sowing, rule_name="fao_trigger", rain_src="imd", et0_src="om",
-            awc_scale=1.0, **param_overrides):
-    params = ir.default_params(awc * awc_scale, **param_overrides)
+            awc_scale=1.0, zone="NWPZ", state="Punjab", **param_overrides):
+    """One season for one district. The default zone/state reproduce the Punjab pilot settings."""
+    params = ir.zone_params(zone, awc * awc_scale, state=state, **param_overrides)
     inputs = ir.season_inputs(daily, name, sowing, params.season_days, rain_src, et0_src)
     run = ir.simulate(inputs, sowing, params, make_rule(rule_name))
     return run, ir.summarise(run)
 
 
-# One-at-a-time stress tests around the default. The ranges are arbitrary stress tests, not
-# uncertainty estimates, except where a source is named.
+def zone_sowing(zone, which="default"):
+    z = ir.ZONES[zone]
+    return {"default": z["sowing"], "early": z["window"][0], "late": z["window"][1]}[which]
+
+
+# One-at-a-time stress tests around the default. Ranges marked arbitrary are stress tests, not
+# uncertainty estimates.
 SCENARIOS = {
     "default": {},
     "awc_minus_20pc": {"awc_scale": 0.8},                       # arbitrary
@@ -69,33 +77,40 @@ SCENARIOS = {
     "kc_mid_1.05": {"kc_mid": 1.05},                            # arbitrary, minus 0.1
     "kc_mid_1.25": {"kc_mid": 1.25},                            # arbitrary, plus 0.1
     "kc_end_0.4": {"kc_end": 0.4},          # FAO-56 Table 12 upper value (hand harvest)
-    "season_120d": {"season_days": 120},    # FAO-56 Table 11 Central India row, unstretched
-    "sow_1_nov": {"sow": (11, 1)},          # agreed window 1 to 25 November
-    "sow_25_nov": {"sow": (11, 25)},
+    "season_minus_15pc": {"season_scale": 0.85},                # arbitrary
+    "season_plus_15pc": {"season_scale": 1.15},                 # arbitrary
+    "sow_early": {"sow": "early"},          # start of the zone's sowing window
+    "sow_late": {"sow": "late"},            # end of the zone's sowing window
     "rain_openmeteo": {"rain_src": "om"},
     "rain_nasapower": {"rain_src": "pw"},
     "et0_nasapower": {"et0_src": "pw"},
 }
 
 
-def stress_test(daily, soil, years, rule_name="fao_trigger", scenarios=SCENARIOS, tol_days=3):
+def stress_test(daily, sites, years, rule_name="fao_trigger", scenarios=SCENARIOS, tol_days=3):
     """Every scenario for every district and season, compared with that district-season's default.
 
-    soil: DataFrame indexed by district name with awc_mm_per_m.
+    sites: DataFrame indexed by district name with awc_mm_per_m, and optionally zone and state
+    (default NWPZ / Punjab, the pilot settings).
     """
     rows = []
-    for name in soil.index:
-        awc = float(soil.loc[name, "awc_mm_per_m"])
+    for name in sites.index:
+        awc = float(sites.loc[name, "awc_mm_per_m"])
+        zone = sites.loc[name, "zone"] if "zone" in sites else "NWPZ"
+        state = sites.loc[name, "state"] if "state" in sites else "Punjab"
         for yr in years:
             base_dates = None
             for scen, kw in scenarios.items():
                 kw = dict(kw)
-                m, d = kw.pop("sow", DEFAULT_SOWING)
+                m, d = zone_sowing(zone, kw.pop("sow", "default"))
+                if "season_scale" in kw:
+                    kw["season_days"] = round(ir.ZONES[zone]["season_days"] * kw.pop("season_scale"))
                 sowing = pd.Timestamp(yr, m, d)
+                season = f"{yr}-{yr + 1 - 2000}"
                 try:
-                    _, s = run_one(daily, name, awc, sowing, rule_name, **kw)
+                    _, s = run_one(daily, name, awc, sowing, rule_name, zone=zone, state=state, **kw)
                 except ValueError as e:  # data gap: report it, do not guess
-                    rows.append({"name": name, "season": f"{yr}-{yr + 1 - 2000}",
+                    rows.append({"name": name, "state": state, "zone": zone, "season": season,
                                  "scenario": scen, "error": str(e)})
                     continue
                 dates = s["irrigation_dates"].split(";") if s["irrigation_dates"] else []
@@ -103,16 +118,18 @@ def stress_test(daily, soil, years, rule_name="fao_trigger", scenarios=SCENARIOS
                     base_dates = dates
                 cmp = compare_events(base_dates or [], dates, tol_days) \
                     if base_dates is not None else {}
-                rows.append({"name": name, "season": f"{yr}-{yr + 1 - 2000}", "rule": rule_name,
-                             "scenario": scen, "sowing": sowing.date().isoformat(), **s,
+                rows.append({"name": name, "state": state, "zone": zone, "season": season,
+                             "rule": rule_name, "scenario": scen,
+                             "sowing": sowing.date().isoformat(), **s,
                              **{f"vs_default_{k}": v for k, v in cmp.items()}})
     return pd.DataFrame(rows)
 
 
-def scenario_table(stress):
-    """Across all district-seasons: how much each scenario moves the advice."""
-    ok = stress[stress.get("error").isna()] if "error" in stress else stress
-    g = ok.groupby("scenario", sort=False)
+def scenario_table(stress, by=None):
+    """How much each scenario moves the advice, across district-seasons (optionally per group)."""
+    ok = stress[stress["error"].isna()] if "error" in stress else stress
+    keys = ([by] if by else []) + ["scenario"]
+    g = ok.groupby(keys, sort=False)
     return pd.DataFrame({
         "district_seasons": g.size(),
         "mean_irrigations": g["n_irrigations"].mean().round(2),

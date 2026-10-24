@@ -27,6 +27,20 @@ def _rename(df, suffix):
     return df.rename(columns=cols)
 
 
+def resolve_elevation(elev_m, om_parts, name=""):
+    """Use the locations file's elevation; if it is blank, use the elevation Open-Meteo reports for
+    its grid point (a terrain model value, not a survey). It only enters ET0 through air pressure,
+    so a few tens of metres make no practical difference."""
+    if elev_m is not None and not pd.isna(elev_m):
+        return float(elev_m)
+    for part in om_parts:
+        e = part.attrs.get("elevation_m")
+        if e is not None:
+            print(f"Elevation {name}: {e} m from Open-Meteo", flush=True)
+            return float(e)
+    raise ValueError(f"{name}: no elevation in the locations file or from Open-Meteo")
+
+
 def fetch_location(name, lat, lon, elev_m, years, raw_dir="data/raw"):
     """Open-Meteo + NASA POWER daily data for one location, fetched and cached one year at a time."""
     om_parts, pw_parts = [], []
@@ -37,6 +51,7 @@ def fetch_location(name, lat, lon, elev_m, years, raw_dir="data/raw"):
         pw_parts.append(nasapower.fetch_history(
             lat, lon, s, e, raw_path=f"{raw_dir}/nasapower/{name}_{yr}.json"))
     print(f"Weather {name}: {len(years)} years from Open-Meteo and NASA POWER", flush=True)
+    elev_m = resolve_elevation(elev_m, om_parts, name)
     om = _rename(pd.concat(om_parts, ignore_index=True), "om")
     pw = pd.concat(pw_parts, ignore_index=True)
     pw = _rename(add_et0(pw, lat, elev_m), "pw")

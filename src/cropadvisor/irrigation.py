@@ -48,6 +48,7 @@ class WheatParams:
     zr_max: float = 1.0                 # FAO-56 Table 22 spring wheat 1.0-1.5 m; soil data stop at 1 m
     p_table: float = 0.55               # FAO-56 Table 22, wheat
     adjust_p: bool = True               # FAO-56 Table 22 footnote: p = p + 0.04 (5 - ETc)
+    last_irrigation_das: int = None     # None: PAU's date rule (Punjab); else days after sowing
 
     def stage_lengths(self):
         """FAO stage lengths stretched to season_days, as integers that add up exactly."""
@@ -88,13 +89,65 @@ def _rabi_date(sowing, month, day):
     return pd.Timestamp(start_year if month >= 7 else start_year + 1, month, day)
 
 
-def last_irrigation_date(sowing):
-    """PAU Rabi 2025-26: irrigate the timely-sown crop until the end of March if needed; for crops
-    sown after 5 December, until 10 April."""
+def last_irrigation_date(sowing, params=None):
+    """Last day an irrigation may be given.
+
+    Punjab (params.last_irrigation_das is None): PAU Rabi 2025-26, until the end of March for the
+    timely-sown crop, until 10 April for crops sown after 5 December.
+    Elsewhere: sowing + params.last_irrigation_das (the last ICAR-IIWBR irrigation stage that falls
+    inside the season, see zone_params).
+    """
     sowing = pd.Timestamp(sowing)
+    if params is not None and params.last_irrigation_das is not None:
+        return sowing + pd.Timedelta(days=int(params.last_irrigation_das))
     if sowing <= _rabi_date(sowing, 12, 5):
         return _rabi_date(sowing, 3, 31)
     return _rabi_date(sowing, 4, 10)
+
+
+# ---------------------------------------------------------------------------------- zones
+# ICAR wheat production zones, from ICAR-Directorate of Wheat Research (now IIWBR), "Wheat
+# Cultivation in India: Pocket Guide", Extension Bulletin 52, Karnal, September 2014, Tables 1 and 3.
+# Season lengths: days to maturity of current timely-sown irrigated varieties (Department of
+# Agriculture and ICAR pre-rabi interface 2023 list: NWPZ varieties 146-156 days, Central Zone
+# 116-119 days; NEPZ: DBW 187 "matures in 120 days", ICAR news item).
+ZONES = {
+    "NWPZ": {"label": "North Western Plains Zone", "season_days": 152,
+             "sowing": (11, 10), "window": ((11, 1), (11, 25))},
+    "NEPZ": {"label": "North Eastern Plains Zone", "season_days": 120,
+             "sowing": (11, 15), "window": ((11, 10), (11, 20))},
+    "CZ": {"label": "Central Zone", "season_days": 118,
+           "sowing": (11, 15), "window": ((11, 10), (11, 20))},
+}
+# NWPZ window 1-25 Nov: IIWBR timely 1-15 Nov, PAU lists varieties to the 4th week of November
+# (agreed for the pilot). NEPZ and CZ: IIWBR timely-sown window 10-20 Nov. Default sowing is inside
+# each window.
+
+# ICAR-DWR pocket guide Table 5: irrigation stages and days after sowing.
+IIWBR_STAGES = (("crown root initiation", 21), ("first node", 45), ("jointing", 65),
+                ("boot", 85), ("milk", 105), ("dough", 120))
+# The guide gives 4 to 6 irrigations totalling 28 to 42 cm, about 7 cm each.
+IIWBR_DEPTH_MM = 70.0
+STAGE_MARGIN_DAYS = 10   # our assumption: no irrigation in the last 10 days before maturity
+
+
+def iiwbr_last_das(season_days):
+    """Last IIWBR stage that falls at least STAGE_MARGIN_DAYS before maturity."""
+    return max(d for _, d in IIWBR_STAGES if d <= season_days - STAGE_MARGIN_DAYS)
+
+
+def zone_params(zone, awc_mm_per_m, state=None, **overrides):
+    """Crop settings for a district: zone season length; PAU cut-off rule for Punjab, the IIWBR
+    stage cut-off elsewhere. Overrides (for stress tests) are applied before the cut-off is set."""
+    season = overrides.pop("season_days", ZONES[zone]["season_days"])
+    last = None if state == "Punjab" else iiwbr_last_das(season)
+    return replace(WheatParams(awc_mm_per_m=awc_mm_per_m), season_days=season,
+                   last_irrigation_das=last, **overrides)
+
+
+def calendar_rule_name(state):
+    """Punjab follows PAU's own schedule; everywhere else ICAR-IIWBR's stage calendar."""
+    return "pau_calendar" if state == "Punjab" else "iiwbr_calendar"
 
 
 # ---------------------------------------------------------------------------------- rules
@@ -111,12 +164,34 @@ class FaoTriggerRule:
         self.mode, self.depth_mm = mode, depth_mm
 
     def start(self, sowing, params):
-        self.cutoff = last_irrigation_date(sowing)
+        self.cutoff = last_irrigation_date(sowing, params)
 
     def decide(self, date, das, dr_prev, raw, taw):
         if date > self.cutoff or dr_prev < raw:
             return 0.0
         return dr_prev if self.mode == "refill" else self.depth_mm
+
+    def observe_rain(self, date, rain_mm):
+        pass
+
+
+class IiwbrCalendarRule:
+    """ICAR-IIWBR stage calendar: irrigate on the stage days in IIWBR_STAGES that fall inside the
+    season (up to params.last_irrigation_das), IIWBR_DEPTH_MM each. The guide gives no rain
+    adjustment, so none is applied: this rule irrigates on schedule even after rain.
+    """
+    name = "iiwbr_calendar"
+
+    def __init__(self, depth_mm=IIWBR_DEPTH_MM):
+        self.depth_mm = depth_mm
+
+    def start(self, sowing, params):
+        last = params.last_irrigation_das if params.last_irrigation_das is not None \
+            else iiwbr_last_das(params.season_days)
+        self.due = {d for _, d in IIWBR_STAGES if d <= last}
+
+    def decide(self, date, das, dr_prev, raw, taw):
+        return self.depth_mm if das in self.due else 0.0
 
     def observe_rain(self, date, rain_mm):
         pass
@@ -147,7 +222,7 @@ class PauCalendarRule:
 
     def start(self, sowing, params):
         sowing = pd.Timestamp(sowing)
-        self.sowing, self.cutoff = sowing, last_irrigation_date(sowing)
+        self.sowing, self.cutoff = sowing, last_irrigation_date(sowing, params)
         self.intervals = self._intervals(sowing)
         first_weeks = 3 if sowing.month == 10 else 4
         self.n_done, self.push_days = 0, 0.0
