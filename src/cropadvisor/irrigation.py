@@ -137,10 +137,17 @@ def iiwbr_last_das(season_days):
 
 
 def zone_params(zone, awc_mm_per_m, state=None, **overrides):
-    """Crop settings for a district: zone season length; PAU cut-off rule for Punjab, the IIWBR
-    stage cut-off elsewhere. Overrides (for stress tests) are applied before the cut-off is set."""
+    """Crop settings for a district: zone season length and irrigation cut-off. Overrides (for
+    stress tests) are applied before the cut-off is set.
+
+    Cut-off: PAU's date rule (end of March for timely sowing) for the whole North Western Plains,
+    the IIWBR stage cut-off elsewhere. Our choice, 24 Oct 2026: IIWBR's generic stage days put the
+    last (dough) irrigation at 120 days, about 10 March, which for the zone's 152-day crop stops
+    water three weeks before grain filling ends; PAU, for the same zone, says to irrigate until
+    the end of March to avoid heat stress at grain filling.
+    """
     season = overrides.pop("season_days", ZONES[zone]["season_days"])
-    last = None if state == "Punjab" else iiwbr_last_das(season)
+    last = None if (state == "Punjab" or zone == "NWPZ") else iiwbr_last_das(season)
     return replace(WheatParams(awc_mm_per_m=awc_mm_per_m), season_days=season,
                    last_irrigation_das=last, **overrides)
 
@@ -170,6 +177,67 @@ class FaoTriggerRule:
         if date > self.cutoff or dr_prev < raw:
             return 0.0
         return dr_prev if self.mode == "refill" else self.depth_mm
+
+    def observe_rain(self, date, rain_mm):
+        pass
+
+
+def first_watering(state, sowing):
+    """Day after sowing of the first irrigation, its allowed window, and its depth.
+
+    Punjab: PAU, three weeks after sowing for October sowing and four weeks for later sowing,
+    "intervals can vary by 2 or 3 days either way", 7.5 cm. Elsewhere: ICAR-IIWBR, crown root
+    initiation at 21 days (pocket guide Table 5), first irrigation 20-25 days after sowing (IIWBR
+    advisory, November 2024), about 7 cm.
+    Returns (day, earliest_day, latest_day, depth_mm).
+    """
+    if state == "Punjab":
+        d = 21 if pd.Timestamp(sowing).month == 10 else 28
+        return d, d - 3, d + 3, 75.0
+    return 21, 20, 25, IIWBR_DEPTH_MM
+
+
+class FirstWateringThenTrigger:
+    """The advice rule (agreed 24 October): always give the first irrigation at the growth stage
+    the guidance names (crown root initiation), then irrigate when the water balance says so.
+
+    The first irrigation is a fixed depth (farmers flood the field; any excess drains). After it,
+    the FAO trigger refills the root zone when depletion reaches RAW, up to the season cut-off.
+    """
+    name = "first_then_fao"
+
+    def __init__(self, state="Punjab"):
+        self.state = state
+        self.trigger = FaoTriggerRule(mode="refill")
+
+    def start(self, sowing, params):
+        self.trigger.start(sowing, params)
+        self.first_das, _, _, self.first_depth = first_watering(self.state, sowing)
+        self.first_done = False
+
+    def decide(self, date, das, dr_prev, raw, taw):
+        if not self.first_done and das >= self.first_das and date <= self.trigger.cutoff:
+            self.first_done = True
+            return self.first_depth
+        return self.trigger.decide(date, das, dr_prev, raw, taw)
+
+    def observe_rain(self, date, rain_mm):
+        pass
+
+
+class GivenIrrigations:
+    """Replays the irrigations a farmer actually gave (for the live calculator)."""
+    name = "given"
+
+    def __init__(self, dates, depth_mm):
+        self.dates = {pd.Timestamp(d) for d in dates}
+        self.depth_mm = float(depth_mm)
+
+    def start(self, sowing, params):
+        pass
+
+    def decide(self, date, das, dr_prev, raw, taw):
+        return self.depth_mm if pd.Timestamp(date) in self.dates else 0.0
 
     def observe_rain(self, date, rain_mm):
         pass

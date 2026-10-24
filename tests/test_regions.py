@@ -26,13 +26,27 @@ def weather(n, et0=3.0, start="2021-11-15"):
 def test_zone_settings_and_cutoffs():
     assert ir.zone_params("NWPZ", 120, state="Punjab").last_irrigation_das is None   # PAU dates
     hry = ir.zone_params("NWPZ", 120, state="Haryana")
-    assert hry.season_days == 152 and hry.last_irrigation_das == 120                 # dough stage
+    assert hry.season_days == 152 and hry.last_irrigation_das is None                # PAU dates (zone)
+    assert ir.last_irrigation_date("2021-11-10", hry) == pd.Timestamp("2022-03-31")
     nep = ir.zone_params("NEPZ", 120, state="Bihar")
     assert nep.season_days == 120 and nep.last_irrigation_das == 105                 # milk stage
     cz = ir.zone_params("CZ", 120, state="Madhya Pradesh")
     assert cz.season_days == 118 and cz.last_irrigation_das == 105
     # a stress-test season length moves the cut-off with it
     assert ir.zone_params("CZ", 120, state="Gujarat", season_days=100).last_irrigation_das == 85
+
+
+def test_first_watering_always_given():
+    # no water stress at all (ET0 tiny): the water balance alone would never irrigate early,
+    # the advice rule still gives the crown-root irrigation
+    for state, zone, day, depth in (("Punjab", "NWPZ", 28, 75), ("Bihar", "NEPZ", 21, 70)):
+        params = ir.zone_params(zone, 140, state=state)
+        run = ir.simulate(weather(40, et0=0.5), "2021-11-15", params,
+                          ir.FirstWateringThenTrigger(state=state))
+        irr = run[run["irrigation_mm"] > 0]
+        assert irr["das"].tolist() == [day] and irr["irrigation_mm"].iloc[0] == depth
+    assert ir.first_watering("Punjab", "2021-10-28")[0] == 21   # PAU: 3 weeks for October
+    assert ir.first_watering("Gujarat", "2021-11-15")[1:3] == (20, 25)
 
 
 def test_calendar_rule_per_state():

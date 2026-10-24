@@ -10,7 +10,7 @@ Punjab pilot settings. Writes, into --out (default: the processed folder):
   irrigation_runs.csv            one row per district, season, rule and rain source
   irrigation_compare.csv         how often advice differs: other rain sources vs IMD, and the
                                  calendar rule vs the FAO trigger
-  irrigation_stress.csv          every stress-test scenario for every district-season (FAO rule)
+  irrigation_stress.csv          every stress-test scenario for every district-season (advice rule)
   irrigation_stress_summary.csv  the same, summarised per scenario
   irrigation_by_state.csv        per-state summary
 """
@@ -25,6 +25,9 @@ from cropadvisor import irrigation as ir  # noqa: E402
 from cropadvisor import irrigation_eval as ev  # noqa: E402
 
 RAIN = ("imd", "om", "pw")
+# advice = always the first irrigation at crown root initiation, then the water balance (agreed
+# 24 Oct 2026); fao_trigger = water balance only; calendar = PAU (Punjab) or ICAR-IIWBR
+RULE_TYPE = {"first_then_fao": "advice", "fao_trigger": "fao_trigger"}
 
 
 def load_sites(processed, locations):
@@ -71,49 +74,52 @@ def main():
             sowing = pd.Timestamp(yr, m, d)
             season = f"{yr}-{yr + 1 - 2000}"
             dates = {}
-            for rule in ("fao_trigger", cal):
+            for rule in ("first_then_fao", "fao_trigger", cal):
                 for rain in RAIN:
                     _, s = ev.run_one(daily, name, awc, sowing, rule, rain_src=rain,
                                       zone=zone, state=state)
                     runs.append({"name": name, "state": state, "zone": zone, "season": season,
                                  "sowing": sowing.date(), "rule": rule, "rule_type":
-                                 "fao_trigger" if rule == "fao_trigger" else "calendar",
+                                 RULE_TYPE.get(rule, "calendar"),
                                  "rain_src": rain, "awc_mm_per_m": awc, **s})
                     dates[rule, rain] = s["irrigation_dates"].split(";") if s["irrigation_dates"] else []
-            for rule in ("fao_trigger", cal):
+            for rule in ("first_then_fao", "fao_trigger", cal):
                 for rain in ("om", "pw"):
                     c = ev.compare_events(dates[rule, "imd"], dates[rule, rain], a.tol_days)
                     compare.append({"name": name, "state": state, "zone": zone, "season": season,
-                                    "comparison": f"{'fao_trigger' if rule == 'fao_trigger' else 'calendar'}"
+                                    "comparison": f"{RULE_TYPE.get(rule, 'calendar')}"
                                                   f": rain_{rain} vs rain_imd", **c})
             for rain in RAIN:
-                c = ev.compare_events(dates["fao_trigger", rain], dates[cal, rain], a.tol_days)
-                compare.append({"name": name, "state": state, "zone": zone, "season": season,
-                                "comparison": f"calendar vs fao_trigger (rain_{rain})", **c})
+                for other in (cal, "fao_trigger"):
+                    c = ev.compare_events(dates["first_then_fao", rain], dates[other, rain],
+                                          a.tol_days)
+                    compare.append({"name": name, "state": state, "zone": zone, "season": season,
+                                    "comparison": f"{RULE_TYPE.get(other, 'calendar')} vs advice"
+                                                  f" (rain_{rain})", **c})
 
     runs, compare = pd.DataFrame(runs), pd.DataFrame(compare)
-    stress = ev.stress_test(daily, sites, a.years, "fao_trigger", tol_days=a.tol_days)
+    stress = ev.stress_test(daily, sites, a.years, "first_then_fao", tol_days=a.tol_days)
     summary = ev.scenario_table(stress)
 
     base = runs[runs["rain_src"] == "imd"]
+    adv = base[base["rule_type"] == "advice"]
     fao, calr = base[base["rule_type"] == "fao_trigger"], base[base["rule_type"] == "calendar"]
-    first = fao.assign(first_das=fao["irrigation_das"].str.split(";").str[0]
-                       .replace("", None).astype(float))
-    om = compare[compare["comparison"] == "fao_trigger: rain_om vs rain_imd"]
+    om = compare[compare["comparison"] == "advice: rain_om vs rain_imd"]
+    g = adv.groupby("state")
     by_state = pd.DataFrame({
-        "zone": fao.groupby("state")["zone"].agg(lambda z: "/".join(sorted(set(z)))),
-        "districts": fao.groupby("state")["name"].nunique(),
-        "district_seasons": fao.groupby("state").size(),
-        "season_rain_imd_mm": fao.groupby("state")["rain_mm"].mean().round(0),
-        "crop_water_use_mm": fao.groupby("state")["etc_mm"].mean().round(0),
-        "fao_irrigations_mean": fao.groupby("state")["n_irrigations"].mean().round(1),
-        "fao_irrigations_min": fao.groupby("state")["n_irrigations"].min(),
-        "fao_irrigations_max": fao.groupby("state")["n_irrigations"].max(),
-        "fao_irrigation_mm": fao.groupby("state")["irrigation_mm"].mean().round(0),
-        "fao_first_irrigation_das": first.groupby("state")["first_das"].mean().round(0),
+        "zone": g["zone"].agg(lambda z: "/".join(sorted(set(z)))),
+        "districts": g["name"].nunique(),
+        "district_seasons": g.size(),
+        "season_rain_imd_mm": g["rain_mm"].mean().round(0),
+        "crop_water_use_mm": g["etc_mm"].mean().round(0),
+        "advice_irrigations_mean": g["n_irrigations"].mean().round(1),
+        "advice_irrigations_min": g["n_irrigations"].min(),
+        "advice_irrigations_max": g["n_irrigations"].max(),
+        "advice_irrigation_mm": g["irrigation_mm"].mean().round(0),
+        "advice_stress_days": g["stress_days"].mean().round(1),
+        "fao_only_irrigations_mean": fao.groupby("state")["n_irrigations"].mean().round(1),
         "calendar_rule": calr.groupby("state")["rule"].first(),
         "calendar_irrigations_mean": calr.groupby("state")["n_irrigations"].mean().round(1),
-        "calendar_stress_days": calr.groupby("state")["stress_days"].mean().round(0),
         "om_vs_imd_events_differ": om.groupby("state")["share_events_differ"].mean().round(2),
         "om_vs_imd_count_changed": om.groupby("state")["count_diff"].apply(lambda s: (s != 0).mean()).round(2),
     })
@@ -126,7 +132,7 @@ def main():
 
     pd.set_option("display.width", 250)
     pd.set_option("display.max_columns", 30)
-    print(f"{len(sites)} districts, {len(fao)} district-seasons, tolerance {a.tol_days} days\n")
+    print(f"{len(sites)} districts, {len(adv)} district-seasons, tolerance {a.tol_days} days\n")
     print(by_state.to_string())
     print()
     print(summary.to_string())

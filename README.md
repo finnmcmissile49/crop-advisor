@@ -66,6 +66,9 @@ src/cropadvisor/
 scripts/run_irrigation_baseline.py  irrigation baseline on the pipeline output (see notes/)
 notes/irrigation_baseline.md    first baseline results, six North India districts
 notes/irrigation_10_states.md   baseline for 27 districts in 10 wheat states (ICAR zones)
+src/cropadvisor/advisor.py      live advice for one field: next irrigation window from the forecast
+scripts/advise.py               the calculator: python scripts/advise.py --district Hisar --sowing 2026-11-10
+notes/calculator.md             how to use the calculator, what was checked
 data/locations_wheat_10states.csv  the 27 districts, with state and ICAR wheat zone
 scripts/refresh_data.py         one command: refresh all data
 notebooks/01_weather_pipeline   steps 1-4, self-contained walkthrough

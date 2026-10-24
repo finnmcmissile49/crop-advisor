@@ -40,7 +40,9 @@ def compare_events(dates_a, dates_b, tol_days=3):
     }
 
 
-def make_rule(name):
+def make_rule(name, state="Punjab"):
+    if name == "first_then_fao":
+        return ir.FirstWateringThenTrigger(state=state)
     if name == "fao_trigger":
         return ir.FaoTriggerRule(mode="refill")
     if name == "fao_trigger_fixed75":
@@ -57,7 +59,7 @@ def run_one(daily, name, awc, sowing, rule_name="fao_trigger", rain_src="imd", e
     """One season for one district. The default zone/state reproduce the Punjab pilot settings."""
     params = ir.zone_params(zone, awc * awc_scale, state=state, **param_overrides)
     inputs = ir.season_inputs(daily, name, sowing, params.season_days, rain_src, et0_src)
-    run = ir.simulate(inputs, sowing, params, make_rule(rule_name))
+    run = ir.simulate(inputs, sowing, params, make_rule(rule_name, state))
     return run, ir.summarise(run)
 
 
