@@ -1,12 +1,30 @@
 # Crop Advisor
 
-A real-time crop and irrigation advisor for smallholder farmers in Maharashtra, with an on-farm
-sensor station that corrects free public weather data.
+Irrigation advice for smallholder farmers in Punjab and Haryana (Hindi and English), from free
+public weather and soil data and official crop guidance, with an on-farm sensor station to come.
+(The Maharashtra locations further down were only used to build the data pipeline.)
 
-**Research question:** how much does on-farm sensing improve crop and irrigation advice compared with
-public data alone, and how often does it change the farmer's decision?
+## Irrigation calculator: 12 crops
 
-## Status: Module 1 (data pipeline)
+```
+python scripts/advise.py --crops                    # crops and their sowing times
+python scripts/advise.py --list                     # districts
+python scripts/advise.py --district Hisar --sowing 2026-11-10                    # wheat
+python scripts/advise.py --crop mustard --district Bathinda --sowing 2026-10-15 --watered 2026-11-08
+```
+
+| Season | Crops |
+|---|---|
+| Rabi | wheat, mustard (raya), chickpea (gram), barley, potato (autumn) |
+| Spring / summer | spring maize, summer moong |
+| Kharif | cotton (narma), kharif maize (lower confidence), bajra, kharif moong, groundnut |
+
+Wheat works in 27 districts in 10 states (`notes/calculator.md`, `notes/irrigation_10_states.md`).
+The other 11 crops follow PAU's Package of Practices and work in the six Punjab and Haryana
+districts (`notes/crops.md`). Advice is for a typical field in the district from public data; it
+has not been checked against real fields for any crop.
+
+## Status: data pipeline
 
 | Step | What | Status |
 |---|---|---|
@@ -67,6 +85,10 @@ scripts/run_irrigation_baseline.py  irrigation baseline on the pipeline output (
 notes/irrigation_baseline.md    first baseline results, six North India districts
 notes/irrigation_10_states.md   baseline for 27 districts in 10 wheat states (ICAR zones)
 src/cropadvisor/advisor.py      live advice for one field: next irrigation window from the forecast
+src/cropadvisor/crops.py        settings and rules for the 11 crops beyond wheat (FAO-56 + PAU, sourced)
+scripts/check_crops.py          past-season checks for those crops (results in data/checks/)
+notes/crops.md                  the 11 crops: sources, choices, past-season results, limits
+data/soil_awc_pilot.csv         soil water-holding for the six Punjab/Haryana districts (no data pull needed)
 scripts/advise.py               the calculator: python scripts/advise.py --district Hisar --sowing 2026-11-10
 notes/calculator.md             how to use the calculator, what was checked
 data/locations_wheat_10states.csv  the 27 districts, with state and ICAR wheat zone

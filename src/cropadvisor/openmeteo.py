@@ -1,6 +1,8 @@
 """Open-Meteo fetchers (history + forecast), returning the project's harmonised daily columns.
 
-Harmonised columns: date, tmax, tmin, rain_mm, solar_mj, rh_mean, wind_2m_ms, et0_openmeteo_mm
+Harmonised columns: date, tmax, tmin, rain_mm, solar_mj, rh_mean, wind_2m_ms, et0_openmeteo_mm,
+plus rh_min (daily minimum relative humidity, percent; empty in responses saved before it was
+requested), used for the FAO-56 crop coefficient adjustment.
 No API key needed. Free for non-commercial use.
 """
 import pandas as pd
@@ -11,7 +13,7 @@ ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 
 DAILY_VARS = ["temperature_2m_max", "temperature_2m_min", "precipitation_sum",
-              "shortwave_radiation_sum", "et0_fao_evapotranspiration"]
+              "shortwave_radiation_sum", "et0_fao_evapotranspiration", "relative_humidity_2m_min"]
 HOURLY_VARS = ["relative_humidity_2m", "wind_speed_10m"]
 
 
@@ -24,7 +26,9 @@ def _parse(data):
     daily = pd.DataFrame(data["daily"]).rename(columns={
         "time": "date", "temperature_2m_max": "tmax", "temperature_2m_min": "tmin",
         "precipitation_sum": "rain_mm", "shortwave_radiation_sum": "solar_mj",
-        "et0_fao_evapotranspiration": "et0_openmeteo_mm"})
+        "et0_fao_evapotranspiration": "et0_openmeteo_mm", "relative_humidity_2m_min": "rh_min"})
+    if "rh_min" not in daily:
+        daily["rh_min"] = float("nan")
     hourly = pd.DataFrame(data["hourly"])
     hourly["date"] = hourly["time"].str.slice(0, 10)
     agg = hourly.groupby("date").agg(
@@ -35,7 +39,7 @@ def _parse(data):
     out["date"] = pd.to_datetime(out["date"])
     out.attrs["elevation_m"] = data.get("elevation")
     return out[["date", "tmax", "tmin", "rain_mm", "solar_mj", "rh_mean",
-                "wind_2m_ms", "et0_openmeteo_mm"]]
+                "wind_2m_ms", "et0_openmeteo_mm", "rh_min"]]
 
 
 def fetch_history(lat, lon, start, end, raw_path=None):

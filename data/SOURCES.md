@@ -112,3 +112,25 @@ Known problems:
 - **Season definitions differ.** The district rainfall file uses rabi = Oct to Feb; `weather.py` uses
   rabi = Nov to Mar. For wheat, `season_rain_mm` in the North India table (Oct to Feb) misses March rain,
   so do not compare it directly with `seasons.csv` from the weather pipeline.
+
+## Crop guidance for the 11 crops beyond wheat (added 27 October 2026)
+
+| Source | What it gave | Link |
+|---|---|---|
+| PAU, Package of Practices for Crops of Punjab, Rabi 2025-26 (Vol. 42 No. 2, Aug 2025) | mustard, chickpea, barley, spring maize, summer moong: sowing time, variety maturity days, irrigation schedule, no-irrigation periods | https://www.pau.edu/content/ccil/pf/pp_rabi.pdf |
+| PAU, Package of Practices for Crops of Punjab, Kharif 2026 (Vol. 43 No. 1, Mar 2026) | cotton, maize, bajra, moong, groundnut: the same | https://www.pau.edu/content/ccil/pf/pp_kharif.pdf |
+| PAU, Package of Practices for Cultivation of Vegetables 2021 | potato: sowing time, maturity days, irrigation | https://www.pau.edu/content/ccil/pf/pp_veg.pdf |
+| FAO-56 (Allen et al. 1998), Tables 11, 12, 22 | stage lengths, Kc, crop height, rooting depth, depletion fraction p | https://www.fao.org/3/x0490e/x0490e0b.htm and x0490e0e.htm |
+
+Page numbers in `src/cropadvisor/crops.py` are the printed book pages. The PAU PDFs could not be
+read by the automated web reader; they were opened in a browser and their text extracted with
+pdf.js.
+
+`data/checks/openmeteo_daily_punjab_haryana_2021_2025.csv`: Open-Meteo history (archive API),
+daily precipitation, FAO ET0, minimum relative humidity and mean 10 m wind (converted to 2 m with
+FAO-56 eq. 47), 1 January 2021 to 31 December 2025, the six pilot district points. Fetched
+27 October 2026 from a browser (this workspace cannot reach Open-Meteo).
+
+`data/soil_awc_pilot.csv`: SoilGrids 2.0 at each district's saved soil point (from
+`locations_wheat_10states.csv`), 0-100 cm thickness-weighted, Saxton-Rawls 2006. Fetched
+27 October 2026; matches the earlier pull for every district.

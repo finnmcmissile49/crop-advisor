@@ -36,8 +36,9 @@ FAO_STAGE_DAYS = (15, 25, 50, 30)
 
 
 @dataclass(frozen=True)
-class WheatParams:
-    """Crop and soil numbers for one run. Each value notes where it comes from."""
+class CropParams:
+    """Crop and soil numbers for one run. The defaults are wheat's (each value notes where it comes
+    from); other crops pass their own values (see crops.py)."""
     awc_mm_per_m: float                 # SoilGrids + Saxton-Rawls (soil.py), a model estimate
     season_days: int = 152              # PAU Rabi 2025-26: timely-sown varieties 145-158 days
     stage_days_fao: tuple = FAO_STAGE_DAYS  # FAO-56 Table 11, stretched to season_days
@@ -49,6 +50,10 @@ class WheatParams:
     p_table: float = 0.55               # FAO-56 Table 22, wheat
     adjust_p: bool = True               # FAO-56 Table 22 footnote: p = p + 0.04 (5 - ETc)
     last_irrigation_das: int = None     # None: PAU's date rule (Punjab); else days after sowing
+    crop_height_m: float = 1.0          # FAO-56 Table 12, maximum crop height (for the Kc adjustment)
+    adjust_kc: bool = False             # FAO-56 eq. 62 climate adjustment of Kc mid and Kc end, using
+                                        # daily minimum humidity and wind when the inputs have them.
+                                        # Off for wheat (its results were checked without it).
 
     def stage_lengths(self):
         """FAO stage lengths stretched to season_days, as integers that add up exactly."""
@@ -81,6 +86,41 @@ class WheatParams:
             if das < end:
                 return name
         return "late"
+
+
+WheatParams = CropParams   # wheat's settings are the defaults
+
+
+def climate_adjusted_kc(params, inputs):
+    """FAO-56 eq. 62: Kc mid (and Kc end when it is at least 0.45) adjusted for the mean daily
+    minimum humidity and 2 m wind of that stage. Needs columns rh_min (percent) and wind_2m_ms in
+    inputs; FAO-56 limits RHmin to 20-80 percent and u2 to 1-6 m/s. Returns params unchanged when
+    the adjustment is off or the data are missing, and the means used (or None)."""
+    if not params.adjust_kc or not {"rh_min", "wind_2m_ms"} <= set(inputs.columns):
+        return params, None
+    stages = np.array([params.stage(d) for d in range(len(inputs))])
+    rh = inputs["rh_min"].to_numpy(float)
+    u2 = inputs["wind_2m_ms"].to_numpy(float)
+    used, new = {}, {}
+    for stage, attr in (("mid", "kc_mid"), ("late", "kc_end")):
+        m = stages == stage
+        if not m.any() or np.isnan(rh[m]).all() or np.isnan(u2[m]).all():
+            continue
+        kc = getattr(params, attr)
+        if attr == "kc_end" and kc < 0.45:
+            continue
+        r = float(np.clip(np.nanmean(rh[m]), 20, 80))
+        u = float(np.clip(np.nanmean(u2[m]), 1, 6))
+        new[attr] = kc + (0.04 * (u - 2) - 0.004 * (r - 45)) * (params.crop_height_m / 3) ** 0.3
+        used[stage] = {"rh_min": round(r, 1), "u2": round(u, 2), attr: round(new[attr], 3)}
+    return replace(params, **new), used
+
+
+def season_date(sowing, month, day):
+    """The first date with this month and day on or after the sowing date."""
+    sowing = pd.Timestamp(sowing)
+    d = pd.Timestamp(sowing.year, month, day)
+    return d if d >= sowing else pd.Timestamp(sowing.year + 1, month, day)
 
 
 def _rabi_date(sowing, month, day):
@@ -229,15 +269,19 @@ class GivenIrrigations:
     """Replays the irrigations a farmer actually gave (for the live calculator)."""
     name = "given"
 
-    def __init__(self, dates, depth_mm):
+    def __init__(self, dates, depth_mm=None):
+        """depth_mm None: each watering refills the root zone to field capacity (a flood irrigation
+        that wets the whole root zone; any excess drains)."""
         self.dates = {pd.Timestamp(d) for d in dates}
-        self.depth_mm = float(depth_mm)
+        self.depth_mm = None if depth_mm is None else float(depth_mm)
 
     def start(self, sowing, params):
         pass
 
     def decide(self, date, das, dr_prev, raw, taw):
-        return self.depth_mm if pd.Timestamp(date) in self.dates else 0.0
+        if pd.Timestamp(date) not in self.dates:
+            return 0.0
+        return dr_prev if self.depth_mm is None else self.depth_mm
 
     def observe_rain(self, date, rain_mm):
         pass
@@ -349,6 +393,7 @@ def simulate(inputs, sowing, params, rule, dr0=0.0):
 
     Returns one row per day. Irrigation is applied at the start of the day it is decided.
     """
+    params, _ = climate_adjusted_kc(params, inputs)
     rule.start(sowing, params)
     rows, dr_prev = [], float(dr0)
     for das, r in enumerate(inputs.itertuples(index=False)):
