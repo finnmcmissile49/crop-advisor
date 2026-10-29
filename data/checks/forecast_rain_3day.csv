@@ -1,0 +1,13 @@
+season,forecast_3day_at_least_mm,cases,share_10mm_fell,median_fell_mm
+all,10,1154,0.6,13.6
+all,20,671,0.71,17.8
+all,30,374,0.77,22.5
+rabi Nov-Mar,10,111,0.59,12.7
+rabi Nov-Mar,20,39,0.79,23.6
+rabi Nov-Mar,30,15,0.87,37.6
+Apr-May,10,76,0.24,5.4
+Apr-May,20,25,0.2,6.8
+Apr-May,30,5,0.4,7.4
+kharif Jun-Oct,10,967,0.63,14.6
+kharif Jun-Oct,20,607,0.72,18.1
+kharif Jun-Oct,30,354,0.77,22.3

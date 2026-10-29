@@ -26,7 +26,8 @@ def wx(start, n, et0=4.0, rain=None, today=None):
 # ------------------------------------------------------------------------- input checks
 
 @pytest.mark.parametrize("sowing,today,watered,msg", [
-    ("2026-09-20", "2026-10-01", [], "between 15 October and 15 January"),
+    ("2026-09-20", "2026-10-01", [], "between 15 October and 5 December"),
+    ("2026-12-10", "2026-12-20", [], "Late-sown wheat"),
     ("2026-11-10", "2026-11-01", [], "before the sowing date"),
     ("2026-11-10", "2027-05-01", [], "past its expected"),
     ("2026-11-10", "2026-12-20", ["2026-12-25"], "after today"),
@@ -190,3 +191,12 @@ def test_render_all_statuses():
     assert "most likely around 8 Feb 2027" in en and "light or sandy, as early as 5 Feb" in en
     en, _ = av.render({**base, **cases[4]})
     assert "PROBABLY NO MORE WATERING" in en and "20 Mar" in en
+
+
+def test_late_sowing_warning_inside_grace():
+    w = wx("2026-11-30", 60)
+    a = av.advise(HISAR, "2026-11-30", "2026-12-05", [], w)    # NWPZ window ends 25 Nov
+    assert a["warnings"] and a["warnings"][0][0] == "late"
+    assert "timely window" in av.render(a)[0]
+    assert av.advise(HISAR, "2026-11-15", "2026-11-25", [], w.assign(
+        date=pd.date_range("2026-11-15", periods=60)))["warnings"] == []

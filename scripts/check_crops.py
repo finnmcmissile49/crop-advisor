@@ -1,7 +1,7 @@
 """Past-season checks for every crop in crops.py (not wheat, which has its own notes).
 
     python scripts/check_crops.py
-    python scripts/check_crops.py --weather data/checks/openmeteo_daily_punjab_haryana_2021_2025.csv
+    python scripts/check_crops.py --weather data/checks/openmeteo_daily_punjab_haryana.csv
 
 For each crop, each pilot district in Punjab and Haryana and each season the weather file covers,
 the advice rule runs from PAU's default sowing date with the recorded weather. It reports the
@@ -26,8 +26,8 @@ from cropadvisor import irrigation as ir     # noqa: E402
 from cropadvisor import irrigation_eval as ev  # noqa: E402
 
 DEF_WEATHER = os.path.join(HERE, "..", "data", "checks",
-                           "openmeteo_daily_punjab_haryana_2021_2025.csv")
-DEF_SOIL = os.path.join(HERE, "..", "data", "soil_awc_pilot.csv")
+                           "openmeteo_daily_punjab_haryana.csv")
+DEF_SOIL = os.path.join(HERE, "..", "data", "soil_awc.csv")
 DEF_OUT = os.path.join(HERE, "..", "data", "checks")
 
 SCENARIOS = {
@@ -38,6 +38,7 @@ SCENARIOS = {
     "season_minus_10pc": {"season_scale": 0.9},   # arbitrary
     "season_plus_10pc": {"season_scale": 1.1},    # arbitrary
     "no_kc_adjustment": {"adjust_kc": False},     # FAO-56 Table 12 values as printed
+    "kc_ini_wetting": {"kc_ini_wetting": True},   # FAO-56 Kc ini from wetting frequency
 }
 # The other end of FAO-56 Table 22's rooting range, for the stress test (depths below 1 m are
 # assumed to hold water like the top metre)
@@ -59,8 +60,10 @@ def seasons_in(spec, daily, sowing_md=None):
 
 
 def run_one(spec, daily, name, awc, sowing, awc_scale=1.0, roots=None, season_scale=1.0,
-            adjust_kc=True):
+            adjust_kc=True, kc_ini_wetting=None):
     over = {"adjust_kc": adjust_kc}
+    if kc_ini_wetting is not None:
+        over["kc_ini_wetting"] = kc_ini_wetting
     if roots == "other":
         over["zr_max"] = ZR_OTHER[spec.key]
         over["zr_ini"] = min(0.2, ZR_OTHER[spec.key])
@@ -91,6 +94,7 @@ def main():
     a = ap.parse_args()
     daily = pd.read_csv(a.weather, parse_dates=["date"])
     soil = pd.read_csv(a.soil).set_index("name")
+    soil = soil[soil.index.isin(daily["name"].unique())]   # districts with weather in the file
 
     rows = []
     for key, spec in cr.CROPS.items():

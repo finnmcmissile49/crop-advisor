@@ -149,6 +149,7 @@ class CropRule:
 
     def decide(self, date, das, dr_prev, raw, taw):
         s = self.spec
+        self.last_kind = None
         if date > self.cutoff:
             return 0.0
         if s.max_irrigations is not None and self.n_done >= s.max_irrigations:
@@ -159,6 +160,7 @@ class CropRule:
             if das >= s.first[0]:
                 self.first_done = True
                 self.n_done += 1
+                self.last_kind = "first"
                 return dr_prev
             return 0.0
         if self.win:
@@ -170,6 +172,7 @@ class CropRule:
             due = dr_prev >= raw
         if due and dr_prev > 0:
             self.n_done += 1
+            self.last_kind = "trigger"
             return dr_prev
         return 0.0
 

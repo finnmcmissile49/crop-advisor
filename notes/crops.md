@@ -9,7 +9,7 @@ Checks: `scripts/check_crops.py`, results in `data/checks/`.
 and PAU's own rules for that crop (sowing time, first watering, last watering, periods with no
 watering, how many waterings at most). **It has not been checked against real fields for any
 crop, so there is no accuracy figure.** What was checked: the arithmetic (the water balance closes
-to 1e-13 mm in all 306 district-seasons), and whether the advice on five past seasons agrees with
+to 1e-13 mm in all 366 district-seasons), and whether the advice on past seasons agrees with
 the number of waterings PAU states.
 
 ## Use it
@@ -22,7 +22,7 @@ python scripts/advise.py --crop cotton --district Hisar --sowing 2027-04-25 --wa
 
 The other crops work in the six Punjab and Haryana districts (Sirsa, Hisar, Kurukshetra,
 Bathinda, Sangrur, Tarn Taran). Their soil numbers are now in the repo
-(`data/soil_awc_pilot.csv`), so the calculator runs from a fresh copy for these districts without
+(`data/soil_awc.csv`), so the calculator runs from a fresh copy for these districts without
 the full data pull.
 
 ## Where the numbers come from
@@ -34,7 +34,8 @@ the full data pull.
   moong, groundnut. **PAU Package of Practices for Cultivation of Vegetables 2021** for potato.
   These were read from the PDFs on pau.edu on 27 October 2026.
 - **Weather** for the checks: Open-Meteo history, daily rain, ET0, minimum humidity and wind,
-  2021-2025, the six district points (`data/checks/openmeteo_daily_punjab_haryana_2021_2025.csv`).
+  January 2021 to 22 October 2026, the six district points
+  (`data/checks/openmeteo_daily_punjab_haryana.csv`).
   This is the source the live calculator uses, so the checks use it too. IMD was not used for
   these checks.
 - **Soil**: SoilGrids 2.0 with Saxton-Rawls, fetched again on 27 October; the six values match the
@@ -74,22 +75,23 @@ Choices that are ours, applied the same way to every crop (details in `crops.py`
 
 ## Past-season check
 
-Six districts, the seasons from 2021 to 2025 that the weather covers, PAU's default sowing date,
-Open-Meteo weather. 306 district-seasons in total.
+Six districts, every season from 2021 to 2026 that the weather covers (to 22 October 2026), PAU's
+default sowing date, Open-Meteo weather. 366 district-seasons in total. (Updated 29 October 2026:
+the first run, 27 October, had 306 district-seasons to 2025; the results barely changed.)
 
 | Crop | District-seasons | Rain (mm) | Waterings, mean (range) | PAU says | Inside PAU's range | Water given (mm) | Stress days |
 |---|---|---|---|---|---|---|---|
-| Mustard | 24 | 91 | 1.9 (1-2) | 1-2 | 100% | 109 | 16.0 |
-| Chickpea | 24 | 111 | 0.9 (0-1) | 0-1 | 100% | 68 | 35.3 |
-| Barley | 24 | 97 | 1.9 (1-2) | 1-2 | 100% | 110 | 13.0 |
-| Potato | 24 | 44 | 7.8 (4-10) | 7-8 | 33% | 171 | 1.8 |
-| Spring maize | 30 | 87 | 9.7 (5-14) | calendar: about 10* | - | 533 | 0.0 |
-| Summer moong | 30 | 45 | 4.5 (3-6) | 3-5 | 77% | 233 | 8.6 |
+| Mustard | 30 | 85 | 1.9 (1-2) | 1-2 | 100% | 113 | 16.5 |
+| Chickpea | 30 | 106 | 0.9 (0-1) | 0-1 | 100% | 70 | 37.1 |
+| Barley | 30 | 92 | 1.9 (1-2) | 1-2 | 100% | 114 | 13.5 |
+| Potato | 30 | 43 | 7.9 (4-10) | 7-8 | 33% | 174 | 1.6 |
+| Spring maize | 36 | 83 | 9.6 (5-14) | calendar: about 10* | - | 527 | 0.0 |
+| Summer moong | 36 | 43 | 4.5 (3-6) | 3-5 | 75% | 236 | 7.9 |
 | Cotton | 30 | 504 | 3.7 (1-7) | 4-6 | 47% | 254 | 10.6 |
-| Kharif maize | 30 | 424 | 1.3 (0-4) | 4-6 | 7% | 86 | 0.4 |
-| Bajra | 30 | 359 | 0.8 (0-2) | about 2 | 100% | 54 | 2.8 |
-| Kharif moong | 30 | 310 | 1.1 (0-4) | only if rain fails | 83% (0-2) | 60 | 0.5 |
-| Groundnut | 30 | 411 | 2.5 (1-3) | 2-3 | 80% | 92 | 14.9 |
+| Kharif maize | 36 | 408 | 1.3 (0-4) | 4-6 | 6% | 84 | 0.3 |
+| Bajra | 36 | 343 | 0.8 (0-2) | about 2 | 100% | 59 | 2.4 |
+| Kharif moong | 36 | 299 | 1.1 (0-4) | only if rain fails | 86% (0-2) | 63 | 0.4 |
+| Groundnut | 36 | 397 | 2.4 (1-3) | 2-3 | 81% | 90 | 16.6 |
 
 \* PAU gives spring maize a calendar, not a number: first watering at 25-30 days, then every two
 weeks to 10 April, then weekly to maturity. For a 1 February sowing that is about 10 waterings.
