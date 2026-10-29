@@ -18,7 +18,7 @@ SEASONS = {  # name: (start month, start day, end month, end day, end-year offse
     "rabi": (11, 1, 3, 31, 1),
 }
 _SHORT = {"tmax": "tmax", "tmin": "tmin", "rain_mm": "rain", "solar_mj": "solar",
-          "rh_mean": "rh", "wind_2m_ms": "wind2"}
+          "rh_mean": "rh", "wind_2m_ms": "wind2", "rh_min": "rhmin"}
 
 
 def _rename(df, suffix):
