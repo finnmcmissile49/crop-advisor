@@ -19,6 +19,10 @@ python scripts/advise.py --crop mustard --district Bathinda --sowing 2026-10-15 
 | Spring / summer | spring maize, summer moong |
 | Kharif | cotton (narma), kharif maize (lower confidence), bajra, kharif moong, groundnut |
 
+Optional inputs: `--soil-type sandy|light_loam|loam|clay`, `--lat/--lon` for the field, `--json`.
+Every answer ends with a confidence level. A small web service: `python scripts/serve.py`
+(`notes/forecast_and_rain.md`).
+
 Wheat works in 27 districts in 10 states (`notes/calculator.md`, `notes/irrigation_10_states.md`).
 The other 11 crops follow PAU's Package of Practices and work in the six Punjab and Haryana
 districts (`notes/crops.md`). Advice is for a typical field in the district from public data; it
@@ -88,7 +92,13 @@ src/cropadvisor/advisor.py      live advice for one field: next irrigation windo
 src/cropadvisor/crops.py        settings and rules for the 11 crops beyond wheat (FAO-56 + PAU, sourced)
 scripts/check_crops.py          past-season checks for those crops (results in data/checks/)
 notes/crops.md                  the 11 crops: sources, choices, past-season results, limits
-data/soil_awc_pilot.csv         soil water-holding for the six Punjab/Haryana districts (no data pull needed)
+notes/forecast_and_rain.md      forecast backtest, rain-wait rule, soil type, field location, confidence, web service
+src/cropadvisor/rainrule.py     wait for forecast rain instead of watering just before it
+src/cropadvisor/sites.py        district or field location, soil source, farmer soil type
+src/cropadvisor/service.py      one call from request to advice (used by the script and the server)
+scripts/serve.py                small JSON web service
+scripts/backtest_forecast.py    forecasts as really issued vs what happened (Open-Meteo Previous Runs)
+data/soil_awc.csv               soil water-holding for all 27 districts (no data pull needed)
 scripts/advise.py               the calculator: python scripts/advise.py --district Hisar --sowing 2026-11-10
 notes/calculator.md             how to use the calculator, what was checked
 data/locations_wheat_10states.csv  the 27 districts, with state and ICAR wheat zone

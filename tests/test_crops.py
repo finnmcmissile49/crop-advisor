@@ -254,3 +254,18 @@ def test_wheat_path_unchanged():
     assert "crop" not in a and a["status"] == "first_upcoming"
     en, _ = av.render(a)
     assert en.startswith("Crop Advisor: wheat irrigation")
+
+
+# ------------------------------------------------------------------------- FAO-56 Kc ini option
+
+def test_kc_ini_wetting_option():
+    s = cr.get("kharif_maize")
+    p = s.params(122.0)
+    assert p.kc_ini_wetting is False                     # off by default (see notes)
+    dry = wx("2026-06-10", p.season_days, et0=6.0)[["date", "rain_mm", "et0_mm"]]
+    wet = wx("2026-06-10", p.season_days, et0=6.0,
+             rain={pd.Timestamp("2026-06-10") + pd.Timedelta(days=d): 15 for d in range(1, 20, 2)}
+             )[["date", "rain_mm", "et0_mm"]]
+    k_dry, k_wet = ir.kc_ini_from_wetting(p, dry), ir.kc_ini_from_wetting(p, wet)
+    assert 0.1 < k_dry < k_wet <= 1.15                 # frequent wetting raises Kc ini
+    assert ir._kc_ini_curve(1, 5, 10, 2.68) == pytest.approx(1.04, abs=0.01)

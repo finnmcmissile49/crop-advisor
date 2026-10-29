@@ -21,10 +21,44 @@ import pandas as pd
 from cropadvisor import crops as cr
 from cropadvisor import irrigation as ir
 from cropadvisor import openmeteo
+from cropadvisor import rainrule as rr
 
-SOIL_SCALES = (0.8, 1.0, 1.2)
+SOIL_SCALES = (0.8, 1.0, 1.2)   # no soil type given: plus or minus 20 percent (arbitrary)
+
+# FAO-56 Table 19, available water (theta FC - theta WP, m3/m3) for typical soils, as mm per metre.
+# Farmer words map to the nearest class: sandy -> loamy sand, light loam -> sandy loam,
+# loam -> loam, heavy/clay -> clay.
+SOIL_TYPES = {
+    "sandy": {"fao_class": "loamy sand", "range": (60.0, 120.0), "en": "sandy",
+              "hi": "रेतीली"},
+    "light_loam": {"fao_class": "sandy loam", "range": (110.0, 150.0), "en": "light loam",
+                   "hi": "हल्की दोमट"},
+    "loam": {"fao_class": "loam", "range": (130.0, 180.0), "en": "loam", "hi": "दोमट"},
+    "clay": {"fao_class": "clay", "range": (120.0, 200.0), "en": "heavy (clay)",
+             "hi": "भारी (चिकनी)"},
+}
+
+
+def soil_cases(site):
+    """Water-holding (mm per m) for the light, likely and heavy cases.
+
+    Farmer gave a soil type: its FAO-56 Table 19 range, with the model (SoilGrids) value as the
+    likely case when it falls inside that range, else the middle of the range. No soil type: the
+    model value plus or minus 20 percent."""
+    st = getattr(site, "soil_type", None)
+    if st:
+        lo, hi = SOIL_TYPES[st]["range"]
+        awc = site.awc_mm_per_m
+        likely = awc if awc is not None and lo <= awc <= hi else (lo + hi) / 2
+        return {"light": lo, "likely": likely, "heavy": hi}
+    a = site.awc_mm_per_m
+    return {"light": a * SOIL_SCALES[0], "likely": a * SOIL_SCALES[1], "heavy": a * SOIL_SCALES[2]}
 EARLIEST_SOWING = (10, 15)   # PAU's schedule table starts with October sowing
-LATEST_SOWING = (1, 15)      # PAU's last row: sown 21 December to 15 January
+# Latest sowing: the end of the zone's timely sowing window (irrigation.ZONES) plus this grace,
+# with a warning after the window. The crop settings (season length, Kc and root curves) are for
+# timely-sown varieties; late-sown varieties are shorter, so later sowings are refused (decided
+# 29 October 2026; PAU's late-sown rows run to 15 January).
+LATE_GRACE_DAYS = 10
 FORECAST_DAYS = 16           # Open-Meteo forecast limit
 RECHECK_DAYS = 7
 
@@ -41,19 +75,38 @@ class Site:
     awc_mm_per_m: float
     lat: float = None
     lon: float = None
+    soil_type: str = None          # key of SOIL_TYPES, from the farmer; None: not given
+    soil_source: str = "district"  # "district" (SoilGrids at the district point) or "field"
 
 
 # ----------------------------------------------------------------------------------- inputs
 
+def timely_end(site, sowing):
+    """Last day of the zone's timely wheat sowing window for the season containing `sowing`."""
+    return ir._rabi_date(pd.Timestamp(sowing), *ir.ZONES[site.zone]["window"][1])
+
+
+def wheat_warnings(site, sowing):
+    end = timely_end(site, sowing)
+    if pd.Timestamp(sowing) <= end:
+        return []
+    return [("late", f"Sown after the timely window ({end.day} {end:%B}): the crop may mature "
+                     "earlier than assumed, so treat the dates as rough.",
+             f"समय पर बुवाई की अवधि ({end.day} {HI_MONTHS[end.month - 1]}) के बाद बोया गया: फ़सल "
+             "जल्दी पक सकती है, इसलिए तारीख़ें अनुमान मानें।")]
+
+
 def check_inputs(site, sowing, today, watered):
     sowing, today = pd.Timestamp(sowing), pd.Timestamp(today)
-    lo = ir._rabi_date(sowing, *EARLIEST_SOWING)
-    hi = ir._rabi_date(sowing, *LATEST_SOWING)
-    if not lo <= sowing <= hi:
-        raise AdviceError("The calculator is set up for wheat sown between 15 October and "
-                          f"15 January. {sowing:%d %b %Y} is outside that.")
     if site.zone not in ir.ZONES:
         raise AdviceError(f"No wheat settings for zone {site.zone}.")
+    lo = ir._rabi_date(sowing, *EARLIEST_SOWING)
+    limit = timely_end(site, sowing) + pd.Timedelta(days=LATE_GRACE_DAYS)
+    if not lo <= sowing <= limit:
+        raise AdviceError(f"The calculator is set up for wheat sown between 15 October and "
+                          f"{limit.day} {limit:%B}, because its crop settings are for timely "
+                          f"sowing. {sowing:%d %b %Y} is outside that. Late-sown wheat needs "
+                          "shorter-season settings, which are not added yet.")
     if today < sowing:
         raise AdviceError(f"Today ({today:%d %b %Y}) is before the sowing date.")
     params = ir.zone_params(site.zone, site.awc_mm_per_m, state=site.state)
@@ -143,7 +196,8 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
     out = {"site": site, "sowing": sowing, "today": today, "das": das, "watered": watered,
            "season_days": params.season_days, "cutoff": cutoff, "depth_mm": depth_mm,
            "mode": mode, "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1),
-           "forecast_end": end}
+           "forecast_end": end, "warnings": wheat_warnings(site, sowing),
+           "soil_type": site.soil_type}
 
     if today > cutoff:
         return {**out, "status": "season_over"}
@@ -157,11 +211,12 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
                 "first_lo_das": first_lo, "first_hi_das": first_hi}
 
     days = {}
-    for scale in SOIL_SCALES:
-        p = ir.zone_params(site.zone, site.awc_mm_per_m * scale, state=site.state)
+    for scale, awc in soil_cases(site).items():
+        p = ir.zone_params(site.zone, awc, state=site.state)
         day, run = _trigger_day(weather, sowing, p, watered, depth_mm, today, min(cutoff, end))
         days[scale] = day
-        if scale == 1.0:
+        if scale == "likely":
+            run_likely = run
             row = run[run["date"] == today].iloc[0]
             out.update(raw_used_pct=round(100 * row["dr_mm"] / row["raw_mm"]) if row["raw_mm"]
                        else 0, dr_mm=round(float(row["dr_mm"]), 1),
@@ -170,7 +225,10 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
     covers_season = end >= cutoff   # forecast reaches the last irrigation date
     quiet = {"recheck": min(today + pd.Timedelta(days=RECHECK_DAYS), cutoff),
              "horizon_days": (end - today).days, "covers_season": covers_season}
-    likely = days[1.0]
+    likely = days["likely"]
+    wait = rain_wait(run_likely, weather, likely, today)
+    if wait:
+        return {**out, **wait, "status": "wait_for_rain"}
     if likely is not None and likely <= today + pd.Timedelta(days=1):
         return {**out, "status": "water_now"}   # due today, or soil crosses the line tonight
     if not found:
@@ -181,14 +239,154 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
         return {**out, "status": "light_soil_only", "light_soil_day": min(found), **quiet}
     return {**out, "status": "water_window", "earliest": min(found), "latest": max(found),
             "likely": likely,
-            "heavy_soil_later": days[1.2] is None,   # heavier soil: later than the horizon
-            "heavy_soil_none": days[1.2] is None and covers_season}
+            "heavy_soil_later": days["heavy"] is None,   # heavier soil: later than the horizon
+            "heavy_soil_none": days["heavy"] is None and covers_season}
+
+
+def rain_wait(run, weather, likely, today, sowing=None, spec=None):
+    """If the watering due on `likely` (within the next WAIT_DAYS days) should wait for forecast
+    rain, return the rain day and forecast total (see rainrule.py), else None."""
+    if likely is None or likely > today + pd.Timedelta(days=rr.WAIT_DAYS):
+        return None
+    days = pd.date_range(likely, periods=rr.WAIT_DAYS)
+    w = weather.set_index("date")
+    r = run.set_index("date")
+    if days[-1] not in w.index or days[-1] not in r.index:
+        return None
+    dr_start = float(r["dr_mm"].shift(1).fillna(0.0).loc[likely])
+    raw, taw = float(r.loc[likely, "raw_mm"]), float(r.loc[likely, "taw_mm"])
+    res = rr.wait_for_rain(likely, dr_start, raw, taw, r.loc[days, "etc_mm"].tolist(),
+                           w.loc[days, "rain_mm"].tolist())
+    if res is None:
+        return None
+    rain_day = likely + pd.Timedelta(days=res[0])
+    if spec is not None:   # never move a watering past the crop's last watering date
+        params = spec.params(1.0)
+        if rain_day + pd.Timedelta(days=1) > spec.cutoff_date(sowing, params):
+            return None
+    return {"rain_day": rain_day, "rain_total_mm": res[1],
+            "water_if_dry": rain_day + pd.Timedelta(days=1)}
+
+
+# ------------------------------------------------------------------------------ confidence
+# How sure the advice is about its own date, from the forecast backtest (29 October 2026, six
+# Punjab and Haryana districts, forecasts as issued, 2024-2026): when the watering was really due
+# 1-3 days ahead the forecast-based date was within a day in 96-100 percent of cases, 4-5 days
+# ahead 91-93 percent, 6 days ahead 79 percent; beyond 6 days it could not be tested. This says
+# nothing about whether the water balance matches a real field (not yet checked anywhere).
+
+CONF_LEVELS = {3: ("high", "ऊँचा"), 2: ("medium", "मध्यम"), 1: ("low", "कम")}
+
+
+def confidence(a):
+    """(level, [(reason_en, reason_hi), ...]) for an advice dict."""
+    score, why = 3, []
+    st = a["status"]
+    if st in ("water_window", "light_soil_only"):
+        day = a.get("likely") or a.get("light_soil_day")
+        lead = (day - a["today"]).days
+        if lead > 6:
+            score -= 2
+            why.append((f"the date is {lead} days away, further than the forecast could be "
+                        "tested", f"तारीख़ {lead} दिन दूर है, जितना मौसम-अनुमान जाँचा जा सका उससे आगे"))
+        elif lead >= 4:
+            score -= 1
+            why.append((f"the date is {lead} days away", f"तारीख़ {lead} दिन दूर है"))
+    elif st == "wait_for_rain":
+        score -= 1
+        why.append(("forecast rain of this size came about 3 times in 4 in past seasons",
+                    "इतनी बारिश का अनुमान पिछले मौसमों में लगभग 4 में से 3 बार सही निकला"))
+    elif st in ("not_needed_soon", "no_more_needed", "window_upcoming"):
+        score -= 1
+        why.append(("it depends on the long-range forecast", "यह लंबे मौसम-अनुमान पर निर्भर है"))
+    site = a["site"]
+    if not a.get("soil_type") and getattr(site, "soil_source", "district") != "field":
+        score -= 1
+        why.append(("the soil is the district's estimate, not your field's",
+                    "मिट्टी ज़िले का अनुमान है, आपके खेत की नहीं"))
+    spec = a.get("spec")
+    if spec is not None and spec.confidence != "normal":
+        score -= 1
+        why.append((f"{spec.en.lower()} advice is less certain (see notes)",
+                    f"{spec.hi} की सलाह कम पक्की है"))
+    if any(w[0] == "late" for w in a.get("warnings", [])):
+        score -= 1
+        why.append(("sown late", "देर से बुवाई"))
+    if st in ("season_over", "max_reached"):
+        score, why = 3, []
+    return CONF_LEVELS[max(1, min(3, score))], why
+
+
+def confidence_text(a):
+    (lvl_en, lvl_hi), why = confidence(a)
+    en = f"Confidence: {lvl_en}" + (f" ({'; '.join(w[0] for w in why)})." if why else ".")
+    hi = f"भरोसा: {lvl_hi}" + (f" ({'; '.join(w[1] for w in why)})।" if why else "।")
+    return en, hi
+
+
+def to_json(a):
+    """The advice as plain JSON-ready data (dates as YYYY-MM-DD), for the web service and app."""
+    out = {}
+    for k, v in a.items():
+        if k in ("site", "spec"):
+            continue
+        if isinstance(v, pd.Timestamp):
+            v = v.strftime("%Y-%m-%d")
+        elif isinstance(v, list):
+            v = [x.strftime("%Y-%m-%d") if isinstance(x, pd.Timestamp) else
+                 (list(x) if isinstance(x, tuple) else x) for x in v]
+        elif hasattr(v, "item"):
+            v = v.item()
+        out[k] = v
+    s = a["site"]
+    out["site"] = {"district": s.name, "state": s.state, "zone": s.zone, "lat": s.lat,
+                   "lon": s.lon, "awc_mm_per_m": s.awc_mm_per_m, "soil_type": s.soil_type,
+                   "soil_source": s.soil_source}
+    out["crop"] = a.get("crop", "wheat")
+    (lvl, _), why = confidence(a)
+    out["confidence"] = {"level": lvl, "reasons": [w[0] for w in why]}
+    return out
 
 
 # ----------------------------------------------------------------------------------- render
 
 HI_MONTHS = ["जनवरी", "फ़रवरी", "मार्च", "अप्रैल", "मई", "जून", "जुलाई", "अगस्त", "सितंबर",
              "अक्टूबर", "नवंबर", "दिसंबर"]
+
+
+def _light_en(a):
+    if a.get("soil_type"):
+        return f"If your {SOIL_TYPES[a['soil_type']]['en']} soil holds less water than usual"
+    return "If your soil is light or sandy"
+
+
+def _light_hi(a):
+    if a.get("soil_type"):
+        return f"आपकी {SOIL_TYPES[a['soil_type']]['hi']} मिट्टी कम पानी रोकती हो"
+    return "हल्की या रेतीली मिट्टी हो"
+
+
+def _heavy_en(a):
+    if a.get("soil_type"):
+        return f"If your {SOIL_TYPES[a['soil_type']]['en']} soil holds more water than usual"
+    return "If your soil is heavy (holds more water)"
+
+
+def _heavy_hi(a):
+    if a.get("soil_type"):
+        return f"आपकी {SOIL_TYPES[a['soil_type']]['hi']} मिट्टी ज़्यादा पानी रोकती हो"
+    return "भारी मिट्टी हो (ज़्यादा पानी रोके)"
+
+
+def _soil_note(a):
+    """The 'how sure' sentence about the soil range."""
+    if a.get("soil_type"):
+        t = SOIL_TYPES[a["soil_type"]]
+        lo, hi = t["range"]
+        return (f"The earlier and later dates cover the range of water a {t['en']} soil can hold "
+                f"({lo:g} to {hi:g} mm per metre, FAO-56).")
+    return ("'Light' and 'heavy' soil show how the answer changes if the soil holds 20 percent "
+            "less or more water than estimated.")
 
 
 def _en(d):
@@ -220,6 +418,9 @@ def render(a):
     if a["mode"] == "test":
         head.append("TEST MODE: the 'forecast' is weather that was actually recorded.")
     en, hi = [], []
+    for _, w_en, w_hi in a.get("warnings", []) + a.get("notes", []):
+        en.append(w_en)
+        hi.append(w_hi)
     st = a["status"]
     if st == "season_over":
         en.append(f"NO MORE WATERING this season (no irrigation after {_en(a['cutoff'])}).")
@@ -247,6 +448,15 @@ def render(a):
                       "सिंचाई करें।")
         en.append("Do not skip it: this is when the crown roots form, the most sensitive stage.")
         hi.append("इसे न छोड़ें: इस समय जड़ें (क्राउन रूट) बनती हैं, यह सबसे ज़रूरी समय है।")
+    elif st == "wait_for_rain":
+        rd, wd = a["rain_day"], a["water_if_dry"]
+        en.append(f"WAIT FOR THE RAIN: the soil is nearly due for water, but about "
+                  f"{a['rain_total_mm']:g} mm of rain is forecast by {_en(rd)}. Do not water "
+                  f"before then. If less than 1 cm (10 mm) falls by {_en(rd)}, water on "
+                  f"{_en(wd)}.")
+        hi.append(f"बारिश का इंतज़ार करें: मिट्टी को जल्द पानी चाहिए, पर {_hi(rd)} तक लगभग "
+                  f"{a['rain_total_mm']:g} मिमी बारिश का अनुमान है। उससे पहले सिंचाई न करें। अगर "
+                  f"{_hi(rd)} तक 1 सेमी (10 मिमी) से कम बारिश हो, तो {_hi(wd)} को सिंचाई करें।")
     elif st == "water_now":
         en.append("WATER TODAY OR TOMORROW: the soil has used up its easily available water.")
         hi.append("आज या कल सिंचाई करें: मिट्टी में आसानी से मिलने वाला पानी ख़त्म हो गया है।")
@@ -255,18 +465,17 @@ def render(a):
         en.append(f"NEXT WATERING: most likely around {_en(k)} (in {_in(k, today)} days).")
         hi.append(f"अगली सिंचाई: सबसे संभावित {_hi(k)} के आसपास ({_in(k, today)} दिन में)।")
         if e < k:
-            en.append(f"If your soil is light or sandy, as early as {_en(e)}.")
-            hi.append(f"हल्की या रेतीली मिट्टी हो तो पहले, {_hi(e)} के आसपास।")
+            en.append(f"{_light_en(a)}, as early as {_en(e)}.")
+            hi.append(f"{_light_hi(a)} तो पहले, {_hi(e)} के आसपास।")
         if a["heavy_soil_none"]:
-            en.append("If your soil is heavy (holds more water), maybe no more watering this "
-                      "season.")
-            hi.append("भारी मिट्टी हो (ज़्यादा पानी रोके) तो शायद इस मौसम में और सिंचाई न लगे।")
+            en.append(f"{_heavy_en(a)}, maybe no more watering this season.")
+            hi.append(f"{_heavy_hi(a)} तो शायद इस मौसम में और सिंचाई न लगे।")
         elif a["heavy_soil_later"]:
-            en.append(f"If your soil is heavy, later than {_en(a['forecast_end'])}.")
-            hi.append(f"भारी मिट्टी हो तो {_hi(a['forecast_end'])} के बाद।")
+            en.append(f"{_heavy_en(a)}, later than {_en(a['forecast_end'])}.")
+            hi.append(f"{_heavy_hi(a)} तो {_hi(a['forecast_end'])} के बाद।")
         elif l > k:
-            en.append(f"If your soil is heavy, as late as {_en(l)}.")
-            hi.append(f"भारी मिट्टी हो तो {_hi(l)} तक।")
+            en.append(f"{_heavy_en(a)}, as late as {_en(l)}.")
+            hi.append(f"{_heavy_hi(a)} तो {_hi(l)} तक।")
     elif st == "light_soil_only":
         if a["covers_season"]:
             en.append("PROBABLY NO MORE WATERING NEEDED this season.")
@@ -276,9 +485,8 @@ def render(a):
                       f"Check again on {_en(a['recheck'])}.")
             hi.append(f"अगले {a['horizon_days']} दिन शायद सिंचाई की ज़रूरत नहीं। "
                       f"{_hi(a['recheck'])} को फिर देखें।")
-        en.append(f"But if your soil is light or sandy, water around {_en(a['light_soil_day'])}.")
-        hi.append(f"लेकिन हल्की या रेतीली मिट्टी हो तो {_hi(a['light_soil_day'])} के आसपास "
-                  "सिंचाई करें।")
+        en.append(f"But {_light_en(a)[0].lower()}{_light_en(a)[1:]}, water around {_en(a['light_soil_day'])}.")
+        hi.append(f"लेकिन {_light_hi(a)} तो {_hi(a['light_soil_day'])} के आसपास सिंचाई करें।")
     elif st == "not_needed_soon":
         en.append(f"NO WATERING NEEDED in the next {a['horizon_days']} days. Check again on "
                   f"{_en(a['recheck'])}.")
@@ -296,11 +504,12 @@ def render(a):
     if st != "season_over":
         en.append(f"Rain forecast, next 7 days: {a['rain_next7_mm']:g} mm.")
         hi.append(f"अगले 7 दिन में बारिश का अनुमान: {a['rain_next7_mm']:g} मिमी।")
+    c_en, c_hi = confidence_text(a)
+    en.append(c_en)
+    hi.append(c_hi)
     note = ("How sure is this? It uses free weather data for the whole district and an "
             "estimated soil, not your own field, and it has not yet been checked against real "
-            "fields. 'Light' and 'heavy' soil show how the answer changes if the soil holds 20 "
-            "percent less or more water than estimated. If it rains well before the date, "
-            "check again.")
+            f"fields. {_soil_note(a)} If it rains well before the date, check again.")
     hi_note = ("यह सलाह ज़िले के मुफ़्त मौसम आँकड़ों और अनुमानित मिट्टी पर आधारित है, आपके खेत पर "
                "नहीं, और अभी असली खेतों में जाँची नहीं गई है। अगर बीच में अच्छी बारिश हो, तो फिर से "
                "देखें।")
@@ -392,7 +601,8 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
     out = {"crop": spec.key, "spec": spec, "site": site, "sowing": sowing, "today": today,
            "das": das, "watered": watered, "season_days": params.season_days, "cutoff": cutoff,
            "depth_mm": depth_mm, "mode": mode, "warnings": warnings,
-           "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1), "forecast_end": end}
+           "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1), "forecast_end": end,
+           "soil_type": site.soil_type}
     if today > cutoff:
         return {**out, "status": "season_over"}
     if spec.max_irrigations is not None and len(watered) >= spec.max_irrigations:
@@ -408,12 +618,13 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
 
     last_day = min(cutoff, end)
     days, hows = {}, {}
-    for scale in SOIL_SCALES:
-        p = spec.params(site.awc_mm_per_m * scale)
+    for scale, awc in soil_cases(site).items():
+        p = spec.params(awc)
         day, how, run = _crop_trigger(spec, weather, sowing, p, watered, depth_mm, today,
                                       last_day)
         days[scale], hows[scale] = day, how
-        if scale == 1.0:
+        if scale == "likely":
+            run_likely = run
             row = run[run["date"] == today].iloc[0]
             out.update(raw_used_pct=round(100 * row["dr_mm"] / row["raw_mm"]) if row["raw_mm"]
                        else 0, dr_mm=round(float(row["dr_mm"]), 1),
@@ -421,7 +632,7 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
             if day is not None:
                 short = float(run.loc[run["date"] == day, "dr_start"].iloc[0])
                 out["refill_mm"] = round(short, 1)
-    out["how"] = hows[1.0]
+    out["how"] = hows["likely"]
     win = spec.window_dates(sowing)
     if win:
         out.update(window_start=win[0], window_end=win[1])
@@ -429,7 +640,10 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
     covers_season = end >= cutoff
     quiet = {"recheck": min(today + pd.Timedelta(days=RECHECK_DAYS), cutoff),
              "horizon_days": (end - today).days, "covers_season": covers_season}
-    likely = days[1.0]
+    likely = days["likely"]
+    wait = rain_wait(run_likely, weather, likely, today, sowing=sowing, spec=spec)
+    if wait:
+        return {**out, **wait, "status": "wait_for_rain"}
     black = spec.blackout_dates(sowing)
     today_blocked = bool(black) and black[0] <= today <= black[1]
     if likely is not None and (likely <= today or
@@ -443,8 +657,8 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
     if likely is None:
         return {**out, "status": "light_soil_only", "light_soil_day": min(found), **quiet}
     return {**out, "status": "water_window", "earliest": min(found), "latest": max(found),
-            "likely": likely, "heavy_soil_later": days[1.2] is None,
-            "heavy_soil_none": days[1.2] is None and covers_season}
+            "likely": likely, "heavy_soil_later": days["heavy"] is None,
+            "heavy_soil_none": days["heavy"] is None and covers_season}
 
 
 def _amount(a):
@@ -476,7 +690,7 @@ def render_crop(a):
     if a["mode"] == "test":
         head.append("TEST MODE: the 'forecast' is weather that was actually recorded.")
     en, hi = [], []
-    for _, w_en, w_hi in a.get("warnings", []):
+    for _, w_en, w_hi in a.get("warnings", []) + a.get("notes", []):
         en.append(w_en)
         hi.append(w_hi)
     st = a["status"]
@@ -514,6 +728,15 @@ def render_crop(a):
         if spec.first_reason_en:
             en.append(spec.first_reason_en)
             hi.append(spec.first_reason_hi)
+    elif st == "wait_for_rain":
+        rd, wd = a["rain_day"], a["water_if_dry"]
+        en.append(f"WAIT FOR THE RAIN: the soil is nearly due for water, but about "
+                  f"{a['rain_total_mm']:g} mm of rain is forecast by {_en(rd)}. Do not water "
+                  f"before then. If less than 1 cm (10 mm) falls by {_en(rd)}, water on "
+                  f"{_en(wd)}.")
+        hi.append(f"बारिश का इंतज़ार करें: मिट्टी को जल्द पानी चाहिए, पर {_hi(rd)} तक लगभग "
+                  f"{a['rain_total_mm']:g} मिमी बारिश का अनुमान है। उससे पहले सिंचाई न करें। अगर "
+                  f"{_hi(rd)} तक 1 सेमी (10 मिमी) से कम बारिश हो, तो {_hi(wd)} को सिंचाई करें।")
     elif st == "water_now":
         en.append("WATER TODAY OR TOMORROW: the soil has used up its easily available water.")
         hi.append("आज या कल सिंचाई करें: मिट्टी में आसानी से मिलने वाला पानी ख़त्म हो गया है।")
@@ -522,18 +745,17 @@ def render_crop(a):
         en.append(f"NEXT WATERING: most likely around {_en(k)} (in {_in(k, today)} days).")
         hi.append(f"अगली सिंचाई: सबसे संभावित {_hi(k)} के आसपास ({_in(k, today)} दिन में)।")
         if e < k:
-            en.append(f"If your soil is light or sandy, as early as {_en(e)}.")
-            hi.append(f"हल्की या रेतीली मिट्टी हो तो पहले, {_hi(e)} के आसपास।")
+            en.append(f"{_light_en(a)}, as early as {_en(e)}.")
+            hi.append(f"{_light_hi(a)} तो पहले, {_hi(e)} के आसपास।")
         if a["heavy_soil_none"]:
-            en.append("If your soil is heavy (holds more water), maybe no more watering this "
-                      "season.")
-            hi.append("भारी मिट्टी हो (ज़्यादा पानी रोके) तो शायद इस मौसम में और सिंचाई न लगे।")
+            en.append(f"{_heavy_en(a)}, maybe no more watering this season.")
+            hi.append(f"{_heavy_hi(a)} तो शायद इस मौसम में और सिंचाई न लगे।")
         elif a["heavy_soil_later"]:
-            en.append(f"If your soil is heavy, later than {_en(a['forecast_end'])}.")
-            hi.append(f"भारी मिट्टी हो तो {_hi(a['forecast_end'])} के बाद।")
+            en.append(f"{_heavy_en(a)}, later than {_en(a['forecast_end'])}.")
+            hi.append(f"{_heavy_hi(a)} तो {_hi(a['forecast_end'])} के बाद।")
         elif l > k:
-            en.append(f"If your soil is heavy, as late as {_en(l)}.")
-            hi.append(f"भारी मिट्टी हो तो {_hi(l)} तक।")
+            en.append(f"{_heavy_en(a)}, as late as {_en(l)}.")
+            hi.append(f"{_heavy_hi(a)} तो {_hi(l)} तक।")
     elif st == "light_soil_only":
         if a["covers_season"]:
             en.append("PROBABLY NO MORE WATERING NEEDED this season.")
@@ -543,9 +765,8 @@ def render_crop(a):
                       f"Check again on {_en(a['recheck'])}.")
             hi.append(f"अगले {a['horizon_days']} दिन शायद सिंचाई की ज़रूरत नहीं। "
                       f"{_hi(a['recheck'])} को फिर देखें।")
-        en.append(f"But if your soil is light or sandy, water around {_en(a['light_soil_day'])}.")
-        hi.append(f"लेकिन हल्की या रेतीली मिट्टी हो तो {_hi(a['light_soil_day'])} के आसपास "
-                  "सिंचाई करें।")
+        en.append(f"But {_light_en(a)[0].lower()}{_light_en(a)[1:]}, water around {_en(a['light_soil_day'])}.")
+        hi.append(f"लेकिन {_light_hi(a)} तो {_hi(a['light_soil_day'])} के आसपास सिंचाई करें।")
     elif st == "window_upcoming":
         en.append(f"NO WATERING YET. PAU's watering window for {spec.en.lower()} is "
                   f"{_en(a['window_start'])} to {_en(a['window_end'])}. Check again on "
@@ -584,11 +805,13 @@ def render_crop(a):
         hi.append(f"अगले 7 दिन में बारिश का अनुमान: {a['rain_next7_mm']:g} मिमी।")
     en.extend(spec.notes_en)
     hi.extend(spec.notes_hi)
+    c_en, c_hi = confidence_text(a)
+    en.append(c_en)
+    hi.append(c_hi)
     note = ("How sure is this? It uses free weather data for the whole district, an estimated "
             "soil and PAU's guidance, not your own field, and it has not yet been checked "
-            "against real fields. 'Light' and 'heavy' soil show how the answer changes if the "
-            "soil holds 20 percent less or more water than estimated. If it rains well before "
-            "the date, check again.")
+            f"against real fields. {_soil_note(a)} If it rains well before the date, check "
+            "again.")
     hi_note = ("यह सलाह ज़िले के मुफ़्त मौसम आँकड़ों, अनुमानित मिट्टी और PAU की सिफ़ारिशों पर "
                "आधारित है, आपके खेत पर नहीं, और अभी असली खेतों में जाँची नहीं गई है। अगर बीच में "
                "अच्छी बारिश हो, तो फिर से देखें।")

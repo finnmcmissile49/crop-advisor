@@ -54,6 +54,9 @@ class CropParams:
     adjust_kc: bool = False             # FAO-56 eq. 62 climate adjustment of Kc mid and Kc end, using
                                         # daily minimum humidity and wind when the inputs have them.
                                         # Off for wheat (its results were checked without it).
+    kc_ini_wetting: bool = False        # FAO-56 Kc ini from wetting frequency (Figs 29-30, Annex 7)
+                                        # instead of the Table 12 value. See kc_ini_from_wetting.
+    coarse_soil: bool = False           # FAO-56 Fig. 30a (sands, loamy sands) instead of 30b
 
     def stage_lengths(self):
         """FAO stage lengths stretched to season_days, as integers that add up exactly."""
@@ -114,6 +117,54 @@ def climate_adjusted_kc(params, inputs):
         new[attr] = kc + (0.04 * (u - 2) - 0.004 * (r - 45)) * (params.crop_height_m / 3) ** 0.3
         used[stage] = {"rh_min": round(r, 1), "u2": round(u, 2), attr: round(new[attr], 3)}
     return replace(params, **new), used
+
+
+WETTING_MM = 3.0   # FAO-56: light wetting events are 3-10 mm; smaller rain is not counted
+
+
+def _kc_ini_curve(tw, eto, tew, rew):
+    """FAO-56 Annex 7 eq. 7-3 (and the 1.15 limit when stage 1 lasts the whole interval)."""
+    eso = 1.15 * eto
+    t1 = rew / eso
+    if tw <= t1:
+        return 1.15
+    k = (tew - (tew - rew) * np.exp(-(tw - t1) * eso * (1 + rew / (tew - rew)) / tew)) / (tw * eto)
+    return float(min(k, 1.15))
+
+
+def kc_ini_from_wetting(params, inputs):
+    """FAO-56 Kc ini for the initial stage from how often the soil surface is wetted.
+
+    tw = initial-stage length / number of wetting events (rain of at least WETTING_MM, plus the
+    wet soil at sowing, which the model assumes is at field capacity). I = mean depth per event,
+    with the sowing event counted as a heavy (40 mm) wetting. Figure 29 (light wetting) and
+    Figure 30a/b (heavy wetting, coarse or medium/fine soil), interpolated for 10-40 mm (eq. 59).
+    Curve parameters from FAO-56 Annex 7:
+      Fig. 29:  TEW = 10, REW = min(max(2.5, 6 / ETo^0.5), 7)
+      Fig. 30a: TEW = min(15, 7 ETo^0.5), REW = min(6, TEW - 0.01)
+      Fig. 30b: TEW = min(28, 13 ETo^0.5), REW = min(9, TEW - 0.01)
+    """
+    l_ini = params.stage_lengths()[0]
+    ini = inputs.iloc[:l_ini]
+    if len(ini) == 0:
+        return params.kc_ini
+    eto = max(float(ini["et0_mm"].mean()), 0.5)
+    events = ini.loc[ini["rain_mm"] >= WETTING_MM, "rain_mm"]
+    nw = 1 + len(events)
+    tw = l_ini / nw
+    depth = (40.0 + float(events.clip(upper=40).sum())) / nw
+    k29 = _kc_ini_curve(tw, eto, 10.0, min(max(2.5, 6 / eto ** 0.5), 7.0))
+    if params.coarse_soil:
+        tew = min(15.0, 7 * eto ** 0.5)
+        k30 = _kc_ini_curve(tw, eto, tew, min(6.0, tew - 0.01))
+    else:
+        tew = min(28.0, 13 * eto ** 0.5)
+        k30 = _kc_ini_curve(tw, eto, tew, min(9.0, tew - 0.01))
+    if depth <= 10:
+        return k29
+    if depth >= 40:
+        return k30
+    return k29 + (depth - 10) / 30 * (k30 - k29)
 
 
 def season_date(sowing, month, day):
@@ -258,7 +309,9 @@ class FirstWateringThenTrigger:
     def decide(self, date, das, dr_prev, raw, taw):
         if not self.first_done and das >= self.first_das and date <= self.trigger.cutoff:
             self.first_done = True
+            self.last_kind = "first"
             return self.first_depth
+        self.last_kind = "trigger"
         return self.trigger.decide(date, das, dr_prev, raw, taw)
 
     def observe_rain(self, date, rain_mm):
@@ -394,6 +447,8 @@ def simulate(inputs, sowing, params, rule, dr0=0.0):
     Returns one row per day. Irrigation is applied at the start of the day it is decided.
     """
     params, _ = climate_adjusted_kc(params, inputs)
+    if params.kc_ini_wetting:
+        params = replace(params, kc_ini=kc_ini_from_wetting(params, inputs))
     rule.start(sowing, params)
     rows, dr_prev = [], float(dr0)
     for das, r in enumerate(inputs.itertuples(index=False)):

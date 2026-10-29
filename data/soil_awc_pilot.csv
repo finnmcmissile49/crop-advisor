@@ -1,7 +1,0 @@
-name,state,soil_lat,soil_lon,sand_pct,silt_pct,clay_pct,soc_g_kg,ph,bulk_density_g_cm3,coarse_frag_pct,organic_matter_pct,texture,field_capacity,wilting_point,awc_mm_per_m,source
-Sirsa,Haryana,29.56003,75.017,45.92,31.29,22.73,4.14,8.05,1.48,9.17,0.71,loam,0.262,0.141,120.4,"ISRIC SoilGrids 2.0 (fetched 2026-10-27), 0-100 cm thickness-weighted; Saxton-Rawls 2006"
-Hisar,Haryana,29.17903,75.721,45.13,32.0,22.87,4.51,8.0,1.49,6.21,0.78,loam,0.265,0.143,122.0,"ISRIC SoilGrids 2.0 (fetched 2026-10-27), 0-100 cm thickness-weighted; Saxton-Rawls 2006"
-Kurukshetra,Haryana,29.99303,76.837,24.25,40.92,34.83,6.75,7.9,1.52,6.36,1.16,clay loam,0.358,0.212,145.7,"ISRIC SoilGrids 2.0 (fetched 2026-10-27), 0-100 cm thickness-weighted; Saxton-Rawls 2006"
-Bathinda,Punjab,30.25703,74.952,43.47,28.8,27.77,6.27,8.04,1.48,7.11,1.08,clay loam,0.296,0.173,123.0,"ISRIC SoilGrids 2.0 (fetched 2026-10-27), 0-100 cm thickness-weighted; Saxton-Rawls 2006"
-Sangrur,Punjab,30.27803,75.844,32.73,37.45,29.82,5.45,8.17,1.52,8.95,0.94,clay loam,0.322,0.184,138.6,"ISRIC SoilGrids 2.0 (fetched 2026-10-27), 0-100 cm thickness-weighted; Saxton-Rawls 2006"
-Tarn Taran,Punjab,31.47803,74.925,31.77,42.26,25.96,5.55,8.03,1.58,5.68,0.96,loam,0.306,0.162,144.6,"ISRIC SoilGrids 2.0 (fetched 2026-10-27), 0-100 cm thickness-weighted; Saxton-Rawls 2006"

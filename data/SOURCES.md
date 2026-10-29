@@ -126,11 +126,20 @@ Page numbers in `src/cropadvisor/crops.py` are the printed book pages. The PAU P
 read by the automated web reader; they were opened in a browser and their text extracted with
 pdf.js.
 
-`data/checks/openmeteo_daily_punjab_haryana_2021_2025.csv`: Open-Meteo history (archive API),
-daily precipitation, FAO ET0, minimum relative humidity and mean 10 m wind (converted to 2 m with
-FAO-56 eq. 47), 1 January 2021 to 31 December 2025, the six pilot district points. Fetched
-27 October 2026 from a browser (this workspace cannot reach Open-Meteo).
+`data/checks/openmeteo_daily_punjab_haryana.csv`: Open-Meteo history (archive API), daily
+precipitation, FAO ET0, minimum relative humidity and mean 10 m wind (converted to 2 m with FAO-56
+eq. 47), 1 January 2021 to 22 October 2026, the six pilot district points. Fetched 27 October 2026
+(to 2025) and 29 October 2026 (2026) from a browser, because this workspace cannot reach
+Open-Meteo.
 
-`data/soil_awc_pilot.csv`: SoilGrids 2.0 at each district's saved soil point (from
-`locations_wheat_10states.csv`), 0-100 cm thickness-weighted, Saxton-Rawls 2006. Fetched
-27 October 2026; matches the earlier pull for every district.
+`data/checks/openmeteo_previous_runs_rain_2024_2026.csv`: Open-Meteo Previous Runs API
+(https://previous-runs-api.open-meteo.com/v1/forecast), hourly precipitation as forecast 0 to 7
+days before each hour, summed to IST days, 1 January 2024 to 28 October 2026, the same six
+points, default model. Fetched 29 October 2026. Lead 7 holds about half the rain of the other
+leads (incomplete in the archive) and is not used.
+
+`data/soil_awc.csv`: SoilGrids 2.0, 0-100 cm thickness-weighted, Saxton-Rawls 2006, all 27
+districts. The six pilot districts at their saved soil points (fetched 27 October 2026; they match
+the earlier pull exactly); the other 21 at the district point, or the nearest point with soil data
+within 10 km (Aligarh and Rajkot, 3 km), fetched 29 October 2026. Ujjain (52 percent clay) and
+Ganganagar (100 mm per m) match the values in notes/irrigation_10_states.md.
