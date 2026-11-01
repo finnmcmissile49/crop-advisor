@@ -297,13 +297,27 @@ def text(o, short=False):
     return en, hi
 
 
-def render(outlooks, district, state):
-    """Full English and Hindi text for --outlook."""
-    head_en = [f"Crop Advisor: season outlook for {district}, {state} (district data, not advice)"]
-    head_hi = [f"क्रॉप एडवाइज़र: {district}, {state} के लिए मौसम की जानकारी (ज़िले के आँकड़े, सलाह नहीं)"]
+def render(outlooks, district, state, prices_only=False):
+    """Full English and Hindi text for --outlook. prices_only: leave out the yield and value
+    lines (the season-start model gives those above it)."""
+    if prices_only:
+        head_en = [f"Last harvest prices in {district}, {state} (mandi averages):"]
+        head_hi = [f"{district}, {state} में पिछली फ़सल के भाव (मंडी औसत):"]
+    else:
+        head_en = [f"Crop Advisor: season outlook for {district}, {state} (district data, not "
+                   "advice)"]
+        head_hi = [f"क्रॉप एडवाइज़र: {district}, {state} के लिए मौसम की जानकारी (ज़िले के आँकड़े, "
+                   "सलाह नहीं)"]
     en, hi = list(head_en), list(head_hi)
     for o in outlooks:
+        if prices_only:
+            o = {**o, "yield": None}
+            o.pop("gross_rs_acre", None)
         e, h = text(o, short=True)
+        if prices_only:
+            en += e
+            hi += h
+            continue
         en += [""] + e
         hi += [""] + h
     en += ["", "Yields: ICRISAT and DES district averages (production divided by area). Prices: "

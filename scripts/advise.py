@@ -15,9 +15,11 @@ Test on a past season (the weather after --today is what was actually recorded):
 Your own field and soil (both optional):
     python scripts/advise.py --district Hisar --sowing 2026-11-10 --lat 29.21 --lon 75.65 --soil-type loam
 
-Season-start outlook (Haryana and Punjab): district yields, last harvest prices, gross value
+Season-start model and outlook (Haryana and Punjab): expected yield and income per acre for each
+crop of the season, how much they vary, how often one crop beats another, plus the last harvest
+prices (about a minute the first time: the model is trained on the spot)
     python scripts/advise.py --outlook --district Hisar
-    python scripts/advise.py --outlook --district Bathinda --crop wheat
+    python scripts/advise.py --outlook --district Bathinda --season kharif
 
 Needs internet (Open-Meteo; NASA POWER for recorded rain; SoilGrids for --lat/--lon). The district
 background (IMD normals, Soil Health Card, yields, prices) comes from files in data/reference.
@@ -70,6 +72,8 @@ def main():
     ap.add_argument("--crops", action="store_true", help="list the crops and their sowing times")
     ap.add_argument("--outlook", action="store_true",
                     help="season-start outlook for the district: usual yield, last harvest price")
+    ap.add_argument("--season", choices=["rabi", "kharif"],
+                    help="with --outlook: which season (default: the next one to be sown)")
     ap.add_argument("--rain-source", choices=["auto", "openmeteo"], default="auto",
                     help="recorded rain: NASA POWER where available (auto) or Open-Meteo only")
     ap.add_argument("--no-extras", action="store_true",
@@ -97,8 +101,8 @@ def main():
     if a.outlook:
         if not a.district:
             ap.error("--outlook needs --district")
-        res = service.outlook_request({"district": a.district, "crop": a.crop, "today": a.today},
-                                      locations=a.locations)
+        res = service.outlook_request({"district": a.district, "crop": a.crop, "today": a.today,
+                                       "season": a.season}, locations=a.locations)
     else:
         if not a.district or not a.sowing:
             ap.error("--district and --sowing are needed (or --list, or --outlook)")

@@ -15,6 +15,12 @@ Outputs (committed, so the calculator runs from a fresh copy of the code):
     data/reference/soil_health_card.csv      calculator + Haryana/Punjab districts, per cycle and nutrient
     data/reference/district_yields.csv       Haryana and Punjab wheat, rice, cotton, 2009-2022
     data/reference/mandi_prices.csv          Haryana and Punjab monthly modal prices from 2015, unflagged rows
+    data/reference/district_yields_all.csv   Haryana and Punjab yields, 9 crops, 2000-2022 (season model)
+    data/reference/district_rain_monthly.csv Haryana and Punjab IMD monthly rain and normals, 2009-2024
+
+Extra inputs for the last two:
+    01_raw_data/icrisat_district_database/icrisat_dld_crops_unapportioned_1990_2019.csv
+    03_processed_data/des_apy_district_2015_2022.csv
 """
 import argparse
 import os
@@ -115,6 +121,99 @@ def mandi_prices(agri):
                            na_position="first")
 
 
+# Season model crops: name -> (ICRISAT column stem, DES crop name, DES season, DES unit factor)
+MODEL_CROPS = {
+    "Mustard": ("RAPESEED AND MUSTARD", "Rapeseed &Mustard", "Rabi", 1.0),
+    "Barley": ("BARLEY", "Barley", "Rabi", 1.0),
+    "Chickpea": ("CHICKPEA", "Gram", "Rabi", 1.0),
+    "Maize": ("MAIZE", "Maize", "Kharif", 1.0),
+    "Bajra": ("PEARL MILLET", "Bajra", "Kharif", 1.0),
+    "Groundnut": ("GROUNDNUT", "Groundnut", "Kharif", 1.0),
+}
+HISTORY_FROM = 2000   # years before the rain record, used only for the lagged-yield features
+SEASON = {"Wheat": "Rabi", "Mustard": "Rabi", "Barley": "Rabi", "Chickpea": "Rabi",
+          "Rice": "Kharif", "Cotton": "Kharif", "Maize": "Kharif", "Bajra": "Kharif",
+          "Groundnut": "Kharif"}
+
+
+def _icrisat(agri, dmap):
+    ic = pd.read_csv(os.path.join(agri, "01_raw_data", "icrisat_district_database",
+                                  "icrisat_dld_crops_unapportioned_1990_2019.csv"))
+    ic = ic[ic["State Name"].isin(["Punjab", "Haryana"])]
+    ic = ic.merge(dmap[["state", "district", "icrisat_name"]], left_on="Dist Name",
+                  right_on="icrisat_name")
+    return ic
+
+
+def district_yields_all(agri):
+    """Yields for the season model: wheat, rice and cotton from the North India table (2009-2022)
+    with ICRISAT years before 2009 added for history; six more crops from ICRISAT (to 2019) and
+    DES (2020-2022). Yield = production / area (t/ha; cotton is lint). ICRISAT is kept wherever
+    both exist; how well the two agree for each crop is printed and saved."""
+    dmap = pd.read_csv(os.path.join(agri, "03_processed_data", "north_india_district_map.csv"))
+    ic = _icrisat(agri, dmap)
+    north = district_yields(agri)
+    rows = []
+    for crop, stem in (("Wheat", "WHEAT"), ("Rice", "RICE"), ("Cotton", "COTTON")):
+        h = ic[(ic["Year"] >= HISTORY_FROM) & (ic["Year"] < 2009)]
+        rows.append(pd.DataFrame({"state": h["state"], "district": h["district"], "crop": crop,
+                                  "year": h["Year"], "area_ha": h[f"{stem} AREA [1000 ha]"] * 1000,
+                                  "production_t": h[f"{stem} PRODUCTION [1000 tons]"] * 1000,
+                                  "source": "ICRISAT DLD"}))
+        n = north[north["crop"] == crop]
+        rows.append(n[["state", "district", "crop", "year", "area_ha", "production_t", "source"]])
+    des = pd.read_csv(os.path.join(agri, "03_processed_data", "des_apy_district_2015_2022.csv"))
+    des = des[des["state"].isin(["Punjab", "Haryana"])].merge(
+        dmap[["state", "district", "des_name"]].rename(columns={"district": "canon"}),
+        left_on=["state", "district"], right_on=["state", "des_name"])
+    agree = []
+    for crop, (stem, dname, dseason, factor) in MODEL_CROPS.items():
+        i = ic[ic["Year"] >= HISTORY_FROM]
+        a = pd.DataFrame({"state": i["state"], "district": i["district"], "crop": crop,
+                          "year": i["Year"], "area_ha": i[f"{stem} AREA [1000 ha]"] * 1000,
+                          "production_t": i[f"{stem} PRODUCTION [1000 tons]"] * 1000,
+                          "source": "ICRISAT DLD"})
+        d = des[(des["crop"] == dname) & (des["season"] == dseason)]
+        b = pd.DataFrame({"state": d["state"], "district": d["canon"], "crop": crop,
+                          "year": d["crop_year"], "area_ha": d["area_ha"],
+                          "production_t": d["production"] * factor,
+                          "source": "DES (data.desagri.gov.in)"})
+        a = a[(a["area_ha"] > 0) & (a["production_t"] >= 0)]
+        b = b[(b["area_ha"] > 0) & (b["production_t"] >= 0)]
+        both = a.merge(b, on=["district", "year"], suffixes=("_i", "_d"))
+        if len(both):
+            r = (both["production_t_i"] / both["area_ha_i"]) / (both["production_t_d"] / both["area_ha_d"])
+            agree.append({"crop": crop, "district_years_both": len(both),
+                          "share_within_10pct": round(float(((r - 1).abs() <= 0.10).mean()), 2),
+                          "median_ratio_icrisat_over_des": round(float(r.median()), 3)})
+        rows += [a, b[b["year"] > a["year"].max()]]
+    out = pd.concat(rows, ignore_index=True)
+    out = out[(out["area_ha"] > 0) & out["production_t"].notna() & (out["production_t"] >= 0)]
+    out["yield_t_ha"] = (out["production_t"] / out["area_ha"]).round(4)
+    out["season"] = out["crop"].map(SEASON)
+    out = out.drop_duplicates(["district", "crop", "year"], keep="first")
+    return out.sort_values(["crop", "state", "district", "year"]), pd.DataFrame(agree)
+
+
+def district_rain_monthly(agri):
+    """IMD monthly rain and IMD's normal for the 45 Haryana and Punjab districts (districts with
+    no series of their own take their parent's, as in the North India table)."""
+    dmap = pd.read_csv(os.path.join(agri, "03_processed_data", "north_india_district_map.csv"))
+    lgd = pd.read_csv(os.path.join(ROOT, "data", "reference", "rain_districts_lgd.csv"))
+    lgd["key"] = lgd["state_name"].map(_norm) + "|" + lgd["district_name"].map(_norm)
+    m = pd.read_csv(os.path.join(agri, "03_processed_data", "rainfall_district_monthly_2009_2024.csv"))
+    rows = []
+    for _, r in dmap.iterrows():
+        hit = lgd[lgd["key"] == _norm(r["state"]) + "|" + _norm(r["rain_name"])]
+        if hit.empty:
+            raise SystemExit(f"No IMD district for {r['district']} ({r['rain_name']})")
+        g = m[m["district_code"] == int(hit["district_code"].iloc[0])]
+        rows.append(g.assign(state=r["state"], district=r["district"], rain_basis=r["rain_basis"]))
+    out = pd.concat(rows)[["state", "district", "rain_basis", "year", "month", "rain_mm",
+                           "normal_mm", "coverage"]]
+    return out.round(2)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--agri-dir", required=True, help="the agri-project folder")
@@ -126,6 +225,11 @@ def main():
               "soil_health_card.csv": soil_health_card(a.agri_dir, loc),
               "district_yields.csv": district_yields(a.agri_dir),
               "mandi_prices.csv": mandi_prices(a.agri_dir)}
+    yall, agree = district_yields_all(a.agri_dir)
+    tables["district_yields_all.csv"] = yall
+    tables["district_rain_monthly.csv"] = district_rain_monthly(a.agri_dir)
+    agree.to_csv(os.path.join(ROOT, "data", "checks", "yield_sources_agreement.csv"), index=False)
+    print(agree.to_string(index=False))
     for fn, df in tables.items():
         df.to_csv(os.path.join(a.out, fn), index=False)
         print(f"{fn}: {len(df)} rows")

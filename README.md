@@ -23,7 +23,10 @@ Optional inputs: `--soil-type sandy|light_loam|loam|clay`, `--lat/--lon` for the
 Every answer ends with a confidence level, then district background: IMD rain normals, Soil Health
 Card results, the district's usual yield and last harvest price.
 
-Season-start outlook (Haryana and Punjab): `python scripts/advise.py --outlook --district Hisar`.
+Season-start model (Haryana and Punjab, `notes/season_model.md`): the JISEM paper's ensemble
+(Random Forest, XGBoost, LightGBM) retrained on district yields and IMD rain for 9 crops; expected
+gross income per acre, its spread, and "crop A beats crop B in N of 10 likely seasons":
+`python scripts/advise.py --outlook --district Hisar`.
 
 Data used (`notes/data_sources.md`): Open-Meteo (ET0, forecast), NASA POWER (recorded rain; closer
 to IMD than Open-Meteo in a 54-season check), SoilGrids or the farmer's soil type, IMD normals,

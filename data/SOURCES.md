@@ -166,3 +166,17 @@ https://saiindia.gov.in/uploads/download_audit_report/2015/Union_Performance_Pro
 Cotton ginning outturn in India varies from 22 to 44 percent (ITMF SpinCom report, India 2002,
 https://itmf.org/images/dl/reports/sc-travel-reports/SpinCom-Report-India-2002.pdf), which is why
 no cotton value per acre is given.
+
+## Season-start model (added 2 November 2026)
+
+| File | From | What |
+|---|---|---|
+| `data/reference/district_yields_all.csv` | ICRISAT DLD `icrisat_dld_crops_unapportioned_1990_2019.csv` (2000-2019) and `03_processed_data/des_apy_district_2015_2022.csv` (DES, 2020-2022), plus the North India table for wheat, rice and cotton | Haryana and Punjab district yields for wheat, mustard, barley, chickpea, rice, cotton, maize, bajra, groundnut; ICRISAT kept where both exist |
+| `data/reference/district_rain_monthly.csv` | `03_processed_data/rainfall_district_monthly_2009_2024.csv` (IMD) | 45 Haryana and Punjab districts, monthly rain, IMD normal and day coverage, 2009-2024 |
+| `data/checks/yield_sources_agreement.csv` | the two above | ICRISAT against DES, 2015-2019, per crop |
+| `data/checks/season_model_*.csv` | `scripts/check_season_model.py` | validation, gate, test and feature importance |
+
+Cotton lint to kapas: north zone ginning outturn 33-35 percent (Cotton Association of India,
+Cotton Statistics and News, 20 April 2021, https://caionline.in/uploads/publications/doc/03_20-04-2021.pdf);
+north zone Bt hybrid trials 30.8-36.9 percent (ICAR AICRP on Cotton, North Zone Bt hybrid
+evaluation 2008-09, https://krishi.icar.gov.in/jspui/bitstream/123456789/7924/1/AICRP_Bt_2008_09_north.pdf).

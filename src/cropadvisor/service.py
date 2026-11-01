@@ -6,7 +6,8 @@
 Returns {"ok": True, "advice": {...JSON...}, "extras": {...}, "text_en": "...", "text_hi": "..."}
 or {"ok": False, "error": "...", "text_en": "I do not know: ...", "text_hi": "..."}.
 
-    outlook_request({"district": "Hisar"})   season-start yields and prices (outlook.py)
+    outlook_request({"district": "Hisar", "season": "rabi"})   season outlook (outlook.py) and the
+                                                 season-start model (seasonmodel.py)
 
 Data used: Open-Meteo (ET0, forecast, recorded rain where NASA POWER has none), NASA POWER
 (recorded rain), SoilGrids or the farmer's soil type (water-holding), and as district background
@@ -82,8 +83,14 @@ def advise_request(req, now=None, fetch_history=None, fetch_forecast=None, fetch
     return {"ok": False, "error": msg, "text_en": en, "text_hi": hi}
 
 
-def outlook_request(req, now=None, locations=sites.LOCATIONS):
-    """Season-start outlook for a district: {"ok", "outlook": [...], "text_en", "text_hi"}."""
+def next_season(today):
+    """The next season to be sown: rabi from July to December, kharif from January to June."""
+    return "rabi" if pd.Timestamp(today).month >= 7 else "kharif"
+
+
+def outlook_request(req, now=None, locations=sites.LOCATIONS, with_model=True):
+    """Season-start outlook for a district: {"ok", "outlook": [...], "season_model": {...},
+    "text_en", "text_hi"}. req["season"]: "rabi" or "kharif" (default: the next to be sown)."""
     try:
         if not req.get("district"):
             raise advisor.AdviceError("district is needed.")
@@ -104,8 +111,19 @@ def outlook_request(req, now=None, locations=sites.LOCATIONS):
         if keys and keys[0] not in ol.CROPS:
             raise advisor.AdviceError(f"Unknown crop '{keys[0]}'. Crops: {', '.join(ol.CROPS)}.")
         outs = ol.district_outlook(name, state, today, keys)
-        en, hi = ol.render(outs, name, state)
-        return {"ok": True, "outlook": advisor._jsonable(outs), "text_en": en, "text_hi": hi}
+        en, hi = ol.render(outs, name, state, prices_only=with_model)
+        res = {"ok": True, "outlook": advisor._jsonable(outs)}
+        if with_model:
+            from cropadvisor import seasonmodel as sm
+            season = req.get("season") or next_season(today)
+            if season not in ("rabi", "kharif"):
+                raise advisor.AdviceError("season must be rabi or kharif.")
+            so = sm.season_outlook(name, state, season, today)
+            res["season_model"] = advisor._jsonable(so)
+            m_en, m_hi = sm.text(so)
+            if m_en:
+                en, hi = "\n".join(m_en) + "\n\n" + en, "\n".join(m_hi) + "\n\n" + hi
+        return {**res, "text_en": en, "text_hi": hi}
     except advisor.AdviceError as e:
         msg = str(e)
     en, hi = advisor.i_do_not_know(msg)

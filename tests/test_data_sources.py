@@ -278,13 +278,14 @@ def test_outlook_stale_price_and_other_states(tables):
 
 
 def test_outlook_request_real_tables():
-    res = service.outlook_request({"district": "Bathinda"}, now="2026-11-02")
+    res = service.outlook_request({"district": "Bathinda"}, now="2026-11-02", with_model=False)
     assert res["ok"] and res["outlook"][0]["key"] == "wheat"
     assert "Not a recommendation" in res["text_en"]
     bad = service.outlook_request({"district": "Ujjain"}, now="2026-11-02")
     assert not bad["ok"] and "Haryana and Punjab only" in bad["error"]
-    assert not service.outlook_request({"district": "Nowhere"})["ok"]
-    assert not service.outlook_request({"district": "Hisar", "crop": "rice"})["ok"]
+    assert not service.outlook_request({"district": "Nowhere"}, with_model=False)["ok"]
+    assert not service.outlook_request({"district": "Hisar", "crop": "rice"},
+                                       with_model=False)["ok"]
 
 
 def test_advice_carries_district_extras():
@@ -315,7 +316,9 @@ def test_extras_outside_haryana_punjab_have_no_outlook():
 def test_server_outlook_endpoint():
     import serve
     from http.server import ThreadingHTTPServer
-    srv = ThreadingHTTPServer(("127.0.0.1", 0), serve.Handler)
+    class H(serve.Handler):
+        outlook = staticmethod(lambda req: service.outlook_request(req, with_model=False))
+    srv = ThreadingHTTPServer(("127.0.0.1", 0), H)
     t = threading.Thread(target=srv.serve_forever, daemon=True)
     t.start()
     try:

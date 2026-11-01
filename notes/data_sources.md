@@ -11,8 +11,9 @@ advice as district background, or in the season-start outlook.
 | SoilGrids / farmer's soil type | water-holding capacity | yes |
 | IMD gridded and district rainfall | (1) the yardstick that chose NASA POWER for recorded rain; (2) IMD normals: rain so far against normal, and next month's normal | no (it arrives months late) |
 | Soil Health Card | district fertility note, only where enough soils were tested | no |
-| ICRISAT and DES district yields | district yield in the outlook, and one line under the advice | no |
-| CEDA / Agmarknet mandi prices | last harvest price in the outlook, and one line under the advice | no |
+| ICRISAT and DES district yields | training data for the season-start model (9 crops); district yield line under the advice | no |
+| CEDA / Agmarknet mandi prices | prices and price changes in the season-start model; last harvest price in the outlook and under the advice | no |
+| IMD district rainfall (again) | weather features and the "likely seasons" of the season-start model | no |
 
 Run it:
 
@@ -84,6 +85,11 @@ not model-grade here). Hisar and Ganganagar, for example, have too few nitrogen 
 figure. No fertiliser dose is given: the farmer is sent to their own test and agriculture office.
 
 ## 4. Season outlook: district yields and mandi prices
+
+(Since 2 November `--outlook` leads with the season-start model, `notes/season_model.md`: the
+JISEM ensemble retrained on 9 crops, expected income per acre, its spread, and how often one crop
+beats another. The outlook below it then shows only the last harvest prices. The simple yield
+outlook described here is still what appears under the irrigation advice.)
 
 `python scripts/advise.py --outlook --district Bathinda`. Haryana and Punjab only. For each crop:
 

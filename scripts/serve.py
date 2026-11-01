@@ -11,7 +11,8 @@ Endpoints (all return JSON):
     GET  /advice?district=Hisar&sowing=2026-11-10&watered=2026-12-01,2027-01-10
                 &crop=wheat&lat=29.2&lon=75.6&soil_type=loam&today=2026-12-20
     POST /advice                         the same fields as a JSON body (watered as a list)
-    GET  /outlook?district=Hisar&crop=wheat   season-start yields and prices (Haryana, Punjab)
+    GET  /outlook?district=Hisar&season=rabi  season-start model (expected income per crop, how
+                                         often one beats another) and last harvest prices
 
 Advice answers also carry "extras": IMD rain normals, Soil Health Card results and the district's
 usual yield and last harvest price (background; they do not change the date). Add
@@ -90,7 +91,8 @@ class Handler(BaseHTTPRequestHandler):
                                     for k, v in advisor.SOIL_TYPES.items()])
         if u.path == "/outlook":
             q = {k: v[0] for k, v in parse_qs(u.query).items()}
-            res = self.outlook({k: q[k] for k in ("district", "crop", "today") if q.get(k)})
+            res = self.outlook({k: q[k] for k in ("district", "crop", "today", "season")
+                                if q.get(k)})
             return self._send(200 if res["ok"] else 422, res)
         if u.path == "/advice":
             try:
