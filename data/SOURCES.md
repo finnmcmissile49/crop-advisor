@@ -143,3 +143,26 @@ districts. The six pilot districts at their saved soil points (fetched 27 Octobe
 the earlier pull exactly); the other 21 at the district point, or the nearest point with soil data
 within 10 km (Aligarh and Rajkot, 3 km), fetched 29 October 2026. Ujjain (52 percent clay) and
 Ganganagar (100 mm per m) match the values in notes/irrigation_10_states.md.
+
+## Reference tables for the calculator (added 1 November 2026)
+
+Built by `scripts/build_reference_tables.py` from processed files in the agri-project folder, so the
+calculator runs from a fresh copy of the code. Nothing in the agri-project folder was changed.
+
+| File | From | What |
+|---|---|---|
+| `data/reference/imd_rain_monthly.csv` | `03_processed_data/rainfall_district_monthly_2009_2024.csv` (IMD district rainfall, with IMD's district normals) | 27 calculator districts: monthly IMD normal and 2009-2024 mean (months with at least 90 percent of days reported) |
+| `data/reference/soil_health_card.csv` | `03_processed_data/shc_district_nutrient_status_2023_2027.csv` (Soil Health Card dashboard, district nutrient status) | per district, cycle and nutrient: samples tested and percent rated low or deficient |
+| `data/reference/district_yields.csv` | `03_processed_data/north_india_yields_2009_2022.csv` (ICRISAT DLD 2009-2019, DES 2020-2022) | Haryana and Punjab wheat, rice, cotton district yields, with source and notes |
+| `data/reference/mandi_prices.csv` | `04_market_prices_ceda/ceda_prices_monthly_2001_2025.csv.gz` (CEDA Ashoka, Agmarknet monthly) | Haryana and Punjab monthly min, max and modal prices from January 2015, state and district level, the calculator's crops, rows without a data flag |
+
+Checks behind the choices: `data/checks/rain_source_vs_imd*.csv` and `rain_totals_by_source.csv`
+(from the 10-state daily weather pull, 2021-2023: Open-Meteo, NASA POWER and IMD gridded rain for
+the 27 districts), `data/checks/yield_outlook_check.csv` and `yield_outlook_by_horizon.csv`.
+
+Conversion figures: paddy to raw rice 67 percent (Tariff Commission norm of 2005, as quoted in CAG
+Report No. 31 of 2015 on procurement and milling of paddy,
+https://saiindia.gov.in/uploads/download_audit_report/2015/Union_Performance_Procurement_Milling_of_Paddy_Central_Pool_31_2015_chap_5.pdf).
+Cotton ginning outturn in India varies from 22 to 44 percent (ITMF SpinCom report, India 2002,
+https://itmf.org/images/dl/reports/sc-travel-reports/SpinCom-Report-India-2002.pdf), which is why
+no cotton value per acre is given.

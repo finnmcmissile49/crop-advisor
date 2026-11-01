@@ -124,13 +124,22 @@ def check_inputs(site, sowing, today, watered):
 
 # ---------------------------------------------------------------------------------- weather
 
-def get_weather(lat, lon, sowing, today, now=None, fetch_history=None, fetch_forecast=None):
-    """Daily rain and ET0 (Open-Meteo) from sowing to the end of the forecast.
+def get_weather(lat, lon, sowing, today, now=None, fetch_history=None, fetch_forecast=None,
+                fetch_power=None):
+    """Daily rain and ET0 from sowing to the end of the forecast.
 
     Live (today within 2 days of now): recorded weather to today plus the 16-day forecast.
     Test mode (today well in the past): recorded weather to today + 16 days, used as if it were
     the forecast (a perfect forecast, so real advice will be less certain).
-    Returns DataFrame date, rain_mm, et0_mm, forecast (bool), and the mode.
+
+    ET0 and the forecast are Open-Meteo's. Rain already fallen comes from NASA POWER where POWER
+    has it (fetch_power given), else from Open-Meteo: with IMD as the reference, POWER's rain put
+    the watering dates closer to IMD's than Open-Meteo's did (1 November 2026, 27 districts, two
+    wheat seasons; notes/data_sources.md). POWER lags real time by a few days; those days and the
+    forecast stay Open-Meteo. Columns rain_om_mm (Open-Meteo's rain) and rain_source ("pw" or
+    "om") record what was used.
+    Returns DataFrame date, rain_mm, et0_mm, forecast (bool), rain_om_mm, rain_source, and the
+    mode. If POWER cannot be reached the DataFrame's attrs["power_error"] says why.
     """
     fetch_history = fetch_history or openmeteo.fetch_history
     fetch_forecast = fetch_forecast or openmeteo.fetch_forecast
@@ -165,7 +174,52 @@ def get_weather(lat, lon, sowing, today, now=None, fetch_history=None, fetch_for
     if len(full) != len(out) or out[["rain_mm", "et0_mm"]].isna().any().any():
         raise AdviceError("Weather data has gaps, so the soil water cannot be tracked. Try again "
                           "later.")
-    return out.reset_index(drop=True), mode
+    out = out.reset_index(drop=True)
+    out["rain_om_mm"] = out["rain_mm"]
+    out["rain_source"] = "om"
+    if fetch_power is not None:
+        last = min(forecast_from - pd.Timedelta(days=1), now - pd.Timedelta(days=1))
+        try:
+            pw = fetch_power(lat, lon, f(sowing), f(last))
+            pw = pw[["date", "rain_mm"]].dropna().rename(columns={"rain_mm": "rain_pw_mm"})
+            pw = pw[(pw["rain_pw_mm"] >= 0) & (pw["date"] < forecast_from)]
+            out = out.merge(pw, on="date", how="left")
+            use = out["rain_pw_mm"].notna()
+            out.loc[use, "rain_mm"] = out.loc[use, "rain_pw_mm"].astype(float)
+            out.loc[use, "rain_source"] = "pw"
+            out = out.drop(columns="rain_pw_mm")
+        except Exception as e:   # POWER down or slow: Open-Meteo alone, and say so
+            out.attrs["power_error"] = str(e)[:150]
+    return out, mode
+
+
+def rain_record(weather, sowing, today):
+    """What the recorded rain since sowing says, by source (for the advice text)."""
+    rec = weather[(weather["date"] >= pd.Timestamp(sowing)) & (weather["date"] <= today)
+                  & ~weather["forecast"]]
+    if "rain_source" not in rec:
+        return None
+    pw = rec[rec["rain_source"] == "pw"]
+    return {"pw_days": int(len(pw)),
+            "pw_until": pw["date"].max() if len(pw) else None,
+            "rain_used_mm": round(float(rec["rain_mm"].sum()), 1),
+            "rain_om_mm": round(float(rec["rain_om_mm"].sum()), 1)}
+
+
+def rain_source_check(weather, day_likely, trigger):
+    """If NASA POWER's rain was used, rerun the likely case with Open-Meteo's rain instead.
+
+    trigger(weather) -> day or None. Returns the Open-Meteo date when it differs from the date
+    with POWER rain by more than a day (or one of them has no date), else None."""
+    if "rain_source" not in weather or not (weather["rain_source"] == "pw").any():
+        return None
+    alt_w = weather.assign(rain_mm=weather["rain_om_mm"])
+    alt = trigger(alt_w)
+    if alt == day_likely:
+        return None
+    if alt is not None and day_likely is not None and abs((alt - day_likely).days) <= 1:
+        return None
+    return {"om_day": alt}
 
 
 # ----------------------------------------------------------------------------------- advice
@@ -197,7 +251,7 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
            "season_days": params.season_days, "cutoff": cutoff, "depth_mm": depth_mm,
            "mode": mode, "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1),
            "forecast_end": end, "warnings": wheat_warnings(site, sowing),
-           "soil_type": site.soil_type}
+           "soil_type": site.soil_type, "rain_record": rain_record(weather, sowing, today)}
 
     if today > cutoff:
         return {**out, "status": "season_over"}
@@ -226,6 +280,11 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
     quiet = {"recheck": min(today + pd.Timedelta(days=RECHECK_DAYS), cutoff),
              "horizon_days": (end - today).days, "covers_season": covers_season}
     likely = days["likely"]
+    p_likely = ir.zone_params(site.zone, soil_cases(site)["likely"], state=site.state)
+    chk = rain_source_check(weather, likely, lambda w: _trigger_day(
+        w, sowing, p_likely, watered, depth_mm, today, min(cutoff, end))[0])
+    if chk:
+        out["rain_source_om_day"] = chk["om_day"]
     wait = rain_wait(run_likely, weather, likely, today)
     if wait:
         return {**out, **wait, "status": "wait_for_rain"}
@@ -312,6 +371,11 @@ def confidence(a):
     if any(w[0] == "late" for w in a.get("warnings", [])):
         score -= 1
         why.append(("sown late", "देर से बुवाई"))
+    if "rain_source_om_day" in a and st in ("water_window", "water_now", "light_soil_only",
+                                            "wait_for_rain", "not_needed_soon", "no_more_needed"):
+        score -= 1
+        why.append(("the two rain records (NASA POWER and Open-Meteo) give different dates",
+                    "बारिश के दो रिकॉर्ड (NASA POWER और Open-Meteo) अलग तारीख़ देते हैं"))
     if st in ("season_over", "max_reached"):
         score, why = 3, []
     return CONF_LEVELS[max(1, min(3, score))], why
@@ -322,6 +386,18 @@ def confidence_text(a):
     en = f"Confidence: {lvl_en}" + (f" ({'; '.join(w[0] for w in why)})." if why else ".")
     hi = f"भरोसा: {lvl_hi}" + (f" ({'; '.join(w[1] for w in why)})।" if why else "।")
     return en, hi
+
+
+def _jsonable(v):
+    if isinstance(v, dict):
+        return {str(k): _jsonable(x) for k, x in v.items()}
+    if isinstance(v, (list, tuple)):
+        return [_jsonable(x) for x in v]
+    if isinstance(v, pd.Timestamp):
+        return v.strftime("%Y-%m-%d")
+    if hasattr(v, "item"):
+        return v.item()
+    return v
 
 
 def to_json(a):
@@ -335,6 +411,8 @@ def to_json(a):
         elif isinstance(v, list):
             v = [x.strftime("%Y-%m-%d") if isinstance(x, pd.Timestamp) else
                  (list(x) if isinstance(x, tuple) else x) for x in v]
+        elif isinstance(v, dict):
+            v = _jsonable(v)
         elif hasattr(v, "item"):
             v = v.item()
         out[k] = v
@@ -399,6 +477,31 @@ def _hi(d):
 
 def _in(d, today):
     return (d - today).days
+
+
+def rain_lines(a):
+    """Which rain record was used, and the date with the other record if it differs."""
+    en, hi = [], []
+    rec = a.get("rain_record")
+    if rec and rec["pw_days"]:
+        en.append(f"Recorded rain since sowing: {rec['rain_used_mm']:g} mm (NASA POWER up to "
+                  f"{_en(rec['pw_until'])}, Open-Meteo after; Open-Meteo alone: "
+                  f"{rec['rain_om_mm']:g} mm).")
+        hi.append(f"बुवाई से अब तक दर्ज बारिश: {rec['rain_used_mm']:g} मिमी (NASA POWER "
+                  f"{_hi(rec['pw_until'])} तक, उसके बाद Open-Meteo; केवल Open-Meteo: "
+                  f"{rec['rain_om_mm']:g} मिमी)।")
+    if "rain_source_om_day" in a and a["status"] not in ("season_over", "max_reached"):
+        d = a["rain_source_om_day"]
+        if d is None:
+            en.append("With Open-Meteo's rain record instead, no watering would be due before "
+                      f"{_en(a['forecast_end'])}.")
+            hi.append(f"Open-Meteo के बारिश रिकॉर्ड से {_hi(a['forecast_end'])} से पहले सिंचाई की "
+                      "ज़रूरत नहीं निकलती।")
+        else:
+            en.append(f"With Open-Meteo's rain record instead, the watering would be due around "
+                      f"{_en(d)}.")
+            hi.append(f"Open-Meteo के बारिश रिकॉर्ड से सिंचाई {_hi(d)} के आसपास निकलती है।")
+    return en, hi
 
 
 def render(a):
@@ -504,6 +607,9 @@ def render(a):
     if st != "season_over":
         en.append(f"Rain forecast, next 7 days: {a['rain_next7_mm']:g} mm.")
         hi.append(f"अगले 7 दिन में बारिश का अनुमान: {a['rain_next7_mm']:g} मिमी।")
+    r_en, r_hi = rain_lines(a)
+    en.extend(r_en)
+    hi.extend(r_hi)
     c_en, c_hi = confidence_text(a)
     en.append(c_en)
     hi.append(c_hi)
@@ -602,7 +708,7 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
            "das": das, "watered": watered, "season_days": params.season_days, "cutoff": cutoff,
            "depth_mm": depth_mm, "mode": mode, "warnings": warnings,
            "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1), "forecast_end": end,
-           "soil_type": site.soil_type}
+           "soil_type": site.soil_type, "rain_record": rain_record(weather, sowing, today)}
     if today > cutoff:
         return {**out, "status": "season_over"}
     if spec.max_irrigations is not None and len(watered) >= spec.max_irrigations:
@@ -641,6 +747,11 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
     quiet = {"recheck": min(today + pd.Timedelta(days=RECHECK_DAYS), cutoff),
              "horizon_days": (end - today).days, "covers_season": covers_season}
     likely = days["likely"]
+    p_likely = spec.params(soil_cases(site)["likely"])
+    chk = rain_source_check(weather, likely, lambda w: _crop_trigger(
+        spec, w, sowing, p_likely, watered, depth_mm, today, last_day)[0])
+    if chk:
+        out["rain_source_om_day"] = chk["om_day"]
     wait = rain_wait(run_likely, weather, likely, today, sowing=sowing, spec=spec)
     if wait:
         return {**out, **wait, "status": "wait_for_rain"}
@@ -803,6 +914,9 @@ def render_crop(a):
     if st != "season_over":
         en.append(f"Rain forecast, next 7 days: {a['rain_next7_mm']:g} mm.")
         hi.append(f"अगले 7 दिन में बारिश का अनुमान: {a['rain_next7_mm']:g} मिमी।")
+    r_en, r_hi = rain_lines(a)
+    en.extend(r_en)
+    hi.extend(r_hi)
     en.extend(spec.notes_en)
     hi.extend(spec.notes_hi)
     c_en, c_hi = confidence_text(a)

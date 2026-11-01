@@ -1,0 +1,4 @@
+source,district_seasons,share_waterings_differ_from_imd,share_seasons_count_differs,mean_abs_shift_days_matched,closer_than_om,same_as_om,further_than_om
+om,54,0.304,0.2,0.34,,,
+omadj,54,0.257,0.15,0.53,10.0,37.0,7.0
+pw,54,0.173,0.09,0.4,19.0,30.0,5.0

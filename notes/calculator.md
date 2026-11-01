@@ -4,7 +4,13 @@
 watered; it tells you when to water next, in English and Hindi.
 
 **Test version.** Advice is for a typical field in the district, from free public data (Open-Meteo
-weather and forecast, SoilGrids soil). It has not been checked against real fields.
+ET0 and forecast, NASA POWER recorded rain, SoilGrids soil). It has not been checked against real
+fields.
+
+**Since 1 November 2026** the calculator uses every source the project collects: NASA POWER for
+rain already fallen (it agreed with IMD better than Open-Meteo did), IMD rain normals, the Soil
+Health Card, and district yields and mandi prices (shown under the advice, and in
+`--outlook`). See `notes/data_sources.md`.
 
 ## Run it
 
@@ -22,9 +28,13 @@ python scripts/advise.py --district Hisar --sowing 2026-11-10 --watered 2026-12-
 - `--depth-cm`: how much water one irrigation gives, if not the usual (7.5 cm Punjab, 7 cm
   elsewhere).
 - `--lang en` or `--lang hi`: one language only.
+- `--rain-source openmeteo`: use Open-Meteo for recorded rain instead of NASA POWER.
+- `--no-extras`: leave out the district background (IMD normals, Soil Health Card, yield, price).
+- `--outlook --district Hisar`: season-start outlook instead of irrigation advice (Haryana and
+  Punjab): district yield, last harvest price and gross value per acre for each crop.
 
-Needs the internet, and the soil file from the 10-state data pull
-(`data_10states/processed/soil.csv`).
+Needs the internet (Open-Meteo, NASA POWER; SoilGrids only with --lat/--lon). Everything else is in
+`data/` in the repo, so it runs from a fresh copy.
 
 ## Try it on a past season
 
@@ -67,5 +77,5 @@ python scripts/advise.py --district Hisar --sowing 2025-11-10 --watered 2025-12-
 
 - One weather point per district; soil from a model, not your field.
 - Rain between now and the advised date changes the answer: run it again after rain.
-- The Hindi text is a first version; have a native speaker and Digital Green check it before
-  farmers see it.
+- The Hindi text is a first version; have a native speaker and the field partner check it before
+  farmers see it. District names are still in English letters in the Hindi text.

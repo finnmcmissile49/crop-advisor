@@ -1,0 +1,1215 @@
+name,state,cycle,nutrient,samples,pct_low
+Sirsa,Haryana,2023-24,n,20100,89.8
+Sirsa,Haryana,2023-24,p,20101,61.8
+Sirsa,Haryana,2023-24,k,20101,51.5
+Sirsa,Haryana,2023-24,oc,20098,76.6
+Sirsa,Haryana,2023-24,zn,20079,65.3
+Sirsa,Haryana,2023-24,s,20102,24.7
+Sirsa,Haryana,2024-25,n,846,96.5
+Sirsa,Haryana,2024-25,p,65994,30.9
+Sirsa,Haryana,2024-25,k,65992,8.9
+Sirsa,Haryana,2024-25,oc,65981,86.8
+Sirsa,Haryana,2024-25,zn,65984,54.7
+Sirsa,Haryana,2024-25,s,65994,1.0
+Sirsa,Haryana,2025-26,n,418,82.1
+Sirsa,Haryana,2025-26,p,17555,52.1
+Sirsa,Haryana,2025-26,k,17555,14.4
+Sirsa,Haryana,2025-26,oc,17557,80.7
+Sirsa,Haryana,2025-26,zn,17555,41.2
+Sirsa,Haryana,2025-26,s,17555,0.2
+Hisar,Haryana,2023-24,n,35,100.0
+Hisar,Haryana,2023-24,p,14992,13.1
+Hisar,Haryana,2023-24,k,14994,25.6
+Hisar,Haryana,2023-24,oc,14979,98.9
+Hisar,Haryana,2023-24,zn,14992,42.6
+Hisar,Haryana,2023-24,s,14939,5.7
+Hisar,Haryana,2024-25,p,40630,4.1
+Hisar,Haryana,2024-25,k,40630,44.2
+Hisar,Haryana,2024-25,oc,40629,93.8
+Hisar,Haryana,2024-25,zn,40628,55.6
+Hisar,Haryana,2024-25,s,40629,9.9
+Hisar,Haryana,2025-26,p,36203,29.3
+Hisar,Haryana,2025-26,k,36204,23.2
+Hisar,Haryana,2025-26,oc,36204,100.0
+Hisar,Haryana,2025-26,zn,36202,52.3
+Hisar,Haryana,2025-26,s,36203,2.0
+Kurukshetra,Haryana,2023-24,n,3911,80.6
+Kurukshetra,Haryana,2023-24,p,15835,14.8
+Kurukshetra,Haryana,2023-24,k,15837,5.3
+Kurukshetra,Haryana,2023-24,oc,15833,60.0
+Kurukshetra,Haryana,2023-24,zn,15832,4.6
+Kurukshetra,Haryana,2023-24,s,15831,3.3
+Kurukshetra,Haryana,2024-25,p,39206,2.9
+Kurukshetra,Haryana,2024-25,k,39206,6.0
+Kurukshetra,Haryana,2024-25,oc,39206,92.2
+Kurukshetra,Haryana,2024-25,zn,39206,5.4
+Kurukshetra,Haryana,2024-25,s,39206,3.4
+Kurukshetra,Haryana,2025-26,p,11473,14.4
+Kurukshetra,Haryana,2025-26,k,11473,34.2
+Kurukshetra,Haryana,2025-26,oc,11472,84.5
+Kurukshetra,Haryana,2025-26,zn,11473,2.5
+Kurukshetra,Haryana,2025-26,s,11473,0.0
+Bathinda,Punjab,2023-24,n,9070,85.3
+Bathinda,Punjab,2023-24,p,14780,30.9
+Bathinda,Punjab,2023-24,k,14779,95.6
+Bathinda,Punjab,2023-24,oc,14780,52.8
+Bathinda,Punjab,2023-24,zn,14780,2.7
+Bathinda,Punjab,2023-24,s,14778,14.7
+Bathinda,Punjab,2024-25,n,18133,82.9
+Bathinda,Punjab,2024-25,p,20000,35.1
+Bathinda,Punjab,2024-25,k,20000,39.5
+Bathinda,Punjab,2024-25,oc,19999,51.9
+Bathinda,Punjab,2024-25,zn,20000,18.3
+Bathinda,Punjab,2024-25,s,18947,0.1
+Bathinda,Punjab,2025-26,n,12211,77.6
+Bathinda,Punjab,2025-26,p,7248,10.8
+Bathinda,Punjab,2025-26,k,7248,8.1
+Bathinda,Punjab,2025-26,oc,21998,53.3
+Bathinda,Punjab,2025-26,zn,7248,2.1
+Bathinda,Punjab,2025-26,s,7248,3.3
+Bathinda,Punjab,2026-27,n,1006,94.4
+Bathinda,Punjab,2026-27,oc,1446,60.9
+Sangrur,Punjab,2023-24,n,15,100.0
+Sangrur,Punjab,2023-24,p,9199,7.0
+Sangrur,Punjab,2023-24,k,9201,51.5
+Sangrur,Punjab,2023-24,oc,9198,10.6
+Sangrur,Punjab,2023-24,zn,9199,13.0
+Sangrur,Punjab,2023-24,s,9201,13.2
+Sangrur,Punjab,2024-25,n,50,100.0
+Sangrur,Punjab,2024-25,p,16501,21.9
+Sangrur,Punjab,2024-25,k,16501,69.5
+Sangrur,Punjab,2024-25,oc,16451,24.1
+Sangrur,Punjab,2024-25,zn,16427,5.1
+Sangrur,Punjab,2024-25,s,16501,11.7
+Sangrur,Punjab,2025-26,n,157,100.0
+Sangrur,Punjab,2025-26,p,17844,37.5
+Sangrur,Punjab,2025-26,k,18001,67.8
+Sangrur,Punjab,2025-26,oc,18001,29.8
+Sangrur,Punjab,2025-26,zn,18001,17.2
+Sangrur,Punjab,2025-26,s,18001,15.3
+Sangrur,Punjab,2026-27,p,1571,14.8
+Sangrur,Punjab,2026-27,k,1571,93.1
+Sangrur,Punjab,2026-27,oc,2324,49.4
+Sangrur,Punjab,2026-27,zn,1571,27.5
+Sangrur,Punjab,2026-27,s,1571,10.8
+Tarn Taran,Punjab,2023-24,oc,4,0.0
+Tarn Taran,Punjab,2024-25,n,8293,100.0
+Tarn Taran,Punjab,2024-25,p,8291,43.4
+Tarn Taran,Punjab,2024-25,k,8203,76.1
+Tarn Taran,Punjab,2024-25,oc,8290,33.8
+Tarn Taran,Punjab,2024-25,zn,8294,4.8
+Tarn Taran,Punjab,2024-25,s,8294,0.5
+Tarn Taran,Punjab,2025-26,n,3727,100.0
+Tarn Taran,Punjab,2025-26,p,3727,57.2
+Tarn Taran,Punjab,2025-26,k,3727,81.3
+Tarn Taran,Punjab,2025-26,oc,4710,24.3
+Tarn Taran,Punjab,2025-26,zn,3726,37.0
+Tarn Taran,Punjab,2025-26,s,3726,45.1
+Shahjahanpur,Uttar Pradesh,2023-24,n,9000,99.9
+Shahjahanpur,Uttar Pradesh,2023-24,p,9000,33.5
+Shahjahanpur,Uttar Pradesh,2023-24,k,9000,0.7
+Shahjahanpur,Uttar Pradesh,2023-24,oc,8999,98.6
+Shahjahanpur,Uttar Pradesh,2023-24,zn,9000,16.1
+Shahjahanpur,Uttar Pradesh,2023-24,s,9000,4.6
+Shahjahanpur,Uttar Pradesh,2024-25,n,14999,100.0
+Shahjahanpur,Uttar Pradesh,2024-25,p,14998,31.0
+Shahjahanpur,Uttar Pradesh,2024-25,k,14999,2.5
+Shahjahanpur,Uttar Pradesh,2024-25,oc,15000,98.2
+Shahjahanpur,Uttar Pradesh,2024-25,zn,14997,18.2
+Shahjahanpur,Uttar Pradesh,2024-25,s,14998,5.0
+Shahjahanpur,Uttar Pradesh,2025-26,n,30000,100.0
+Shahjahanpur,Uttar Pradesh,2025-26,p,30000,32.0
+Shahjahanpur,Uttar Pradesh,2025-26,k,30000,2.3
+Shahjahanpur,Uttar Pradesh,2025-26,oc,30000,97.2
+Shahjahanpur,Uttar Pradesh,2025-26,zn,30000,20.5
+Shahjahanpur,Uttar Pradesh,2025-26,s,30000,5.2
+Shahjahanpur,Uttar Pradesh,2026-27,n,6100,100.0
+Shahjahanpur,Uttar Pradesh,2026-27,p,6100,23.9
+Shahjahanpur,Uttar Pradesh,2026-27,k,6100,2.3
+Shahjahanpur,Uttar Pradesh,2026-27,oc,6100,88.1
+Shahjahanpur,Uttar Pradesh,2026-27,zn,6100,16.3
+Shahjahanpur,Uttar Pradesh,2026-27,s,6100,7.8
+Aligarh,Uttar Pradesh,2023-24,n,6000,94.7
+Aligarh,Uttar Pradesh,2023-24,p,6000,57.7
+Aligarh,Uttar Pradesh,2023-24,k,6000,73.0
+Aligarh,Uttar Pradesh,2023-24,oc,6000,94.4
+Aligarh,Uttar Pradesh,2023-24,zn,5985,69.9
+Aligarh,Uttar Pradesh,2023-24,s,6000,99.5
+Aligarh,Uttar Pradesh,2024-25,n,12000,80.8
+Aligarh,Uttar Pradesh,2024-25,p,12000,67.9
+Aligarh,Uttar Pradesh,2024-25,k,12000,85.5
+Aligarh,Uttar Pradesh,2024-25,oc,12000,80.6
+Aligarh,Uttar Pradesh,2024-25,zn,12000,48.2
+Aligarh,Uttar Pradesh,2024-25,s,12000,99.7
+Aligarh,Uttar Pradesh,2025-26,n,23235,94.4
+Aligarh,Uttar Pradesh,2025-26,p,23235,3.8
+Aligarh,Uttar Pradesh,2025-26,k,23235,77.3
+Aligarh,Uttar Pradesh,2025-26,oc,23235,72.5
+Aligarh,Uttar Pradesh,2025-26,zn,23235,74.9
+Aligarh,Uttar Pradesh,2025-26,s,23235,97.7
+Aligarh,Uttar Pradesh,2026-27,n,5100,96.0
+Aligarh,Uttar Pradesh,2026-27,p,5100,3.9
+Aligarh,Uttar Pradesh,2026-27,k,5100,31.7
+Aligarh,Uttar Pradesh,2026-27,oc,5100,61.1
+Aligarh,Uttar Pradesh,2026-27,zn,5100,95.2
+Aligarh,Uttar Pradesh,2026-27,s,5100,74.5
+Azamgarh,Uttar Pradesh,2023-24,n,13200,99.9
+Azamgarh,Uttar Pradesh,2023-24,p,13200,30.3
+Azamgarh,Uttar Pradesh,2023-24,k,13200,3.4
+Azamgarh,Uttar Pradesh,2023-24,oc,13200,99.9
+Azamgarh,Uttar Pradesh,2023-24,zn,13200,65.3
+Azamgarh,Uttar Pradesh,2023-24,s,13200,81.8
+Azamgarh,Uttar Pradesh,2024-25,n,21999,100.0
+Azamgarh,Uttar Pradesh,2024-25,p,21997,22.1
+Azamgarh,Uttar Pradesh,2024-25,k,21999,2.7
+Azamgarh,Uttar Pradesh,2024-25,oc,22000,99.8
+Azamgarh,Uttar Pradesh,2024-25,zn,22000,60.7
+Azamgarh,Uttar Pradesh,2024-25,s,22000,89.8
+Azamgarh,Uttar Pradesh,2025-26,n,43998,89.1
+Azamgarh,Uttar Pradesh,2025-26,p,43992,13.4
+Azamgarh,Uttar Pradesh,2025-26,k,43995,9.4
+Azamgarh,Uttar Pradesh,2025-26,oc,44000,99.9
+Azamgarh,Uttar Pradesh,2025-26,zn,43970,53.0
+Azamgarh,Uttar Pradesh,2025-26,s,43992,77.5
+Azamgarh,Uttar Pradesh,2026-27,n,8900,99.8
+Azamgarh,Uttar Pradesh,2026-27,p,8900,21.8
+Azamgarh,Uttar Pradesh,2026-27,k,8900,8.8
+Azamgarh,Uttar Pradesh,2026-27,oc,8900,100.0
+Azamgarh,Uttar Pradesh,2026-27,zn,8900,52.9
+Azamgarh,Uttar Pradesh,2026-27,s,8900,21.8
+Gorakhpur,Uttar Pradesh,2023-24,n,12000,99.9
+Gorakhpur,Uttar Pradesh,2023-24,p,11999,27.4
+Gorakhpur,Uttar Pradesh,2023-24,k,12000,7.8
+Gorakhpur,Uttar Pradesh,2023-24,oc,12000,72.5
+Gorakhpur,Uttar Pradesh,2023-24,zn,11999,28.7
+Gorakhpur,Uttar Pradesh,2023-24,s,12000,2.0
+Gorakhpur,Uttar Pradesh,2024-25,n,20000,99.7
+Gorakhpur,Uttar Pradesh,2024-25,p,19996,39.1
+Gorakhpur,Uttar Pradesh,2024-25,k,19999,15.9
+Gorakhpur,Uttar Pradesh,2024-25,oc,20000,72.2
+Gorakhpur,Uttar Pradesh,2024-25,zn,19998,40.1
+Gorakhpur,Uttar Pradesh,2024-25,s,19998,2.2
+Gorakhpur,Uttar Pradesh,2025-26,n,30599,100.0
+Gorakhpur,Uttar Pradesh,2025-26,p,30600,20.5
+Gorakhpur,Uttar Pradesh,2025-26,k,30600,17.7
+Gorakhpur,Uttar Pradesh,2025-26,oc,30598,74.4
+Gorakhpur,Uttar Pradesh,2025-26,zn,30599,27.6
+Gorakhpur,Uttar Pradesh,2025-26,s,30600,2.7
+Gorakhpur,Uttar Pradesh,2026-27,n,7800,99.9
+Gorakhpur,Uttar Pradesh,2026-27,p,7800,28.9
+Gorakhpur,Uttar Pradesh,2026-27,k,7800,23.8
+Gorakhpur,Uttar Pradesh,2026-27,oc,7800,69.9
+Gorakhpur,Uttar Pradesh,2026-27,zn,7800,21.5
+Gorakhpur,Uttar Pradesh,2026-27,s,7800,6.6
+Jhansi,Uttar Pradesh,2023-24,n,3998,98.7
+Jhansi,Uttar Pradesh,2023-24,p,3997,46.9
+Jhansi,Uttar Pradesh,2023-24,k,3998,1.0
+Jhansi,Uttar Pradesh,2023-24,oc,3998,73.7
+Jhansi,Uttar Pradesh,2023-24,zn,3998,12.4
+Jhansi,Uttar Pradesh,2023-24,s,3998,98.0
+Jhansi,Uttar Pradesh,2024-25,n,7998,99.8
+Jhansi,Uttar Pradesh,2024-25,p,7999,48.4
+Jhansi,Uttar Pradesh,2024-25,k,8000,0.3
+Jhansi,Uttar Pradesh,2024-25,oc,7999,80.3
+Jhansi,Uttar Pradesh,2024-25,zn,8000,20.2
+Jhansi,Uttar Pradesh,2024-25,s,8000,93.3
+Jhansi,Uttar Pradesh,2025-26,n,15996,96.4
+Jhansi,Uttar Pradesh,2025-26,p,15996,54.2
+Jhansi,Uttar Pradesh,2025-26,k,15996,0.3
+Jhansi,Uttar Pradesh,2025-26,oc,15995,66.5
+Jhansi,Uttar Pradesh,2025-26,zn,15995,14.6
+Jhansi,Uttar Pradesh,2025-26,s,15996,98.5
+Jhansi,Uttar Pradesh,2026-27,n,3300,90.7
+Jhansi,Uttar Pradesh,2026-27,p,3300,48.8
+Jhansi,Uttar Pradesh,2026-27,k,3300,0.3
+Jhansi,Uttar Pradesh,2026-27,oc,3300,62.4
+Jhansi,Uttar Pradesh,2026-27,zn,3300,63.1
+Jhansi,Uttar Pradesh,2026-27,s,3300,96.8
+Ujjain,Madhya Pradesh,2023-24,n,14553,95.4
+Ujjain,Madhya Pradesh,2023-24,p,14563,12.5
+Ujjain,Madhya Pradesh,2023-24,k,14567,0.8
+Ujjain,Madhya Pradesh,2023-24,oc,14550,31.6
+Ujjain,Madhya Pradesh,2023-24,zn,14569,52.9
+Ujjain,Madhya Pradesh,2023-24,s,14560,5.7
+Ujjain,Madhya Pradesh,2024-25,n,24098,94.7
+Ujjain,Madhya Pradesh,2024-25,p,24102,5.8
+Ujjain,Madhya Pradesh,2024-25,k,24105,0.6
+Ujjain,Madhya Pradesh,2024-25,oc,24040,28.3
+Ujjain,Madhya Pradesh,2024-25,zn,24032,43.1
+Ujjain,Madhya Pradesh,2024-25,s,24099,9.1
+Ujjain,Madhya Pradesh,2025-26,n,21830,93.8
+Ujjain,Madhya Pradesh,2025-26,p,21833,3.2
+Ujjain,Madhya Pradesh,2025-26,k,21831,0.5
+Ujjain,Madhya Pradesh,2025-26,oc,21802,32.4
+Ujjain,Madhya Pradesh,2025-26,zn,21797,54.9
+Ujjain,Madhya Pradesh,2025-26,s,21830,19.7
+Ujjain,Madhya Pradesh,2026-27,n,5046,91.5
+Ujjain,Madhya Pradesh,2026-27,p,5046,2.3
+Ujjain,Madhya Pradesh,2026-27,k,5046,0.8
+Ujjain,Madhya Pradesh,2026-27,oc,5046,18.4
+Ujjain,Madhya Pradesh,2026-27,zn,5046,67.9
+Ujjain,Madhya Pradesh,2026-27,s,5046,17.8
+Vidisha,Madhya Pradesh,2023-24,n,14052,95.4
+Vidisha,Madhya Pradesh,2023-24,p,14086,1.6
+Vidisha,Madhya Pradesh,2023-24,k,14099,0.5
+Vidisha,Madhya Pradesh,2023-24,oc,13995,32.1
+Vidisha,Madhya Pradesh,2023-24,zn,14102,22.5
+Vidisha,Madhya Pradesh,2023-24,s,14106,6.2
+Vidisha,Madhya Pradesh,2024-25,n,27918,82.9
+Vidisha,Madhya Pradesh,2024-25,p,27939,1.2
+Vidisha,Madhya Pradesh,2024-25,k,27943,0.4
+Vidisha,Madhya Pradesh,2024-25,oc,27877,38.6
+Vidisha,Madhya Pradesh,2024-25,zn,27927,17.1
+Vidisha,Madhya Pradesh,2024-25,s,27944,5.0
+Vidisha,Madhya Pradesh,2025-26,n,25453,88.0
+Vidisha,Madhya Pradesh,2025-26,p,25455,7.5
+Vidisha,Madhya Pradesh,2025-26,k,25454,3.2
+Vidisha,Madhya Pradesh,2025-26,oc,25447,61.2
+Vidisha,Madhya Pradesh,2025-26,zn,25448,49.6
+Vidisha,Madhya Pradesh,2025-26,s,25455,52.3
+Vidisha,Madhya Pradesh,2026-27,n,7372,91.3
+Vidisha,Madhya Pradesh,2026-27,p,7374,12.8
+Vidisha,Madhya Pradesh,2026-27,k,7374,1.6
+Vidisha,Madhya Pradesh,2026-27,oc,7369,51.1
+Vidisha,Madhya Pradesh,2026-27,zn,7372,46.4
+Vidisha,Madhya Pradesh,2026-27,s,7374,41.6
+Rewa,Madhya Pradesh,2023-24,n,13633,67.7
+Rewa,Madhya Pradesh,2023-24,p,13633,1.3
+Rewa,Madhya Pradesh,2023-24,k,13633,0.4
+Rewa,Madhya Pradesh,2023-24,oc,13633,10.5
+Rewa,Madhya Pradesh,2023-24,zn,13633,90.1
+Rewa,Madhya Pradesh,2023-24,s,13633,1.3
+Rewa,Madhya Pradesh,2024-25,n,22289,65.9
+Rewa,Madhya Pradesh,2024-25,p,22289,1.0
+Rewa,Madhya Pradesh,2024-25,k,22288,0.6
+Rewa,Madhya Pradesh,2024-25,oc,22285,16.1
+Rewa,Madhya Pradesh,2024-25,zn,22289,83.1
+Rewa,Madhya Pradesh,2024-25,s,22289,0.9
+Rewa,Madhya Pradesh,2025-26,n,21849,75.3
+Rewa,Madhya Pradesh,2025-26,p,21848,5.2
+Rewa,Madhya Pradesh,2025-26,k,21849,0.4
+Rewa,Madhya Pradesh,2025-26,oc,21848,26.7
+Rewa,Madhya Pradesh,2025-26,zn,21848,64.9
+Rewa,Madhya Pradesh,2025-26,s,21850,15.5
+Rewa,Madhya Pradesh,2026-27,n,5348,56.0
+Rewa,Madhya Pradesh,2026-27,p,5348,0.9
+Rewa,Madhya Pradesh,2026-27,k,5348,0.3
+Rewa,Madhya Pradesh,2026-27,oc,5348,21.5
+Rewa,Madhya Pradesh,2026-27,zn,5348,66.3
+Rewa,Madhya Pradesh,2026-27,s,5348,3.4
+Ganganagar,Rajasthan,2023-24,n,4,100.0
+Ganganagar,Rajasthan,2023-24,p,11492,0.1
+Ganganagar,Rajasthan,2023-24,k,11506,0.7
+Ganganagar,Rajasthan,2023-24,oc,11507,99.4
+Ganganagar,Rajasthan,2023-24,zn,11506,41.1
+Ganganagar,Rajasthan,2023-24,s,11506,25.3
+Ganganagar,Rajasthan,2024-25,n,2,100.0
+Ganganagar,Rajasthan,2024-25,p,12391,1.1
+Ganganagar,Rajasthan,2024-25,k,12406,0.4
+Ganganagar,Rajasthan,2024-25,oc,12406,99.7
+Ganganagar,Rajasthan,2024-25,zn,12406,40.9
+Ganganagar,Rajasthan,2024-25,s,12406,16.4
+Ganganagar,Rajasthan,2025-26,p,20295,0.0
+Ganganagar,Rajasthan,2025-26,k,20317,0.1
+Ganganagar,Rajasthan,2025-26,oc,20317,98.5
+Ganganagar,Rajasthan,2025-26,zn,20317,50.8
+Ganganagar,Rajasthan,2025-26,s,20316,2.8
+Alwar,Rajasthan,2023-24,n,38,92.1
+Alwar,Rajasthan,2023-24,p,12466,0.6
+Alwar,Rajasthan,2023-24,k,12469,19.4
+Alwar,Rajasthan,2023-24,oc,12454,97.3
+Alwar,Rajasthan,2023-24,zn,12458,77.4
+Alwar,Rajasthan,2023-24,s,7882,23.6
+Alwar,Rajasthan,2024-25,n,36,94.4
+Alwar,Rajasthan,2024-25,p,9575,0.2
+Alwar,Rajasthan,2024-25,k,9582,17.4
+Alwar,Rajasthan,2024-25,oc,9565,87.4
+Alwar,Rajasthan,2024-25,zn,9582,59.3
+Alwar,Rajasthan,2024-25,s,9539,28.6
+Alwar,Rajasthan,2025-26,n,1,100.0
+Alwar,Rajasthan,2025-26,p,13436,0.0
+Alwar,Rajasthan,2025-26,k,13437,10.2
+Alwar,Rajasthan,2025-26,oc,13434,97.0
+Alwar,Rajasthan,2025-26,zn,13438,64.7
+Alwar,Rajasthan,2025-26,s,13439,27.9
+Alwar,Rajasthan,2026-27,p,3403,0.0
+Alwar,Rajasthan,2026-27,k,3403,2.3
+Alwar,Rajasthan,2026-27,oc,3403,94.8
+Alwar,Rajasthan,2026-27,zn,3403,72.0
+Alwar,Rajasthan,2026-27,s,3403,10.9
+Bundi,Rajasthan,2023-24,p,6151,0.0
+Bundi,Rajasthan,2023-24,k,6151,0.1
+Bundi,Rajasthan,2023-24,oc,6150,46.9
+Bundi,Rajasthan,2023-24,zn,6146,26.6
+Bundi,Rajasthan,2023-24,s,1,0.0
+Bundi,Rajasthan,2024-25,p,8632,0.0
+Bundi,Rajasthan,2024-25,k,8633,0.1
+Bundi,Rajasthan,2024-25,oc,8633,36.0
+Bundi,Rajasthan,2024-25,zn,8628,26.4
+Bundi,Rajasthan,2024-25,s,10,100.0
+Bundi,Rajasthan,2025-26,p,10000,0.0
+Bundi,Rajasthan,2025-26,k,10000,0.1
+Bundi,Rajasthan,2025-26,oc,9999,45.7
+Bundi,Rajasthan,2025-26,zn,9996,23.6
+Bundi,Rajasthan,2026-27,p,3437,0.0
+Bundi,Rajasthan,2026-27,k,3437,0.0
+Bundi,Rajasthan,2026-27,oc,3437,43.3
+Bundi,Rajasthan,2026-27,zn,3437,36.0
+Bundi,Rajasthan,2026-27,s,3437,77.1
+Rohtas,Bihar,2023-24,n,7389,0.9
+Rohtas,Bihar,2023-24,p,7388,0.3
+Rohtas,Bihar,2023-24,k,7388,1.3
+Rohtas,Bihar,2023-24,oc,7388,7.9
+Rohtas,Bihar,2023-24,zn,7388,1.0
+Rohtas,Bihar,2023-24,s,7388,4.9
+Rohtas,Bihar,2024-25,n,17799,6.9
+Rohtas,Bihar,2024-25,p,17798,0.4
+Rohtas,Bihar,2024-25,k,17797,3.3
+Rohtas,Bihar,2024-25,oc,17790,11.0
+Rohtas,Bihar,2024-25,zn,17793,2.0
+Rohtas,Bihar,2024-25,s,17798,11.2
+Rohtas,Bihar,2025-26,n,10674,1.6
+Rohtas,Bihar,2025-26,p,10674,0.0
+Rohtas,Bihar,2025-26,k,10674,0.0
+Rohtas,Bihar,2025-26,oc,10674,5.9
+Rohtas,Bihar,2025-26,zn,10674,0.5
+Rohtas,Bihar,2025-26,s,10674,2.1
+Rohtas,Bihar,2026-27,n,2776,0.9
+Rohtas,Bihar,2026-27,p,2776,0.1
+Rohtas,Bihar,2026-27,k,2776,0.1
+Rohtas,Bihar,2026-27,oc,2776,9.4
+Rohtas,Bihar,2026-27,zn,2776,0.9
+Rohtas,Bihar,2026-27,s,2776,1.0
+Muzaffarpur,Bihar,2023-24,n,6129,99.8
+Muzaffarpur,Bihar,2023-24,p,6136,1.1
+Muzaffarpur,Bihar,2023-24,k,6136,3.5
+Muzaffarpur,Bihar,2023-24,oc,6132,48.6
+Muzaffarpur,Bihar,2023-24,zn,6135,70.1
+Muzaffarpur,Bihar,2023-24,s,6133,19.1
+Muzaffarpur,Bihar,2024-25,n,14992,99.7
+Muzaffarpur,Bihar,2024-25,p,14996,0.1
+Muzaffarpur,Bihar,2024-25,k,14996,2.8
+Muzaffarpur,Bihar,2024-25,oc,14996,14.1
+Muzaffarpur,Bihar,2024-25,zn,14996,67.7
+Muzaffarpur,Bihar,2024-25,s,14997,4.2
+Muzaffarpur,Bihar,2025-26,n,8989,99.0
+Muzaffarpur,Bihar,2025-26,p,8989,0.5
+Muzaffarpur,Bihar,2025-26,k,8988,3.5
+Muzaffarpur,Bihar,2025-26,oc,8989,13.2
+Muzaffarpur,Bihar,2025-26,zn,8989,47.6
+Muzaffarpur,Bihar,2025-26,s,8989,3.9
+Muzaffarpur,Bihar,2026-27,n,1509,97.7
+Muzaffarpur,Bihar,2026-27,p,1509,0.5
+Muzaffarpur,Bihar,2026-27,k,1509,8.0
+Muzaffarpur,Bihar,2026-27,oc,1509,27.0
+Muzaffarpur,Bihar,2026-27,zn,1509,51.5
+Muzaffarpur,Bihar,2026-27,s,1509,19.7
+Ahmadabad,Gujarat,2023-24,n,4800,94.1
+Ahmadabad,Gujarat,2023-24,p,4800,6.9
+Ahmadabad,Gujarat,2023-24,k,4800,3.2
+Ahmadabad,Gujarat,2023-24,oc,4800,43.1
+Ahmadabad,Gujarat,2023-24,zn,4800,32.8
+Ahmadabad,Gujarat,2023-24,s,4800,1.0
+Ahmadabad,Gujarat,2024-25,n,16601,91.8
+Ahmadabad,Gujarat,2024-25,p,16601,6.8
+Ahmadabad,Gujarat,2024-25,k,16601,0.9
+Ahmadabad,Gujarat,2024-25,oc,16601,40.0
+Ahmadabad,Gujarat,2024-25,zn,16601,43.1
+Ahmadabad,Gujarat,2024-25,s,16601,77.2
+Ahmadabad,Gujarat,2025-26,n,17231,97.7
+Ahmadabad,Gujarat,2025-26,p,17230,6.2
+Ahmadabad,Gujarat,2025-26,k,17231,2.8
+Ahmadabad,Gujarat,2025-26,oc,17231,44.7
+Ahmadabad,Gujarat,2025-26,zn,17230,38.9
+Ahmadabad,Gujarat,2025-26,s,17231,77.6
+Ahmadabad,Gujarat,2026-27,n,1054,87.8
+Ahmadabad,Gujarat,2026-27,p,1054,39.4
+Ahmadabad,Gujarat,2026-27,k,1054,2.2
+Ahmadabad,Gujarat,2026-27,oc,1054,41.1
+Ahmadabad,Gujarat,2026-27,zn,1054,35.1
+Ahmadabad,Gujarat,2026-27,s,1054,86.8
+Rajkot,Gujarat,2023-24,n,6190,53.8
+Rajkot,Gujarat,2023-24,p,6190,0.0
+Rajkot,Gujarat,2023-24,k,6190,0.1
+Rajkot,Gujarat,2023-24,oc,6190,23.7
+Rajkot,Gujarat,2023-24,zn,6190,16.7
+Rajkot,Gujarat,2023-24,s,6190,32.0
+Rajkot,Gujarat,2024-25,n,21664,86.3
+Rajkot,Gujarat,2024-25,p,21628,0.1
+Rajkot,Gujarat,2024-25,k,21665,0.5
+Rajkot,Gujarat,2024-25,oc,21664,44.0
+Rajkot,Gujarat,2024-25,zn,21665,18.8
+Rajkot,Gujarat,2024-25,s,21665,15.9
+Rajkot,Gujarat,2025-26,n,21665,88.2
+Rajkot,Gujarat,2025-26,p,21665,0.1
+Rajkot,Gujarat,2025-26,k,21665,0.0
+Rajkot,Gujarat,2025-26,oc,21665,54.1
+Rajkot,Gujarat,2025-26,zn,21664,17.4
+Rajkot,Gujarat,2025-26,s,21665,22.9
+Rajkot,Gujarat,2026-27,n,3802,100.0
+Rajkot,Gujarat,2026-27,p,3802,0.1
+Rajkot,Gujarat,2026-27,k,3802,0.0
+Rajkot,Gujarat,2026-27,oc,3802,96.2
+Rajkot,Gujarat,2026-27,zn,3802,17.4
+Rajkot,Gujarat,2026-27,s,3802,8.0
+Udham Singh Nagar,Uttarakhand,2023-24,n,5,100.0
+Udham Singh Nagar,Uttarakhand,2023-24,p,9893,18.7
+Udham Singh Nagar,Uttarakhand,2023-24,k,9893,64.5
+Udham Singh Nagar,Uttarakhand,2023-24,oc,9893,65.7
+Udham Singh Nagar,Uttarakhand,2023-24,zn,9893,11.8
+Udham Singh Nagar,Uttarakhand,2023-24,s,9893,12.3
+Udham Singh Nagar,Uttarakhand,2024-25,n,6161,95.6
+Udham Singh Nagar,Uttarakhand,2024-25,p,11829,8.4
+Udham Singh Nagar,Uttarakhand,2024-25,k,11835,32.2
+Udham Singh Nagar,Uttarakhand,2024-25,oc,11811,67.4
+Udham Singh Nagar,Uttarakhand,2024-25,zn,11839,17.3
+Udham Singh Nagar,Uttarakhand,2024-25,s,11838,7.0
+Udham Singh Nagar,Uttarakhand,2025-26,n,11036,98.3
+Udham Singh Nagar,Uttarakhand,2025-26,p,11036,14.5
+Udham Singh Nagar,Uttarakhand,2025-26,k,11036,35.2
+Udham Singh Nagar,Uttarakhand,2025-26,oc,11036,49.7
+Udham Singh Nagar,Uttarakhand,2025-26,zn,11036,12.2
+Udham Singh Nagar,Uttarakhand,2025-26,s,11036,11.4
+Udham Singh Nagar,Uttarakhand,2026-27,n,1154,99.9
+Udham Singh Nagar,Uttarakhand,2026-27,p,1154,29.2
+Udham Singh Nagar,Uttarakhand,2026-27,k,1154,22.5
+Udham Singh Nagar,Uttarakhand,2026-27,oc,1154,4.2
+Udham Singh Nagar,Uttarakhand,2026-27,zn,1154,16.5
+Udham Singh Nagar,Uttarakhand,2026-27,s,1154,7.2
+Haridwar,Uttarakhand,2023-24,n,1,100.0
+Haridwar,Uttarakhand,2023-24,p,5219,16.9
+Haridwar,Uttarakhand,2023-24,k,5220,13.9
+Haridwar,Uttarakhand,2023-24,oc,5225,43.7
+Haridwar,Uttarakhand,2023-24,zn,5214,22.7
+Haridwar,Uttarakhand,2023-24,s,5224,20.5
+Haridwar,Uttarakhand,2024-25,n,5720,95.8
+Haridwar,Uttarakhand,2024-25,p,9986,14.4
+Haridwar,Uttarakhand,2024-25,k,9998,15.0
+Haridwar,Uttarakhand,2024-25,oc,9998,51.2
+Haridwar,Uttarakhand,2024-25,zn,9998,18.3
+Haridwar,Uttarakhand,2024-25,s,10000,17.7
+Haridwar,Uttarakhand,2025-26,n,7250,91.5
+Haridwar,Uttarakhand,2025-26,p,7249,10.0
+Haridwar,Uttarakhand,2025-26,k,7250,13.6
+Haridwar,Uttarakhand,2025-26,oc,7250,51.8
+Haridwar,Uttarakhand,2025-26,zn,7247,25.2
+Haridwar,Uttarakhand,2025-26,s,7250,14.9
+Haridwar,Uttarakhand,2026-27,n,2711,79.6
+Haridwar,Uttarakhand,2026-27,p,2711,13.5
+Haridwar,Uttarakhand,2026-27,k,2711,10.7
+Haridwar,Uttarakhand,2026-27,oc,2711,55.7
+Haridwar,Uttarakhand,2026-27,zn,2710,30.8
+Haridwar,Uttarakhand,2026-27,s,2711,21.6
+Jammu,Jammu and Kashmir,2023-24,n,4131,36.2
+Jammu,Jammu and Kashmir,2023-24,p,4131,0.1
+Jammu,Jammu and Kashmir,2023-24,k,4131,1.4
+Jammu,Jammu and Kashmir,2023-24,oc,4128,57.2
+Jammu,Jammu and Kashmir,2023-24,zn,4112,4.3
+Jammu,Jammu and Kashmir,2023-24,s,4130,0.4
+Jammu,Jammu and Kashmir,2024-25,n,2992,42.0
+Jammu,Jammu and Kashmir,2024-25,p,2997,1.4
+Jammu,Jammu and Kashmir,2024-25,k,2997,2.0
+Jammu,Jammu and Kashmir,2024-25,oc,2982,62.0
+Jammu,Jammu and Kashmir,2024-25,zn,2996,4.9
+Jammu,Jammu and Kashmir,2024-25,s,2998,6.2
+Jammu,Jammu and Kashmir,2025-26,n,7042,41.0
+Jammu,Jammu and Kashmir,2025-26,p,7044,4.6
+Jammu,Jammu and Kashmir,2025-26,k,7043,7.7
+Jammu,Jammu and Kashmir,2025-26,oc,7031,57.4
+Jammu,Jammu and Kashmir,2025-26,zn,7027,12.4
+Jammu,Jammu and Kashmir,2025-26,s,7040,9.7
+Jammu,Jammu and Kashmir,2026-27,n,450,35.1
+Jammu,Jammu and Kashmir,2026-27,p,450,6.9
+Jammu,Jammu and Kashmir,2026-27,k,450,4.9
+Jammu,Jammu and Kashmir,2026-27,oc,450,54.9
+Jammu,Jammu and Kashmir,2026-27,zn,450,10.7
+Jammu,Jammu and Kashmir,2026-27,s,450,13.1
+Kathua,Jammu and Kashmir,2023-24,n,3000,9.9
+Kathua,Jammu and Kashmir,2023-24,p,3000,1.2
+Kathua,Jammu and Kashmir,2023-24,k,3000,3.5
+Kathua,Jammu and Kashmir,2023-24,oc,2999,20.0
+Kathua,Jammu and Kashmir,2023-24,zn,2993,10.2
+Kathua,Jammu and Kashmir,2023-24,s,3000,2.4
+Kathua,Jammu and Kashmir,2024-25,n,3260,5.8
+Kathua,Jammu and Kashmir,2024-25,p,3262,1.6
+Kathua,Jammu and Kashmir,2024-25,k,3263,2.6
+Kathua,Jammu and Kashmir,2024-25,oc,3255,15.3
+Kathua,Jammu and Kashmir,2024-25,zn,3263,6.7
+Kathua,Jammu and Kashmir,2024-25,s,3263,8.6
+Kathua,Jammu and Kashmir,2025-26,n,3801,11.9
+Kathua,Jammu and Kashmir,2025-26,p,3800,5.3
+Kathua,Jammu and Kashmir,2025-26,k,3798,13.9
+Kathua,Jammu and Kashmir,2025-26,oc,3799,24.1
+Kathua,Jammu and Kashmir,2025-26,zn,3797,6.8
+Kathua,Jammu and Kashmir,2025-26,s,3799,7.4
+Kathua,Jammu and Kashmir,2026-27,n,500,13.6
+Kathua,Jammu and Kashmir,2026-27,p,500,0.8
+Kathua,Jammu and Kashmir,2026-27,k,500,40.4
+Kathua,Jammu and Kashmir,2026-27,oc,500,27.0
+Kathua,Jammu and Kashmir,2026-27,zn,500,9.6
+Kathua,Jammu and Kashmir,2026-27,s,500,4.0
+Murshidabad,West Bengal,2023-24,n,26085,30.6
+Murshidabad,West Bengal,2023-24,p,26085,0.1
+Murshidabad,West Bengal,2023-24,k,26085,6.3
+Murshidabad,West Bengal,2023-24,oc,26084,48.5
+Murshidabad,West Bengal,2023-24,zn,26084,37.4
+Murshidabad,West Bengal,2023-24,s,26085,21.7
+Murshidabad,West Bengal,2024-25,n,30991,65.5
+Murshidabad,West Bengal,2024-25,p,30998,0.2
+Murshidabad,West Bengal,2024-25,k,31000,2.8
+Murshidabad,West Bengal,2024-25,oc,30954,50.0
+Murshidabad,West Bengal,2024-25,zn,30999,50.0
+Murshidabad,West Bengal,2024-25,s,31003,17.2
+Murshidabad,West Bengal,2025-26,n,37979,62.5
+Murshidabad,West Bengal,2025-26,p,37979,15.5
+Murshidabad,West Bengal,2025-26,k,37980,3.0
+Murshidabad,West Bengal,2025-26,oc,37981,44.4
+Murshidabad,West Bengal,2025-26,zn,37979,66.2
+Murshidabad,West Bengal,2025-26,s,37978,63.7
+Murshidabad,West Bengal,2026-27,n,1916,56.8
+Murshidabad,West Bengal,2026-27,p,1916,14.9
+Murshidabad,West Bengal,2026-27,k,1916,4.3
+Murshidabad,West Bengal,2026-27,oc,1916,24.8
+Murshidabad,West Bengal,2026-27,zn,1916,50.3
+Murshidabad,West Bengal,2026-27,s,1916,93.3
+Dakshin Dinajpur,West Bengal,2023-24,n,6432,36.0
+Dakshin Dinajpur,West Bengal,2023-24,p,6432,0.0
+Dakshin Dinajpur,West Bengal,2023-24,k,6432,7.7
+Dakshin Dinajpur,West Bengal,2023-24,oc,6431,34.7
+Dakshin Dinajpur,West Bengal,2023-24,zn,6432,2.8
+Dakshin Dinajpur,West Bengal,2023-24,s,6432,4.9
+Dakshin Dinajpur,West Bengal,2024-25,n,8361,33.0
+Dakshin Dinajpur,West Bengal,2024-25,p,8362,27.3
+Dakshin Dinajpur,West Bengal,2024-25,k,8362,13.3
+Dakshin Dinajpur,West Bengal,2024-25,oc,8357,32.8
+Dakshin Dinajpur,West Bengal,2024-25,zn,8363,12.6
+Dakshin Dinajpur,West Bengal,2024-25,s,8362,11.2
+Dakshin Dinajpur,West Bengal,2025-26,n,16602,11.3
+Dakshin Dinajpur,West Bengal,2025-26,p,16605,37.6
+Dakshin Dinajpur,West Bengal,2025-26,k,16605,9.4
+Dakshin Dinajpur,West Bengal,2025-26,oc,16601,10.5
+Dakshin Dinajpur,West Bengal,2025-26,zn,16606,29.4
+Dakshin Dinajpur,West Bengal,2025-26,s,16605,37.7
+Dakshin Dinajpur,West Bengal,2026-27,n,160,6.9
+Dakshin Dinajpur,West Bengal,2026-27,p,160,8.8
+Dakshin Dinajpur,West Bengal,2026-27,k,160,5.6
+Dakshin Dinajpur,West Bengal,2026-27,oc,160,6.9
+Dakshin Dinajpur,West Bengal,2026-27,zn,160,7.5
+Dakshin Dinajpur,West Bengal,2026-27,s,160,40.6
+Ambala,Haryana,2023-24,n,22,100.0
+Ambala,Haryana,2023-24,p,19489,36.5
+Ambala,Haryana,2023-24,k,19491,55.6
+Ambala,Haryana,2023-24,oc,19489,81.8
+Ambala,Haryana,2023-24,zn,19475,19.2
+Ambala,Haryana,2023-24,s,19486,15.8
+Ambala,Haryana,2024-25,p,40067,5.7
+Ambala,Haryana,2024-25,k,40066,36.0
+Ambala,Haryana,2024-25,oc,40067,75.1
+Ambala,Haryana,2024-25,zn,40067,8.2
+Ambala,Haryana,2024-25,s,40067,1.4
+Ambala,Haryana,2025-26,n,891,93.3
+Ambala,Haryana,2025-26,p,60692,42.0
+Ambala,Haryana,2025-26,k,60693,29.9
+Ambala,Haryana,2025-26,oc,60693,87.4
+Ambala,Haryana,2025-26,zn,60687,13.8
+Ambala,Haryana,2025-26,s,60693,0.9
+Bhiwani,Haryana,2023-24,n,26,100.0
+Bhiwani,Haryana,2023-24,p,14232,2.3
+Bhiwani,Haryana,2023-24,k,14232,6.8
+Bhiwani,Haryana,2023-24,oc,14226,46.9
+Bhiwani,Haryana,2023-24,zn,14229,23.2
+Bhiwani,Haryana,2023-24,s,14231,5.7
+Bhiwani,Haryana,2024-25,p,43896,19.2
+Bhiwani,Haryana,2024-25,k,43896,17.5
+Bhiwani,Haryana,2024-25,oc,43896,63.2
+Bhiwani,Haryana,2024-25,zn,43644,29.9
+Bhiwani,Haryana,2024-25,s,43895,10.0
+Bhiwani,Haryana,2025-26,p,53462,43.0
+Bhiwani,Haryana,2025-26,k,53474,17.8
+Bhiwani,Haryana,2025-26,oc,53263,55.1
+Bhiwani,Haryana,2025-26,zn,53378,27.9
+Bhiwani,Haryana,2025-26,s,53472,5.2
+Charkhi Dadri,Haryana,2023-24,p,8295,3.3
+Charkhi Dadri,Haryana,2023-24,k,8295,1.8
+Charkhi Dadri,Haryana,2023-24,oc,8295,80.9
+Charkhi Dadri,Haryana,2023-24,zn,8295,21.4
+Charkhi Dadri,Haryana,2023-24,s,8295,15.0
+Charkhi Dadri,Haryana,2024-25,p,4172,1.1
+Charkhi Dadri,Haryana,2024-25,k,4172,9.8
+Charkhi Dadri,Haryana,2024-25,oc,4172,98.1
+Charkhi Dadri,Haryana,2024-25,zn,4172,43.5
+Charkhi Dadri,Haryana,2024-25,s,4172,3.2
+Charkhi Dadri,Haryana,2025-26,p,5000,17.9
+Charkhi Dadri,Haryana,2025-26,k,5000,33.9
+Charkhi Dadri,Haryana,2025-26,oc,5000,100.0
+Charkhi Dadri,Haryana,2025-26,zn,5000,29.1
+Charkhi Dadri,Haryana,2025-26,s,5000,5.6
+Faridabad,Haryana,2023-24,n,1,100.0
+Faridabad,Haryana,2023-24,p,4999,32.0
+Faridabad,Haryana,2023-24,k,5000,0.0
+Faridabad,Haryana,2023-24,oc,5000,100.0
+Faridabad,Haryana,2023-24,zn,5000,0.4
+Faridabad,Haryana,2023-24,s,5000,0.0
+Faridabad,Haryana,2025-26,p,1497,88.5
+Faridabad,Haryana,2025-26,k,1497,86.4
+Faridabad,Haryana,2025-26,oc,1497,100.0
+Faridabad,Haryana,2025-26,zn,1496,38.8
+Faridabad,Haryana,2025-26,s,1497,0.2
+Fatehabad,Haryana,2023-24,n,25,100.0
+Fatehabad,Haryana,2023-24,p,13001,0.2
+Fatehabad,Haryana,2023-24,k,13004,10.0
+Fatehabad,Haryana,2023-24,oc,13000,25.5
+Fatehabad,Haryana,2023-24,zn,13002,17.4
+Fatehabad,Haryana,2023-24,s,13003,11.0
+Fatehabad,Haryana,2024-25,p,24083,0.0
+Fatehabad,Haryana,2024-25,k,24083,1.2
+Fatehabad,Haryana,2024-25,oc,24083,10.5
+Fatehabad,Haryana,2024-25,zn,24083,16.2
+Fatehabad,Haryana,2024-25,s,24083,0.0
+Fatehabad,Haryana,2025-26,p,59996,9.0
+Fatehabad,Haryana,2025-26,k,59996,7.9
+Fatehabad,Haryana,2025-26,oc,59996,48.2
+Fatehabad,Haryana,2025-26,zn,59996,19.8
+Fatehabad,Haryana,2025-26,s,59995,0.0
+Gurugram,Haryana,2023-24,n,58,100.0
+Gurugram,Haryana,2023-24,p,8344,67.4
+Gurugram,Haryana,2023-24,k,8348,6.6
+Gurugram,Haryana,2023-24,oc,8336,76.3
+Gurugram,Haryana,2023-24,zn,8299,0.6
+Gurugram,Haryana,2023-24,s,8348,21.0
+Gurugram,Haryana,2025-26,p,19995,17.5
+Gurugram,Haryana,2025-26,k,19994,45.5
+Gurugram,Haryana,2025-26,oc,19993,98.9
+Gurugram,Haryana,2025-26,zn,19993,16.5
+Gurugram,Haryana,2025-26,s,19996,28.9
+Jhajjar,Haryana,2023-24,n,102,100.0
+Jhajjar,Haryana,2023-24,p,11195,0.6
+Jhajjar,Haryana,2023-24,k,11195,6.3
+Jhajjar,Haryana,2023-24,oc,11395,86.3
+Jhajjar,Haryana,2023-24,zn,11394,12.3
+Jhajjar,Haryana,2023-24,s,11195,1.0
+Jhajjar,Haryana,2024-25,p,68604,9.1
+Jhajjar,Haryana,2024-25,k,68604,20.6
+Jhajjar,Haryana,2024-25,oc,68604,83.3
+Jhajjar,Haryana,2024-25,zn,68591,27.3
+Jhajjar,Haryana,2024-25,s,68604,6.6
+Jhajjar,Haryana,2025-26,p,4347,17.6
+Jhajjar,Haryana,2025-26,k,4347,79.8
+Jhajjar,Haryana,2025-26,oc,4275,86.3
+Jhajjar,Haryana,2025-26,zn,4341,36.2
+Jhajjar,Haryana,2025-26,s,4347,22.1
+Jind,Haryana,2023-24,p,13848,37.1
+Jind,Haryana,2023-24,k,13849,0.4
+Jind,Haryana,2023-24,oc,13849,98.1
+Jind,Haryana,2023-24,zn,13849,8.9
+Jind,Haryana,2023-24,s,13849,0.0
+Jind,Haryana,2024-25,p,24000,0.1
+Jind,Haryana,2024-25,k,24000,0.0
+Jind,Haryana,2024-25,oc,24000,99.9
+Jind,Haryana,2024-25,zn,24000,7.8
+Jind,Haryana,2024-25,s,24000,0.0
+Jind,Haryana,2025-26,p,50942,35.0
+Jind,Haryana,2025-26,k,50943,10.0
+Jind,Haryana,2025-26,oc,51018,98.8
+Jind,Haryana,2025-26,zn,50944,11.8
+Jind,Haryana,2025-26,s,50944,0.6
+Kaithal,Haryana,2023-24,n,9,100.0
+Kaithal,Haryana,2023-24,p,13671,12.9
+Kaithal,Haryana,2023-24,k,13594,55.5
+Kaithal,Haryana,2023-24,oc,13671,31.7
+Kaithal,Haryana,2023-24,zn,13668,42.3
+Kaithal,Haryana,2023-24,s,13670,3.4
+Kaithal,Haryana,2024-25,p,44433,2.2
+Kaithal,Haryana,2024-25,k,44433,32.9
+Kaithal,Haryana,2024-25,oc,44433,10.6
+Kaithal,Haryana,2024-25,zn,44433,23.7
+Kaithal,Haryana,2024-25,s,44433,0.9
+Kaithal,Haryana,2025-26,p,43995,22.6
+Kaithal,Haryana,2025-26,k,43994,20.8
+Kaithal,Haryana,2025-26,oc,43995,18.6
+Kaithal,Haryana,2025-26,zn,42918,24.7
+Kaithal,Haryana,2025-26,s,43995,1.6
+Karnal,Haryana,2023-24,n,4,100.0
+Karnal,Haryana,2023-24,p,17799,63.9
+Karnal,Haryana,2023-24,k,17800,0.5
+Karnal,Haryana,2023-24,oc,17796,79.3
+Karnal,Haryana,2023-24,zn,17800,0.6
+Karnal,Haryana,2023-24,s,17800,1.8
+Karnal,Haryana,2024-25,p,14026,8.2
+Karnal,Haryana,2024-25,k,14026,0.4
+Karnal,Haryana,2024-25,oc,14026,52.5
+Karnal,Haryana,2024-25,zn,14026,0.0
+Karnal,Haryana,2024-25,s,14026,0.0
+Karnal,Haryana,2025-26,p,3499,73.2
+Karnal,Haryana,2025-26,k,3499,8.2
+Karnal,Haryana,2025-26,oc,3499,82.0
+Karnal,Haryana,2025-26,zn,3499,0.8
+Karnal,Haryana,2025-26,s,3499,8.6
+Mahendragarh,Haryana,2023-24,n,10595,99.9
+Mahendragarh,Haryana,2023-24,p,16971,28.9
+Mahendragarh,Haryana,2023-24,k,16973,49.4
+Mahendragarh,Haryana,2023-24,oc,16973,83.1
+Mahendragarh,Haryana,2023-24,zn,16969,37.6
+Mahendragarh,Haryana,2023-24,s,16971,19.8
+Mahendragarh,Haryana,2024-25,p,13000,11.6
+Mahendragarh,Haryana,2024-25,k,13000,62.7
+Mahendragarh,Haryana,2024-25,oc,13000,74.0
+Mahendragarh,Haryana,2024-25,zn,12996,30.4
+Mahendragarh,Haryana,2024-25,s,13000,17.0
+Mahendragarh,Haryana,2025-26,p,55575,14.8
+Mahendragarh,Haryana,2025-26,k,55774,28.1
+Mahendragarh,Haryana,2025-26,oc,55773,97.9
+Mahendragarh,Haryana,2025-26,zn,55672,45.3
+Mahendragarh,Haryana,2025-26,s,55574,17.4
+Nuh,Haryana,2023-24,n,50,100.0
+Nuh,Haryana,2023-24,p,18000,27.9
+Nuh,Haryana,2023-24,k,18000,17.9
+Nuh,Haryana,2023-24,oc,18000,100.0
+Nuh,Haryana,2023-24,zn,18000,15.7
+Nuh,Haryana,2023-24,s,18000,9.1
+Nuh,Haryana,2024-25,p,51803,5.0
+Nuh,Haryana,2024-25,k,51804,21.3
+Nuh,Haryana,2024-25,oc,51804,97.0
+Nuh,Haryana,2024-25,zn,51801,23.0
+Nuh,Haryana,2024-25,s,51804,5.5
+Nuh,Haryana,2025-26,p,44916,42.8
+Nuh,Haryana,2025-26,k,44917,43.5
+Nuh,Haryana,2025-26,oc,44916,95.4
+Nuh,Haryana,2025-26,zn,44914,13.8
+Nuh,Haryana,2025-26,s,44915,2.6
+Palwal,Haryana,2023-24,p,10200,0.2
+Palwal,Haryana,2023-24,k,10200,0.0
+Palwal,Haryana,2023-24,oc,10199,99.7
+Palwal,Haryana,2023-24,zn,10200,1.3
+Palwal,Haryana,2023-24,s,10200,0.0
+Palwal,Haryana,2024-25,p,15915,1.0
+Palwal,Haryana,2024-25,k,15915,10.9
+Palwal,Haryana,2024-25,oc,15915,99.7
+Palwal,Haryana,2024-25,zn,15915,7.7
+Palwal,Haryana,2024-25,s,15915,0.1
+Palwal,Haryana,2025-26,n,895,100.0
+Palwal,Haryana,2025-26,p,2993,1.3
+Palwal,Haryana,2025-26,k,2993,0.0
+Palwal,Haryana,2025-26,oc,2993,100.0
+Palwal,Haryana,2025-26,zn,2993,0.6
+Palwal,Haryana,2025-26,s,2993,0.0
+Panchkula,Haryana,2023-24,n,14,100.0
+Panchkula,Haryana,2023-24,p,9418,10.7
+Panchkula,Haryana,2023-24,k,9421,35.4
+Panchkula,Haryana,2023-24,oc,9413,72.1
+Panchkula,Haryana,2023-24,zn,9417,9.8
+Panchkula,Haryana,2023-24,s,9416,14.9
+Panchkula,Haryana,2024-25,p,6999,3.9
+Panchkula,Haryana,2024-25,k,6999,6.3
+Panchkula,Haryana,2024-25,oc,6999,96.3
+Panchkula,Haryana,2024-25,zn,6999,7.2
+Panchkula,Haryana,2024-25,s,6999,2.4
+Panchkula,Haryana,2025-26,p,1500,46.7
+Panchkula,Haryana,2025-26,k,1500,50.3
+Panchkula,Haryana,2025-26,oc,1500,70.6
+Panchkula,Haryana,2025-26,zn,1500,8.6
+Panchkula,Haryana,2025-26,s,1500,1.7
+Panipat,Haryana,2023-24,n,6,100.0
+Panipat,Haryana,2023-24,p,8395,21.9
+Panipat,Haryana,2023-24,k,8395,12.0
+Panipat,Haryana,2023-24,oc,8393,33.9
+Panipat,Haryana,2023-24,zn,8394,6.4
+Panipat,Haryana,2023-24,s,8392,2.7
+Panipat,Haryana,2024-25,p,9977,0.1
+Panipat,Haryana,2024-25,k,9977,19.2
+Panipat,Haryana,2024-25,oc,9977,7.0
+Panipat,Haryana,2024-25,zn,9977,4.4
+Panipat,Haryana,2024-25,s,9977,0.1
+Panipat,Haryana,2025-26,p,2972,11.9
+Panipat,Haryana,2025-26,k,2972,27.8
+Panipat,Haryana,2025-26,oc,2972,64.3
+Panipat,Haryana,2025-26,zn,2972,6.7
+Panipat,Haryana,2025-26,s,2972,0.0
+Rewari,Haryana,2023-24,p,13757,0.8
+Rewari,Haryana,2023-24,k,13757,5.4
+Rewari,Haryana,2023-24,oc,13758,100.0
+Rewari,Haryana,2023-24,zn,13756,0.7
+Rewari,Haryana,2023-24,s,13756,1.5
+Rewari,Haryana,2024-25,p,44502,11.3
+Rewari,Haryana,2024-25,k,44502,75.3
+Rewari,Haryana,2024-25,oc,44502,97.0
+Rewari,Haryana,2024-25,zn,44502,8.3
+Rewari,Haryana,2024-25,s,44502,17.0
+Rewari,Haryana,2025-26,p,9971,46.3
+Rewari,Haryana,2025-26,k,9971,19.1
+Rewari,Haryana,2025-26,oc,9972,100.0
+Rewari,Haryana,2025-26,zn,9971,1.1
+Rewari,Haryana,2025-26,s,9971,2.1
+Rohtak,Haryana,2023-24,n,1,100.0
+Rohtak,Haryana,2023-24,p,6422,26.4
+Rohtak,Haryana,2023-24,k,6423,12.5
+Rohtak,Haryana,2023-24,oc,6422,78.1
+Rohtak,Haryana,2023-24,zn,6421,26.1
+Rohtak,Haryana,2023-24,s,6423,2.8
+Rohtak,Haryana,2024-25,p,8000,0.2
+Rohtak,Haryana,2024-25,k,8000,39.3
+Rohtak,Haryana,2024-25,oc,8000,78.9
+Rohtak,Haryana,2024-25,zn,8000,31.3
+Rohtak,Haryana,2024-25,s,8000,0.4
+Rohtak,Haryana,2025-26,p,8461,32.0
+Rohtak,Haryana,2025-26,k,8461,14.3
+Rohtak,Haryana,2025-26,oc,8477,72.1
+Rohtak,Haryana,2025-26,zn,8461,14.8
+Rohtak,Haryana,2025-26,s,8461,0.1
+Sonipat,Haryana,2023-24,n,18,100.0
+Sonipat,Haryana,2023-24,p,13718,44.6
+Sonipat,Haryana,2023-24,k,13718,18.8
+Sonipat,Haryana,2023-24,oc,13718,58.7
+Sonipat,Haryana,2023-24,zn,13715,32.7
+Sonipat,Haryana,2023-24,s,13718,5.3
+Sonipat,Haryana,2024-25,p,11000,52.0
+Sonipat,Haryana,2024-25,k,11000,1.8
+Sonipat,Haryana,2024-25,oc,10999,59.2
+Sonipat,Haryana,2024-25,zn,11000,33.9
+Sonipat,Haryana,2024-25,s,11000,0.1
+Sonipat,Haryana,2025-26,p,10558,87.4
+Sonipat,Haryana,2025-26,k,10651,15.8
+Sonipat,Haryana,2025-26,oc,10651,83.7
+Sonipat,Haryana,2025-26,zn,10551,19.2
+Sonipat,Haryana,2025-26,s,10651,0.0
+Yamunanagar,Haryana,2023-24,n,3,100.0
+Yamunanagar,Haryana,2023-24,p,24798,25.4
+Yamunanagar,Haryana,2023-24,k,24797,69.2
+Yamunanagar,Haryana,2023-24,oc,24789,97.2
+Yamunanagar,Haryana,2023-24,zn,24797,11.5
+Yamunanagar,Haryana,2023-24,s,24798,20.0
+Yamunanagar,Haryana,2024-25,p,12477,13.7
+Yamunanagar,Haryana,2024-25,k,12477,65.9
+Yamunanagar,Haryana,2024-25,oc,12477,96.4
+Yamunanagar,Haryana,2024-25,zn,12477,0.9
+Yamunanagar,Haryana,2024-25,s,12477,11.0
+Yamunanagar,Haryana,2025-26,p,5000,8.6
+Yamunanagar,Haryana,2025-26,k,5000,58.0
+Yamunanagar,Haryana,2025-26,oc,5000,97.5
+Yamunanagar,Haryana,2025-26,zn,5000,8.1
+Yamunanagar,Haryana,2025-26,s,5000,0.3
+Amritsar,Punjab,2023-24,n,8,100.0
+Amritsar,Punjab,2023-24,p,207,67.1
+Amritsar,Punjab,2023-24,k,210,85.7
+Amritsar,Punjab,2023-24,oc,11126,39.9
+Amritsar,Punjab,2023-24,zn,198,22.7
+Amritsar,Punjab,2023-24,s,198,48.0
+Amritsar,Punjab,2024-25,n,26,100.0
+Amritsar,Punjab,2024-25,p,2559,64.0
+Amritsar,Punjab,2024-25,k,2640,55.4
+Amritsar,Punjab,2024-25,oc,12439,40.2
+Amritsar,Punjab,2024-25,zn,2557,20.3
+Amritsar,Punjab,2024-25,s,2561,3.9
+Amritsar,Punjab,2025-26,p,6147,12.8
+Amritsar,Punjab,2025-26,k,5937,62.4
+Amritsar,Punjab,2025-26,oc,16499,43.4
+Amritsar,Punjab,2025-26,zn,6142,54.2
+Amritsar,Punjab,2025-26,s,6147,18.8
+Amritsar,Punjab,2026-27,oc,1748,20.5
+Barnala,Punjab,2023-24,p,3750,69.2
+Barnala,Punjab,2023-24,k,3750,80.9
+Barnala,Punjab,2023-24,oc,3750,85.0
+Barnala,Punjab,2023-24,zn,3750,6.9
+Barnala,Punjab,2023-24,s,3750,5.7
+Barnala,Punjab,2024-25,p,6500,99.8
+Barnala,Punjab,2024-25,k,6500,56.4
+Barnala,Punjab,2024-25,oc,6500,85.0
+Barnala,Punjab,2024-25,zn,6500,0.5
+Barnala,Punjab,2024-25,s,6500,18.7
+Barnala,Punjab,2025-26,n,102,100.0
+Barnala,Punjab,2025-26,p,5936,17.1
+Barnala,Punjab,2025-26,k,5936,44.5
+Barnala,Punjab,2025-26,oc,7000,54.8
+Barnala,Punjab,2025-26,zn,5936,2.8
+Barnala,Punjab,2025-26,s,5936,0.8
+Faridkot,Punjab,2023-24,n,2,100.0
+Faridkot,Punjab,2023-24,p,3752,40.9
+Faridkot,Punjab,2023-24,k,3751,57.9
+Faridkot,Punjab,2023-24,oc,3737,43.6
+Faridkot,Punjab,2023-24,zn,3453,5.6
+Faridkot,Punjab,2023-24,s,3752,6.8
+Faridkot,Punjab,2024-25,p,6440,8.6
+Faridkot,Punjab,2024-25,k,6440,29.0
+Faridkot,Punjab,2024-25,oc,6439,16.6
+Faridkot,Punjab,2024-25,zn,6440,12.4
+Faridkot,Punjab,2024-25,s,6440,0.8
+Faridkot,Punjab,2025-26,p,7000,26.6
+Faridkot,Punjab,2025-26,k,7000,27.6
+Faridkot,Punjab,2025-26,oc,7000,17.1
+Faridkot,Punjab,2025-26,zn,7000,14.4
+Faridkot,Punjab,2025-26,s,7000,9.0
+Faridkot,Punjab,2026-27,p,1132,14.5
+Faridkot,Punjab,2026-27,k,1132,33.9
+Faridkot,Punjab,2026-27,oc,1132,24.8
+Faridkot,Punjab,2026-27,zn,1132,0.3
+Faridkot,Punjab,2026-27,s,1132,0.0
+Fatehgarh Sahib,Punjab,2023-24,n,6,100.0
+Fatehgarh Sahib,Punjab,2023-24,p,1906,4.1
+Fatehgarh Sahib,Punjab,2023-24,k,1916,56.6
+Fatehgarh Sahib,Punjab,2023-24,oc,1879,76.1
+Fatehgarh Sahib,Punjab,2023-24,zn,1926,0.2
+Fatehgarh Sahib,Punjab,2023-24,s,1923,3.4
+Fatehgarh Sahib,Punjab,2024-25,n,3,100.0
+Fatehgarh Sahib,Punjab,2024-25,p,2539,55.1
+Fatehgarh Sahib,Punjab,2024-25,k,2534,50.6
+Fatehgarh Sahib,Punjab,2024-25,oc,5990,77.3
+Fatehgarh Sahib,Punjab,2024-25,zn,2535,0.2
+Fatehgarh Sahib,Punjab,2024-25,s,2542,24.0
+Fatehgarh Sahib,Punjab,2025-26,n,1,100.0
+Fatehgarh Sahib,Punjab,2025-26,p,3467,97.5
+Fatehgarh Sahib,Punjab,2025-26,k,3467,100.0
+Fatehgarh Sahib,Punjab,2025-26,oc,6500,49.1
+Fatehgarh Sahib,Punjab,2025-26,zn,3466,14.5
+Fatehgarh Sahib,Punjab,2025-26,s,3467,0.6
+Fatehgarh Sahib,Punjab,2026-27,oc,1811,54.7
+Fazilka,Punjab,2023-24,p,6297,9.0
+Fazilka,Punjab,2023-24,k,6294,23.7
+Fazilka,Punjab,2023-24,oc,6297,18.4
+Fazilka,Punjab,2023-24,zn,6297,19.5
+Fazilka,Punjab,2023-24,s,6297,2.0
+Fazilka,Punjab,2024-25,p,6000,51.4
+Fazilka,Punjab,2024-25,k,6000,38.0
+Fazilka,Punjab,2024-25,oc,6000,24.7
+Fazilka,Punjab,2024-25,zn,6000,43.3
+Fazilka,Punjab,2024-25,s,6000,0.1
+Fazilka,Punjab,2025-26,n,2110,100.0
+Fazilka,Punjab,2025-26,p,9879,43.5
+Fazilka,Punjab,2025-26,k,9879,37.2
+Fazilka,Punjab,2025-26,oc,13428,37.3
+Fazilka,Punjab,2025-26,zn,9879,24.6
+Fazilka,Punjab,2025-26,s,9879,22.9
+Fazilka,Punjab,2026-27,p,4631,19.7
+Fazilka,Punjab,2026-27,k,4631,12.2
+Fazilka,Punjab,2026-27,oc,4631,42.1
+Fazilka,Punjab,2026-27,zn,4631,12.4
+Fazilka,Punjab,2026-27,s,4631,0.0
+Ferozepur,Punjab,2023-24,p,4929,19.1
+Ferozepur,Punjab,2023-24,k,4929,43.8
+Ferozepur,Punjab,2023-24,oc,4929,21.8
+Ferozepur,Punjab,2023-24,zn,4928,20.1
+Ferozepur,Punjab,2023-24,s,4929,2.0
+Ferozepur,Punjab,2024-25,n,37,100.0
+Ferozepur,Punjab,2024-25,p,12705,30.6
+Ferozepur,Punjab,2024-25,k,12705,25.2
+Ferozepur,Punjab,2024-25,oc,12704,21.2
+Ferozepur,Punjab,2024-25,zn,12705,19.6
+Ferozepur,Punjab,2024-25,s,12705,1.4
+Ferozepur,Punjab,2025-26,n,7,100.0
+Ferozepur,Punjab,2025-26,p,12214,89.5
+Ferozepur,Punjab,2025-26,k,12214,29.5
+Ferozepur,Punjab,2025-26,oc,14452,25.7
+Ferozepur,Punjab,2025-26,zn,12211,11.3
+Ferozepur,Punjab,2025-26,s,12214,6.8
+Ferozepur,Punjab,2026-27,p,1799,11.8
+Ferozepur,Punjab,2026-27,k,1799,15.7
+Ferozepur,Punjab,2026-27,oc,1795,20.3
+Ferozepur,Punjab,2026-27,zn,1799,2.8
+Ferozepur,Punjab,2026-27,s,1799,1.1
+Gurdaspur,Punjab,2023-24,p,1393,21.1
+Gurdaspur,Punjab,2023-24,k,1393,49.7
+Gurdaspur,Punjab,2023-24,oc,2463,45.4
+Gurdaspur,Punjab,2023-24,zn,1392,67.2
+Gurdaspur,Punjab,2023-24,s,1392,16.4
+Gurdaspur,Punjab,2024-25,p,1207,23.9
+Gurdaspur,Punjab,2024-25,k,1248,86.1
+Gurdaspur,Punjab,2024-25,oc,622,31.4
+Gurdaspur,Punjab,2024-25,zn,1248,47.0
+Gurdaspur,Punjab,2024-25,s,1248,9.6
+Gurdaspur,Punjab,2025-26,oc,1535,44.8
+Gurdaspur,Punjab,2026-27,oc,1392,41.2
+Hoshiarpur,Punjab,2024-25,oc,3720,37.2
+Hoshiarpur,Punjab,2025-26,n,5,100.0
+Hoshiarpur,Punjab,2025-26,p,4,100.0
+Hoshiarpur,Punjab,2025-26,oc,9188,53.3
+Hoshiarpur,Punjab,2026-27,oc,853,47.0
+Jalandhar,Punjab,2024-25,p,1499,33.1
+Jalandhar,Punjab,2024-25,k,1499,87.7
+Jalandhar,Punjab,2024-25,oc,7387,88.4
+Jalandhar,Punjab,2024-25,zn,1498,0.0
+Jalandhar,Punjab,2024-25,s,1499,9.5
+Jalandhar,Punjab,2025-26,p,11076,32.6
+Jalandhar,Punjab,2025-26,k,11076,79.2
+Jalandhar,Punjab,2025-26,oc,15795,86.9
+Jalandhar,Punjab,2025-26,zn,11076,0.9
+Jalandhar,Punjab,2025-26,s,11076,5.3
+Jalandhar,Punjab,2026-27,oc,1575,87.5
+Kapurthala,Punjab,2023-24,n,4,100.0
+Kapurthala,Punjab,2023-24,p,59,0.0
+Kapurthala,Punjab,2023-24,k,59,3.4
+Kapurthala,Punjab,2023-24,oc,102,99.0
+Kapurthala,Punjab,2023-24,zn,59,0.0
+Kapurthala,Punjab,2023-24,s,59,0.0
+Kapurthala,Punjab,2024-25,n,27,100.0
+Kapurthala,Punjab,2024-25,p,2193,66.6
+Kapurthala,Punjab,2024-25,k,2196,81.7
+Kapurthala,Punjab,2024-25,oc,1608,43.5
+Kapurthala,Punjab,2024-25,zn,2195,0.1
+Kapurthala,Punjab,2024-25,s,2195,36.6
+Kapurthala,Punjab,2025-26,p,1873,5.6
+Kapurthala,Punjab,2025-26,k,1873,37.1
+Kapurthala,Punjab,2025-26,oc,489,5.7
+Kapurthala,Punjab,2025-26,zn,1873,0.6
+Kapurthala,Punjab,2025-26,s,1873,0.6
+Ludhiana,Punjab,2023-24,n,1,100.0
+Ludhiana,Punjab,2023-24,p,5178,5.5
+Ludhiana,Punjab,2023-24,k,5178,76.9
+Ludhiana,Punjab,2023-24,oc,5177,26.0
+Ludhiana,Punjab,2023-24,zn,5177,4.2
+Ludhiana,Punjab,2023-24,s,5177,1.1
+Ludhiana,Punjab,2024-25,p,764,100.0
+Ludhiana,Punjab,2024-25,k,764,61.0
+Ludhiana,Punjab,2024-25,oc,764,18.2
+Ludhiana,Punjab,2024-25,zn,764,0.0
+Ludhiana,Punjab,2024-25,s,764,39.4
+Ludhiana,Punjab,2025-26,oc,20001,41.2
+Ludhiana,Punjab,2026-27,n,10,100.0
+Ludhiana,Punjab,2026-27,oc,931,28.6
+Malerkotla,Punjab,2023-24,n,3,100.0
+Malerkotla,Punjab,2023-24,p,2050,6.2
+Malerkotla,Punjab,2023-24,k,2051,71.3
+Malerkotla,Punjab,2023-24,oc,2050,14.0
+Malerkotla,Punjab,2023-24,zn,2049,1.7
+Malerkotla,Punjab,2023-24,s,2051,21.6
+Malerkotla,Punjab,2024-25,p,3500,11.6
+Malerkotla,Punjab,2024-25,k,3500,99.4
+Malerkotla,Punjab,2024-25,oc,3500,22.2
+Malerkotla,Punjab,2024-25,zn,3500,0.8
+Malerkotla,Punjab,2024-25,s,3500,14.3
+Malerkotla,Punjab,2025-26,p,4000,52.2
+Malerkotla,Punjab,2025-26,k,4000,95.8
+Malerkotla,Punjab,2025-26,oc,4000,43.4
+Malerkotla,Punjab,2025-26,zn,4000,14.2
+Malerkotla,Punjab,2025-26,s,4000,26.3
+Mansa,Punjab,2023-24,p,5439,13.1
+Mansa,Punjab,2023-24,k,5439,82.7
+Mansa,Punjab,2023-24,oc,5439,33.4
+Mansa,Punjab,2023-24,zn,5439,0.4
+Mansa,Punjab,2023-24,s,5439,51.1
+Mansa,Punjab,2024-25,p,11992,20.6
+Mansa,Punjab,2024-25,k,11992,64.1
+Mansa,Punjab,2024-25,oc,11992,33.8
+Mansa,Punjab,2024-25,zn,11992,8.7
+Mansa,Punjab,2024-25,s,11992,1.1
+Mansa,Punjab,2025-26,p,2579,9.7
+Mansa,Punjab,2025-26,k,2579,92.5
+Mansa,Punjab,2025-26,oc,12939,37.3
+Mansa,Punjab,2025-26,zn,2579,5.1
+Mansa,Punjab,2025-26,s,2579,35.3
+Mansa,Punjab,2026-27,p,2,0.0
+Mansa,Punjab,2026-27,k,2,0.0
+Mansa,Punjab,2026-27,oc,1571,38.8
+Mansa,Punjab,2026-27,zn,2,0.0
+Mansa,Punjab,2026-27,s,2,0.0
+Moga,Punjab,2023-24,p,51,2.0
+Moga,Punjab,2023-24,k,51,3.9
+Moga,Punjab,2023-24,oc,51,5.9
+Moga,Punjab,2023-24,zn,51,0.0
+Moga,Punjab,2023-24,s,51,0.0
+Moga,Punjab,2024-25,p,10827,36.0
+Moga,Punjab,2024-25,k,10827,15.8
+Moga,Punjab,2024-25,oc,10827,29.0
+Moga,Punjab,2024-25,zn,10817,5.6
+Moga,Punjab,2024-25,s,10827,27.5
+Moga,Punjab,2025-26,n,476,92.2
+Moga,Punjab,2025-26,p,13892,10.3
+Moga,Punjab,2025-26,k,13892,5.4
+Moga,Punjab,2025-26,oc,13178,55.5
+Moga,Punjab,2025-26,zn,13892,48.7
+Moga,Punjab,2025-26,s,13892,1.0
+Moga,Punjab,2026-27,p,2297,10.4
+Moga,Punjab,2026-27,k,2297,6.3
+Moga,Punjab,2026-27,oc,2297,28.3
+Moga,Punjab,2026-27,zn,2297,44.4
+Moga,Punjab,2026-27,s,2297,0.9
+Pathankot,Punjab,2024-25,n,5,100.0
+Pathankot,Punjab,2024-25,p,2364,41.0
+Pathankot,Punjab,2024-25,k,2361,88.4
+Pathankot,Punjab,2024-25,oc,2365,32.1
+Pathankot,Punjab,2024-25,zn,2366,8.9
+Pathankot,Punjab,2024-25,s,2366,9.5
+Pathankot,Punjab,2025-26,n,3,100.0
+Pathankot,Punjab,2025-26,p,1662,64.7
+Pathankot,Punjab,2025-26,k,1653,65.3
+Pathankot,Punjab,2025-26,oc,2497,40.0
+Pathankot,Punjab,2025-26,zn,1660,15.2
+Pathankot,Punjab,2025-26,s,1658,8.4
+Pathankot,Punjab,2026-27,oc,526,27.8
+Patiala,Punjab,2023-24,n,22,100.0
+Patiala,Punjab,2023-24,p,5182,78.9
+Patiala,Punjab,2023-24,k,5065,92.0
+Patiala,Punjab,2023-24,oc,5969,47.2
+Patiala,Punjab,2023-24,zn,4783,19.4
+Patiala,Punjab,2023-24,s,5139,79.1
+Patiala,Punjab,2024-25,n,6,100.0
+Patiala,Punjab,2024-25,p,7004,15.1
+Patiala,Punjab,2024-25,k,6099,83.8
+Patiala,Punjab,2024-25,oc,11121,50.7
+Patiala,Punjab,2024-25,zn,6695,4.6
+Patiala,Punjab,2024-25,s,5885,4.5
+Patiala,Punjab,2025-26,n,1,100.0
+Patiala,Punjab,2025-26,p,9759,25.2
+Patiala,Punjab,2025-26,k,3127,98.9
+Patiala,Punjab,2025-26,oc,15911,57.7
+Patiala,Punjab,2025-26,zn,9744,5.1
+Patiala,Punjab,2025-26,s,3131,18.2
+Patiala,Punjab,2026-27,p,1942,80.1
+Patiala,Punjab,2026-27,oc,2742,53.8
+Patiala,Punjab,2026-27,zn,1228,43.6
+Rupnagar,Punjab,2023-24,p,178,16.9
+Rupnagar,Punjab,2023-24,k,178,93.3
+Rupnagar,Punjab,2023-24,oc,179,69.3
+Rupnagar,Punjab,2023-24,zn,179,10.1
+Rupnagar,Punjab,2023-24,s,179,65.9
+Rupnagar,Punjab,2024-25,n,2,100.0
+Rupnagar,Punjab,2024-25,p,570,65.3
+Rupnagar,Punjab,2024-25,k,571,98.9
+Rupnagar,Punjab,2024-25,oc,4749,62.2
+Rupnagar,Punjab,2024-25,zn,567,0.7
+Rupnagar,Punjab,2024-25,s,567,1.4
+Rupnagar,Punjab,2025-26,n,1,100.0
+Rupnagar,Punjab,2025-26,p,1171,53.8
+Rupnagar,Punjab,2025-26,k,1171,100.0
+Rupnagar,Punjab,2025-26,oc,5495,69.0
+Rupnagar,Punjab,2025-26,zn,1171,25.0
+Rupnagar,Punjab,2025-26,s,1172,9.1
+Rupnagar,Punjab,2026-27,oc,124,82.3
+S.A.S Nagar,Punjab,2023-24,n,1,100.0
+S.A.S Nagar,Punjab,2023-24,p,439,1.6
+S.A.S Nagar,Punjab,2023-24,k,438,80.6
+S.A.S Nagar,Punjab,2023-24,zn,435,1.6
+S.A.S Nagar,Punjab,2023-24,s,439,15.7
+S.A.S Nagar,Punjab,2024-25,p,485,85.6
+S.A.S Nagar,Punjab,2024-25,k,486,99.8
+S.A.S Nagar,Punjab,2024-25,zn,486,41.4
+S.A.S Nagar,Punjab,2024-25,s,486,0.6
+S.A.S Nagar,Punjab,2025-26,n,10,100.0
+S.A.S Nagar,Punjab,2025-26,p,3702,15.7
+S.A.S Nagar,Punjab,2025-26,k,3702,75.7
+S.A.S Nagar,Punjab,2025-26,oc,19,42.1
+S.A.S Nagar,Punjab,2025-26,zn,3700,31.5
+S.A.S Nagar,Punjab,2025-26,s,3687,5.6
+S.A.S Nagar,Punjab,2026-27,oc,135,50.4
+Shahid Bhagat Singh Nagar,Punjab,2023-24,n,5542,99.9
+Shahid Bhagat Singh Nagar,Punjab,2023-24,p,5545,64.7
+Shahid Bhagat Singh Nagar,Punjab,2023-24,k,5545,96.6
+Shahid Bhagat Singh Nagar,Punjab,2023-24,oc,5545,41.5
+Shahid Bhagat Singh Nagar,Punjab,2023-24,zn,5545,16.2
+Shahid Bhagat Singh Nagar,Punjab,2023-24,s,5545,15.2
+Shahid Bhagat Singh Nagar,Punjab,2025-26,n,904,100.0
+Shahid Bhagat Singh Nagar,Punjab,2025-26,oc,6386,44.0
+Shahid Bhagat Singh Nagar,Punjab,2026-27,oc,1000,39.8
+Sri Muktsar Sahib,Punjab,2023-24,p,4204,64.3
+Sri Muktsar Sahib,Punjab,2023-24,k,4296,43.5
+Sri Muktsar Sahib,Punjab,2023-24,oc,4492,86.4
+Sri Muktsar Sahib,Punjab,2023-24,zn,4481,22.2
+Sri Muktsar Sahib,Punjab,2023-24,s,4496,4.0
+Sri Muktsar Sahib,Punjab,2024-25,p,10269,53.9
+Sri Muktsar Sahib,Punjab,2024-25,k,10269,72.9
+Sri Muktsar Sahib,Punjab,2024-25,oc,10269,51.3
+Sri Muktsar Sahib,Punjab,2024-25,zn,10269,35.1
+Sri Muktsar Sahib,Punjab,2024-25,s,10269,3.8
+Sri Muktsar Sahib,Punjab,2025-26,p,3062,36.2
+Sri Muktsar Sahib,Punjab,2025-26,k,3062,70.4
+Sri Muktsar Sahib,Punjab,2025-26,oc,12535,57.5
+Sri Muktsar Sahib,Punjab,2025-26,zn,3062,9.0
+Sri Muktsar Sahib,Punjab,2025-26,s,3062,0.4
