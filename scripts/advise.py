@@ -15,6 +15,9 @@ Test on a past season (the weather after --today is what was actually recorded):
 Your own field and soil (both optional):
     python scripts/advise.py --district Hisar --sowing 2026-11-10 --lat 29.21 --lon 75.65 --soil-type loam
 
+With a farm station (soil moisture sensors; Kalman filter combines them with the water balance):
+    python scripts/advise.py --district Hisar --sowing 2026-11-10 --watered 2026-12-08 --station readings.csv
+
 Season-start model and outlook (Haryana and Punjab): expected yield and income per acre for each
 crop of the season, how much they vary, how often one crop beats another, plus the last harvest
 prices (about a minute the first time: the model is trained on the spot)
@@ -76,6 +79,12 @@ def main():
                     help="with --outlook: which season (default: the next one to be sown)")
     ap.add_argument("--rain-source", choices=["auto", "openmeteo"], default="auto",
                     help="recorded rain: NASA POWER where available (auto) or Open-Meteo only")
+    ap.add_argument("--station", help="farm station readings (CSV, data/templates/station_readings.csv)")
+    ap.add_argument("--field-capacity", type=float,
+                    help="with --station: the field's soil field capacity, m3/m3 (default: district)")
+    ap.add_argument("--soil-card", nargs="*", default=None,
+                    help="ratings from your own Soil Health Card, e.g. n=low p=medium k=high "
+                         "oc=low zn=deficient s=sufficient ph=alkaline ec=non-saline")
     ap.add_argument("--no-extras", action="store_true",
                     help="leave out the district background (IMD, Soil Health Card, prices)")
     a = ap.parse_args()
@@ -112,7 +121,8 @@ def main():
                      "--outlook for paddy")
         req = {"district": a.district, "sowing": a.sowing, "watered": a.watered, "crop": crop,
                "today": a.today, "depth_cm": a.depth_cm, "lat": a.lat, "lon": a.lon,
-               "soil_type": a.soil_type, "rain_source": a.rain_source}
+               "soil_type": a.soil_type, "rain_source": a.rain_source, "station": a.station,
+               "field_capacity": a.field_capacity, "soil_card": a.soil_card}
         res = service.advise_request(req, soil_files=(a.soil,) + sites.SOIL_FILES[1:],
                                      locations=a.locations, with_extras=not a.no_extras)
     if a.json:

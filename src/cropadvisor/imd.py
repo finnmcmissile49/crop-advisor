@@ -111,3 +111,40 @@ def point_series(ds, locations):
     out = pd.concat(frames, ignore_index=True)
     out.loc[out["rain_imd_mm"] < 0, "rain_imd_mm"] = np.nan  # -999 missing flag
     return out[["date", "name", "rain_imd_mm", "imd_lat", "imd_lon"]]
+
+
+NOT_PUBLISHED_RECHECK_H = 24   # after IMD says a year is not out yet, ask again a day later
+
+
+def _not_published_marker(cache_dir, year):
+    return os.path.join(cache_dir, "rain", f"{year}.not_published")
+
+
+def point_rain(lat, lon, start, end, cache_dir="data/raw/imd"):
+    """IMD gridded daily rain at the nearest 0.25 degree cell, for whatever days IMD has published
+    between start and end. Returns DataFrame date, rain_mm (possibly empty). A year IMD has not
+    published yet is remembered for a day so the calculator does not ask again on every run."""
+    import time
+    imd = _imdlib()
+    start, end = pd.Timestamp(start), pd.Timestamp(end)
+    frames = []
+    for yr in range(start.year, end.year + 1):
+        marker = _not_published_marker(cache_dir, yr)
+        if os.path.exists(marker) and time.time() - os.path.getmtime(marker) < \
+                NOT_PUBLISHED_RECHECK_H * 3600:
+            continue
+        try:
+            download_year(yr, cache_dir, retries=1)
+        except Exception:
+            os.makedirs(os.path.dirname(marker), exist_ok=True)
+            open(marker, "w").close()
+            continue
+        ds = imd.open_data("rain", yr, yr, fn_format="yearwise", file_dir=cache_dir).get_xarray()
+        loc = pd.DataFrame({"lat": [lat], "lon": [lon]}, index=["point"])
+        s = point_series(ds, loc)
+        frames.append(s[["date", "rain_imd_mm"]].rename(columns={"rain_imd_mm": "rain_mm"}))
+    if not frames:
+        return pd.DataFrame(columns=["date", "rain_mm"])
+    out = pd.concat(frames)
+    out = out[(out["date"] >= start) & (out["date"] <= end)].dropna()
+    return out.reset_index(drop=True)

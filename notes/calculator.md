@@ -79,3 +79,16 @@ python scripts/advise.py --district Hisar --sowing 2025-11-10 --watered 2025-12-
 - Rain between now and the advised date changes the answer: run it again after rain.
 - The Hindi text is a first version; have a native speaker and the field partner check it before
   farmers see it. District names are still in English letters in the Hindi text.
+
+## Station, Soil Health Card and satellite (added 2 November 2026)
+
+```
+python scripts/advise.py --district Hisar --sowing 2026-11-10 --station data/templates/station_readings.csv
+python scripts/advise.py --district Hisar --sowing 2026-11-10 --soil-card n=low p=medium zn=deficient
+python scripts/advise.py --district Hisar --sowing 2026-11-10 --lat 29.15 --lon 75.72   # adds Sentinel-2
+```
+
+- With `--station`, the advice says how far the station moved the soil-water estimate (with its ±)
+  and what the date would have been without it. `--field-capacity` overrides the district value.
+- `--soil-card` and Sentinel-2 are background and never change the date.
+- See `notes/live_data_and_features.md` for what is and is not tested.
