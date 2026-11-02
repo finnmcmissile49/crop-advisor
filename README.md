@@ -20,7 +20,17 @@ python scripts/advise.py --crop mustard --district Bathinda --sowing 2026-10-15 
 | Kharif | cotton (narma), kharif maize (lower confidence), bajra, kharif moong, groundnut |
 
 Optional inputs: `--soil-type sandy|light_loam|loam|clay`, `--lat/--lon` for the field, `--json`.
-Every answer ends with a confidence level. A small web service: `python scripts/serve.py`
+Every answer ends with a confidence level, then district background: IMD rain normals, Soil Health
+Card results, the district's usual yield and last harvest price.
+
+Season-start model (Haryana and Punjab, `notes/season_model.md`): the JISEM paper's ensemble
+(Random Forest, XGBoost, LightGBM) retrained on district yields and IMD rain for 9 crops; expected
+gross income per acre, its spread, and "crop A beats crop B in N of 10 likely seasons":
+`python scripts/advise.py --outlook --district Hisar`.
+
+Data used (`notes/data_sources.md`): Open-Meteo (ET0, forecast), NASA POWER (recorded rain; closer
+to IMD than Open-Meteo in a 54-season check), SoilGrids or the farmer's soil type, IMD normals,
+Soil Health Card, ICRISAT/DES yields, CEDA/Agmarknet prices. A small web service: `python scripts/serve.py`
 (`notes/forecast_and_rain.md`).
 
 Wheat works in 27 districts in 10 states (`notes/calculator.md`, `notes/irrigation_10_states.md`).
@@ -39,7 +49,7 @@ has not been checked against real fields for any crop.
 | 5 | IMD gridded rainfall | done, tested live |
 | 6 | SoilGrids soil + water-holding capacity | done, tested live |
 | 7 | Mandi prices | `scripts/fetch_ceda_prices.py`: monthly Agmarknet prices from CEDA Ashoka, 2001 to Oct 2025, state and district level, no key. (data.gov.in daily feed: `scripts/fetch_prices_local.py`, but the server is unreliable) |
-| 8 | District yields | code ready, needs a manual DES/UPAg download |
+| 8 | District yields | done: ICRISAT 2009-2019 + DES 2020-2022 for Haryana and Punjab (`data/reference/district_yields.csv`) |
 | 9 | Merge, season features, quality checks | done, tested live |
 | 10 | One-command refresh, pull log, source notes | done, tested live |
 

@@ -1,0 +1,325 @@
+name,state,imd_district_code,month,normal_mm,mean_2009_2024_mm,years
+Sirsa,Haryana,74,1,12.4,10.5,16
+Sirsa,Haryana,74,2,11.1,8.3,16
+Sirsa,Haryana,74,3,10.6,15.6,15
+Sirsa,Haryana,74,4,4.6,8.3,15
+Sirsa,Haryana,74,5,11.9,13.6,15
+Sirsa,Haryana,74,6,18.7,38.8,14
+Sirsa,Haryana,74,7,96.5,86.3,14
+Sirsa,Haryana,74,8,86.3,63.9,15
+Sirsa,Haryana,74,9,51.3,69.7,15
+Sirsa,Haryana,74,10,9.5,4.1,15
+Sirsa,Haryana,74,11,4.5,2.8,15
+Sirsa,Haryana,74,12,2.7,1.9,15
+Hisar,Haryana,63,1,14.1,12.8,16
+Hisar,Haryana,63,2,12.1,11.4,16
+Hisar,Haryana,63,3,9.7,15.9,15
+Hisar,Haryana,63,4,9.1,8.5,15
+Hisar,Haryana,63,5,13.9,18.8,15
+Hisar,Haryana,63,6,32.7,49.1,14
+Hisar,Haryana,63,7,121.9,104.4,14
+Hisar,Haryana,63,8,114.1,81.5,15
+Hisar,Haryana,63,9,68.8,71.6,15
+Hisar,Haryana,63,10,10.3,2.8,15
+Hisar,Haryana,63,11,4.3,2.6,15
+Hisar,Haryana,63,12,4.4,2.8,15
+Kurukshetra,Haryana,68,1,31.7,27.9,16
+Kurukshetra,Haryana,68,2,21.1,19.6,16
+Kurukshetra,Haryana,68,3,21.0,22.9,15
+Kurukshetra,Haryana,68,4,10.4,11.8,15
+Kurukshetra,Haryana,68,5,9.0,26.8,15
+Kurukshetra,Haryana,68,6,62.2,79.6,14
+Kurukshetra,Haryana,68,7,207.0,199.7,14
+Kurukshetra,Haryana,68,8,192.5,143.7,15
+Kurukshetra,Haryana,68,9,107.7,104.1,15
+Kurukshetra,Haryana,68,10,18.9,12.1,15
+Kurukshetra,Haryana,68,11,4.8,3.4,15
+Kurukshetra,Haryana,68,12,9.3,8.0,15
+Bathinda,Punjab,28,1,12.8,14.5,16
+Bathinda,Punjab,28,2,16.3,11.7,16
+Bathinda,Punjab,28,3,13.0,18.6,15
+Bathinda,Punjab,28,4,6.8,9.0,15
+Bathinda,Punjab,28,5,10.3,13.1,15
+Bathinda,Punjab,28,6,29.1,42.3,14
+Bathinda,Punjab,28,7,114.2,101.9,14
+Bathinda,Punjab,28,8,120.6,72.9,15
+Bathinda,Punjab,28,9,71.5,74.7,15
+Bathinda,Punjab,28,10,21.3,6.1,15
+Bathinda,Punjab,28,11,2.1,3.0,15
+Bathinda,Punjab,28,12,5.9,2.7,15
+Sangrur,Punjab,43,1,19.9,21.4,16
+Sangrur,Punjab,43,2,18.9,15.6,16
+Sangrur,Punjab,43,3,19.4,22.9,15
+Sangrur,Punjab,43,4,11.2,12.6,15
+Sangrur,Punjab,43,5,18.1,21.3,15
+Sangrur,Punjab,43,6,43.4,61.7,14
+Sangrur,Punjab,43,7,180.3,161.0,14
+Sangrur,Punjab,43,8,156.2,97.7,15
+Sangrur,Punjab,43,9,103.8,89.6,15
+Sangrur,Punjab,43,10,23.6,7.5,15
+Sangrur,Punjab,43,11,5.0,3.6,15
+Sangrur,Punjab,43,12,14.1,8.3,15
+Tarn Taran,Punjab,609,1,0.0,32.2,16
+Tarn Taran,Punjab,609,2,0.0,28.7,16
+Tarn Taran,Punjab,609,3,0.0,29.0,15
+Tarn Taran,Punjab,609,4,0.0,22.8,15
+Tarn Taran,Punjab,609,5,0.0,19.4,15
+Tarn Taran,Punjab,609,6,0.0,60.6,14
+Tarn Taran,Punjab,609,7,0.0,190.2,14
+Tarn Taran,Punjab,609,8,0.0,158.6,15
+Tarn Taran,Punjab,609,9,0.0,107.9,15
+Tarn Taran,Punjab,609,10,0.0,10.0,15
+Tarn Taran,Punjab,609,11,0.0,6.9,15
+Tarn Taran,Punjab,609,12,0.0,7.3,15
+Shahjahanpur,Uttar Pradesh,180,1,19.0,14.8,16
+Shahjahanpur,Uttar Pradesh,180,2,15.7,12.9,16
+Shahjahanpur,Uttar Pradesh,180,3,12.0,17.0,15
+Shahjahanpur,Uttar Pradesh,180,4,5.1,10.6,15
+Shahjahanpur,Uttar Pradesh,180,5,18.6,24.6,15
+Shahjahanpur,Uttar Pradesh,180,6,92.3,74.7,14
+Shahjahanpur,Uttar Pradesh,180,7,294.2,268.5,14
+Shahjahanpur,Uttar Pradesh,180,8,306.9,212.2,15
+Shahjahanpur,Uttar Pradesh,180,9,158.1,131.3,15
+Shahjahanpur,Uttar Pradesh,180,10,63.0,45.3,15
+Shahjahanpur,Uttar Pradesh,180,11,2.6,2.4,15
+Shahjahanpur,Uttar Pradesh,180,12,6.5,6.2,15
+Aligarh,Uttar Pradesh,119,1,16.5,18.4,16
+Aligarh,Uttar Pradesh,119,2,14.2,12.9,16
+Aligarh,Uttar Pradesh,119,3,10.1,15.2,15
+Aligarh,Uttar Pradesh,119,4,5.1,7.8,15
+Aligarh,Uttar Pradesh,119,5,14.7,20.4,15
+Aligarh,Uttar Pradesh,119,6,41.3,50.3,14
+Aligarh,Uttar Pradesh,119,7,207.1,215.0,14
+Aligarh,Uttar Pradesh,119,8,237.3,174.3,15
+Aligarh,Uttar Pradesh,119,9,138.0,115.5,15
+Aligarh,Uttar Pradesh,119,10,36.3,29.4,15
+Aligarh,Uttar Pradesh,119,11,3.6,3.5,15
+Aligarh,Uttar Pradesh,119,12,6.4,4.9,15
+Azamgarh,Uttar Pradesh,123,1,15.7,7.9,16
+Azamgarh,Uttar Pradesh,123,2,13.2,7.5,16
+Azamgarh,Uttar Pradesh,123,3,8.8,7.4,15
+Azamgarh,Uttar Pradesh,123,4,5.7,7.6,15
+Azamgarh,Uttar Pradesh,123,5,15.1,22.4,15
+Azamgarh,Uttar Pradesh,123,6,97.6,88.8,14
+Azamgarh,Uttar Pradesh,123,7,334.1,206.4,14
+Azamgarh,Uttar Pradesh,123,8,294.0,196.7,15
+Azamgarh,Uttar Pradesh,123,9,220.9,183.1,15
+Azamgarh,Uttar Pradesh,123,10,46.1,43.5,15
+Azamgarh,Uttar Pradesh,123,11,5.6,1.1,15
+Azamgarh,Uttar Pradesh,123,12,4.9,2.6,15
+Gorakhpur,Uttar Pradesh,148,1,19.2,8.0,16
+Gorakhpur,Uttar Pradesh,148,2,12.8,9.9,16
+Gorakhpur,Uttar Pradesh,148,3,12.4,8.1,15
+Gorakhpur,Uttar Pradesh,148,4,13.3,9.3,15
+Gorakhpur,Uttar Pradesh,148,5,34.6,46.6,15
+Gorakhpur,Uttar Pradesh,148,6,156.6,116.1,14
+Gorakhpur,Uttar Pradesh,148,7,352.7,238.2,14
+Gorakhpur,Uttar Pradesh,148,8,337.8,210.1,15
+Gorakhpur,Uttar Pradesh,148,9,232.0,184.4,15
+Gorakhpur,Uttar Pradesh,148,10,75.7,51.0,15
+Gorakhpur,Uttar Pradesh,148,11,4.7,0.3,15
+Gorakhpur,Uttar Pradesh,148,12,7.5,2.5,15
+Jhansi,Uttar Pradesh,153,1,15.3,14.9,16
+Jhansi,Uttar Pradesh,153,2,12.5,12.5,16
+Jhansi,Uttar Pradesh,153,3,6.5,6.2,15
+Jhansi,Uttar Pradesh,153,4,3.3,3.7,15
+Jhansi,Uttar Pradesh,153,5,7.2,9.8,15
+Jhansi,Uttar Pradesh,153,6,88.1,75.7,14
+Jhansi,Uttar Pradesh,153,7,283.9,216.8,14
+Jhansi,Uttar Pradesh,153,8,303.7,203.9,15
+Jhansi,Uttar Pradesh,153,9,171.3,111.9,15
+Jhansi,Uttar Pradesh,153,10,34.0,32.3,15
+Jhansi,Uttar Pradesh,153,11,6.2,4.3,15
+Jhansi,Uttar Pradesh,153,12,6.1,5.1,15
+Ujjain,Madhya Pradesh,435,1,7.8,6.7,16
+Ujjain,Madhya Pradesh,435,2,2.6,3.8,16
+Ujjain,Madhya Pradesh,435,3,1.9,6.6,15
+Ujjain,Madhya Pradesh,435,4,0.8,3.0,15
+Ujjain,Madhya Pradesh,435,5,5.6,9.6,15
+Ujjain,Madhya Pradesh,435,6,109.1,127.6,14
+Ujjain,Madhya Pradesh,435,7,269.8,382.9,14
+Ujjain,Madhya Pradesh,435,8,300.9,326.4,15
+Ujjain,Madhya Pradesh,435,9,164.3,191.1,15
+Ujjain,Madhya Pradesh,435,10,30.6,31.5,15
+Ujjain,Madhya Pradesh,435,11,14.1,9.7,15
+Ujjain,Madhya Pradesh,435,12,5.0,5.0,15
+Vidisha,Madhya Pradesh,437,1,22.0,13.0,16
+Vidisha,Madhya Pradesh,437,2,9.0,7.0,16
+Vidisha,Madhya Pradesh,437,3,5.5,11.6,15
+Vidisha,Madhya Pradesh,437,4,1.5,4.0,15
+Vidisha,Madhya Pradesh,437,5,4.4,9.1,15
+Vidisha,Madhya Pradesh,437,6,123.2,180.0,14
+Vidisha,Madhya Pradesh,437,7,372.6,388.2,14
+Vidisha,Madhya Pradesh,437,8,380.1,381.8,15
+Vidisha,Madhya Pradesh,437,9,168.7,178.5,15
+Vidisha,Madhya Pradesh,437,10,22.2,31.8,15
+Vidisha,Madhya Pradesh,437,11,15.9,11.7,15
+Vidisha,Madhya Pradesh,437,12,10.2,5.7,15
+Rewa,Madhya Pradesh,424,1,25.0,16.6,16
+Rewa,Madhya Pradesh,424,2,18.9,12.7,16
+Rewa,Madhya Pradesh,424,3,13.0,12.1,15
+Rewa,Madhya Pradesh,424,4,3.0,5.3,15
+Rewa,Madhya Pradesh,424,5,4.3,16.6,15
+Rewa,Madhya Pradesh,424,6,124.6,96.7,14
+Rewa,Madhya Pradesh,424,7,335.8,295.5,14
+Rewa,Madhya Pradesh,424,8,354.9,298.7,15
+Rewa,Madhya Pradesh,424,9,210.0,179.9,15
+Rewa,Madhya Pradesh,424,10,35.3,39.3,15
+Rewa,Madhya Pradesh,424,11,11.7,4.6,15
+Rewa,Madhya Pradesh,424,12,6.6,4.6,15
+Ganganagar,Rajasthan,100,1,6.4,7.5,16
+Ganganagar,Rajasthan,100,2,6.9,7.2,16
+Ganganagar,Rajasthan,100,3,7.8,12.2,15
+Ganganagar,Rajasthan,100,4,5.2,8.1,15
+Ganganagar,Rajasthan,100,5,11.6,17.3,15
+Ganganagar,Rajasthan,100,6,23.1,29.9,14
+Ganganagar,Rajasthan,100,7,78.7,79.9,14
+Ganganagar,Rajasthan,100,8,66.9,57.5,15
+Ganganagar,Rajasthan,100,9,32.5,59.6,15
+Ganganagar,Rajasthan,100,10,2.5,5.5,15
+Ganganagar,Rajasthan,100,11,2.1,1.7,15
+Ganganagar,Rajasthan,100,12,4.1,1.5,15
+Alwar,Rajasthan,87,1,8.8,11.8,16
+Alwar,Rajasthan,87,2,9.0,7.7,16
+Alwar,Rajasthan,87,3,5.8,17.5,15
+Alwar,Rajasthan,87,4,4.7,7.3,15
+Alwar,Rajasthan,87,5,16.7,18.9,15
+Alwar,Rajasthan,87,6,43.1,57.0,14
+Alwar,Rajasthan,87,7,199.3,176.3,14
+Alwar,Rajasthan,87,8,207.9,176.6,15
+Alwar,Rajasthan,87,9,103.1,104.4,15
+Alwar,Rajasthan,87,10,18.4,14.8,15
+Alwar,Rajasthan,87,11,3.3,4.5,15
+Alwar,Rajasthan,87,12,5.0,1.0,15
+Bundi,Rajasthan,94,1,5.2,9.9,16
+Bundi,Rajasthan,94,2,4.5,3.2,16
+Bundi,Rajasthan,94,3,3.4,11.4,15
+Bundi,Rajasthan,94,4,2.5,4.7,15
+Bundi,Rajasthan,94,5,6.7,11.0,15
+Bundi,Rajasthan,94,6,64.5,88.9,14
+Bundi,Rajasthan,94,7,267.2,251.6,14
+Bundi,Rajasthan,94,8,245.8,310.6,15
+Bundi,Rajasthan,94,9,105.5,104.6,15
+Bundi,Rajasthan,94,10,17.3,13.9,15
+Bundi,Rajasthan,94,11,8.8,10.0,15
+Bundi,Rajasthan,94,12,4.4,3.7,15
+Rohtas,Bihar,215,1,21.3,9.2,16
+Rohtas,Bihar,215,2,21.1,12.6,16
+Rohtas,Bihar,215,3,8.7,9.7,15
+Rohtas,Bihar,215,4,7.1,8.7,15
+Rohtas,Bihar,215,5,15.8,28.5,15
+Rohtas,Bihar,215,6,116.7,101.2,14
+Rohtas,Bihar,215,7,318.5,244.9,14
+Rohtas,Bihar,215,8,312.8,244.5,15
+Rohtas,Bihar,215,9,236.2,175.1,15
+Rohtas,Bihar,215,10,47.5,53.2,15
+Rohtas,Bihar,215,11,6.8,1.7,15
+Rohtas,Bihar,215,12,4.6,5.6,15
+Muzaffarpur,Bihar,208,1,17.2,4.6,16
+Muzaffarpur,Bihar,208,2,11.3,8.5,16
+Muzaffarpur,Bihar,208,3,8.4,9.5,15
+Muzaffarpur,Bihar,208,4,14.4,20.8,15
+Muzaffarpur,Bihar,208,5,57.2,86.1,15
+Muzaffarpur,Bihar,208,6,159.0,117.9,14
+Muzaffarpur,Bihar,208,7,350.1,253.5,14
+Muzaffarpur,Bihar,208,8,277.7,250.4,15
+Muzaffarpur,Bihar,208,9,223.7,190.4,15
+Muzaffarpur,Bihar,208,10,71.4,57.6,15
+Muzaffarpur,Bihar,208,11,4.8,0.2,15
+Muzaffarpur,Bihar,208,12,3.4,2.1,15
+Ahmadabad,Gujarat,438,1,1.8,0.5,16
+Ahmadabad,Gujarat,438,2,0.6,0.0,16
+Ahmadabad,Gujarat,438,3,0.6,1.4,15
+Ahmadabad,Gujarat,438,4,1.7,1.7,15
+Ahmadabad,Gujarat,438,5,6.6,7.3,15
+Ahmadabad,Gujarat,438,6,81.1,69.9,14
+Ahmadabad,Gujarat,438,7,249.3,271.4,14
+Ahmadabad,Gujarat,438,8,209.7,205.2,15
+Ahmadabad,Gujarat,438,9,119.2,147.4,15
+Ahmadabad,Gujarat,438,10,13.6,15.4,15
+Ahmadabad,Gujarat,438,11,8.3,6.1,15
+Ahmadabad,Gujarat,438,12,2.4,0.7,15
+Rajkot,Gujarat,457,1,0.8,0.2,16
+Rajkot,Gujarat,457,2,0.2,0.1,16
+Rajkot,Gujarat,457,3,1.5,1.3,15
+Rajkot,Gujarat,457,4,2.2,2.3,15
+Rajkot,Gujarat,457,5,3.6,5.3,15
+Rajkot,Gujarat,457,6,92.4,111.6,14
+Rajkot,Gujarat,457,7,236.1,293.5,14
+Rajkot,Gujarat,457,8,159.2,205.8,15
+Rajkot,Gujarat,457,9,86.8,181.1,15
+Rajkot,Gujarat,457,10,20.0,21.6,15
+Rajkot,Gujarat,457,11,9.8,7.7,15
+Rajkot,Gujarat,457,12,1.0,0.2,15
+Udham Singh Nagar,Uttarakhand,56,1,35.4,34.4,16
+Udham Singh Nagar,Uttarakhand,56,2,22.9,32.0,16
+Udham Singh Nagar,Uttarakhand,56,3,15.7,24.6,15
+Udham Singh Nagar,Uttarakhand,56,4,10.6,17.7,15
+Udham Singh Nagar,Uttarakhand,56,5,31.9,53.3,15
+Udham Singh Nagar,Uttarakhand,56,6,155.6,172.9,14
+Udham Singh Nagar,Uttarakhand,56,7,419.6,464.5,14
+Udham Singh Nagar,Uttarakhand,56,8,389.3,426.3,15
+Udham Singh Nagar,Uttarakhand,56,9,210.2,232.6,15
+Udham Singh Nagar,Uttarakhand,56,10,68.1,72.1,15
+Udham Singh Nagar,Uttarakhand,56,11,3.8,2.8,15
+Udham Singh Nagar,Uttarakhand,56,12,9.0,11.4,15
+Haridwar,Uttarakhand,50,1,37.1,38.0,16
+Haridwar,Uttarakhand,50,2,30.8,41.7,16
+Haridwar,Uttarakhand,50,3,19.8,33.0,15
+Haridwar,Uttarakhand,50,4,5.4,23.9,15
+Haridwar,Uttarakhand,50,5,9.5,42.7,15
+Haridwar,Uttarakhand,50,6,85.5,134.2,14
+Haridwar,Uttarakhand,50,7,325.0,380.8,14
+Haridwar,Uttarakhand,50,8,347.4,358.4,15
+Haridwar,Uttarakhand,50,9,147.6,186.0,15
+Haridwar,Uttarakhand,50,10,36.3,21.8,15
+Haridwar,Uttarakhand,50,11,2.5,3.6,15
+Haridwar,Uttarakhand,50,12,7.6,9.4,15
+Jammu,Jammu and Kashmir,5,1,80.8,66.7,16
+Jammu,Jammu and Kashmir,5,2,73.9,36.8,16
+Jammu,Jammu and Kashmir,5,3,78.7,45.3,15
+Jammu,Jammu and Kashmir,5,4,43.0,23.8,15
+Jammu,Jammu and Kashmir,5,5,33.5,62.2,15
+Jammu,Jammu and Kashmir,5,6,65.1,41.1,14
+Jammu,Jammu and Kashmir,5,7,334.4,206.2,14
+Jammu,Jammu and Kashmir,5,8,314.5,639.5,15
+Jammu,Jammu and Kashmir,5,9,146.6,187.1,15
+Jammu,Jammu and Kashmir,5,10,20.3,48.8,15
+Jammu,Jammu and Kashmir,5,11,14.1,10.2,15
+Jammu,Jammu and Kashmir,5,12,45.0,5.4,15
+Kathua,Jammu and Kashmir,7,1,84.5,64.6,16
+Kathua,Jammu and Kashmir,7,2,57.5,48.9,16
+Kathua,Jammu and Kashmir,7,3,62.3,116.2,15
+Kathua,Jammu and Kashmir,7,4,27.7,27.6,15
+Kathua,Jammu and Kashmir,7,5,14.8,68.0,15
+Kathua,Jammu and Kashmir,7,6,54.2,70.7,14
+Kathua,Jammu and Kashmir,7,7,386.2,218.8,14
+Kathua,Jammu and Kashmir,7,8,397.6,355.8,15
+Kathua,Jammu and Kashmir,7,9,195.5,187.4,15
+Kathua,Jammu and Kashmir,7,10,29.0,36.2,15
+Kathua,Jammu and Kashmir,7,11,7.2,9.1,15
+Kathua,Jammu and Kashmir,7,12,34.2,5.6,15
+Murshidabad,West Bengal,319,1,15.6,5.7,16
+Murshidabad,West Bengal,319,2,11.5,11.4,16
+Murshidabad,West Bengal,319,3,19.1,15.7,15
+Murshidabad,West Bengal,319,4,45.4,41.0,15
+Murshidabad,West Bengal,319,5,100.9,124.3,15
+Murshidabad,West Bengal,319,6,222.7,153.6,14
+Murshidabad,West Bengal,319,7,325.9,219.2,14
+Murshidabad,West Bengal,319,8,261.9,194.4,15
+Murshidabad,West Bengal,319,9,228.2,175.8,15
+Murshidabad,West Bengal,319,10,124.2,81.2,15
+Murshidabad,West Bengal,319,11,15.6,5.0,15
+Murshidabad,West Bengal,319,12,2.6,9.8,15
+Dakshin Dinajpur,West Bengal,310,1,7.0,2.0,16
+Dakshin Dinajpur,West Bengal,310,2,15.1,6.9,16
+Dakshin Dinajpur,West Bengal,310,3,23.0,14.4,15
+Dakshin Dinajpur,West Bengal,310,4,62.4,47.3,15
+Dakshin Dinajpur,West Bengal,310,5,163.8,124.5,15
+Dakshin Dinajpur,West Bengal,310,6,298.4,181.9,14
+Dakshin Dinajpur,West Bengal,310,7,378.0,265.2,14
+Dakshin Dinajpur,West Bengal,310,8,242.8,199.2,15
+Dakshin Dinajpur,West Bengal,310,9,269.1,167.8,15
+Dakshin Dinajpur,West Bengal,310,10,132.3,82.8,15
+Dakshin Dinajpur,West Bengal,310,11,12.4,4.4,15
+Dakshin Dinajpur,West Bengal,310,12,4.9,2.0,15

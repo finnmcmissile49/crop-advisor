@@ -15,8 +15,15 @@ Test on a past season (the weather after --today is what was actually recorded):
 Your own field and soil (both optional):
     python scripts/advise.py --district Hisar --sowing 2026-11-10 --lat 29.21 --lon 75.65 --soil-type loam
 
-Needs internet (Open-Meteo; SoilGrids for --lat/--lon). Advice is from public data; it has not
-been checked against real fields.
+Season-start model and outlook (Haryana and Punjab): expected yield and income per acre for each
+crop of the season, how much they vary, how often one crop beats another, plus the last harvest
+prices (about a minute the first time: the model is trained on the spot)
+    python scripts/advise.py --outlook --district Hisar
+    python scripts/advise.py --outlook --district Bathinda --season kharif
+
+Needs internet (Open-Meteo; NASA POWER for recorded rain; SoilGrids for --lat/--lon). The district
+background (IMD normals, Soil Health Card, yields, prices) comes from files in data/reference.
+Advice is from public data; it has not been checked against real fields.
 """
 import argparse
 import os
@@ -43,8 +50,8 @@ def load_site(name, locations, soil_csv):
 
 def main():
     ap = argparse.ArgumentParser(description="When should this wheat field be watered next?")
-    ap.add_argument("--crop", default="wheat", choices=["wheat"] + list(cr.CROPS),
-                    help="crop (default wheat; see --crops)")
+    ap.add_argument("--crop", default=None, choices=["wheat", "paddy"] + list(cr.CROPS),
+                    help="crop (default wheat; see --crops; paddy only with --outlook)")
     ap.add_argument("--district", help="district name, e.g. Hisar (see --list)")
     ap.add_argument("--sowing", help="sowing date, YYYY-MM-DD")
     ap.add_argument("--watered", nargs="*", default=[],
@@ -63,6 +70,14 @@ def main():
     ap.add_argument("--soil", default=DEFAULT_SOIL)
     ap.add_argument("--list", action="store_true", help="list the districts that are set up")
     ap.add_argument("--crops", action="store_true", help="list the crops and their sowing times")
+    ap.add_argument("--outlook", action="store_true",
+                    help="season-start outlook for the district: usual yield, last harvest price")
+    ap.add_argument("--season", choices=["rabi", "kharif"],
+                    help="with --outlook: which season (default: the next one to be sown)")
+    ap.add_argument("--rain-source", choices=["auto", "openmeteo"], default="auto",
+                    help="recorded rain: NASA POWER where available (auto) or Open-Meteo only")
+    ap.add_argument("--no-extras", action="store_true",
+                    help="leave out the district background (IMD, Soil Health Card, prices)")
     a = ap.parse_args()
 
     if hasattr(sys.stdout, "reconfigure"):
@@ -83,14 +98,23 @@ def main():
         for state, g in loc.groupby("state"):
             print(f"{state}: {', '.join(g['name'])}")
         return
-    if not a.district or not a.sowing:
-        ap.error("--district and --sowing are needed (or --list)")
-
-    req = {"district": a.district, "sowing": a.sowing, "watered": a.watered, "crop": a.crop,
-           "today": a.today, "depth_cm": a.depth_cm, "lat": a.lat, "lon": a.lon,
-           "soil_type": a.soil_type}
-    res = service.advise_request(req, soil_files=(a.soil,) + sites.SOIL_FILES[1:],
-                                 locations=a.locations)
+    if a.outlook:
+        if not a.district:
+            ap.error("--outlook needs --district")
+        res = service.outlook_request({"district": a.district, "crop": a.crop, "today": a.today,
+                                       "season": a.season}, locations=a.locations)
+    else:
+        if not a.district or not a.sowing:
+            ap.error("--district and --sowing are needed (or --list, or --outlook)")
+        crop = a.crop or "wheat"
+        if crop == "paddy":
+            ap.error("paddy irrigation is not set up (it needs a flooded-field model); use "
+                     "--outlook for paddy")
+        req = {"district": a.district, "sowing": a.sowing, "watered": a.watered, "crop": crop,
+               "today": a.today, "depth_cm": a.depth_cm, "lat": a.lat, "lon": a.lon,
+               "soil_type": a.soil_type, "rain_source": a.rain_source}
+        res = service.advise_request(req, soil_files=(a.soil,) + sites.SOIL_FILES[1:],
+                                     locations=a.locations, with_extras=not a.no_extras)
     if a.json:
         import json
         print(json.dumps(res, ensure_ascii=False, indent=1))

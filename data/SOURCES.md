@@ -143,3 +143,40 @@ districts. The six pilot districts at their saved soil points (fetched 27 Octobe
 the earlier pull exactly); the other 21 at the district point, or the nearest point with soil data
 within 10 km (Aligarh and Rajkot, 3 km), fetched 29 October 2026. Ujjain (52 percent clay) and
 Ganganagar (100 mm per m) match the values in notes/irrigation_10_states.md.
+
+## Reference tables for the calculator (added 1 November 2026)
+
+Built by `scripts/build_reference_tables.py` from processed files in the agri-project folder, so the
+calculator runs from a fresh copy of the code. Nothing in the agri-project folder was changed.
+
+| File | From | What |
+|---|---|---|
+| `data/reference/imd_rain_monthly.csv` | `03_processed_data/rainfall_district_monthly_2009_2024.csv` (IMD district rainfall, with IMD's district normals) | 27 calculator districts: monthly IMD normal and 2009-2024 mean (months with at least 90 percent of days reported) |
+| `data/reference/soil_health_card.csv` | `03_processed_data/shc_district_nutrient_status_2023_2027.csv` (Soil Health Card dashboard, district nutrient status) | per district, cycle and nutrient: samples tested and percent rated low or deficient |
+| `data/reference/district_yields.csv` | `03_processed_data/north_india_yields_2009_2022.csv` (ICRISAT DLD 2009-2019, DES 2020-2022) | Haryana and Punjab wheat, rice, cotton district yields, with source and notes |
+| `data/reference/mandi_prices.csv` | `04_market_prices_ceda/ceda_prices_monthly_2001_2025.csv.gz` (CEDA Ashoka, Agmarknet monthly) | Haryana and Punjab monthly min, max and modal prices from January 2015, state and district level, the calculator's crops, rows without a data flag |
+
+Checks behind the choices: `data/checks/rain_source_vs_imd*.csv` and `rain_totals_by_source.csv`
+(from the 10-state daily weather pull, 2021-2023: Open-Meteo, NASA POWER and IMD gridded rain for
+the 27 districts), `data/checks/yield_outlook_check.csv` and `yield_outlook_by_horizon.csv`.
+
+Conversion figures: paddy to raw rice 67 percent (Tariff Commission norm of 2005, as quoted in CAG
+Report No. 31 of 2015 on procurement and milling of paddy,
+https://saiindia.gov.in/uploads/download_audit_report/2015/Union_Performance_Procurement_Milling_of_Paddy_Central_Pool_31_2015_chap_5.pdf).
+Cotton ginning outturn in India varies from 22 to 44 percent (ITMF SpinCom report, India 2002,
+https://itmf.org/images/dl/reports/sc-travel-reports/SpinCom-Report-India-2002.pdf), which is why
+no cotton value per acre is given.
+
+## Season-start model (added 2 November 2026)
+
+| File | From | What |
+|---|---|---|
+| `data/reference/district_yields_all.csv` | ICRISAT DLD `icrisat_dld_crops_unapportioned_1990_2019.csv` (2000-2019) and `03_processed_data/des_apy_district_2015_2022.csv` (DES, 2020-2022), plus the North India table for wheat, rice and cotton | Haryana and Punjab district yields for wheat, mustard, barley, chickpea, rice, cotton, maize, bajra, groundnut; ICRISAT kept where both exist |
+| `data/reference/district_rain_monthly.csv` | `03_processed_data/rainfall_district_monthly_2009_2024.csv` (IMD) | 45 Haryana and Punjab districts, monthly rain, IMD normal and day coverage, 2009-2024 |
+| `data/checks/yield_sources_agreement.csv` | the two above | ICRISAT against DES, 2015-2019, per crop |
+| `data/checks/season_model_*.csv` | `scripts/check_season_model.py` | validation, gate, test and feature importance |
+
+Cotton lint to kapas: north zone ginning outturn 33-35 percent (Cotton Association of India,
+Cotton Statistics and News, 20 April 2021, https://caionline.in/uploads/publications/doc/03_20-04-2021.pdf);
+north zone Bt hybrid trials 30.8-36.9 percent (ICAR AICRP on Cotton, North Zone Bt hybrid
+evaluation 2008-09, https://krishi.icar.gov.in/jspui/bitstream/123456789/7924/1/AICRP_Bt_2008_09_north.pdf).
