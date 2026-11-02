@@ -33,6 +33,18 @@ to IMD than Open-Meteo in a 54-season check), SoilGrids or the farmer's soil typ
 Soil Health Card, ICRISAT/DES yields, CEDA/Agmarknet prices. A small web service: `python scripts/serve.py`
 (`notes/forecast_and_rain.md`).
 
+Farm station, satellite and checks (`notes/live_data_and_features.md`):
+- `--station readings.csv` fuses on-farm soil-moisture and rain readings with the water balance
+  (Kalman filter; keeps working if a sensor fails) and says what the date would be without them.
+- `--soil-card n=low zn=deficient ...` adds the farmer's own Soil Health Card.
+- `--lat/--lon` adds Sentinel-2 crop greenness at the field.
+- `python scripts/run_digital_twin.py --district Hisar --crop wheat --years 2021-2023` plays past
+  seasons in AquaCrop under the advice, the calendar, no irrigation and frequent irrigation.
+- `python scripts/check_soil_samples.py --samples samples.csv --station readings.csv ...` checks
+  sensors, model and fused estimate against oven-dried soil samples.
+
+The station and samples code has only been tested with made-up readings so far.
+
 Wheat works in 27 districts in 10 states (`notes/calculator.md`, `notes/irrigation_10_states.md`).
 The other 11 crops follow PAU's Package of Practices and work in the six Punjab and Haryana
 districts (`notes/crops.md`). Advice is for a typical field in the district from public data; it
@@ -109,6 +121,14 @@ src/cropadvisor/service.py      one call from request to advice (used by the scr
 scripts/serve.py                small JSON web service
 scripts/backtest_forecast.py    forecasts as really issued vs what happened (Open-Meteo Previous Runs)
 data/soil_awc.csv               soil water-holding for all 27 districts (no data pull needed)
+src/cropadvisor/station.py      farm station readings: load, quality checks, daily values
+src/cropadvisor/fusion.py       Kalman filter: station readings + water balance
+src/cropadvisor/groundtruth.py  oven-dried soil samples vs sensors, model and fused estimate
+src/cropadvisor/twin.py         digital twin: AquaCrop-OSPy runs of past seasons per strategy
+src/cropadvisor/sentinel.py     Sentinel-2 NDVI at the field (Planetary Computer)
+scripts/refresh_soil_health_card.py  rebuild the Soil Health Card table from a new dashboard download
+data/templates/                 example station readings and soil samples files
+notes/live_data_and_features.md what is live, what each feature does, what is not tested yet
 scripts/advise.py               the calculator: python scripts/advise.py --district Hisar --sowing 2026-11-10
 notes/calculator.md             how to use the calculator, what was checked
 data/locations_wheat_10states.csv  the 27 districts, with state and ICAR wheat zone

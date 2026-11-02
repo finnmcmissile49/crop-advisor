@@ -105,3 +105,77 @@ def text(name, s):
     hi.append("ये ज़िले के आँकड़े हैं, आपके खेत के नहीं। अपने खेत की मिट्टी जाँच (सॉइल हेल्थ कार्ड) "
               "करवाएँ और खाद की मात्रा के लिए कृषि विभाग से पूछें।")
     return en, hi
+
+
+# --------------------------------------------------------------- refresh and the farmer's card
+
+DASHBOARD_KEYS = {"n": "n", "p": "p", "k": "k", "S": "s", "OC": "oc", "pH": "ph", "EC": "ec",
+                  "Fe": "fe", "Zn": "zn", "Cu": "cu", "B": "b", "Mn": "mn"}
+
+
+def parse_dashboard(records):
+    """The Soil Health Card nutrient dashboard's district records (as saved in
+    01_raw_data/soil_health_card/shc_district_nutrient_status_raw.json) to one row per district and
+    cycle: counts and percent of samples in each rating class per nutrient."""
+    rows = []
+    for r in records:
+        row = {"cycle": r.get("cycle"), "state": r.get("state"), "state_code": r.get("state_code"),
+               "district": r.get("district"), "district_code_lgd": r.get("district_code")}
+        res = r.get("results") or {}
+        for key, short in DASHBOARD_KEYS.items():
+            classes = res.get(key) or {}
+            n = sum(int(v or 0) for v in classes.values())
+            for cls, v in classes.items():
+                row[f"{short}_{cls.lower()}"] = int(v or 0)
+            row[f"{short}_samples"] = n
+            for cls, v in classes.items():
+                row[f"pct_{short}_{cls.lower()}"] = round(100 * int(v or 0) / n, 1) if n else None
+        row["samples"] = row.get("n_samples", 0)   # as in the processed table: nitrogen samples
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+# Ratings a farmer reads off their own card. The card states the rating for each nutrient, so no
+# thresholds are applied here (they differ between states and labs).
+CARD_RATINGS = {"n": ("low", "medium", "high"), "p": ("low", "medium", "high"),
+                "k": ("low", "medium", "high"), "oc": ("low", "medium", "high"),
+                "s": ("deficient", "sufficient"), "zn": ("deficient", "sufficient"),
+                "ph": ("acidic", "neutral", "alkaline"), "ec": ("saline", "non-saline")}
+RATING_HI = {"low": "कम", "medium": "मध्यम", "high": "ज़्यादा", "deficient": "कमी",
+             "sufficient": "पर्याप्त", "acidic": "अम्लीय", "neutral": "सामान्य",
+             "alkaline": "क्षारीय", "saline": "लवणीय", "non-saline": "सामान्य"}
+EXTRA_NAMES = {"ph": ("pH", "pH"), "ec": ("salinity (EC)", "लवणता (EC)")}
+
+
+def farmer_card(card):
+    """Check the ratings a farmer typed from their own Soil Health Card. card: {nutrient: rating}.
+    Returns the cleaned dict; raises ValueError for an unknown nutrient or rating."""
+    out = {}
+    for k, v in (card or {}).items():
+        k2, v2 = str(k).strip().lower(), str(v).strip().lower().replace("_", "-")
+        if k2 not in CARD_RATINGS:
+            raise ValueError(f"unknown Soil Health Card item '{k}' (use: {', '.join(CARD_RATINGS)})")
+        if v2 not in CARD_RATINGS[k2]:
+            raise ValueError(f"{k}: rating must be one of {', '.join(CARD_RATINGS[k2])}")
+        out[k2] = v2
+    return out
+
+
+def farmer_card_text(card, district_summary=None):
+    """English and Hindi lines for the farmer's own card, with the district's share alongside."""
+    if not card:
+        return [], []
+    names = {**{k: v for k, v in NUTRIENTS.items()}, **EXTRA_NAMES}
+    parts_en, parts_hi = [], []
+    for k, v in card.items():
+        en_name, hi_name = names[k]
+        extra = ""
+        s = (district_summary or {}).get(k)
+        if s and s["status"] == "range" and v in ("low", "deficient"):
+            extra = f" (district: {_pct(s)}% of fields low)"
+        parts_en.append(f"{en_name} {v}{extra}")
+        parts_hi.append(f"{hi_name} {RATING_HI[v]}")
+    return ([f"Your Soil Health Card: {', '.join(parts_en)}. Ask your agriculture office for the "
+             "fertiliser dose for these ratings."],
+            [f"आपका सॉइल हेल्थ कार्ड: {', '.join(parts_hi)}। इन नतीजों के हिसाब से खाद की मात्रा "
+             "कृषि विभाग से पूछें।"])

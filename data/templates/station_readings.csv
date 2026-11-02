@@ -1,0 +1,3 @@
+timestamp,sm_top,sm_deep,rain_mm,soil_temp_c,air_temp_c,rh_pct
+2026-12-15T06:00,0.24,0.27,0.0,14.2,9.8,88
+2026-12-15T18:00,0.23,0.27,0.0,17.5,21.3,52

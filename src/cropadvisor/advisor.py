@@ -125,7 +125,7 @@ def check_inputs(site, sowing, today, watered):
 # ---------------------------------------------------------------------------------- weather
 
 def get_weather(lat, lon, sowing, today, now=None, fetch_history=None, fetch_forecast=None,
-                fetch_power=None):
+                fetch_power=None, fetch_imd=None):
     """Daily rain and ET0 from sowing to the end of the forecast.
 
     Live (today within 2 days of now): recorded weather to today plus the 16-day forecast.
@@ -140,6 +140,10 @@ def get_weather(lat, lon, sowing, today, now=None, fetch_history=None, fetch_for
     "om") record what was used.
     Returns DataFrame date, rain_mm, et0_mm, forecast (bool), rain_om_mm, rain_source, and the
     mode. If POWER cannot be reached the DataFrame's attrs["power_error"] says why.
+
+    fetch_imd: IMD gridded rain (imd.point_rain), used ahead of POWER on any recorded day IMD has
+    published (gauge-based; it is the reference the rain sources were judged against). IMD
+    releases a year's file months late, so in live use it is usually absent and POWER is used.
     """
     fetch_history = fetch_history or openmeteo.fetch_history
     fetch_forecast = fetch_forecast or openmeteo.fetch_forecast
@@ -190,6 +194,22 @@ def get_weather(lat, lon, sowing, today, now=None, fetch_history=None, fetch_for
             out = out.drop(columns="rain_pw_mm")
         except Exception as e:   # POWER down or slow: Open-Meteo alone, and say so
             out.attrs["power_error"] = str(e)[:150]
+    if fetch_imd is not None:
+        last = min(forecast_from - pd.Timedelta(days=1), now - pd.Timedelta(days=1))
+        try:
+            im = fetch_imd(lat, lon, f(sowing), f(last))
+            im = im[["date", "rain_mm"]].dropna().rename(columns={"rain_mm": "rain_imd_mm"})
+            im = im[(im["rain_imd_mm"] >= 0) & (pd.to_datetime(im["date"]) < forecast_from)]
+            im["date"] = pd.to_datetime(im["date"])
+            attrs = out.attrs.copy()
+            out = out.merge(im, on="date", how="left")
+            out.attrs.update(attrs)
+            use = out["rain_imd_mm"].notna()
+            out.loc[use, "rain_mm"] = out.loc[use, "rain_imd_mm"].astype(float)
+            out.loc[use, "rain_source"] = "imd"
+            out = out.drop(columns="rain_imd_mm")
+        except Exception as e:
+            out.attrs["imd_error"] = str(e)[:150]
     return out, mode
 
 
@@ -200,8 +220,11 @@ def rain_record(weather, sowing, today):
     if "rain_source" not in rec:
         return None
     pw = rec[rec["rain_source"] == "pw"]
+    im = rec[rec["rain_source"] == "imd"]
     return {"pw_days": int(len(pw)),
             "pw_until": pw["date"].max() if len(pw) else None,
+            "imd_days": int(len(im)),
+            "imd_until": im["date"].max() if len(im) else None,
             "rain_used_mm": round(float(rec["rain_mm"].sum()), 1),
             "rain_om_mm": round(float(rec["rain_om_mm"].sum()), 1)}
 
@@ -211,7 +234,7 @@ def rain_source_check(weather, day_likely, trigger):
 
     trigger(weather) -> day or None. Returns the Open-Meteo date when it differs from the date
     with POWER rain by more than a day (or one of them has no date), else None."""
-    if "rain_source" not in weather or not (weather["rain_source"] == "pw").any():
+    if "rain_source" not in weather or not weather["rain_source"].isin(["pw", "imd"]).any():
         return None
     alt_w = weather.assign(rain_mm=weather["rain_om_mm"])
     alt = trigger(alt_w)
@@ -234,12 +257,25 @@ def _trigger_day(weather, sowing, params, watered, depth_mm, today, cutoff):
     return (hit["date"].iloc[0] if len(hit) else None), run
 
 
-def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", crop="wheat"):
+def apply_correction(weather, correction):
+    """Add the station correction (fusion.run) as water on its day, so the water balance ends that
+    day at the fused soil water. The rain record shown to the farmer is taken before this."""
+    if not correction or not correction.get("mm"):
+        return weather
+    w = weather.copy()
+    day = w["date"] == pd.Timestamp(correction["date"])
+    w.loc[day, "rain_mm"] = w.loc[day, "rain_mm"] + float(correction["mm"])
+    return w
+
+
+def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", crop="wheat",
+           correction=None):
     """Advice as a dict (see render). weather: date, rain_mm, et0_mm, forecast (and optionally
-    rh_min, wind_2m_ms). crop: "wheat" or a key of crops.CROPS."""
+    rh_min, wind_2m_ms). crop: "wheat" or a key of crops.CROPS. correction: from fusion.run, when
+    a farm station's readings are used."""
     if crop != "wheat":
         return advise_crop(cr.get(crop), site, sowing, today, watered, weather,
-                           depth_mm=depth_mm, mode=mode)
+                           depth_mm=depth_mm, mode=mode, correction=correction)
     sowing, today, watered, params = check_inputs(site, sowing, today, watered)
     cutoff = ir.last_irrigation_date(sowing, params)
     first_das, first_lo, first_hi, first_depth = ir.first_watering(site.state, sowing)
@@ -252,6 +288,7 @@ def advise(site, sowing, today, watered, weather, depth_mm=None, mode="live", cr
            "mode": mode, "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1),
            "forecast_end": end, "warnings": wheat_warnings(site, sowing),
            "soil_type": site.soil_type, "rain_record": rain_record(weather, sowing, today)}
+    weather = apply_correction(weather, correction)
 
     if today > cutoff:
         return {**out, "status": "season_over"}
@@ -335,6 +372,7 @@ def rain_wait(run, weather, likely, today, sowing=None, spec=None):
 # nothing about whether the water balance matches a real field (not yet checked anywhere).
 
 CONF_LEVELS = {3: ("high", "ऊँचा"), 2: ("medium", "मध्यम"), 1: ("low", "कम")}
+STATION_FRESH_DAYS = 3   # a station reading this recent replaces the soil-estimate penalty
 
 
 def confidence(a):
@@ -359,7 +397,12 @@ def confidence(a):
         score -= 1
         why.append(("it depends on the long-range forecast", "यह लंबे मौसम-अनुमान पर निर्भर है"))
     site = a["site"]
-    if not a.get("soil_type") and getattr(site, "soil_source", "district") != "field":
+    st_info = a.get("station") or {}
+    recent = st_info.get("last_reading") is not None and \
+        (a["today"] - pd.Timestamp(st_info["last_reading"])).days <= STATION_FRESH_DAYS
+    if recent:
+        pass   # measured on the farm: no penalty for an estimated soil
+    elif not a.get("soil_type") and getattr(site, "soil_source", "district") != "field":
         score -= 1
         why.append(("the soil is the district's estimate, not your field's",
                     "मिट्टी ज़िले का अनुमान है, आपके खेत की नहीं"))
@@ -479,16 +522,57 @@ def _in(d, today):
     return (d - today).days
 
 
+def station_lines(a):
+    """What the farm station changed (sensor fusion)."""
+    s = a.get("station")
+    if not s:
+        return [], []
+    en, hi = [], []
+    if s.get("last_reading") is None:
+        en.append("Farm station: no valid soil moisture readings, so the advice uses the model "
+                  "alone.")
+        hi.append("खेत स्टेशन: मिट्टी की नमी की कोई सही रीडिंग नहीं, इसलिए सलाह केवल मॉडल से।")
+        return en, hi
+    c = s.get("correction") or {}
+    lr = pd.Timestamp(s["last_reading"])
+    en.append(f"Farm station: soil moisture readings up to {_en(lr)} ({s['days_used']} days used"
+              + (f", {s['days_rejected']} rejected as outliers" if s["days_rejected"] else "")
+              + f"). Sensors and model together put the soil about {abs(c.get('mm', 0)):.1f} mm "
+              f"{'wetter' if c.get('mm', 0) >= 0 else 'drier'} than the model alone (Kalman "
+              f"filter, +-{c.get('sd_mm', 0):g} mm).")
+    hi.append(f"खेत स्टेशन: {_hi(lr)} तक मिट्टी की नमी की रीडिंग। सेंसर और मॉडल मिलाकर मिट्टी "
+              f"मॉडल से लगभग {abs(c.get('mm', 0)):.1f} मिमी "
+              f"{'ज़्यादा गीली' if c.get('mm', 0) >= 0 else 'ज़्यादा सूखी'} है।")
+    d = a.get("date_without_station", "same")
+    if d != "same":
+        if d is None:
+            en.append(f"Without the station, no watering would be due before "
+                      f"{_en(a['forecast_end'])}.")
+            hi.append(f"स्टेशन के बिना {_hi(a['forecast_end'])} से पहले सिंचाई नहीं निकलती।")
+        else:
+            en.append(f"Without the station, the watering would be due around "
+                      f"{_en(pd.Timestamp(d))}.")
+            hi.append(f"स्टेशन के बिना सिंचाई {_hi(pd.Timestamp(d))} के आसपास निकलती।")
+    return en, hi
+
+
 def rain_lines(a):
     """Which rain record was used, and the date with the other record if it differs."""
-    en, hi = [], []
+    en, hi = station_lines(a)
     rec = a.get("rain_record")
-    if rec and rec["pw_days"]:
-        en.append(f"Recorded rain since sowing: {rec['rain_used_mm']:g} mm (NASA POWER up to "
-                  f"{_en(rec['pw_until'])}, Open-Meteo after; Open-Meteo alone: "
+    if rec and (rec["pw_days"] or rec.get("imd_days")):
+        parts_en, parts_hi = [], []
+        if rec.get("imd_days"):
+            parts_en.append(f"IMD up to {_en(rec['imd_until'])}")
+            parts_hi.append(f"IMD {_hi(rec['imd_until'])} तक")
+        if rec["pw_days"]:
+            parts_en.append(f"NASA POWER up to {_en(rec['pw_until'])}")
+            parts_hi.append(f"NASA POWER {_hi(rec['pw_until'])} तक")
+        en.append(f"Recorded rain since sowing: {rec['rain_used_mm']:g} mm "
+                  f"({', '.join(parts_en)}, Open-Meteo after; Open-Meteo alone: "
                   f"{rec['rain_om_mm']:g} mm).")
-        hi.append(f"बुवाई से अब तक दर्ज बारिश: {rec['rain_used_mm']:g} मिमी (NASA POWER "
-                  f"{_hi(rec['pw_until'])} तक, उसके बाद Open-Meteo; केवल Open-Meteo: "
+        hi.append(f"बुवाई से अब तक दर्ज बारिश: {rec['rain_used_mm']:g} मिमी "
+                  f"({', '.join(parts_hi)}, उसके बाद Open-Meteo; केवल Open-Meteo: "
                   f"{rec['rain_om_mm']:g} मिमी)।")
     if "rain_source_om_day" in a and a["status"] not in ("season_over", "max_reached"):
         d = a["rain_source_om_day"]
@@ -697,7 +781,8 @@ def _crop_trigger(spec, weather, sowing, params, watered, depth_mm, today, last_
     return day, how, run
 
 
-def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode="live"):
+def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode="live",
+                correction=None):
     sowing, today, watered, params, warnings = check_crop_inputs(spec, site, sowing, today,
                                                                  watered)
     cutoff = spec.cutoff_date(sowing, params)
@@ -709,6 +794,7 @@ def advise_crop(spec, site, sowing, today, watered, weather, depth_mm=None, mode
            "depth_mm": depth_mm, "mode": mode, "warnings": warnings,
            "rain_next7_mm": round(float(fc["rain_mm"].sum()), 1), "forecast_end": end,
            "soil_type": site.soil_type, "rain_record": rain_record(weather, sowing, today)}
+    weather = apply_correction(weather, correction)
     if today > cutoff:
         return {**out, "status": "season_over"}
     if spec.max_irrigations is not None and len(watered) >= spec.max_irrigations:

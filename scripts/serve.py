@@ -10,7 +10,11 @@ Endpoints (all return JSON):
     GET  /soil-types                     soil types a farmer can choose
     GET  /advice?district=Hisar&sowing=2026-11-10&watered=2026-12-01,2027-01-10
                 &crop=wheat&lat=29.2&lon=75.6&soil_type=loam&today=2026-12-20
-    POST /advice                         the same fields as a JSON body (watered as a list)
+    POST /advice                         the same fields as a JSON body (watered as a list); add
+                                         "station": [{timestamp, sm_top, sm_deep, rain_mm}, ...]
+                                         for farm station readings (sensor fusion)
+                                         "soil_card": {"n": "low", "zn": "deficient", ...}
+                                         ratings from the farmer's own Soil Health Card
     GET  /outlook?district=Hisar&season=rabi  season-start model (expected income per crop, how
                                          often one beats another) and last harvest prices
 
