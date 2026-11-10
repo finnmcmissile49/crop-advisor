@@ -180,3 +180,13 @@ Cotton lint to kapas: north zone ginning outturn 33-35 percent (Cotton Associati
 Cotton Statistics and News, 20 April 2021, https://caionline.in/uploads/publications/doc/03_20-04-2021.pdf);
 north zone Bt hybrid trials 30.8-36.9 percent (ICAR AICRP on Cotton, North Zone Bt hybrid
 evaluation 2008-09, https://krishi.icar.gov.in/jspui/bitstream/123456789/7924/1/AICRP_Bt_2008_09_north.pdf).
+
+## Live inputs and technical features (added 2 November 2026)
+
+| Source | Used for | Access | Notes |
+|---|---|---|---|
+| Sentinel-2 Level-2A (ESA Copernicus), via Microsoft Planetary Computer, https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a | NDVI at the field (`sentinel.py`) | STAC search + SAS token, no account | Reflectance offset of -1000 from processing baseline 04.00 (25 Jan 2022), ESA Level-2A product notes, https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a-algorithms-products. Copernicus data are free and open. |
+| AquaCrop-OSPy 3.1, https://github.com/aquacropos/aquacrop | digital twin (`twin.py`) | pip `aquacrop` | Kelly, T. D. and Foster, T. (2021), AquaCrop-OSPy, Agricultural Water Management 254, 106976, doi:10.1016/j.agwat.2021.106976. Based on AquaCrop-OS (Foster et al. 2017, Agricultural Water Management 181, 18-22). Not FAO's official AquaCrop; built-in crop settings, not calibrated for Indian varieties. |
+| data.gov.in, Agmarknet daily prices (resource 9ef84268-d588-465a-a308-a864a43d0070) | "price now" in the outlook (`prices.live_price`) | free API key in `DATA_GOV_IN_KEY` | Whole state feed, matched on commodity names without spaces. |
+| IMD 0.25 degree gridded daily rain (Pai et al. 2014) | recorded rain at the field cell, ahead of NASA POWER (`imd.point_rain`) | imdlib download, cached | A year's file appears months late; years not yet published are retried once a day. |
+| Soil Health Card nutrient dashboard, https://soilhealth.dac.gov.in | district table refresh (`scripts/refresh_soil_health_card.py`); farmer's own card ratings | saved JSON download (no documented API) | Parser gives the same counts as the current processed file (2,758 district-cycles). |

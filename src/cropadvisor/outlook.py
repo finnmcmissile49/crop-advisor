@@ -211,7 +211,7 @@ def season_year(key, today):
 
 
 def crop_outlook(district, state, key, today, yields_path=YIELDS, prices_path=PRICES,
-                 season=None):
+                 season=None, live_price_fn=None):
     """Everything for one crop in one district, or None outside Haryana and Punjab.
     season: the data year of the season (the sowing year); default the next sowing after today."""
     if state not in STATES or key not in CROPS:
@@ -222,6 +222,7 @@ def crop_outlook(district, state, key, today, yields_path=YIELDS, prices_path=PR
            "season_year": int(season) if season is not None else season_year(key, today)}
     out["yield"] = yield_outlook(district, ycrop, out["season_year"], yields_path) if ycrop else None
     out["price"] = price_outlook(district, state, commodity, months, today, prices_path)
+    out["live_price"] = live_price_fn(commodity, state, district) if live_price_fn else None
     y, pr = out["yield"], out["price"]
     if y and pr and ycrop != "Cotton":
         out["gross_rs_acre"] = int(round(y["expected_q_acre"] * pr["price"], -2))
@@ -231,10 +232,10 @@ def crop_outlook(district, state, key, today, yields_path=YIELDS, prices_path=PR
     return out
 
 
-def district_outlook(district, state, today, keys=None):
+def district_outlook(district, state, today, keys=None, live_price_fn=None):
     keys = keys or list(CROPS)
-    return [o for o in (crop_outlook(district, state, k, today) for k in keys)
-            if o and (o["yield"] or o["price"])]
+    return [o for o in (crop_outlook(district, state, k, today, live_price_fn=live_price_fn)
+                        for k in keys) if o and (o["yield"] or o["price"] or o.get("live_price"))]
 
 
 def _rs(x):
@@ -277,6 +278,13 @@ def text(o, short=False):
                   f"({where_en}, {_months_en(pr)}{spread}).")
         hi.append(f"पिछली फ़सल पर {name_hi} का भाव: लगभग {pr['price']:,} रुपये प्रति क्विंटल "
                   f"({where_hi} में, {_months_hi(pr)})।")
+    lp = o.get("live_price")
+    if lp:
+        where = f"{d} mandis" if lp["level"] == "district" else f"{o['state']} mandis"
+        en.append(f"{name_en} price now: about {_rs(lp['price'])} per quintal ({where}, latest "
+                  f"{pd.Timestamp(lp['date']):%d %b %Y}, data.gov.in daily feed).")
+        hi.append(f"{name_hi} का अभी का भाव: लगभग {lp['price']:,} रुपये प्रति क्विंटल "
+                  f"(data.gov.in, {pd.Timestamp(lp['date']):%d-%m-%Y})।")
     if "gross_rs_acre" in o:
         rng = (f", range {_rs(o['gross_low_rs_acre'])} to {_rs(o['gross_high_rs_acre'])}"
                if "gross_low_rs_acre" in o else "")

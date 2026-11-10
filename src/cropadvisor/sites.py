@@ -95,3 +95,16 @@ def build_site(district, lat=None, lon=None, soil_type=None, locations=LOCATIONS
         notes.append(("soil_type", f"Soil: {t['en']} (as you said).",
                       f"मिट्टी: {t['hi']} (आपके बताए अनुसार)।"))
     return site, notes
+
+
+def district_soil(name, path=os.path.join(ROOT, "data", "soil_awc.csv")):
+    """Field capacity, wilting point (m3/m3), bulk density and texture for a district (SoilGrids,
+    Saxton-Rawls), or None. Used by the sensor fusion and the oven-dry check."""
+    if not os.path.exists(path):
+        return None
+    s = pd.read_csv(path).set_index("name")
+    if name not in s.index:
+        return None
+    r = s.loc[name]
+    return {"field_capacity": float(r["field_capacity"]), "wilting_point": float(r["wilting_point"]),
+            "bulk_density_g_cm3": float(r["bulk_density_g_cm3"]), "texture": r["texture"]}
