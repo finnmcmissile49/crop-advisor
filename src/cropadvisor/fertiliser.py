@@ -163,7 +163,7 @@ PLANS = {
     # 10 kg); all P at sowing; half N at thinning (done after the first irrigation), half when
     # flowers appear; 20 kg MOP in light soils.
     "cotton": Plan(
-        "cotton", urea=120, p_product="ssp", p_kg=75, mop_kg=20, source=PAU_KHARIF + ", p. 49",
+        "cotton", urea=120, p_product="ssp", p_kg=75, source=PAU_KHARIF + ", p. 49",
         doses=(Dose(("sowing",), p=True, k=True),
                Dose(("watering", 1), n_share=0.5,
                     extra_en="at thinning, after the first watering",
