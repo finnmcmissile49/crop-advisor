@@ -1,0 +1,4321 @@
+district,state,season,period,months,year,tmax_mean_c
+Ambala,Haryana,rabi,1,Oct-Nov,normal_1991_2008,29.5
+Ambala,Haryana,rabi,2,Dec-Jan,normal_1991_2008,22.5
+Ambala,Haryana,rabi,3,Feb-Mar,normal_1991_2008,27.5
+Ambala,Haryana,kharif,1,Jun-Jul,normal_1991_2008,38.1
+Ambala,Haryana,kharif,2,Aug-Sep,normal_1991_2008,32.5
+Ambala,Haryana,kharif,3,Oct,normal_1991_2008,31.3
+Ambala,Haryana,rabi,1,Oct-Nov,2009,28.7
+Ambala,Haryana,rabi,2,Dec-Jan,2009,22.8
+Ambala,Haryana,rabi,3,Feb-Mar,2009,30.0
+Ambala,Haryana,kharif,1,Jun-Jul,2009,40.2
+Ambala,Haryana,kharif,2,Aug-Sep,2009,33.0
+Ambala,Haryana,kharif,3,Oct,2009,30.8
+Ambala,Haryana,rabi,1,Oct-Nov,2010,27.2
+Ambala,Haryana,rabi,2,Dec-Jan,2010,20.2
+Ambala,Haryana,rabi,3,Feb-Mar,2010,26.9
+Ambala,Haryana,kharif,1,Jun-Jul,2010,36.7
+Ambala,Haryana,kharif,2,Aug-Sep,2010,30.2
+Ambala,Haryana,kharif,3,Oct,2010,28.5
+Ambala,Haryana,rabi,1,Oct-Nov,2011,27.5
+Ambala,Haryana,rabi,2,Dec-Jan,2011,20.6
+Ambala,Haryana,rabi,3,Feb-Mar,2011,26.8
+Ambala,Haryana,kharif,1,Jun-Jul,2011,35.1
+Ambala,Haryana,kharif,2,Aug-Sep,2011,30.2
+Ambala,Haryana,kharif,3,Oct,2011,28.8
+Ambala,Haryana,rabi,1,Oct-Nov,2012,28.6
+Ambala,Haryana,rabi,2,Dec-Jan,2012,21.4
+Ambala,Haryana,rabi,3,Feb-Mar,2012,25.9
+Ambala,Haryana,kharif,1,Jun-Jul,2012,40.2
+Ambala,Haryana,kharif,2,Aug-Sep,2012,31.8
+Ambala,Haryana,kharif,3,Oct,2012,30.4
+Ambala,Haryana,rabi,1,Oct-Nov,2013,27.5
+Ambala,Haryana,rabi,2,Dec-Jan,2013,21.3
+Ambala,Haryana,rabi,3,Feb-Mar,2013,24.5
+Ambala,Haryana,kharif,1,Jun-Jul,2013,35.3
+Ambala,Haryana,kharif,2,Aug-Sep,2013,30.4
+Ambala,Haryana,kharif,3,Oct,2013,29.4
+Ambala,Haryana,rabi,1,Oct-Nov,2014,29.4
+Ambala,Haryana,rabi,2,Dec-Jan,2014,21.3
+Ambala,Haryana,rabi,3,Feb-Mar,2014,25.8
+Ambala,Haryana,kharif,1,Jun-Jul,2014,40.6
+Ambala,Haryana,kharif,2,Aug-Sep,2014,33.9
+Ambala,Haryana,kharif,3,Oct,2014,30.8
+Ambala,Haryana,rabi,1,Oct-Nov,2015,29.8
+Ambala,Haryana,rabi,2,Dec-Jan,2015,22.3
+Ambala,Haryana,rabi,3,Feb-Mar,2015,28.4
+Ambala,Haryana,kharif,1,Jun-Jul,2015,36.5
+Ambala,Haryana,kharif,2,Aug-Sep,2015,32.2
+Ambala,Haryana,kharif,3,Oct,2015,31.7
+Ambala,Haryana,rabi,1,Oct-Nov,2016,30.7
+Ambala,Haryana,rabi,2,Dec-Jan,2016,22.8
+Ambala,Haryana,rabi,3,Feb-Mar,2016,27.4
+Ambala,Haryana,kharif,1,Jun-Jul,2016,37.7
+Ambala,Haryana,kharif,2,Aug-Sep,2016,32.2
+Ambala,Haryana,kharif,3,Oct,2016,32.6
+Ambala,Haryana,rabi,1,Oct-Nov,2017,28.8
+Ambala,Haryana,rabi,2,Dec-Jan,2017,22.6
+Ambala,Haryana,rabi,3,Feb-Mar,2017,28.8
+Ambala,Haryana,kharif,1,Jun-Jul,2017,36.3
+Ambala,Haryana,kharif,2,Aug-Sep,2017,31.1
+Ambala,Haryana,kharif,3,Oct,2017,31.3
+Ambala,Haryana,rabi,1,Oct-Nov,2018,26.1
+Ambala,Haryana,rabi,2,Dec-Jan,2018,19.5
+Ambala,Haryana,rabi,3,Feb-Mar,2018,23.5
+Ambala,Haryana,kharif,1,Jun-Jul,2018,35.7
+Ambala,Haryana,kharif,2,Aug-Sep,2018,30.1
+Ambala,Haryana,kharif,3,Oct,2018,27.9
+Ambala,Haryana,rabi,1,Oct-Nov,2019,27.0
+Ambala,Haryana,rabi,2,Dec-Jan,2019,18.6
+Ambala,Haryana,rabi,3,Feb-Mar,2019,23.6
+Ambala,Haryana,kharif,1,Jun-Jul,2019,38.6
+Ambala,Haryana,kharif,2,Aug-Sep,2019,31.3
+Ambala,Haryana,kharif,3,Oct,2019,28.7
+Ambala,Haryana,rabi,1,Oct-Nov,2020,29.6
+Ambala,Haryana,rabi,2,Dec-Jan,2020,22.0
+Ambala,Haryana,rabi,3,Feb-Mar,2020,29.3
+Ambala,Haryana,kharif,1,Jun-Jul,2020,36.2
+Ambala,Haryana,kharif,2,Aug-Sep,2020,32.2
+Ambala,Haryana,kharif,3,Oct,2020,32.8
+Ambala,Haryana,rabi,1,Oct-Nov,2021,27.4
+Ambala,Haryana,rabi,2,Dec-Jan,2021,19.1
+Ambala,Haryana,rabi,3,Feb-Mar,2021,26.6
+Ambala,Haryana,kharif,1,Jun-Jul,2021,36.6
+Ambala,Haryana,kharif,2,Aug-Sep,2021,30.9
+Ambala,Haryana,kharif,3,Oct,2021,29.0
+Ambala,Haryana,rabi,1,Oct-Nov,2022,26.2
+Ambala,Haryana,rabi,2,Dec-Jan,2022,21.3
+Ambala,Haryana,rabi,3,Feb-Mar,2022,27.6
+Ambala,Haryana,kharif,1,Jun-Jul,2022,36.4
+Ambala,Haryana,kharif,2,Aug-Sep,2022,30.7
+Ambala,Haryana,kharif,3,Oct,2022,27.6
+Ambala,Haryana,rabi,1,Oct-Nov,2023,27.2
+Ambala,Haryana,rabi,2,Dec-Jan,2023,21.5
+Ambala,Haryana,rabi,3,Feb-Mar,2023,25.7
+Ambala,Haryana,kharif,1,Jun-Jul,2023,34.1
+Ambala,Haryana,kharif,2,Aug-Sep,2023,30.7
+Ambala,Haryana,kharif,3,Oct,2023,28.4
+Bhiwani,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.3
+Bhiwani,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.0
+Bhiwani,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.7
+Bhiwani,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.4
+Bhiwani,Haryana,kharif,2,Aug-Sep,normal_1991_2008,36.3
+Bhiwani,Haryana,kharif,3,Oct,normal_1991_2008,34.6
+Bhiwani,Haryana,rabi,1,Oct-Nov,2009,31.0
+Bhiwani,Haryana,rabi,2,Dec-Jan,2009,24.0
+Bhiwani,Haryana,rabi,3,Feb-Mar,2009,32.0
+Bhiwani,Haryana,kharif,1,Jun-Jul,2009,42.2
+Bhiwani,Haryana,kharif,2,Aug-Sep,2009,37.3
+Bhiwani,Haryana,kharif,3,Oct,2009,33.8
+Bhiwani,Haryana,rabi,1,Oct-Nov,2010,30.0
+Bhiwani,Haryana,rabi,2,Dec-Jan,2010,21.5
+Bhiwani,Haryana,rabi,3,Feb-Mar,2010,29.3
+Bhiwani,Haryana,kharif,1,Jun-Jul,2010,40.2
+Bhiwani,Haryana,kharif,2,Aug-Sep,2010,32.6
+Bhiwani,Haryana,kharif,3,Oct,2010,32.1
+Bhiwani,Haryana,rabi,1,Oct-Nov,2011,31.3
+Bhiwani,Haryana,rabi,2,Dec-Jan,2011,22.7
+Bhiwani,Haryana,rabi,3,Feb-Mar,2011,29.1
+Bhiwani,Haryana,kharif,1,Jun-Jul,2011,39.5
+Bhiwani,Haryana,kharif,2,Aug-Sep,2011,33.7
+Bhiwani,Haryana,kharif,3,Oct,2011,32.9
+Bhiwani,Haryana,rabi,1,Oct-Nov,2012,30.8
+Bhiwani,Haryana,rabi,2,Dec-Jan,2012,22.6
+Bhiwani,Haryana,rabi,3,Feb-Mar,2012,28.0
+Bhiwani,Haryana,kharif,1,Jun-Jul,2012,42.4
+Bhiwani,Haryana,kharif,2,Aug-Sep,2012,34.4
+Bhiwani,Haryana,kharif,3,Oct,2012,33.0
+Bhiwani,Haryana,rabi,1,Oct-Nov,2013,29.9
+Bhiwani,Haryana,rabi,2,Dec-Jan,2013,22.8
+Bhiwani,Haryana,rabi,3,Feb-Mar,2013,27.1
+Bhiwani,Haryana,kharif,1,Jun-Jul,2013,39.1
+Bhiwani,Haryana,kharif,2,Aug-Sep,2013,33.8
+Bhiwani,Haryana,kharif,3,Oct,2013,32.1
+Bhiwani,Haryana,rabi,1,Oct-Nov,2014,32.1
+Bhiwani,Haryana,rabi,2,Dec-Jan,2014,22.1
+Bhiwani,Haryana,rabi,3,Feb-Mar,2014,28.0
+Bhiwani,Haryana,kharif,1,Jun-Jul,2014,41.8
+Bhiwani,Haryana,kharif,2,Aug-Sep,2014,37.6
+Bhiwani,Haryana,kharif,3,Oct,2014,34.5
+Bhiwani,Haryana,rabi,1,Oct-Nov,2015,32.4
+Bhiwani,Haryana,rabi,2,Dec-Jan,2015,24.0
+Bhiwani,Haryana,rabi,3,Feb-Mar,2015,30.3
+Bhiwani,Haryana,kharif,1,Jun-Jul,2015,38.3
+Bhiwani,Haryana,kharif,2,Aug-Sep,2015,36.3
+Bhiwani,Haryana,kharif,3,Oct,2015,35.3
+Bhiwani,Haryana,rabi,1,Oct-Nov,2016,32.9
+Bhiwani,Haryana,rabi,2,Dec-Jan,2016,24.1
+Bhiwani,Haryana,rabi,3,Feb-Mar,2016,29.4
+Bhiwani,Haryana,kharif,1,Jun-Jul,2016,39.3
+Bhiwani,Haryana,kharif,2,Aug-Sep,2016,35.0
+Bhiwani,Haryana,kharif,3,Oct,2016,35.2
+Bhiwani,Haryana,rabi,1,Oct-Nov,2017,32.4
+Bhiwani,Haryana,rabi,2,Dec-Jan,2017,23.9
+Bhiwani,Haryana,rabi,3,Feb-Mar,2017,31.4
+Bhiwani,Haryana,kharif,1,Jun-Jul,2017,38.3
+Bhiwani,Haryana,kharif,2,Aug-Sep,2017,36.8
+Bhiwani,Haryana,kharif,3,Oct,2017,36.0
+Bhiwani,Haryana,rabi,1,Oct-Nov,2018,30.6
+Bhiwani,Haryana,rabi,2,Dec-Jan,2018,22.0
+Bhiwani,Haryana,rabi,3,Feb-Mar,2018,27.0
+Bhiwani,Haryana,kharif,1,Jun-Jul,2018,38.9
+Bhiwani,Haryana,kharif,2,Aug-Sep,2018,34.5
+Bhiwani,Haryana,kharif,3,Oct,2018,32.6
+Bhiwani,Haryana,rabi,1,Oct-Nov,2019,30.8
+Bhiwani,Haryana,rabi,2,Dec-Jan,2019,20.1
+Bhiwani,Haryana,rabi,3,Feb-Mar,2019,26.6
+Bhiwani,Haryana,kharif,1,Jun-Jul,2019,40.8
+Bhiwani,Haryana,kharif,2,Aug-Sep,2019,35.6
+Bhiwani,Haryana,kharif,3,Oct,2019,33.1
+Bhiwani,Haryana,rabi,1,Oct-Nov,2020,31.1
+Bhiwani,Haryana,rabi,2,Dec-Jan,2020,22.2
+Bhiwani,Haryana,rabi,3,Feb-Mar,2020,31.5
+Bhiwani,Haryana,kharif,1,Jun-Jul,2020,39.4
+Bhiwani,Haryana,kharif,2,Aug-Sep,2020,34.7
+Bhiwani,Haryana,kharif,3,Oct,2020,34.6
+Bhiwani,Haryana,rabi,1,Oct-Nov,2021,28.5
+Bhiwani,Haryana,rabi,2,Dec-Jan,2021,20.0
+Bhiwani,Haryana,rabi,3,Feb-Mar,2021,29.6
+Bhiwani,Haryana,kharif,1,Jun-Jul,2021,38.6
+Bhiwani,Haryana,kharif,2,Aug-Sep,2021,32.5
+Bhiwani,Haryana,kharif,3,Oct,2021,30.6
+Bhiwani,Haryana,rabi,1,Oct-Nov,2022,29.0
+Bhiwani,Haryana,rabi,2,Dec-Jan,2022,22.2
+Bhiwani,Haryana,rabi,3,Feb-Mar,2022,30.3
+Bhiwani,Haryana,kharif,1,Jun-Jul,2022,38.9
+Bhiwani,Haryana,kharif,2,Aug-Sep,2022,34.0
+Bhiwani,Haryana,kharif,3,Oct,2022,30.5
+Bhiwani,Haryana,rabi,1,Oct-Nov,2023,31.1
+Bhiwani,Haryana,rabi,2,Dec-Jan,2023,23.0
+Bhiwani,Haryana,rabi,3,Feb-Mar,2023,28.3
+Bhiwani,Haryana,kharif,1,Jun-Jul,2023,36.8
+Bhiwani,Haryana,kharif,2,Aug-Sep,2023,36.7
+Bhiwani,Haryana,kharif,3,Oct,2023,34.3
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.4
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.2
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.0
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.1
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,normal_1991_2008,36.1
+Charkhi Dadri,Haryana,kharif,3,Oct,normal_1991_2008,34.7
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2009,31.3
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2009,24.3
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2009,32.1
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2009,41.8
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2009,37.2
+Charkhi Dadri,Haryana,kharif,3,Oct,2009,34.0
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2010,30.1
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2010,21.8
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2010,29.4
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2010,40.1
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2010,32.4
+Charkhi Dadri,Haryana,kharif,3,Oct,2010,32.5
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2011,31.9
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2011,23.1
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2011,29.2
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2011,39.3
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2011,33.6
+Charkhi Dadri,Haryana,kharif,3,Oct,2011,33.5
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2012,30.8
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2012,22.6
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2012,28.2
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2012,42.0
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2012,33.9
+Charkhi Dadri,Haryana,kharif,3,Oct,2012,33.1
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2013,29.9
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2013,22.9
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2013,27.3
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2013,38.7
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2013,33.7
+Charkhi Dadri,Haryana,kharif,3,Oct,2013,32.1
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2014,32.4
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2014,22.2
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2014,28.3
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2014,41.4
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2014,37.2
+Charkhi Dadri,Haryana,kharif,3,Oct,2014,34.8
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2015,32.5
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2015,24.3
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2015,30.5
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2015,38.3
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2015,36.4
+Charkhi Dadri,Haryana,kharif,3,Oct,2015,35.5
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2016,32.9
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2016,24.4
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2016,29.9
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2016,39.0
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2016,34.4
+Charkhi Dadri,Haryana,kharif,3,Oct,2016,35.1
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2017,32.8
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2017,24.5
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2017,31.7
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2017,38.1
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2017,36.7
+Charkhi Dadri,Haryana,kharif,3,Oct,2017,36.4
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2018,31.3
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2018,22.6
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2018,27.3
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2018,39.0
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2018,34.3
+Charkhi Dadri,Haryana,kharif,3,Oct,2018,33.6
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2019,31.0
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2019,20.4
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2019,27.3
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2019,40.7
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2019,35.3
+Charkhi Dadri,Haryana,kharif,3,Oct,2019,33.2
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2020,31.3
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2020,22.7
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2020,31.8
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2020,39.3
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2020,34.7
+Charkhi Dadri,Haryana,kharif,3,Oct,2020,34.7
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2021,29.1
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2021,20.5
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2021,30.3
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2021,38.5
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2021,32.5
+Charkhi Dadri,Haryana,kharif,3,Oct,2021,31.1
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2022,30.3
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2022,22.8
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2022,30.6
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2022,38.9
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2022,34.9
+Charkhi Dadri,Haryana,kharif,3,Oct,2022,31.8
+Charkhi Dadri,Haryana,rabi,1,Oct-Nov,2023,31.7
+Charkhi Dadri,Haryana,rabi,2,Dec-Jan,2023,23.3
+Charkhi Dadri,Haryana,rabi,3,Feb-Mar,2023,28.8
+Charkhi Dadri,Haryana,kharif,1,Jun-Jul,2023,36.9
+Charkhi Dadri,Haryana,kharif,2,Aug-Sep,2023,36.7
+Charkhi Dadri,Haryana,kharif,3,Oct,2023,34.9
+Faridabad,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.2
+Faridabad,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.0
+Faridabad,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.2
+Faridabad,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.8
+Faridabad,Haryana,kharif,2,Aug-Sep,normal_1991_2008,34.2
+Faridabad,Haryana,kharif,3,Oct,normal_1991_2008,33.1
+Faridabad,Haryana,rabi,1,Oct-Nov,2009,29.7
+Faridabad,Haryana,rabi,2,Dec-Jan,2009,23.6
+Faridabad,Haryana,rabi,3,Feb-Mar,2009,32.0
+Faridabad,Haryana,kharif,1,Jun-Jul,2009,41.9
+Faridabad,Haryana,kharif,2,Aug-Sep,2009,34.1
+Faridabad,Haryana,kharif,3,Oct,2009,31.9
+Faridabad,Haryana,rabi,1,Oct-Nov,2010,27.5
+Faridabad,Haryana,rabi,2,Dec-Jan,2010,20.2
+Faridabad,Haryana,rabi,3,Feb-Mar,2010,28.7
+Faridabad,Haryana,kharif,1,Jun-Jul,2010,40.0
+Faridabad,Haryana,kharif,2,Aug-Sep,2010,31.2
+Faridabad,Haryana,kharif,3,Oct,2010,29.7
+Faridabad,Haryana,rabi,1,Oct-Nov,2011,30.4
+Faridabad,Haryana,rabi,2,Dec-Jan,2011,22.4
+Faridabad,Haryana,rabi,3,Feb-Mar,2011,29.6
+Faridabad,Haryana,kharif,1,Jun-Jul,2011,37.8
+Faridabad,Haryana,kharif,2,Aug-Sep,2011,31.8
+Faridabad,Haryana,kharif,3,Oct,2011,31.7
+Faridabad,Haryana,rabi,1,Oct-Nov,2012,29.7
+Faridabad,Haryana,rabi,2,Dec-Jan,2012,22.4
+Faridabad,Haryana,rabi,3,Feb-Mar,2012,28.0
+Faridabad,Haryana,kharif,1,Jun-Jul,2012,41.8
+Faridabad,Haryana,kharif,2,Aug-Sep,2012,32.4
+Faridabad,Haryana,kharif,3,Oct,2012,31.7
+Faridabad,Haryana,rabi,1,Oct-Nov,2013,27.5
+Faridabad,Haryana,rabi,2,Dec-Jan,2013,21.8
+Faridabad,Haryana,rabi,3,Feb-Mar,2013,26.4
+Faridabad,Haryana,kharif,1,Jun-Jul,2013,37.0
+Faridabad,Haryana,kharif,2,Aug-Sep,2013,31.6
+Faridabad,Haryana,kharif,3,Oct,2013,29.4
+Faridabad,Haryana,rabi,1,Oct-Nov,2014,31.8
+Faridabad,Haryana,rabi,2,Dec-Jan,2014,22.2
+Faridabad,Haryana,rabi,3,Feb-Mar,2014,28.2
+Faridabad,Haryana,kharif,1,Jun-Jul,2014,41.6
+Faridabad,Haryana,kharif,2,Aug-Sep,2014,36.2
+Faridabad,Haryana,kharif,3,Oct,2014,33.7
+Faridabad,Haryana,rabi,1,Oct-Nov,2015,32.0
+Faridabad,Haryana,rabi,2,Dec-Jan,2015,24.5
+Faridabad,Haryana,rabi,3,Feb-Mar,2015,31.1
+Faridabad,Haryana,kharif,1,Jun-Jul,2015,38.1
+Faridabad,Haryana,kharif,2,Aug-Sep,2015,35.0
+Faridabad,Haryana,kharif,3,Oct,2015,34.3
+Faridabad,Haryana,rabi,1,Oct-Nov,2016,32.4
+Faridabad,Haryana,rabi,2,Dec-Jan,2016,24.7
+Faridabad,Haryana,rabi,3,Feb-Mar,2016,30.5
+Faridabad,Haryana,kharif,1,Jun-Jul,2016,38.5
+Faridabad,Haryana,kharif,2,Aug-Sep,2016,33.5
+Faridabad,Haryana,kharif,3,Oct,2016,34.6
+Faridabad,Haryana,rabi,1,Oct-Nov,2017,31.1
+Faridabad,Haryana,rabi,2,Dec-Jan,2017,24.2
+Faridabad,Haryana,rabi,3,Feb-Mar,2017,32.2
+Faridabad,Haryana,kharif,1,Jun-Jul,2017,37.9
+Faridabad,Haryana,kharif,2,Aug-Sep,2017,34.8
+Faridabad,Haryana,kharif,3,Oct,2017,34.1
+Faridabad,Haryana,rabi,1,Oct-Nov,2018,29.2
+Faridabad,Haryana,rabi,2,Dec-Jan,2018,21.9
+Faridabad,Haryana,rabi,3,Feb-Mar,2018,27.2
+Faridabad,Haryana,kharif,1,Jun-Jul,2018,39.1
+Faridabad,Haryana,kharif,2,Aug-Sep,2018,31.6
+Faridabad,Haryana,kharif,3,Oct,2018,30.7
+Faridabad,Haryana,rabi,1,Oct-Nov,2019,30.8
+Faridabad,Haryana,rabi,2,Dec-Jan,2019,20.6
+Faridabad,Haryana,rabi,3,Feb-Mar,2019,27.2
+Faridabad,Haryana,kharif,1,Jun-Jul,2019,41.5
+Faridabad,Haryana,kharif,2,Aug-Sep,2019,34.2
+Faridabad,Haryana,kharif,3,Oct,2019,32.9
+Faridabad,Haryana,rabi,1,Oct-Nov,2020,31.9
+Faridabad,Haryana,rabi,2,Dec-Jan,2020,23.1
+Faridabad,Haryana,rabi,3,Feb-Mar,2020,31.9
+Faridabad,Haryana,kharif,1,Jun-Jul,2020,39.1
+Faridabad,Haryana,kharif,2,Aug-Sep,2020,35.3
+Faridabad,Haryana,kharif,3,Oct,2020,35.4
+Faridabad,Haryana,rabi,1,Oct-Nov,2021,27.9
+Faridabad,Haryana,rabi,2,Dec-Jan,2021,19.8
+Faridabad,Haryana,rabi,3,Feb-Mar,2021,29.2
+Faridabad,Haryana,kharif,1,Jun-Jul,2021,37.8
+Faridabad,Haryana,kharif,2,Aug-Sep,2021,31.8
+Faridabad,Haryana,kharif,3,Oct,2021,30.5
+Faridabad,Haryana,rabi,1,Oct-Nov,2022,27.8
+Faridabad,Haryana,rabi,2,Dec-Jan,2022,22.1
+Faridabad,Haryana,rabi,3,Feb-Mar,2022,30.1
+Faridabad,Haryana,kharif,1,Jun-Jul,2022,39.9
+Faridabad,Haryana,kharif,2,Aug-Sep,2022,35.5
+Faridabad,Haryana,kharif,3,Oct,2022,29.5
+Faridabad,Haryana,rabi,1,Oct-Nov,2023,30.3
+Faridabad,Haryana,rabi,2,Dec-Jan,2023,22.8
+Faridabad,Haryana,rabi,3,Feb-Mar,2023,28.8
+Faridabad,Haryana,kharif,1,Jun-Jul,2023,36.8
+Faridabad,Haryana,kharif,2,Aug-Sep,2023,33.3
+Faridabad,Haryana,kharif,3,Oct,2023,32.8
+Fatehabad,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.7
+Fatehabad,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.8
+Fatehabad,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.4
+Fatehabad,Haryana,kharif,1,Jun-Jul,normal_1991_2008,41.0
+Fatehabad,Haryana,kharif,2,Aug-Sep,normal_1991_2008,37.4
+Fatehabad,Haryana,kharif,3,Oct,normal_1991_2008,35.2
+Fatehabad,Haryana,rabi,1,Oct-Nov,2009,31.5
+Fatehabad,Haryana,rabi,2,Dec-Jan,2009,23.8
+Fatehabad,Haryana,rabi,3,Feb-Mar,2009,31.8
+Fatehabad,Haryana,kharif,1,Jun-Jul,2009,42.5
+Fatehabad,Haryana,kharif,2,Aug-Sep,2009,38.1
+Fatehabad,Haryana,kharif,3,Oct,2009,34.5
+Fatehabad,Haryana,rabi,1,Oct-Nov,2010,31.4
+Fatehabad,Haryana,rabi,2,Dec-Jan,2010,21.9
+Fatehabad,Haryana,rabi,3,Feb-Mar,2010,29.5
+Fatehabad,Haryana,kharif,1,Jun-Jul,2010,40.3
+Fatehabad,Haryana,kharif,2,Aug-Sep,2010,33.6
+Fatehabad,Haryana,kharif,3,Oct,2010,33.6
+Fatehabad,Haryana,rabi,1,Oct-Nov,2011,31.6
+Fatehabad,Haryana,rabi,2,Dec-Jan,2011,22.6
+Fatehabad,Haryana,rabi,3,Feb-Mar,2011,28.8
+Fatehabad,Haryana,kharif,1,Jun-Jul,2011,40.4
+Fatehabad,Haryana,kharif,2,Aug-Sep,2011,34.2
+Fatehabad,Haryana,kharif,3,Oct,2011,33.1
+Fatehabad,Haryana,rabi,1,Oct-Nov,2012,30.9
+Fatehabad,Haryana,rabi,2,Dec-Jan,2012,22.5
+Fatehabad,Haryana,rabi,3,Feb-Mar,2012,28.1
+Fatehabad,Haryana,kharif,1,Jun-Jul,2012,42.9
+Fatehabad,Haryana,kharif,2,Aug-Sep,2012,35.0
+Fatehabad,Haryana,kharif,3,Oct,2012,33.1
+Fatehabad,Haryana,rabi,1,Oct-Nov,2013,31.1
+Fatehabad,Haryana,rabi,2,Dec-Jan,2013,23.0
+Fatehabad,Haryana,rabi,3,Feb-Mar,2013,27.2
+Fatehabad,Haryana,kharif,1,Jun-Jul,2013,40.2
+Fatehabad,Haryana,kharif,2,Aug-Sep,2013,35.4
+Fatehabad,Haryana,kharif,3,Oct,2013,33.7
+Fatehabad,Haryana,rabi,1,Oct-Nov,2014,31.7
+Fatehabad,Haryana,rabi,2,Dec-Jan,2014,22.2
+Fatehabad,Haryana,rabi,3,Feb-Mar,2014,27.7
+Fatehabad,Haryana,kharif,1,Jun-Jul,2014,42.2
+Fatehabad,Haryana,kharif,2,Aug-Sep,2014,37.5
+Fatehabad,Haryana,kharif,3,Oct,2014,33.9
+Fatehabad,Haryana,rabi,1,Oct-Nov,2015,32.3
+Fatehabad,Haryana,rabi,2,Dec-Jan,2015,23.8
+Fatehabad,Haryana,rabi,3,Feb-Mar,2015,30.0
+Fatehabad,Haryana,kharif,1,Jun-Jul,2015,38.6
+Fatehabad,Haryana,kharif,2,Aug-Sep,2015,37.0
+Fatehabad,Haryana,kharif,3,Oct,2015,35.3
+Fatehabad,Haryana,rabi,1,Oct-Nov,2016,33.2
+Fatehabad,Haryana,rabi,2,Dec-Jan,2016,23.8
+Fatehabad,Haryana,rabi,3,Feb-Mar,2016,29.0
+Fatehabad,Haryana,kharif,1,Jun-Jul,2016,39.7
+Fatehabad,Haryana,kharif,2,Aug-Sep,2016,36.7
+Fatehabad,Haryana,kharif,3,Oct,2016,35.8
+Fatehabad,Haryana,rabi,1,Oct-Nov,2017,32.6
+Fatehabad,Haryana,rabi,2,Dec-Jan,2017,23.3
+Fatehabad,Haryana,rabi,3,Feb-Mar,2017,31.0
+Fatehabad,Haryana,kharif,1,Jun-Jul,2017,38.6
+Fatehabad,Haryana,kharif,2,Aug-Sep,2017,37.5
+Fatehabad,Haryana,kharif,3,Oct,2017,36.6
+Fatehabad,Haryana,rabi,1,Oct-Nov,2018,30.8
+Fatehabad,Haryana,rabi,2,Dec-Jan,2018,21.8
+Fatehabad,Haryana,rabi,3,Feb-Mar,2018,26.7
+Fatehabad,Haryana,kharif,1,Jun-Jul,2018,39.2
+Fatehabad,Haryana,kharif,2,Aug-Sep,2018,36.0
+Fatehabad,Haryana,kharif,3,Oct,2018,32.7
+Fatehabad,Haryana,rabi,1,Oct-Nov,2019,30.8
+Fatehabad,Haryana,rabi,2,Dec-Jan,2019,19.7
+Fatehabad,Haryana,rabi,3,Feb-Mar,2019,26.4
+Fatehabad,Haryana,kharif,1,Jun-Jul,2019,40.9
+Fatehabad,Haryana,kharif,2,Aug-Sep,2019,36.4
+Fatehabad,Haryana,kharif,3,Oct,2019,33.7
+Fatehabad,Haryana,rabi,1,Oct-Nov,2020,31.7
+Fatehabad,Haryana,rabi,2,Dec-Jan,2020,22.0
+Fatehabad,Haryana,rabi,3,Feb-Mar,2020,31.5
+Fatehabad,Haryana,kharif,1,Jun-Jul,2020,39.8
+Fatehabad,Haryana,kharif,2,Aug-Sep,2020,36.8
+Fatehabad,Haryana,kharif,3,Oct,2020,36.1
+Fatehabad,Haryana,rabi,1,Oct-Nov,2021,30.1
+Fatehabad,Haryana,rabi,2,Dec-Jan,2021,20.7
+Fatehabad,Haryana,rabi,3,Feb-Mar,2021,30.2
+Fatehabad,Haryana,kharif,1,Jun-Jul,2021,39.5
+Fatehabad,Haryana,kharif,2,Aug-Sep,2021,33.9
+Fatehabad,Haryana,kharif,3,Oct,2021,32.2
+Fatehabad,Haryana,rabi,1,Oct-Nov,2022,30.2
+Fatehabad,Haryana,rabi,2,Dec-Jan,2022,22.8
+Fatehabad,Haryana,rabi,3,Feb-Mar,2022,30.4
+Fatehabad,Haryana,kharif,1,Jun-Jul,2022,38.8
+Fatehabad,Haryana,kharif,2,Aug-Sep,2022,34.1
+Fatehabad,Haryana,kharif,3,Oct,2022,31.7
+Fatehabad,Haryana,rabi,1,Oct-Nov,2023,30.3
+Fatehabad,Haryana,rabi,2,Dec-Jan,2023,22.5
+Fatehabad,Haryana,rabi,3,Feb-Mar,2023,27.8
+Fatehabad,Haryana,kharif,1,Jun-Jul,2023,37.3
+Fatehabad,Haryana,kharif,2,Aug-Sep,2023,37.0
+Fatehabad,Haryana,kharif,3,Oct,2023,33.6
+Gurugram,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.8
+Gurugram,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.1
+Gurugram,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.1
+Gurugram,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.0
+Gurugram,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.1
+Gurugram,Haryana,kharif,3,Oct,normal_1991_2008,33.9
+Gurugram,Haryana,rabi,1,Oct-Nov,2009,30.5
+Gurugram,Haryana,rabi,2,Dec-Jan,2009,23.8
+Gurugram,Haryana,rabi,3,Feb-Mar,2009,32.1
+Gurugram,Haryana,kharif,1,Jun-Jul,2009,42.0
+Gurugram,Haryana,kharif,2,Aug-Sep,2009,35.7
+Gurugram,Haryana,kharif,3,Oct,2009,33.0
+Gurugram,Haryana,rabi,1,Oct-Nov,2010,28.5
+Gurugram,Haryana,rabi,2,Dec-Jan,2010,21.1
+Gurugram,Haryana,rabi,3,Feb-Mar,2010,29.0
+Gurugram,Haryana,kharif,1,Jun-Jul,2010,40.1
+Gurugram,Haryana,kharif,2,Aug-Sep,2010,31.7
+Gurugram,Haryana,kharif,3,Oct,2010,30.6
+Gurugram,Haryana,rabi,1,Oct-Nov,2011,31.2
+Gurugram,Haryana,rabi,2,Dec-Jan,2011,22.7
+Gurugram,Haryana,rabi,3,Feb-Mar,2011,29.4
+Gurugram,Haryana,kharif,1,Jun-Jul,2011,38.8
+Gurugram,Haryana,kharif,2,Aug-Sep,2011,32.7
+Gurugram,Haryana,kharif,3,Oct,2011,32.8
+Gurugram,Haryana,rabi,1,Oct-Nov,2012,30.4
+Gurugram,Haryana,rabi,2,Dec-Jan,2012,22.6
+Gurugram,Haryana,rabi,3,Feb-Mar,2012,28.1
+Gurugram,Haryana,kharif,1,Jun-Jul,2012,41.9
+Gurugram,Haryana,kharif,2,Aug-Sep,2012,33.3
+Gurugram,Haryana,kharif,3,Oct,2012,32.6
+Gurugram,Haryana,rabi,1,Oct-Nov,2013,28.8
+Gurugram,Haryana,rabi,2,Dec-Jan,2013,22.3
+Gurugram,Haryana,rabi,3,Feb-Mar,2013,26.8
+Gurugram,Haryana,kharif,1,Jun-Jul,2013,38.1
+Gurugram,Haryana,kharif,2,Aug-Sep,2013,32.5
+Gurugram,Haryana,kharif,3,Oct,2013,30.6
+Gurugram,Haryana,rabi,1,Oct-Nov,2014,32.0
+Gurugram,Haryana,rabi,2,Dec-Jan,2014,22.0
+Gurugram,Haryana,rabi,3,Feb-Mar,2014,28.2
+Gurugram,Haryana,kharif,1,Jun-Jul,2014,41.6
+Gurugram,Haryana,kharif,2,Aug-Sep,2014,36.8
+Gurugram,Haryana,kharif,3,Oct,2014,34.0
+Gurugram,Haryana,rabi,1,Oct-Nov,2015,32.3
+Gurugram,Haryana,rabi,2,Dec-Jan,2015,24.4
+Gurugram,Haryana,rabi,3,Feb-Mar,2015,30.8
+Gurugram,Haryana,kharif,1,Jun-Jul,2015,38.4
+Gurugram,Haryana,kharif,2,Aug-Sep,2015,35.8
+Gurugram,Haryana,kharif,3,Oct,2015,34.8
+Gurugram,Haryana,rabi,1,Oct-Nov,2016,32.4
+Gurugram,Haryana,rabi,2,Dec-Jan,2016,24.5
+Gurugram,Haryana,rabi,3,Feb-Mar,2016,30.1
+Gurugram,Haryana,kharif,1,Jun-Jul,2016,38.9
+Gurugram,Haryana,kharif,2,Aug-Sep,2016,33.7
+Gurugram,Haryana,kharif,3,Oct,2016,34.6
+Gurugram,Haryana,rabi,1,Oct-Nov,2017,31.7
+Gurugram,Haryana,rabi,2,Dec-Jan,2017,24.3
+Gurugram,Haryana,rabi,3,Feb-Mar,2017,32.0
+Gurugram,Haryana,kharif,1,Jun-Jul,2017,38.0
+Gurugram,Haryana,kharif,2,Aug-Sep,2017,35.5
+Gurugram,Haryana,kharif,3,Oct,2017,34.9
+Gurugram,Haryana,rabi,1,Oct-Nov,2018,30.1
+Gurugram,Haryana,rabi,2,Dec-Jan,2018,22.0
+Gurugram,Haryana,rabi,3,Feb-Mar,2018,27.0
+Gurugram,Haryana,kharif,1,Jun-Jul,2018,38.8
+Gurugram,Haryana,kharif,2,Aug-Sep,2018,32.5
+Gurugram,Haryana,kharif,3,Oct,2018,32.1
+Gurugram,Haryana,rabi,1,Oct-Nov,2019,30.5
+Gurugram,Haryana,rabi,2,Dec-Jan,2019,20.4
+Gurugram,Haryana,rabi,3,Feb-Mar,2019,27.1
+Gurugram,Haryana,kharif,1,Jun-Jul,2019,41.3
+Gurugram,Haryana,kharif,2,Aug-Sep,2019,34.6
+Gurugram,Haryana,kharif,3,Oct,2019,32.6
+Gurugram,Haryana,rabi,1,Oct-Nov,2020,31.2
+Gurugram,Haryana,rabi,2,Dec-Jan,2020,22.7
+Gurugram,Haryana,rabi,3,Feb-Mar,2020,31.7
+Gurugram,Haryana,kharif,1,Jun-Jul,2020,39.2
+Gurugram,Haryana,kharif,2,Aug-Sep,2020,34.6
+Gurugram,Haryana,kharif,3,Oct,2020,34.6
+Gurugram,Haryana,rabi,1,Oct-Nov,2021,28.0
+Gurugram,Haryana,rabi,2,Dec-Jan,2021,19.9
+Gurugram,Haryana,rabi,3,Feb-Mar,2021,29.4
+Gurugram,Haryana,kharif,1,Jun-Jul,2021,38.0
+Gurugram,Haryana,kharif,2,Aug-Sep,2021,31.9
+Gurugram,Haryana,kharif,3,Oct,2021,30.3
+Gurugram,Haryana,rabi,1,Oct-Nov,2022,28.9
+Gurugram,Haryana,rabi,2,Dec-Jan,2022,22.3
+Gurugram,Haryana,rabi,3,Feb-Mar,2022,30.2
+Gurugram,Haryana,kharif,1,Jun-Jul,2022,39.4
+Gurugram,Haryana,kharif,2,Aug-Sep,2022,35.0
+Gurugram,Haryana,kharif,3,Oct,2022,30.3
+Gurugram,Haryana,rabi,1,Oct-Nov,2023,31.0
+Gurugram,Haryana,rabi,2,Dec-Jan,2023,23.1
+Gurugram,Haryana,rabi,3,Feb-Mar,2023,28.8
+Gurugram,Haryana,kharif,1,Jun-Jul,2023,36.7
+Gurugram,Haryana,kharif,2,Aug-Sep,2023,35.1
+Gurugram,Haryana,kharif,3,Oct,2023,34.1
+Hisar,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.6
+Hisar,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.8
+Hisar,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.6
+Hisar,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.7
+Hisar,Haryana,kharif,2,Aug-Sep,normal_1991_2008,37.4
+Hisar,Haryana,kharif,3,Oct,normal_1991_2008,35.1
+Hisar,Haryana,rabi,1,Oct-Nov,2009,31.5
+Hisar,Haryana,rabi,2,Dec-Jan,2009,23.9
+Hisar,Haryana,rabi,3,Feb-Mar,2009,31.8
+Hisar,Haryana,kharif,1,Jun-Jul,2009,42.0
+Hisar,Haryana,kharif,2,Aug-Sep,2009,38.4
+Hisar,Haryana,kharif,3,Oct,2009,34.6
+Hisar,Haryana,rabi,1,Oct-Nov,2010,31.3
+Hisar,Haryana,rabi,2,Dec-Jan,2010,21.8
+Hisar,Haryana,rabi,3,Feb-Mar,2010,29.4
+Hisar,Haryana,kharif,1,Jun-Jul,2010,40.3
+Hisar,Haryana,kharif,2,Aug-Sep,2010,34.0
+Hisar,Haryana,kharif,3,Oct,2010,33.9
+Hisar,Haryana,rabi,1,Oct-Nov,2011,31.9
+Hisar,Haryana,rabi,2,Dec-Jan,2011,22.6
+Hisar,Haryana,rabi,3,Feb-Mar,2011,28.7
+Hisar,Haryana,kharif,1,Jun-Jul,2011,40.3
+Hisar,Haryana,kharif,2,Aug-Sep,2011,34.6
+Hisar,Haryana,kharif,3,Oct,2011,33.6
+Hisar,Haryana,rabi,1,Oct-Nov,2012,30.8
+Hisar,Haryana,rabi,2,Dec-Jan,2012,22.2
+Hisar,Haryana,rabi,3,Feb-Mar,2012,28.2
+Hisar,Haryana,kharif,1,Jun-Jul,2012,42.5
+Hisar,Haryana,kharif,2,Aug-Sep,2012,35.2
+Hisar,Haryana,kharif,3,Oct,2012,33.2
+Hisar,Haryana,rabi,1,Oct-Nov,2013,30.8
+Hisar,Haryana,rabi,2,Dec-Jan,2013,23.0
+Hisar,Haryana,rabi,3,Feb-Mar,2013,27.3
+Hisar,Haryana,kharif,1,Jun-Jul,2013,39.9
+Hisar,Haryana,kharif,2,Aug-Sep,2013,35.5
+Hisar,Haryana,kharif,3,Oct,2013,33.3
+Hisar,Haryana,rabi,1,Oct-Nov,2014,32.0
+Hisar,Haryana,rabi,2,Dec-Jan,2014,22.3
+Hisar,Haryana,rabi,3,Feb-Mar,2014,28.0
+Hisar,Haryana,kharif,1,Jun-Jul,2014,41.7
+Hisar,Haryana,kharif,2,Aug-Sep,2014,37.8
+Hisar,Haryana,kharif,3,Oct,2014,34.4
+Hisar,Haryana,rabi,1,Oct-Nov,2015,32.2
+Hisar,Haryana,rabi,2,Dec-Jan,2015,23.8
+Hisar,Haryana,rabi,3,Feb-Mar,2015,30.1
+Hisar,Haryana,kharif,1,Jun-Jul,2015,38.5
+Hisar,Haryana,kharif,2,Aug-Sep,2015,37.0
+Hisar,Haryana,kharif,3,Oct,2015,35.3
+Hisar,Haryana,rabi,1,Oct-Nov,2016,32.8
+Hisar,Haryana,rabi,2,Dec-Jan,2016,23.9
+Hisar,Haryana,rabi,3,Feb-Mar,2016,29.3
+Hisar,Haryana,kharif,1,Jun-Jul,2016,39.6
+Hisar,Haryana,kharif,2,Aug-Sep,2016,36.1
+Hisar,Haryana,kharif,3,Oct,2016,35.3
+Hisar,Haryana,rabi,1,Oct-Nov,2017,32.7
+Hisar,Haryana,rabi,2,Dec-Jan,2017,23.7
+Hisar,Haryana,rabi,3,Feb-Mar,2017,31.1
+Hisar,Haryana,kharif,1,Jun-Jul,2017,38.6
+Hisar,Haryana,kharif,2,Aug-Sep,2017,37.7
+Hisar,Haryana,kharif,3,Oct,2017,36.8
+Hisar,Haryana,rabi,1,Oct-Nov,2018,31.3
+Hisar,Haryana,rabi,2,Dec-Jan,2018,22.1
+Hisar,Haryana,rabi,3,Feb-Mar,2018,27.0
+Hisar,Haryana,kharif,1,Jun-Jul,2018,39.5
+Hisar,Haryana,kharif,2,Aug-Sep,2018,36.0
+Hisar,Haryana,kharif,3,Oct,2018,33.5
+Hisar,Haryana,rabi,1,Oct-Nov,2019,31.1
+Hisar,Haryana,rabi,2,Dec-Jan,2019,20.1
+Hisar,Haryana,rabi,3,Feb-Mar,2019,26.9
+Hisar,Haryana,kharif,1,Jun-Jul,2019,40.7
+Hisar,Haryana,kharif,2,Aug-Sep,2019,36.7
+Hisar,Haryana,kharif,3,Oct,2019,34.0
+Hisar,Haryana,rabi,1,Oct-Nov,2020,31.5
+Hisar,Haryana,rabi,2,Dec-Jan,2020,22.3
+Hisar,Haryana,rabi,3,Feb-Mar,2020,31.6
+Hisar,Haryana,kharif,1,Jun-Jul,2020,39.7
+Hisar,Haryana,kharif,2,Aug-Sep,2020,36.6
+Hisar,Haryana,kharif,3,Oct,2020,35.6
+Hisar,Haryana,rabi,1,Oct-Nov,2021,30.1
+Hisar,Haryana,rabi,2,Dec-Jan,2021,20.7
+Hisar,Haryana,rabi,3,Feb-Mar,2021,30.5
+Hisar,Haryana,kharif,1,Jun-Jul,2021,39.3
+Hisar,Haryana,kharif,2,Aug-Sep,2021,34.0
+Hisar,Haryana,kharif,3,Oct,2021,32.2
+Hisar,Haryana,rabi,1,Oct-Nov,2022,30.7
+Hisar,Haryana,rabi,2,Dec-Jan,2022,22.9
+Hisar,Haryana,rabi,3,Feb-Mar,2022,30.5
+Hisar,Haryana,kharif,1,Jun-Jul,2022,38.9
+Hisar,Haryana,kharif,2,Aug-Sep,2022,35.1
+Hisar,Haryana,kharif,3,Oct,2022,32.6
+Hisar,Haryana,rabi,1,Oct-Nov,2023,31.1
+Hisar,Haryana,rabi,2,Dec-Jan,2023,22.8
+Hisar,Haryana,rabi,3,Feb-Mar,2023,28.2
+Hisar,Haryana,kharif,1,Jun-Jul,2023,37.4
+Hisar,Haryana,kharif,2,Aug-Sep,2023,37.8
+Hisar,Haryana,kharif,3,Oct,2023,34.5
+Jhajjar,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.8
+Jhajjar,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.1
+Jhajjar,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.1
+Jhajjar,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.0
+Jhajjar,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.1
+Jhajjar,Haryana,kharif,3,Oct,normal_1991_2008,33.9
+Jhajjar,Haryana,rabi,1,Oct-Nov,2009,30.5
+Jhajjar,Haryana,rabi,2,Dec-Jan,2009,23.8
+Jhajjar,Haryana,rabi,3,Feb-Mar,2009,32.1
+Jhajjar,Haryana,kharif,1,Jun-Jul,2009,42.0
+Jhajjar,Haryana,kharif,2,Aug-Sep,2009,35.7
+Jhajjar,Haryana,kharif,3,Oct,2009,33.0
+Jhajjar,Haryana,rabi,1,Oct-Nov,2010,28.5
+Jhajjar,Haryana,rabi,2,Dec-Jan,2010,21.1
+Jhajjar,Haryana,rabi,3,Feb-Mar,2010,29.0
+Jhajjar,Haryana,kharif,1,Jun-Jul,2010,40.1
+Jhajjar,Haryana,kharif,2,Aug-Sep,2010,31.7
+Jhajjar,Haryana,kharif,3,Oct,2010,30.6
+Jhajjar,Haryana,rabi,1,Oct-Nov,2011,31.2
+Jhajjar,Haryana,rabi,2,Dec-Jan,2011,22.7
+Jhajjar,Haryana,rabi,3,Feb-Mar,2011,29.4
+Jhajjar,Haryana,kharif,1,Jun-Jul,2011,38.8
+Jhajjar,Haryana,kharif,2,Aug-Sep,2011,32.7
+Jhajjar,Haryana,kharif,3,Oct,2011,32.8
+Jhajjar,Haryana,rabi,1,Oct-Nov,2012,30.4
+Jhajjar,Haryana,rabi,2,Dec-Jan,2012,22.6
+Jhajjar,Haryana,rabi,3,Feb-Mar,2012,28.1
+Jhajjar,Haryana,kharif,1,Jun-Jul,2012,41.9
+Jhajjar,Haryana,kharif,2,Aug-Sep,2012,33.3
+Jhajjar,Haryana,kharif,3,Oct,2012,32.6
+Jhajjar,Haryana,rabi,1,Oct-Nov,2013,28.8
+Jhajjar,Haryana,rabi,2,Dec-Jan,2013,22.3
+Jhajjar,Haryana,rabi,3,Feb-Mar,2013,26.8
+Jhajjar,Haryana,kharif,1,Jun-Jul,2013,38.1
+Jhajjar,Haryana,kharif,2,Aug-Sep,2013,32.5
+Jhajjar,Haryana,kharif,3,Oct,2013,30.6
+Jhajjar,Haryana,rabi,1,Oct-Nov,2014,32.0
+Jhajjar,Haryana,rabi,2,Dec-Jan,2014,22.0
+Jhajjar,Haryana,rabi,3,Feb-Mar,2014,28.2
+Jhajjar,Haryana,kharif,1,Jun-Jul,2014,41.6
+Jhajjar,Haryana,kharif,2,Aug-Sep,2014,36.8
+Jhajjar,Haryana,kharif,3,Oct,2014,34.0
+Jhajjar,Haryana,rabi,1,Oct-Nov,2015,32.3
+Jhajjar,Haryana,rabi,2,Dec-Jan,2015,24.4
+Jhajjar,Haryana,rabi,3,Feb-Mar,2015,30.8
+Jhajjar,Haryana,kharif,1,Jun-Jul,2015,38.4
+Jhajjar,Haryana,kharif,2,Aug-Sep,2015,35.8
+Jhajjar,Haryana,kharif,3,Oct,2015,34.8
+Jhajjar,Haryana,rabi,1,Oct-Nov,2016,32.4
+Jhajjar,Haryana,rabi,2,Dec-Jan,2016,24.5
+Jhajjar,Haryana,rabi,3,Feb-Mar,2016,30.1
+Jhajjar,Haryana,kharif,1,Jun-Jul,2016,38.9
+Jhajjar,Haryana,kharif,2,Aug-Sep,2016,33.7
+Jhajjar,Haryana,kharif,3,Oct,2016,34.6
+Jhajjar,Haryana,rabi,1,Oct-Nov,2017,31.7
+Jhajjar,Haryana,rabi,2,Dec-Jan,2017,24.3
+Jhajjar,Haryana,rabi,3,Feb-Mar,2017,32.0
+Jhajjar,Haryana,kharif,1,Jun-Jul,2017,38.0
+Jhajjar,Haryana,kharif,2,Aug-Sep,2017,35.5
+Jhajjar,Haryana,kharif,3,Oct,2017,34.9
+Jhajjar,Haryana,rabi,1,Oct-Nov,2018,30.1
+Jhajjar,Haryana,rabi,2,Dec-Jan,2018,22.0
+Jhajjar,Haryana,rabi,3,Feb-Mar,2018,27.0
+Jhajjar,Haryana,kharif,1,Jun-Jul,2018,38.8
+Jhajjar,Haryana,kharif,2,Aug-Sep,2018,32.5
+Jhajjar,Haryana,kharif,3,Oct,2018,32.1
+Jhajjar,Haryana,rabi,1,Oct-Nov,2019,30.5
+Jhajjar,Haryana,rabi,2,Dec-Jan,2019,20.4
+Jhajjar,Haryana,rabi,3,Feb-Mar,2019,27.1
+Jhajjar,Haryana,kharif,1,Jun-Jul,2019,41.3
+Jhajjar,Haryana,kharif,2,Aug-Sep,2019,34.6
+Jhajjar,Haryana,kharif,3,Oct,2019,32.6
+Jhajjar,Haryana,rabi,1,Oct-Nov,2020,31.2
+Jhajjar,Haryana,rabi,2,Dec-Jan,2020,22.7
+Jhajjar,Haryana,rabi,3,Feb-Mar,2020,31.7
+Jhajjar,Haryana,kharif,1,Jun-Jul,2020,39.2
+Jhajjar,Haryana,kharif,2,Aug-Sep,2020,34.6
+Jhajjar,Haryana,kharif,3,Oct,2020,34.6
+Jhajjar,Haryana,rabi,1,Oct-Nov,2021,28.0
+Jhajjar,Haryana,rabi,2,Dec-Jan,2021,19.9
+Jhajjar,Haryana,rabi,3,Feb-Mar,2021,29.4
+Jhajjar,Haryana,kharif,1,Jun-Jul,2021,38.0
+Jhajjar,Haryana,kharif,2,Aug-Sep,2021,31.9
+Jhajjar,Haryana,kharif,3,Oct,2021,30.3
+Jhajjar,Haryana,rabi,1,Oct-Nov,2022,28.9
+Jhajjar,Haryana,rabi,2,Dec-Jan,2022,22.3
+Jhajjar,Haryana,rabi,3,Feb-Mar,2022,30.2
+Jhajjar,Haryana,kharif,1,Jun-Jul,2022,39.4
+Jhajjar,Haryana,kharif,2,Aug-Sep,2022,35.0
+Jhajjar,Haryana,kharif,3,Oct,2022,30.3
+Jhajjar,Haryana,rabi,1,Oct-Nov,2023,31.0
+Jhajjar,Haryana,rabi,2,Dec-Jan,2023,23.1
+Jhajjar,Haryana,rabi,3,Feb-Mar,2023,28.8
+Jhajjar,Haryana,kharif,1,Jun-Jul,2023,36.7
+Jhajjar,Haryana,kharif,2,Aug-Sep,2023,35.1
+Jhajjar,Haryana,kharif,3,Oct,2023,34.1
+Jind,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.9
+Jind,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.6
+Jind,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.3
+Jind,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.5
+Jind,Haryana,kharif,2,Aug-Sep,normal_1991_2008,36.1
+Jind,Haryana,kharif,3,Oct,normal_1991_2008,34.3
+Jind,Haryana,rabi,1,Oct-Nov,2009,30.7
+Jind,Haryana,rabi,2,Dec-Jan,2009,23.5
+Jind,Haryana,rabi,3,Feb-Mar,2009,31.7
+Jind,Haryana,kharif,1,Jun-Jul,2009,42.3
+Jind,Haryana,kharif,2,Aug-Sep,2009,37.0
+Jind,Haryana,kharif,3,Oct,2009,33.6
+Jind,Haryana,rabi,1,Oct-Nov,2010,30.1
+Jind,Haryana,rabi,2,Dec-Jan,2010,21.4
+Jind,Haryana,rabi,3,Feb-Mar,2010,28.9
+Jind,Haryana,kharif,1,Jun-Jul,2010,39.8
+Jind,Haryana,kharif,2,Aug-Sep,2010,32.5
+Jind,Haryana,kharif,3,Oct,2010,32.0
+Jind,Haryana,rabi,1,Oct-Nov,2011,30.7
+Jind,Haryana,rabi,2,Dec-Jan,2011,22.1
+Jind,Haryana,rabi,3,Feb-Mar,2011,28.8
+Jind,Haryana,kharif,1,Jun-Jul,2011,39.1
+Jind,Haryana,kharif,2,Aug-Sep,2011,33.2
+Jind,Haryana,kharif,3,Oct,2011,32.3
+Jind,Haryana,rabi,1,Oct-Nov,2012,30.7
+Jind,Haryana,rabi,2,Dec-Jan,2012,22.5
+Jind,Haryana,rabi,3,Feb-Mar,2012,27.8
+Jind,Haryana,kharif,1,Jun-Jul,2012,42.5
+Jind,Haryana,kharif,2,Aug-Sep,2012,34.4
+Jind,Haryana,kharif,3,Oct,2012,33.0
+Jind,Haryana,rabi,1,Oct-Nov,2013,30.0
+Jind,Haryana,rabi,2,Dec-Jan,2013,22.6
+Jind,Haryana,rabi,3,Feb-Mar,2013,26.8
+Jind,Haryana,kharif,1,Jun-Jul,2013,39.1
+Jind,Haryana,kharif,2,Aug-Sep,2013,33.7
+Jind,Haryana,kharif,3,Oct,2013,32.3
+Jind,Haryana,rabi,1,Oct-Nov,2014,31.6
+Jind,Haryana,rabi,2,Dec-Jan,2014,21.9
+Jind,Haryana,rabi,3,Feb-Mar,2014,27.5
+Jind,Haryana,kharif,1,Jun-Jul,2014,42.2
+Jind,Haryana,kharif,2,Aug-Sep,2014,37.5
+Jind,Haryana,kharif,3,Oct,2014,33.7
+Jind,Haryana,rabi,1,Oct-Nov,2015,32.0
+Jind,Haryana,rabi,2,Dec-Jan,2015,23.7
+Jind,Haryana,rabi,3,Feb-Mar,2015,30.1
+Jind,Haryana,kharif,1,Jun-Jul,2015,38.1
+Jind,Haryana,kharif,2,Aug-Sep,2015,36.1
+Jind,Haryana,kharif,3,Oct,2015,34.8
+Jind,Haryana,rabi,1,Oct-Nov,2016,32.8
+Jind,Haryana,rabi,2,Dec-Jan,2016,23.7
+Jind,Haryana,rabi,3,Feb-Mar,2016,28.9
+Jind,Haryana,kharif,1,Jun-Jul,2016,39.5
+Jind,Haryana,kharif,2,Aug-Sep,2016,35.7
+Jind,Haryana,kharif,3,Oct,2016,35.2
+Jind,Haryana,rabi,1,Oct-Nov,2017,31.7
+Jind,Haryana,rabi,2,Dec-Jan,2017,23.3
+Jind,Haryana,rabi,3,Feb-Mar,2017,31.0
+Jind,Haryana,kharif,1,Jun-Jul,2017,38.6
+Jind,Haryana,kharif,2,Aug-Sep,2017,36.3
+Jind,Haryana,kharif,3,Oct,2017,35.3
+Jind,Haryana,rabi,1,Oct-Nov,2018,29.6
+Jind,Haryana,rabi,2,Dec-Jan,2018,21.2
+Jind,Haryana,rabi,3,Feb-Mar,2018,26.3
+Jind,Haryana,kharif,1,Jun-Jul,2018,38.4
+Jind,Haryana,kharif,2,Aug-Sep,2018,34.0
+Jind,Haryana,kharif,3,Oct,2018,31.4
+Jind,Haryana,rabi,1,Oct-Nov,2019,30.0
+Jind,Haryana,rabi,2,Dec-Jan,2019,19.6
+Jind,Haryana,rabi,3,Feb-Mar,2019,25.9
+Jind,Haryana,kharif,1,Jun-Jul,2019,40.6
+Jind,Haryana,kharif,2,Aug-Sep,2019,35.0
+Jind,Haryana,kharif,3,Oct,2019,32.5
+Jind,Haryana,rabi,1,Oct-Nov,2020,31.0
+Jind,Haryana,rabi,2,Dec-Jan,2020,21.8
+Jind,Haryana,rabi,3,Feb-Mar,2020,31.1
+Jind,Haryana,kharif,1,Jun-Jul,2020,39.2
+Jind,Haryana,kharif,2,Aug-Sep,2020,34.8
+Jind,Haryana,kharif,3,Oct,2020,34.8
+Jind,Haryana,rabi,1,Oct-Nov,2021,28.6
+Jind,Haryana,rabi,2,Dec-Jan,2021,19.9
+Jind,Haryana,rabi,3,Feb-Mar,2021,29.1
+Jind,Haryana,kharif,1,Jun-Jul,2021,38.6
+Jind,Haryana,kharif,2,Aug-Sep,2021,32.4
+Jind,Haryana,kharif,3,Oct,2021,30.5
+Jind,Haryana,rabi,1,Oct-Nov,2022,28.0
+Jind,Haryana,rabi,2,Dec-Jan,2022,21.7
+Jind,Haryana,rabi,3,Feb-Mar,2022,29.6
+Jind,Haryana,kharif,1,Jun-Jul,2022,38.6
+Jind,Haryana,kharif,2,Aug-Sep,2022,33.1
+Jind,Haryana,kharif,3,Oct,2022,29.5
+Jind,Haryana,rabi,1,Oct-Nov,2023,30.0
+Jind,Haryana,rabi,2,Dec-Jan,2023,22.3
+Jind,Haryana,rabi,3,Feb-Mar,2023,27.7
+Jind,Haryana,kharif,1,Jun-Jul,2023,36.4
+Jind,Haryana,kharif,2,Aug-Sep,2023,35.6
+Jind,Haryana,kharif,3,Oct,2023,33.1
+Kaithal,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.4
+Kaithal,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.2
+Kaithal,Haryana,rabi,3,Feb-Mar,normal_1991_2008,28.9
+Kaithal,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.5
+Kaithal,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.9
+Kaithal,Haryana,kharif,3,Oct,normal_1991_2008,33.8
+Kaithal,Haryana,rabi,1,Oct-Nov,2009,30.4
+Kaithal,Haryana,rabi,2,Dec-Jan,2009,23.2
+Kaithal,Haryana,rabi,3,Feb-Mar,2009,31.5
+Kaithal,Haryana,kharif,1,Jun-Jul,2009,42.2
+Kaithal,Haryana,kharif,2,Aug-Sep,2009,36.6
+Kaithal,Haryana,kharif,3,Oct,2009,33.3
+Kaithal,Haryana,rabi,1,Oct-Nov,2010,30.1
+Kaithal,Haryana,rabi,2,Dec-Jan,2010,21.2
+Kaithal,Haryana,rabi,3,Feb-Mar,2010,28.5
+Kaithal,Haryana,kharif,1,Jun-Jul,2010,39.3
+Kaithal,Haryana,kharif,2,Aug-Sep,2010,32.6
+Kaithal,Haryana,kharif,3,Oct,2010,31.9
+Kaithal,Haryana,rabi,1,Oct-Nov,2011,30.2
+Kaithal,Haryana,rabi,2,Dec-Jan,2011,21.5
+Kaithal,Haryana,rabi,3,Feb-Mar,2011,28.4
+Kaithal,Haryana,kharif,1,Jun-Jul,2011,38.7
+Kaithal,Haryana,kharif,2,Aug-Sep,2011,32.9
+Kaithal,Haryana,kharif,3,Oct,2011,31.9
+Kaithal,Haryana,rabi,1,Oct-Nov,2012,30.5
+Kaithal,Haryana,rabi,2,Dec-Jan,2012,22.2
+Kaithal,Haryana,rabi,3,Feb-Mar,2012,27.7
+Kaithal,Haryana,kharif,1,Jun-Jul,2012,42.6
+Kaithal,Haryana,kharif,2,Aug-Sep,2012,34.9
+Kaithal,Haryana,kharif,3,Oct,2012,33.0
+Kaithal,Haryana,rabi,1,Oct-Nov,2013,30.0
+Kaithal,Haryana,rabi,2,Dec-Jan,2013,22.3
+Kaithal,Haryana,rabi,3,Feb-Mar,2013,26.4
+Kaithal,Haryana,kharif,1,Jun-Jul,2013,39.1
+Kaithal,Haryana,kharif,2,Aug-Sep,2013,33.6
+Kaithal,Haryana,kharif,3,Oct,2013,32.7
+Kaithal,Haryana,rabi,1,Oct-Nov,2014,30.9
+Kaithal,Haryana,rabi,2,Dec-Jan,2014,21.7
+Kaithal,Haryana,rabi,3,Feb-Mar,2014,27.2
+Kaithal,Haryana,kharif,1,Jun-Jul,2014,42.5
+Kaithal,Haryana,kharif,2,Aug-Sep,2014,37.2
+Kaithal,Haryana,kharif,3,Oct,2014,32.9
+Kaithal,Haryana,rabi,1,Oct-Nov,2015,31.4
+Kaithal,Haryana,rabi,2,Dec-Jan,2015,23.4
+Kaithal,Haryana,rabi,3,Feb-Mar,2015,29.7
+Kaithal,Haryana,kharif,1,Jun-Jul,2015,38.2
+Kaithal,Haryana,kharif,2,Aug-Sep,2015,35.9
+Kaithal,Haryana,kharif,3,Oct,2015,34.0
+Kaithal,Haryana,rabi,1,Oct-Nov,2016,32.4
+Kaithal,Haryana,rabi,2,Dec-Jan,2016,23.4
+Kaithal,Haryana,rabi,3,Feb-Mar,2016,28.5
+Kaithal,Haryana,kharif,1,Jun-Jul,2016,39.8
+Kaithal,Haryana,kharif,2,Aug-Sep,2016,35.8
+Kaithal,Haryana,kharif,3,Oct,2016,34.7
+Kaithal,Haryana,rabi,1,Oct-Nov,2017,30.7
+Kaithal,Haryana,rabi,2,Dec-Jan,2017,22.9
+Kaithal,Haryana,rabi,3,Feb-Mar,2017,30.4
+Kaithal,Haryana,kharif,1,Jun-Jul,2017,38.8
+Kaithal,Haryana,kharif,2,Aug-Sep,2017,35.0
+Kaithal,Haryana,kharif,3,Oct,2017,34.2
+Kaithal,Haryana,rabi,1,Oct-Nov,2018,28.3
+Kaithal,Haryana,rabi,2,Dec-Jan,2018,20.4
+Kaithal,Haryana,rabi,3,Feb-Mar,2018,25.3
+Kaithal,Haryana,kharif,1,Jun-Jul,2018,37.9
+Kaithal,Haryana,kharif,2,Aug-Sep,2018,33.2
+Kaithal,Haryana,kharif,3,Oct,2018,30.1
+Kaithal,Haryana,rabi,1,Oct-Nov,2019,28.8
+Kaithal,Haryana,rabi,2,Dec-Jan,2019,19.1
+Kaithal,Haryana,rabi,3,Feb-Mar,2019,25.1
+Kaithal,Haryana,kharif,1,Jun-Jul,2019,40.4
+Kaithal,Haryana,kharif,2,Aug-Sep,2019,33.7
+Kaithal,Haryana,kharif,3,Oct,2019,31.2
+Kaithal,Haryana,rabi,1,Oct-Nov,2020,30.7
+Kaithal,Haryana,rabi,2,Dec-Jan,2020,21.7
+Kaithal,Haryana,rabi,3,Feb-Mar,2020,30.8
+Kaithal,Haryana,kharif,1,Jun-Jul,2020,38.9
+Kaithal,Haryana,kharif,2,Aug-Sep,2020,35.1
+Kaithal,Haryana,kharif,3,Oct,2020,34.5
+Kaithal,Haryana,rabi,1,Oct-Nov,2021,29.1
+Kaithal,Haryana,rabi,2,Dec-Jan,2021,19.8
+Kaithal,Haryana,rabi,3,Feb-Mar,2021,28.5
+Kaithal,Haryana,kharif,1,Jun-Jul,2021,38.7
+Kaithal,Haryana,kharif,2,Aug-Sep,2021,32.8
+Kaithal,Haryana,kharif,3,Oct,2021,31.0
+Kaithal,Haryana,rabi,1,Oct-Nov,2022,27.7
+Kaithal,Haryana,rabi,2,Dec-Jan,2022,21.4
+Kaithal,Haryana,rabi,3,Feb-Mar,2022,29.1
+Kaithal,Haryana,kharif,1,Jun-Jul,2022,38.2
+Kaithal,Haryana,kharif,2,Aug-Sep,2022,32.8
+Kaithal,Haryana,kharif,3,Oct,2022,29.2
+Kaithal,Haryana,rabi,1,Oct-Nov,2023,28.8
+Kaithal,Haryana,rabi,2,Dec-Jan,2023,21.5
+Kaithal,Haryana,rabi,3,Feb-Mar,2023,27.0
+Kaithal,Haryana,kharif,1,Jun-Jul,2023,36.1
+Kaithal,Haryana,kharif,2,Aug-Sep,2023,33.4
+Kaithal,Haryana,kharif,3,Oct,2023,31.2
+Karnal,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.0
+Karnal,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.4
+Karnal,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.2
+Karnal,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.9
+Karnal,Haryana,kharif,2,Aug-Sep,normal_1991_2008,34.6
+Karnal,Haryana,kharif,3,Oct,normal_1991_2008,33.1
+Karnal,Haryana,rabi,1,Oct-Nov,2009,29.9
+Karnal,Haryana,rabi,2,Dec-Jan,2009,23.1
+Karnal,Haryana,rabi,3,Feb-Mar,2009,31.5
+Karnal,Haryana,kharif,1,Jun-Jul,2009,42.0
+Karnal,Haryana,kharif,2,Aug-Sep,2009,35.1
+Karnal,Haryana,kharif,3,Oct,2009,32.4
+Karnal,Haryana,rabi,1,Oct-Nov,2010,28.1
+Karnal,Haryana,rabi,2,Dec-Jan,2010,20.4
+Karnal,Haryana,rabi,3,Feb-Mar,2010,28.0
+Karnal,Haryana,kharif,1,Jun-Jul,2010,39.3
+Karnal,Haryana,kharif,2,Aug-Sep,2010,31.3
+Karnal,Haryana,kharif,3,Oct,2010,29.9
+Karnal,Haryana,rabi,1,Oct-Nov,2011,29.4
+Karnal,Haryana,rabi,2,Dec-Jan,2011,21.7
+Karnal,Haryana,rabi,3,Feb-Mar,2011,28.6
+Karnal,Haryana,kharif,1,Jun-Jul,2011,37.7
+Karnal,Haryana,kharif,2,Aug-Sep,2011,31.9
+Karnal,Haryana,kharif,3,Oct,2011,30.9
+Karnal,Haryana,rabi,1,Oct-Nov,2012,30.1
+Karnal,Haryana,rabi,2,Dec-Jan,2012,22.1
+Karnal,Haryana,rabi,3,Feb-Mar,2012,27.5
+Karnal,Haryana,kharif,1,Jun-Jul,2012,42.1
+Karnal,Haryana,kharif,2,Aug-Sep,2012,33.3
+Karnal,Haryana,kharif,3,Oct,2012,32.4
+Karnal,Haryana,rabi,1,Oct-Nov,2013,28.7
+Karnal,Haryana,rabi,2,Dec-Jan,2013,22.1
+Karnal,Haryana,rabi,3,Feb-Mar,2013,26.2
+Karnal,Haryana,kharif,1,Jun-Jul,2013,37.5
+Karnal,Haryana,kharif,2,Aug-Sep,2013,32.0
+Karnal,Haryana,kharif,3,Oct,2013,30.5
+Karnal,Haryana,rabi,1,Oct-Nov,2014,31.1
+Karnal,Haryana,rabi,2,Dec-Jan,2014,21.8
+Karnal,Haryana,rabi,3,Feb-Mar,2014,27.4
+Karnal,Haryana,kharif,1,Jun-Jul,2014,41.9
+Karnal,Haryana,kharif,2,Aug-Sep,2014,36.6
+Karnal,Haryana,kharif,3,Oct,2014,33.1
+Karnal,Haryana,rabi,1,Oct-Nov,2015,31.5
+Karnal,Haryana,rabi,2,Dec-Jan,2015,23.6
+Karnal,Haryana,rabi,3,Feb-Mar,2015,30.3
+Karnal,Haryana,kharif,1,Jun-Jul,2015,38.0
+Karnal,Haryana,kharif,2,Aug-Sep,2015,34.9
+Karnal,Haryana,kharif,3,Oct,2015,34.0
+Karnal,Haryana,rabi,1,Oct-Nov,2016,32.2
+Karnal,Haryana,rabi,2,Dec-Jan,2016,23.8
+Karnal,Haryana,rabi,3,Feb-Mar,2016,29.2
+Karnal,Haryana,kharif,1,Jun-Jul,2016,39.3
+Karnal,Haryana,kharif,2,Aug-Sep,2016,34.5
+Karnal,Haryana,kharif,3,Oct,2016,34.4
+Karnal,Haryana,rabi,1,Oct-Nov,2017,30.8
+Karnal,Haryana,rabi,2,Dec-Jan,2017,23.2
+Karnal,Haryana,rabi,3,Feb-Mar,2017,31.0
+Karnal,Haryana,kharif,1,Jun-Jul,2017,38.4
+Karnal,Haryana,kharif,2,Aug-Sep,2017,35.0
+Karnal,Haryana,kharif,3,Oct,2017,34.0
+Karnal,Haryana,rabi,1,Oct-Nov,2018,28.2
+Karnal,Haryana,rabi,2,Dec-Jan,2018,20.8
+Karnal,Haryana,rabi,3,Feb-Mar,2018,26.0
+Karnal,Haryana,kharif,1,Jun-Jul,2018,37.9
+Karnal,Haryana,kharif,2,Aug-Sep,2018,32.0
+Karnal,Haryana,kharif,3,Oct,2018,29.9
+Karnal,Haryana,rabi,1,Oct-Nov,2019,29.4
+Karnal,Haryana,rabi,2,Dec-Jan,2019,19.8
+Karnal,Haryana,rabi,3,Feb-Mar,2019,25.7
+Karnal,Haryana,kharif,1,Jun-Jul,2019,40.7
+Karnal,Haryana,kharif,2,Aug-Sep,2019,33.9
+Karnal,Haryana,kharif,3,Oct,2019,31.6
+Karnal,Haryana,rabi,1,Oct-Nov,2020,30.4
+Karnal,Haryana,rabi,2,Dec-Jan,2020,22.0
+Karnal,Haryana,rabi,3,Feb-Mar,2020,30.9
+Karnal,Haryana,kharif,1,Jun-Jul,2020,38.6
+Karnal,Haryana,kharif,2,Aug-Sep,2020,33.5
+Karnal,Haryana,kharif,3,Oct,2020,33.9
+Karnal,Haryana,rabi,1,Oct-Nov,2021,27.4
+Karnal,Haryana,rabi,2,Dec-Jan,2021,19.1
+Karnal,Haryana,rabi,3,Feb-Mar,2021,28.0
+Karnal,Haryana,kharif,1,Jun-Jul,2021,37.9
+Karnal,Haryana,kharif,2,Aug-Sep,2021,31.7
+Karnal,Haryana,kharif,3,Oct,2021,29.5
+Karnal,Haryana,rabi,1,Oct-Nov,2022,27.0
+Karnal,Haryana,rabi,2,Dec-Jan,2022,21.2
+Karnal,Haryana,rabi,3,Feb-Mar,2022,29.0
+Karnal,Haryana,kharif,1,Jun-Jul,2022,38.5
+Karnal,Haryana,kharif,2,Aug-Sep,2022,32.8
+Karnal,Haryana,kharif,3,Oct,2022,28.6
+Karnal,Haryana,rabi,1,Oct-Nov,2023,29.8
+Karnal,Haryana,rabi,2,Dec-Jan,2023,22.3
+Karnal,Haryana,rabi,3,Feb-Mar,2023,27.8
+Karnal,Haryana,kharif,1,Jun-Jul,2023,35.9
+Karnal,Haryana,kharif,2,Aug-Sep,2023,33.5
+Karnal,Haryana,kharif,3,Oct,2023,32.3
+Kurukshetra,Haryana,rabi,1,Oct-Nov,normal_1991_2008,30.5
+Kurukshetra,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.2
+Kurukshetra,Haryana,rabi,3,Feb-Mar,normal_1991_2008,28.8
+Kurukshetra,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.6
+Kurukshetra,Haryana,kharif,2,Aug-Sep,normal_1991_2008,34.0
+Kurukshetra,Haryana,kharif,3,Oct,normal_1991_2008,32.6
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2009,29.6
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2009,23.2
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2009,31.2
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2009,41.7
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2009,34.5
+Kurukshetra,Haryana,kharif,3,Oct,2009,31.9
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2010,28.1
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2010,20.4
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2010,27.8
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2010,38.4
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2010,31.1
+Kurukshetra,Haryana,kharif,3,Oct,2010,29.6
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2011,28.7
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2011,21.3
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2011,28.1
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2011,36.7
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2011,31.4
+Kurukshetra,Haryana,kharif,3,Oct,2011,30.2
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2012,29.8
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2012,22.0
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2012,27.1
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2012,41.7
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2012,33.2
+Kurukshetra,Haryana,kharif,3,Oct,2012,32.0
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2013,28.6
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2013,21.9
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2013,25.8
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2013,36.8
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2013,31.8
+Kurukshetra,Haryana,kharif,3,Oct,2013,30.6
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2014,30.7
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2014,21.8
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2014,27.1
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2014,42.0
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2014,35.9
+Kurukshetra,Haryana,kharif,3,Oct,2014,32.6
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2015,31.1
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2015,23.3
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2015,29.9
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2015,37.8
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2015,34.0
+Kurukshetra,Haryana,kharif,3,Oct,2015,33.3
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2016,31.7
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2016,23.6
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2016,28.7
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2016,39.2
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2016,34.1
+Kurukshetra,Haryana,kharif,3,Oct,2016,33.9
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2017,30.0
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2017,23.0
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2017,30.4
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2017,37.9
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2017,33.2
+Kurukshetra,Haryana,kharif,3,Oct,2017,33.0
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2018,27.1
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2018,20.1
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2018,25.1
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2018,37.2
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2018,31.4
+Kurukshetra,Haryana,kharif,3,Oct,2018,28.9
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2019,28.3
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2019,19.3
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2019,24.9
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2019,40.1
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2019,32.8
+Kurukshetra,Haryana,kharif,3,Oct,2019,30.2
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2020,30.2
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2020,22.0
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2020,30.5
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2020,37.9
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2020,33.1
+Kurukshetra,Haryana,kharif,3,Oct,2020,33.5
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2021,27.7
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2021,19.4
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2021,27.7
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2021,37.7
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2021,31.7
+Kurukshetra,Haryana,kharif,3,Oct,2021,29.6
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2022,26.7
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2022,21.3
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2022,28.7
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2022,37.8
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2022,32.0
+Kurukshetra,Haryana,kharif,3,Oct,2022,28.2
+Kurukshetra,Haryana,rabi,1,Oct-Nov,2023,28.5
+Kurukshetra,Haryana,rabi,2,Dec-Jan,2023,21.9
+Kurukshetra,Haryana,rabi,3,Feb-Mar,2023,27.1
+Kurukshetra,Haryana,kharif,1,Jun-Jul,2023,35.4
+Kurukshetra,Haryana,kharif,2,Aug-Sep,2023,32.1
+Kurukshetra,Haryana,kharif,3,Oct,2023,30.2
+Mahendragarh,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.1
+Mahendragarh,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.3
+Mahendragarh,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.0
+Mahendragarh,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.5
+Mahendragarh,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.2
+Mahendragarh,Haryana,kharif,3,Oct,normal_1991_2008,34.3
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2009,31.3
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2009,24.6
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2009,32.2
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2009,40.9
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2009,36.7
+Mahendragarh,Haryana,kharif,3,Oct,2009,33.6
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2010,29.6
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2010,21.7
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2010,29.5
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2010,39.5
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2010,31.5
+Mahendragarh,Haryana,kharif,3,Oct,2010,31.9
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2011,31.6
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2011,23.3
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2011,29.3
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2011,38.6
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2011,32.6
+Mahendragarh,Haryana,kharif,3,Oct,2011,33.1
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2012,30.0
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2012,22.8
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2012,28.4
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2012,41.2
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2012,32.5
+Mahendragarh,Haryana,kharif,3,Oct,2012,32.2
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2013,29.5
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2013,22.9
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2013,27.2
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2013,37.8
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2013,32.7
+Mahendragarh,Haryana,kharif,3,Oct,2013,31.5
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2014,32.4
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2014,22.3
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2014,28.2
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2014,40.9
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2014,35.7
+Mahendragarh,Haryana,kharif,3,Oct,2014,34.5
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2015,32.5
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2015,24.7
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2015,30.7
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2015,38.0
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2015,35.9
+Mahendragarh,Haryana,kharif,3,Oct,2015,35.4
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2016,32.8
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2016,24.8
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2016,30.1
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2016,38.6
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2016,33.6
+Mahendragarh,Haryana,kharif,3,Oct,2016,34.7
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2017,33.0
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2017,25.0
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2017,31.8
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2017,37.8
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2017,36.2
+Mahendragarh,Haryana,kharif,3,Oct,2017,36.5
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2018,31.5
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2018,23.0
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2018,27.5
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2018,38.7
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2018,33.3
+Mahendragarh,Haryana,kharif,3,Oct,2018,33.7
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2019,30.7
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2019,20.6
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2019,27.6
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2019,40.4
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2019,34.1
+Mahendragarh,Haryana,kharif,3,Oct,2019,32.8
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2020,31.4
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2020,23.2
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2020,32.0
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2020,39.0
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2020,34.6
+Mahendragarh,Haryana,kharif,3,Oct,2020,34.6
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2021,29.2
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2021,20.9
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2021,30.7
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2021,38.2
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2021,31.8
+Mahendragarh,Haryana,kharif,3,Oct,2021,31.0
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2022,30.4
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2022,23.3
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2022,30.5
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2022,38.5
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2022,34.5
+Mahendragarh,Haryana,kharif,3,Oct,2022,31.8
+Mahendragarh,Haryana,rabi,1,Oct-Nov,2023,31.8
+Mahendragarh,Haryana,rabi,2,Dec-Jan,2023,23.6
+Mahendragarh,Haryana,rabi,3,Feb-Mar,2023,29.1
+Mahendragarh,Haryana,kharif,1,Jun-Jul,2023,36.7
+Mahendragarh,Haryana,kharif,2,Aug-Sep,2023,35.7
+Mahendragarh,Haryana,kharif,3,Oct,2023,34.9
+Nuh,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.0
+Nuh,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.4
+Nuh,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.4
+Nuh,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.8
+Nuh,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.0
+Nuh,Haryana,kharif,3,Oct,normal_1991_2008,34.1
+Nuh,Haryana,rabi,1,Oct-Nov,2009,30.7
+Nuh,Haryana,rabi,2,Dec-Jan,2009,24.2
+Nuh,Haryana,rabi,3,Feb-Mar,2009,32.4
+Nuh,Haryana,kharif,1,Jun-Jul,2009,41.7
+Nuh,Haryana,kharif,2,Aug-Sep,2009,36.1
+Nuh,Haryana,kharif,3,Oct,2009,33.3
+Nuh,Haryana,rabi,1,Oct-Nov,2010,29.0
+Nuh,Haryana,rabi,2,Dec-Jan,2010,21.6
+Nuh,Haryana,rabi,3,Feb-Mar,2010,29.6
+Nuh,Haryana,kharif,1,Jun-Jul,2010,40.0
+Nuh,Haryana,kharif,2,Aug-Sep,2010,31.7
+Nuh,Haryana,kharif,3,Oct,2010,31.2
+Nuh,Haryana,rabi,1,Oct-Nov,2011,31.6
+Nuh,Haryana,rabi,2,Dec-Jan,2011,23.0
+Nuh,Haryana,rabi,3,Feb-Mar,2011,29.8
+Nuh,Haryana,kharif,1,Jun-Jul,2011,38.6
+Nuh,Haryana,kharif,2,Aug-Sep,2011,32.5
+Nuh,Haryana,kharif,3,Oct,2011,33.2
+Nuh,Haryana,rabi,1,Oct-Nov,2012,30.1
+Nuh,Haryana,rabi,2,Dec-Jan,2012,22.9
+Nuh,Haryana,rabi,3,Feb-Mar,2012,28.5
+Nuh,Haryana,kharif,1,Jun-Jul,2012,41.4
+Nuh,Haryana,kharif,2,Aug-Sep,2012,32.6
+Nuh,Haryana,kharif,3,Oct,2012,32.3
+Nuh,Haryana,rabi,1,Oct-Nov,2013,28.7
+Nuh,Haryana,rabi,2,Dec-Jan,2013,22.4
+Nuh,Haryana,rabi,3,Feb-Mar,2013,26.9
+Nuh,Haryana,kharif,1,Jun-Jul,2013,37.8
+Nuh,Haryana,kharif,2,Aug-Sep,2013,32.4
+Nuh,Haryana,kharif,3,Oct,2013,30.5
+Nuh,Haryana,rabi,1,Oct-Nov,2014,32.4
+Nuh,Haryana,rabi,2,Dec-Jan,2014,22.2
+Nuh,Haryana,rabi,3,Feb-Mar,2014,28.4
+Nuh,Haryana,kharif,1,Jun-Jul,2014,41.5
+Nuh,Haryana,kharif,2,Aug-Sep,2014,36.1
+Nuh,Haryana,kharif,3,Oct,2014,34.4
+Nuh,Haryana,rabi,1,Oct-Nov,2015,32.5
+Nuh,Haryana,rabi,2,Dec-Jan,2015,24.7
+Nuh,Haryana,rabi,3,Feb-Mar,2015,31.1
+Nuh,Haryana,kharif,1,Jun-Jul,2015,38.5
+Nuh,Haryana,kharif,2,Aug-Sep,2015,36.0
+Nuh,Haryana,kharif,3,Oct,2015,35.3
+Nuh,Haryana,rabi,1,Oct-Nov,2016,32.6
+Nuh,Haryana,rabi,2,Dec-Jan,2016,25.0
+Nuh,Haryana,rabi,3,Feb-Mar,2016,30.5
+Nuh,Haryana,kharif,1,Jun-Jul,2016,38.6
+Nuh,Haryana,kharif,2,Aug-Sep,2016,33.4
+Nuh,Haryana,kharif,3,Oct,2016,34.6
+Nuh,Haryana,rabi,1,Oct-Nov,2017,32.3
+Nuh,Haryana,rabi,2,Dec-Jan,2017,25.0
+Nuh,Haryana,rabi,3,Feb-Mar,2017,32.3
+Nuh,Haryana,kharif,1,Jun-Jul,2017,38.0
+Nuh,Haryana,kharif,2,Aug-Sep,2017,35.9
+Nuh,Haryana,kharif,3,Oct,2017,35.5
+Nuh,Haryana,rabi,1,Oct-Nov,2018,30.9
+Nuh,Haryana,rabi,2,Dec-Jan,2018,22.6
+Nuh,Haryana,rabi,3,Feb-Mar,2018,27.6
+Nuh,Haryana,kharif,1,Jun-Jul,2018,38.9
+Nuh,Haryana,kharif,2,Aug-Sep,2018,32.5
+Nuh,Haryana,kharif,3,Oct,2018,33.0
+Nuh,Haryana,rabi,1,Oct-Nov,2019,30.6
+Nuh,Haryana,rabi,2,Dec-Jan,2019,20.6
+Nuh,Haryana,rabi,3,Feb-Mar,2019,27.6
+Nuh,Haryana,kharif,1,Jun-Jul,2019,41.2
+Nuh,Haryana,kharif,2,Aug-Sep,2019,34.2
+Nuh,Haryana,kharif,3,Oct,2019,32.7
+Nuh,Haryana,rabi,1,Oct-Nov,2020,31.6
+Nuh,Haryana,rabi,2,Dec-Jan,2020,23.1
+Nuh,Haryana,rabi,3,Feb-Mar,2020,32.2
+Nuh,Haryana,kharif,1,Jun-Jul,2020,39.4
+Nuh,Haryana,kharif,2,Aug-Sep,2020,35.1
+Nuh,Haryana,kharif,3,Oct,2020,34.9
+Nuh,Haryana,rabi,1,Oct-Nov,2021,29.0
+Nuh,Haryana,rabi,2,Dec-Jan,2021,20.6
+Nuh,Haryana,rabi,3,Feb-Mar,2021,30.3
+Nuh,Haryana,kharif,1,Jun-Jul,2021,38.2
+Nuh,Haryana,kharif,2,Aug-Sep,2021,31.9
+Nuh,Haryana,kharif,3,Oct,2021,31.2
+Nuh,Haryana,rabi,1,Oct-Nov,2022,29.5
+Nuh,Haryana,rabi,2,Dec-Jan,2022,22.8
+Nuh,Haryana,rabi,3,Feb-Mar,2022,30.5
+Nuh,Haryana,kharif,1,Jun-Jul,2022,39.4
+Nuh,Haryana,kharif,2,Aug-Sep,2022,35.1
+Nuh,Haryana,kharif,3,Oct,2022,30.8
+Nuh,Haryana,rabi,1,Oct-Nov,2023,31.2
+Nuh,Haryana,rabi,2,Dec-Jan,2023,23.3
+Nuh,Haryana,rabi,3,Feb-Mar,2023,29.4
+Nuh,Haryana,kharif,1,Jun-Jul,2023,36.9
+Nuh,Haryana,kharif,2,Aug-Sep,2023,35.1
+Nuh,Haryana,kharif,3,Oct,2023,34.3
+Palwal,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.7
+Palwal,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.4
+Palwal,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.8
+Palwal,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.0
+Palwal,Haryana,kharif,2,Aug-Sep,normal_1991_2008,34.6
+Palwal,Haryana,kharif,3,Oct,normal_1991_2008,33.7
+Palwal,Haryana,rabi,1,Oct-Nov,2009,30.3
+Palwal,Haryana,rabi,2,Dec-Jan,2009,23.7
+Palwal,Haryana,rabi,3,Feb-Mar,2009,32.5
+Palwal,Haryana,kharif,1,Jun-Jul,2009,42.1
+Palwal,Haryana,kharif,2,Aug-Sep,2009,35.3
+Palwal,Haryana,kharif,3,Oct,2009,32.7
+Palwal,Haryana,rabi,1,Oct-Nov,2010,28.5
+Palwal,Haryana,rabi,2,Dec-Jan,2010,21.4
+Palwal,Haryana,rabi,3,Feb-Mar,2010,29.7
+Palwal,Haryana,kharif,1,Jun-Jul,2010,40.4
+Palwal,Haryana,kharif,2,Aug-Sep,2010,31.8
+Palwal,Haryana,kharif,3,Oct,2010,30.7
+Palwal,Haryana,rabi,1,Oct-Nov,2011,31.4
+Palwal,Haryana,rabi,2,Dec-Jan,2011,22.8
+Palwal,Haryana,rabi,3,Feb-Mar,2011,30.1
+Palwal,Haryana,kharif,1,Jun-Jul,2011,38.1
+Palwal,Haryana,kharif,2,Aug-Sep,2011,32.0
+Palwal,Haryana,kharif,3,Oct,2011,33.0
+Palwal,Haryana,rabi,1,Oct-Nov,2012,29.8
+Palwal,Haryana,rabi,2,Dec-Jan,2012,22.7
+Palwal,Haryana,rabi,3,Feb-Mar,2012,28.6
+Palwal,Haryana,kharif,1,Jun-Jul,2012,41.5
+Palwal,Haryana,kharif,2,Aug-Sep,2012,32.2
+Palwal,Haryana,kharif,3,Oct,2012,31.8
+Palwal,Haryana,rabi,1,Oct-Nov,2013,27.7
+Palwal,Haryana,rabi,2,Dec-Jan,2013,21.9
+Palwal,Haryana,rabi,3,Feb-Mar,2013,26.7
+Palwal,Haryana,kharif,1,Jun-Jul,2013,37.2
+Palwal,Haryana,kharif,2,Aug-Sep,2013,31.9
+Palwal,Haryana,kharif,3,Oct,2013,29.6
+Palwal,Haryana,rabi,1,Oct-Nov,2014,32.3
+Palwal,Haryana,rabi,2,Dec-Jan,2014,22.2
+Palwal,Haryana,rabi,3,Feb-Mar,2014,28.6
+Palwal,Haryana,kharif,1,Jun-Jul,2014,41.8
+Palwal,Haryana,kharif,2,Aug-Sep,2014,36.1
+Palwal,Haryana,kharif,3,Oct,2014,34.2
+Palwal,Haryana,rabi,1,Oct-Nov,2015,32.3
+Palwal,Haryana,rabi,2,Dec-Jan,2015,24.8
+Palwal,Haryana,rabi,3,Feb-Mar,2015,31.6
+Palwal,Haryana,kharif,1,Jun-Jul,2015,38.6
+Palwal,Haryana,kharif,2,Aug-Sep,2015,35.7
+Palwal,Haryana,kharif,3,Oct,2015,34.7
+Palwal,Haryana,rabi,1,Oct-Nov,2016,32.4
+Palwal,Haryana,rabi,2,Dec-Jan,2016,24.9
+Palwal,Haryana,rabi,3,Feb-Mar,2016,30.9
+Palwal,Haryana,kharif,1,Jun-Jul,2016,38.4
+Palwal,Haryana,kharif,2,Aug-Sep,2016,33.2
+Palwal,Haryana,kharif,3,Oct,2016,34.5
+Palwal,Haryana,rabi,1,Oct-Nov,2017,31.6
+Palwal,Haryana,rabi,2,Dec-Jan,2017,24.7
+Palwal,Haryana,rabi,3,Feb-Mar,2017,32.7
+Palwal,Haryana,kharif,1,Jun-Jul,2017,38.0
+Palwal,Haryana,kharif,2,Aug-Sep,2017,35.4
+Palwal,Haryana,kharif,3,Oct,2017,34.7
+Palwal,Haryana,rabi,1,Oct-Nov,2018,30.0
+Palwal,Haryana,rabi,2,Dec-Jan,2018,22.3
+Palwal,Haryana,rabi,3,Feb-Mar,2018,27.8
+Palwal,Haryana,kharif,1,Jun-Jul,2018,39.2
+Palwal,Haryana,kharif,2,Aug-Sep,2018,31.8
+Palwal,Haryana,kharif,3,Oct,2018,31.7
+Palwal,Haryana,rabi,1,Oct-Nov,2019,30.9
+Palwal,Haryana,rabi,2,Dec-Jan,2019,20.8
+Palwal,Haryana,rabi,3,Feb-Mar,2019,27.8
+Palwal,Haryana,kharif,1,Jun-Jul,2019,41.6
+Palwal,Haryana,kharif,2,Aug-Sep,2019,34.1
+Palwal,Haryana,kharif,3,Oct,2019,32.8
+Palwal,Haryana,rabi,1,Oct-Nov,2020,32.2
+Palwal,Haryana,rabi,2,Dec-Jan,2020,23.3
+Palwal,Haryana,rabi,3,Feb-Mar,2020,32.4
+Palwal,Haryana,kharif,1,Jun-Jul,2020,39.7
+Palwal,Haryana,kharif,2,Aug-Sep,2020,35.9
+Palwal,Haryana,kharif,3,Oct,2020,35.6
+Palwal,Haryana,rabi,1,Oct-Nov,2021,28.9
+Palwal,Haryana,rabi,2,Dec-Jan,2021,20.6
+Palwal,Haryana,rabi,3,Feb-Mar,2021,30.2
+Palwal,Haryana,kharif,1,Jun-Jul,2021,38.1
+Palwal,Haryana,kharif,2,Aug-Sep,2021,32.1
+Palwal,Haryana,kharif,3,Oct,2021,31.5
+Palwal,Haryana,rabi,1,Oct-Nov,2022,28.1
+Palwal,Haryana,rabi,2,Dec-Jan,2022,22.1
+Palwal,Haryana,rabi,3,Feb-Mar,2022,30.4
+Palwal,Haryana,kharif,1,Jun-Jul,2022,40.0
+Palwal,Haryana,kharif,2,Aug-Sep,2022,35.4
+Palwal,Haryana,kharif,3,Oct,2022,29.9
+Palwal,Haryana,rabi,1,Oct-Nov,2023,30.7
+Palwal,Haryana,rabi,2,Dec-Jan,2023,22.8
+Palwal,Haryana,rabi,3,Feb-Mar,2023,29.4
+Palwal,Haryana,kharif,1,Jun-Jul,2023,37.2
+Palwal,Haryana,kharif,2,Aug-Sep,2023,33.7
+Palwal,Haryana,kharif,3,Oct,2023,33.5
+Panchkula,Haryana,rabi,1,Oct-Nov,normal_1991_2008,29.5
+Panchkula,Haryana,rabi,2,Dec-Jan,normal_1991_2008,22.5
+Panchkula,Haryana,rabi,3,Feb-Mar,normal_1991_2008,27.5
+Panchkula,Haryana,kharif,1,Jun-Jul,normal_1991_2008,38.1
+Panchkula,Haryana,kharif,2,Aug-Sep,normal_1991_2008,32.5
+Panchkula,Haryana,kharif,3,Oct,normal_1991_2008,31.3
+Panchkula,Haryana,rabi,1,Oct-Nov,2009,28.7
+Panchkula,Haryana,rabi,2,Dec-Jan,2009,22.8
+Panchkula,Haryana,rabi,3,Feb-Mar,2009,30.0
+Panchkula,Haryana,kharif,1,Jun-Jul,2009,40.2
+Panchkula,Haryana,kharif,2,Aug-Sep,2009,33.0
+Panchkula,Haryana,kharif,3,Oct,2009,30.8
+Panchkula,Haryana,rabi,1,Oct-Nov,2010,27.2
+Panchkula,Haryana,rabi,2,Dec-Jan,2010,20.2
+Panchkula,Haryana,rabi,3,Feb-Mar,2010,26.9
+Panchkula,Haryana,kharif,1,Jun-Jul,2010,36.7
+Panchkula,Haryana,kharif,2,Aug-Sep,2010,30.2
+Panchkula,Haryana,kharif,3,Oct,2010,28.5
+Panchkula,Haryana,rabi,1,Oct-Nov,2011,27.5
+Panchkula,Haryana,rabi,2,Dec-Jan,2011,20.6
+Panchkula,Haryana,rabi,3,Feb-Mar,2011,26.8
+Panchkula,Haryana,kharif,1,Jun-Jul,2011,35.1
+Panchkula,Haryana,kharif,2,Aug-Sep,2011,30.2
+Panchkula,Haryana,kharif,3,Oct,2011,28.8
+Panchkula,Haryana,rabi,1,Oct-Nov,2012,28.6
+Panchkula,Haryana,rabi,2,Dec-Jan,2012,21.4
+Panchkula,Haryana,rabi,3,Feb-Mar,2012,25.9
+Panchkula,Haryana,kharif,1,Jun-Jul,2012,40.2
+Panchkula,Haryana,kharif,2,Aug-Sep,2012,31.8
+Panchkula,Haryana,kharif,3,Oct,2012,30.4
+Panchkula,Haryana,rabi,1,Oct-Nov,2013,27.5
+Panchkula,Haryana,rabi,2,Dec-Jan,2013,21.3
+Panchkula,Haryana,rabi,3,Feb-Mar,2013,24.5
+Panchkula,Haryana,kharif,1,Jun-Jul,2013,35.3
+Panchkula,Haryana,kharif,2,Aug-Sep,2013,30.4
+Panchkula,Haryana,kharif,3,Oct,2013,29.4
+Panchkula,Haryana,rabi,1,Oct-Nov,2014,29.4
+Panchkula,Haryana,rabi,2,Dec-Jan,2014,21.3
+Panchkula,Haryana,rabi,3,Feb-Mar,2014,25.8
+Panchkula,Haryana,kharif,1,Jun-Jul,2014,40.6
+Panchkula,Haryana,kharif,2,Aug-Sep,2014,33.9
+Panchkula,Haryana,kharif,3,Oct,2014,30.8
+Panchkula,Haryana,rabi,1,Oct-Nov,2015,29.8
+Panchkula,Haryana,rabi,2,Dec-Jan,2015,22.3
+Panchkula,Haryana,rabi,3,Feb-Mar,2015,28.4
+Panchkula,Haryana,kharif,1,Jun-Jul,2015,36.5
+Panchkula,Haryana,kharif,2,Aug-Sep,2015,32.2
+Panchkula,Haryana,kharif,3,Oct,2015,31.7
+Panchkula,Haryana,rabi,1,Oct-Nov,2016,30.7
+Panchkula,Haryana,rabi,2,Dec-Jan,2016,22.8
+Panchkula,Haryana,rabi,3,Feb-Mar,2016,27.4
+Panchkula,Haryana,kharif,1,Jun-Jul,2016,37.7
+Panchkula,Haryana,kharif,2,Aug-Sep,2016,32.2
+Panchkula,Haryana,kharif,3,Oct,2016,32.6
+Panchkula,Haryana,rabi,1,Oct-Nov,2017,28.8
+Panchkula,Haryana,rabi,2,Dec-Jan,2017,22.6
+Panchkula,Haryana,rabi,3,Feb-Mar,2017,28.8
+Panchkula,Haryana,kharif,1,Jun-Jul,2017,36.3
+Panchkula,Haryana,kharif,2,Aug-Sep,2017,31.1
+Panchkula,Haryana,kharif,3,Oct,2017,31.3
+Panchkula,Haryana,rabi,1,Oct-Nov,2018,26.1
+Panchkula,Haryana,rabi,2,Dec-Jan,2018,19.5
+Panchkula,Haryana,rabi,3,Feb-Mar,2018,23.5
+Panchkula,Haryana,kharif,1,Jun-Jul,2018,35.7
+Panchkula,Haryana,kharif,2,Aug-Sep,2018,30.1
+Panchkula,Haryana,kharif,3,Oct,2018,27.9
+Panchkula,Haryana,rabi,1,Oct-Nov,2019,27.0
+Panchkula,Haryana,rabi,2,Dec-Jan,2019,18.6
+Panchkula,Haryana,rabi,3,Feb-Mar,2019,23.6
+Panchkula,Haryana,kharif,1,Jun-Jul,2019,38.6
+Panchkula,Haryana,kharif,2,Aug-Sep,2019,31.3
+Panchkula,Haryana,kharif,3,Oct,2019,28.7
+Panchkula,Haryana,rabi,1,Oct-Nov,2020,29.6
+Panchkula,Haryana,rabi,2,Dec-Jan,2020,22.0
+Panchkula,Haryana,rabi,3,Feb-Mar,2020,29.3
+Panchkula,Haryana,kharif,1,Jun-Jul,2020,36.2
+Panchkula,Haryana,kharif,2,Aug-Sep,2020,32.2
+Panchkula,Haryana,kharif,3,Oct,2020,32.8
+Panchkula,Haryana,rabi,1,Oct-Nov,2021,27.4
+Panchkula,Haryana,rabi,2,Dec-Jan,2021,19.1
+Panchkula,Haryana,rabi,3,Feb-Mar,2021,26.6
+Panchkula,Haryana,kharif,1,Jun-Jul,2021,36.6
+Panchkula,Haryana,kharif,2,Aug-Sep,2021,30.9
+Panchkula,Haryana,kharif,3,Oct,2021,29.0
+Panchkula,Haryana,rabi,1,Oct-Nov,2022,26.2
+Panchkula,Haryana,rabi,2,Dec-Jan,2022,21.3
+Panchkula,Haryana,rabi,3,Feb-Mar,2022,27.6
+Panchkula,Haryana,kharif,1,Jun-Jul,2022,36.4
+Panchkula,Haryana,kharif,2,Aug-Sep,2022,30.7
+Panchkula,Haryana,kharif,3,Oct,2022,27.6
+Panchkula,Haryana,rabi,1,Oct-Nov,2023,27.2
+Panchkula,Haryana,rabi,2,Dec-Jan,2023,21.5
+Panchkula,Haryana,rabi,3,Feb-Mar,2023,25.7
+Panchkula,Haryana,kharif,1,Jun-Jul,2023,34.1
+Panchkula,Haryana,kharif,2,Aug-Sep,2023,30.7
+Panchkula,Haryana,kharif,3,Oct,2023,28.4
+Panipat,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.0
+Panipat,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.4
+Panipat,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.2
+Panipat,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.9
+Panipat,Haryana,kharif,2,Aug-Sep,normal_1991_2008,34.6
+Panipat,Haryana,kharif,3,Oct,normal_1991_2008,33.1
+Panipat,Haryana,rabi,1,Oct-Nov,2009,29.9
+Panipat,Haryana,rabi,2,Dec-Jan,2009,23.1
+Panipat,Haryana,rabi,3,Feb-Mar,2009,31.5
+Panipat,Haryana,kharif,1,Jun-Jul,2009,42.0
+Panipat,Haryana,kharif,2,Aug-Sep,2009,35.1
+Panipat,Haryana,kharif,3,Oct,2009,32.4
+Panipat,Haryana,rabi,1,Oct-Nov,2010,28.1
+Panipat,Haryana,rabi,2,Dec-Jan,2010,20.4
+Panipat,Haryana,rabi,3,Feb-Mar,2010,28.0
+Panipat,Haryana,kharif,1,Jun-Jul,2010,39.3
+Panipat,Haryana,kharif,2,Aug-Sep,2010,31.3
+Panipat,Haryana,kharif,3,Oct,2010,29.9
+Panipat,Haryana,rabi,1,Oct-Nov,2011,29.4
+Panipat,Haryana,rabi,2,Dec-Jan,2011,21.7
+Panipat,Haryana,rabi,3,Feb-Mar,2011,28.6
+Panipat,Haryana,kharif,1,Jun-Jul,2011,37.7
+Panipat,Haryana,kharif,2,Aug-Sep,2011,31.9
+Panipat,Haryana,kharif,3,Oct,2011,30.9
+Panipat,Haryana,rabi,1,Oct-Nov,2012,30.1
+Panipat,Haryana,rabi,2,Dec-Jan,2012,22.1
+Panipat,Haryana,rabi,3,Feb-Mar,2012,27.5
+Panipat,Haryana,kharif,1,Jun-Jul,2012,42.1
+Panipat,Haryana,kharif,2,Aug-Sep,2012,33.3
+Panipat,Haryana,kharif,3,Oct,2012,32.4
+Panipat,Haryana,rabi,1,Oct-Nov,2013,28.7
+Panipat,Haryana,rabi,2,Dec-Jan,2013,22.1
+Panipat,Haryana,rabi,3,Feb-Mar,2013,26.2
+Panipat,Haryana,kharif,1,Jun-Jul,2013,37.5
+Panipat,Haryana,kharif,2,Aug-Sep,2013,32.0
+Panipat,Haryana,kharif,3,Oct,2013,30.5
+Panipat,Haryana,rabi,1,Oct-Nov,2014,31.1
+Panipat,Haryana,rabi,2,Dec-Jan,2014,21.8
+Panipat,Haryana,rabi,3,Feb-Mar,2014,27.4
+Panipat,Haryana,kharif,1,Jun-Jul,2014,41.9
+Panipat,Haryana,kharif,2,Aug-Sep,2014,36.6
+Panipat,Haryana,kharif,3,Oct,2014,33.1
+Panipat,Haryana,rabi,1,Oct-Nov,2015,31.5
+Panipat,Haryana,rabi,2,Dec-Jan,2015,23.6
+Panipat,Haryana,rabi,3,Feb-Mar,2015,30.3
+Panipat,Haryana,kharif,1,Jun-Jul,2015,38.0
+Panipat,Haryana,kharif,2,Aug-Sep,2015,34.9
+Panipat,Haryana,kharif,3,Oct,2015,34.0
+Panipat,Haryana,rabi,1,Oct-Nov,2016,32.2
+Panipat,Haryana,rabi,2,Dec-Jan,2016,23.8
+Panipat,Haryana,rabi,3,Feb-Mar,2016,29.2
+Panipat,Haryana,kharif,1,Jun-Jul,2016,39.3
+Panipat,Haryana,kharif,2,Aug-Sep,2016,34.5
+Panipat,Haryana,kharif,3,Oct,2016,34.4
+Panipat,Haryana,rabi,1,Oct-Nov,2017,30.8
+Panipat,Haryana,rabi,2,Dec-Jan,2017,23.2
+Panipat,Haryana,rabi,3,Feb-Mar,2017,31.0
+Panipat,Haryana,kharif,1,Jun-Jul,2017,38.4
+Panipat,Haryana,kharif,2,Aug-Sep,2017,35.0
+Panipat,Haryana,kharif,3,Oct,2017,34.0
+Panipat,Haryana,rabi,1,Oct-Nov,2018,28.2
+Panipat,Haryana,rabi,2,Dec-Jan,2018,20.8
+Panipat,Haryana,rabi,3,Feb-Mar,2018,26.0
+Panipat,Haryana,kharif,1,Jun-Jul,2018,37.9
+Panipat,Haryana,kharif,2,Aug-Sep,2018,32.0
+Panipat,Haryana,kharif,3,Oct,2018,29.9
+Panipat,Haryana,rabi,1,Oct-Nov,2019,29.4
+Panipat,Haryana,rabi,2,Dec-Jan,2019,19.8
+Panipat,Haryana,rabi,3,Feb-Mar,2019,25.7
+Panipat,Haryana,kharif,1,Jun-Jul,2019,40.7
+Panipat,Haryana,kharif,2,Aug-Sep,2019,33.9
+Panipat,Haryana,kharif,3,Oct,2019,31.6
+Panipat,Haryana,rabi,1,Oct-Nov,2020,30.4
+Panipat,Haryana,rabi,2,Dec-Jan,2020,22.0
+Panipat,Haryana,rabi,3,Feb-Mar,2020,30.9
+Panipat,Haryana,kharif,1,Jun-Jul,2020,38.6
+Panipat,Haryana,kharif,2,Aug-Sep,2020,33.5
+Panipat,Haryana,kharif,3,Oct,2020,33.9
+Panipat,Haryana,rabi,1,Oct-Nov,2021,27.4
+Panipat,Haryana,rabi,2,Dec-Jan,2021,19.1
+Panipat,Haryana,rabi,3,Feb-Mar,2021,28.0
+Panipat,Haryana,kharif,1,Jun-Jul,2021,37.9
+Panipat,Haryana,kharif,2,Aug-Sep,2021,31.7
+Panipat,Haryana,kharif,3,Oct,2021,29.5
+Panipat,Haryana,rabi,1,Oct-Nov,2022,27.0
+Panipat,Haryana,rabi,2,Dec-Jan,2022,21.2
+Panipat,Haryana,rabi,3,Feb-Mar,2022,29.0
+Panipat,Haryana,kharif,1,Jun-Jul,2022,38.5
+Panipat,Haryana,kharif,2,Aug-Sep,2022,32.8
+Panipat,Haryana,kharif,3,Oct,2022,28.6
+Panipat,Haryana,rabi,1,Oct-Nov,2023,29.8
+Panipat,Haryana,rabi,2,Dec-Jan,2023,22.3
+Panipat,Haryana,rabi,3,Feb-Mar,2023,27.8
+Panipat,Haryana,kharif,1,Jun-Jul,2023,35.9
+Panipat,Haryana,kharif,2,Aug-Sep,2023,33.5
+Panipat,Haryana,kharif,3,Oct,2023,32.3
+Rewari,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.0
+Rewari,Haryana,rabi,2,Dec-Jan,normal_1991_2008,24.4
+Rewari,Haryana,rabi,3,Feb-Mar,normal_1991_2008,30.4
+Rewari,Haryana,kharif,1,Jun-Jul,normal_1991_2008,39.8
+Rewari,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.0
+Rewari,Haryana,kharif,3,Oct,normal_1991_2008,34.1
+Rewari,Haryana,rabi,1,Oct-Nov,2009,30.7
+Rewari,Haryana,rabi,2,Dec-Jan,2009,24.2
+Rewari,Haryana,rabi,3,Feb-Mar,2009,32.4
+Rewari,Haryana,kharif,1,Jun-Jul,2009,41.7
+Rewari,Haryana,kharif,2,Aug-Sep,2009,36.1
+Rewari,Haryana,kharif,3,Oct,2009,33.3
+Rewari,Haryana,rabi,1,Oct-Nov,2010,29.0
+Rewari,Haryana,rabi,2,Dec-Jan,2010,21.6
+Rewari,Haryana,rabi,3,Feb-Mar,2010,29.6
+Rewari,Haryana,kharif,1,Jun-Jul,2010,40.0
+Rewari,Haryana,kharif,2,Aug-Sep,2010,31.7
+Rewari,Haryana,kharif,3,Oct,2010,31.2
+Rewari,Haryana,rabi,1,Oct-Nov,2011,31.6
+Rewari,Haryana,rabi,2,Dec-Jan,2011,23.0
+Rewari,Haryana,rabi,3,Feb-Mar,2011,29.8
+Rewari,Haryana,kharif,1,Jun-Jul,2011,38.6
+Rewari,Haryana,kharif,2,Aug-Sep,2011,32.5
+Rewari,Haryana,kharif,3,Oct,2011,33.2
+Rewari,Haryana,rabi,1,Oct-Nov,2012,30.1
+Rewari,Haryana,rabi,2,Dec-Jan,2012,22.9
+Rewari,Haryana,rabi,3,Feb-Mar,2012,28.5
+Rewari,Haryana,kharif,1,Jun-Jul,2012,41.4
+Rewari,Haryana,kharif,2,Aug-Sep,2012,32.6
+Rewari,Haryana,kharif,3,Oct,2012,32.3
+Rewari,Haryana,rabi,1,Oct-Nov,2013,28.7
+Rewari,Haryana,rabi,2,Dec-Jan,2013,22.4
+Rewari,Haryana,rabi,3,Feb-Mar,2013,26.9
+Rewari,Haryana,kharif,1,Jun-Jul,2013,37.8
+Rewari,Haryana,kharif,2,Aug-Sep,2013,32.4
+Rewari,Haryana,kharif,3,Oct,2013,30.5
+Rewari,Haryana,rabi,1,Oct-Nov,2014,32.4
+Rewari,Haryana,rabi,2,Dec-Jan,2014,22.2
+Rewari,Haryana,rabi,3,Feb-Mar,2014,28.4
+Rewari,Haryana,kharif,1,Jun-Jul,2014,41.5
+Rewari,Haryana,kharif,2,Aug-Sep,2014,36.1
+Rewari,Haryana,kharif,3,Oct,2014,34.4
+Rewari,Haryana,rabi,1,Oct-Nov,2015,32.5
+Rewari,Haryana,rabi,2,Dec-Jan,2015,24.7
+Rewari,Haryana,rabi,3,Feb-Mar,2015,31.1
+Rewari,Haryana,kharif,1,Jun-Jul,2015,38.5
+Rewari,Haryana,kharif,2,Aug-Sep,2015,36.0
+Rewari,Haryana,kharif,3,Oct,2015,35.3
+Rewari,Haryana,rabi,1,Oct-Nov,2016,32.6
+Rewari,Haryana,rabi,2,Dec-Jan,2016,25.0
+Rewari,Haryana,rabi,3,Feb-Mar,2016,30.5
+Rewari,Haryana,kharif,1,Jun-Jul,2016,38.6
+Rewari,Haryana,kharif,2,Aug-Sep,2016,33.4
+Rewari,Haryana,kharif,3,Oct,2016,34.6
+Rewari,Haryana,rabi,1,Oct-Nov,2017,32.3
+Rewari,Haryana,rabi,2,Dec-Jan,2017,25.0
+Rewari,Haryana,rabi,3,Feb-Mar,2017,32.3
+Rewari,Haryana,kharif,1,Jun-Jul,2017,38.0
+Rewari,Haryana,kharif,2,Aug-Sep,2017,35.9
+Rewari,Haryana,kharif,3,Oct,2017,35.5
+Rewari,Haryana,rabi,1,Oct-Nov,2018,30.9
+Rewari,Haryana,rabi,2,Dec-Jan,2018,22.6
+Rewari,Haryana,rabi,3,Feb-Mar,2018,27.6
+Rewari,Haryana,kharif,1,Jun-Jul,2018,38.9
+Rewari,Haryana,kharif,2,Aug-Sep,2018,32.5
+Rewari,Haryana,kharif,3,Oct,2018,33.0
+Rewari,Haryana,rabi,1,Oct-Nov,2019,30.6
+Rewari,Haryana,rabi,2,Dec-Jan,2019,20.6
+Rewari,Haryana,rabi,3,Feb-Mar,2019,27.6
+Rewari,Haryana,kharif,1,Jun-Jul,2019,41.2
+Rewari,Haryana,kharif,2,Aug-Sep,2019,34.2
+Rewari,Haryana,kharif,3,Oct,2019,32.7
+Rewari,Haryana,rabi,1,Oct-Nov,2020,31.6
+Rewari,Haryana,rabi,2,Dec-Jan,2020,23.1
+Rewari,Haryana,rabi,3,Feb-Mar,2020,32.2
+Rewari,Haryana,kharif,1,Jun-Jul,2020,39.4
+Rewari,Haryana,kharif,2,Aug-Sep,2020,35.1
+Rewari,Haryana,kharif,3,Oct,2020,34.9
+Rewari,Haryana,rabi,1,Oct-Nov,2021,29.0
+Rewari,Haryana,rabi,2,Dec-Jan,2021,20.6
+Rewari,Haryana,rabi,3,Feb-Mar,2021,30.3
+Rewari,Haryana,kharif,1,Jun-Jul,2021,38.2
+Rewari,Haryana,kharif,2,Aug-Sep,2021,31.9
+Rewari,Haryana,kharif,3,Oct,2021,31.2
+Rewari,Haryana,rabi,1,Oct-Nov,2022,29.5
+Rewari,Haryana,rabi,2,Dec-Jan,2022,22.8
+Rewari,Haryana,rabi,3,Feb-Mar,2022,30.5
+Rewari,Haryana,kharif,1,Jun-Jul,2022,39.4
+Rewari,Haryana,kharif,2,Aug-Sep,2022,35.1
+Rewari,Haryana,kharif,3,Oct,2022,30.8
+Rewari,Haryana,rabi,1,Oct-Nov,2023,31.2
+Rewari,Haryana,rabi,2,Dec-Jan,2023,23.3
+Rewari,Haryana,rabi,3,Feb-Mar,2023,29.4
+Rewari,Haryana,kharif,1,Jun-Jul,2023,36.9
+Rewari,Haryana,kharif,2,Aug-Sep,2023,35.1
+Rewari,Haryana,kharif,3,Oct,2023,34.3
+Rohtak,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.5
+Rohtak,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.7
+Rohtak,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.7
+Rohtak,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.1
+Rohtak,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.0
+Rohtak,Haryana,kharif,3,Oct,normal_1991_2008,33.6
+Rohtak,Haryana,rabi,1,Oct-Nov,2009,30.2
+Rohtak,Haryana,rabi,2,Dec-Jan,2009,23.4
+Rohtak,Haryana,rabi,3,Feb-Mar,2009,31.8
+Rohtak,Haryana,kharif,1,Jun-Jul,2009,42.2
+Rohtak,Haryana,kharif,2,Aug-Sep,2009,35.4
+Rohtak,Haryana,kharif,3,Oct,2009,32.7
+Rohtak,Haryana,rabi,1,Oct-Nov,2010,28.2
+Rohtak,Haryana,rabi,2,Dec-Jan,2010,20.6
+Rohtak,Haryana,rabi,3,Feb-Mar,2010,28.5
+Rohtak,Haryana,kharif,1,Jun-Jul,2010,40.0
+Rohtak,Haryana,kharif,2,Aug-Sep,2010,31.6
+Rohtak,Haryana,kharif,3,Oct,2010,30.2
+Rohtak,Haryana,rabi,1,Oct-Nov,2011,30.4
+Rohtak,Haryana,rabi,2,Dec-Jan,2011,22.2
+Rohtak,Haryana,rabi,3,Feb-Mar,2011,29.1
+Rohtak,Haryana,kharif,1,Jun-Jul,2011,38.6
+Rohtak,Haryana,kharif,2,Aug-Sep,2011,32.5
+Rohtak,Haryana,kharif,3,Oct,2011,32.0
+Rohtak,Haryana,rabi,1,Oct-Nov,2012,30.3
+Rohtak,Haryana,rabi,2,Dec-Jan,2012,22.3
+Rohtak,Haryana,rabi,3,Feb-Mar,2012,27.8
+Rohtak,Haryana,kharif,1,Jun-Jul,2012,42.3
+Rohtak,Haryana,kharif,2,Aug-Sep,2012,33.5
+Rohtak,Haryana,kharif,3,Oct,2012,32.6
+Rohtak,Haryana,rabi,1,Oct-Nov,2013,28.8
+Rohtak,Haryana,rabi,2,Dec-Jan,2013,22.2
+Rohtak,Haryana,rabi,3,Feb-Mar,2013,26.6
+Rohtak,Haryana,kharif,1,Jun-Jul,2013,38.1
+Rohtak,Haryana,kharif,2,Aug-Sep,2013,32.3
+Rohtak,Haryana,kharif,3,Oct,2013,30.6
+Rohtak,Haryana,rabi,1,Oct-Nov,2014,31.6
+Rohtak,Haryana,rabi,2,Dec-Jan,2014,21.9
+Rohtak,Haryana,rabi,3,Feb-Mar,2014,27.8
+Rohtak,Haryana,kharif,1,Jun-Jul,2014,41.8
+Rohtak,Haryana,kharif,2,Aug-Sep,2014,36.9
+Rohtak,Haryana,kharif,3,Oct,2014,33.6
+Rohtak,Haryana,rabi,1,Oct-Nov,2015,32.0
+Rohtak,Haryana,rabi,2,Dec-Jan,2015,24.0
+Rohtak,Haryana,rabi,3,Feb-Mar,2015,30.6
+Rohtak,Haryana,kharif,1,Jun-Jul,2015,38.2
+Rohtak,Haryana,kharif,2,Aug-Sep,2015,35.6
+Rohtak,Haryana,kharif,3,Oct,2015,34.5
+Rohtak,Haryana,rabi,1,Oct-Nov,2016,32.4
+Rohtak,Haryana,rabi,2,Dec-Jan,2016,24.2
+Rohtak,Haryana,rabi,3,Feb-Mar,2016,29.6
+Rohtak,Haryana,kharif,1,Jun-Jul,2016,39.2
+Rohtak,Haryana,kharif,2,Aug-Sep,2016,34.3
+Rohtak,Haryana,kharif,3,Oct,2016,34.6
+Rohtak,Haryana,rabi,1,Oct-Nov,2017,31.3
+Rohtak,Haryana,rabi,2,Dec-Jan,2017,23.7
+Rohtak,Haryana,rabi,3,Feb-Mar,2017,31.5
+Rohtak,Haryana,kharif,1,Jun-Jul,2017,38.3
+Rohtak,Haryana,kharif,2,Aug-Sep,2017,35.6
+Rohtak,Haryana,kharif,3,Oct,2017,34.6
+Rohtak,Haryana,rabi,1,Oct-Nov,2018,29.3
+Rohtak,Haryana,rabi,2,Dec-Jan,2018,21.5
+Rohtak,Haryana,rabi,3,Feb-Mar,2018,26.6
+Rohtak,Haryana,kharif,1,Jun-Jul,2018,38.5
+Rohtak,Haryana,kharif,2,Aug-Sep,2018,32.5
+Rohtak,Haryana,kharif,3,Oct,2018,31.1
+Rohtak,Haryana,rabi,1,Oct-Nov,2019,30.3
+Rohtak,Haryana,rabi,2,Dec-Jan,2019,20.2
+Rohtak,Haryana,rabi,3,Feb-Mar,2019,26.5
+Rohtak,Haryana,kharif,1,Jun-Jul,2019,41.1
+Rohtak,Haryana,kharif,2,Aug-Sep,2019,34.6
+Rohtak,Haryana,kharif,3,Oct,2019,32.5
+Rohtak,Haryana,rabi,1,Oct-Nov,2020,30.8
+Rohtak,Haryana,rabi,2,Dec-Jan,2020,22.3
+Rohtak,Haryana,rabi,3,Feb-Mar,2020,31.3
+Rohtak,Haryana,kharif,1,Jun-Jul,2020,39.0
+Rohtak,Haryana,kharif,2,Aug-Sep,2020,34.2
+Rohtak,Haryana,kharif,3,Oct,2020,34.3
+Rohtak,Haryana,rabi,1,Oct-Nov,2021,27.4
+Rohtak,Haryana,rabi,2,Dec-Jan,2021,19.2
+Rohtak,Haryana,rabi,3,Feb-Mar,2021,28.5
+Rohtak,Haryana,kharif,1,Jun-Jul,2021,38.0
+Rohtak,Haryana,kharif,2,Aug-Sep,2021,31.9
+Rohtak,Haryana,kharif,3,Oct,2021,29.8
+Rohtak,Haryana,rabi,1,Oct-Nov,2022,27.8
+Rohtak,Haryana,rabi,2,Dec-Jan,2022,21.7
+Rohtak,Haryana,rabi,3,Feb-Mar,2022,29.7
+Rohtak,Haryana,kharif,1,Jun-Jul,2022,39.1
+Rohtak,Haryana,kharif,2,Aug-Sep,2022,34.1
+Rohtak,Haryana,kharif,3,Oct,2022,29.4
+Rohtak,Haryana,rabi,1,Oct-Nov,2023,30.7
+Rohtak,Haryana,rabi,2,Dec-Jan,2023,22.8
+Rohtak,Haryana,rabi,3,Feb-Mar,2023,28.4
+Rohtak,Haryana,kharif,1,Jun-Jul,2023,36.4
+Rohtak,Haryana,kharif,2,Aug-Sep,2023,34.7
+Rohtak,Haryana,kharif,3,Oct,2023,33.6
+Sirsa,Haryana,rabi,1,Oct-Nov,normal_1991_2008,32.9
+Sirsa,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.7
+Sirsa,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.4
+Sirsa,Haryana,kharif,1,Jun-Jul,normal_1991_2008,41.3
+Sirsa,Haryana,kharif,2,Aug-Sep,normal_1991_2008,38.1
+Sirsa,Haryana,kharif,3,Oct,normal_1991_2008,35.6
+Sirsa,Haryana,rabi,1,Oct-Nov,2009,31.7
+Sirsa,Haryana,rabi,2,Dec-Jan,2009,23.9
+Sirsa,Haryana,rabi,3,Feb-Mar,2009,31.8
+Sirsa,Haryana,kharif,1,Jun-Jul,2009,42.4
+Sirsa,Haryana,kharif,2,Aug-Sep,2009,38.8
+Sirsa,Haryana,kharif,3,Oct,2009,34.9
+Sirsa,Haryana,rabi,1,Oct-Nov,2010,31.9
+Sirsa,Haryana,rabi,2,Dec-Jan,2010,21.9
+Sirsa,Haryana,rabi,3,Feb-Mar,2010,29.6
+Sirsa,Haryana,kharif,1,Jun-Jul,2010,40.5
+Sirsa,Haryana,kharif,2,Aug-Sep,2010,34.6
+Sirsa,Haryana,kharif,3,Oct,2010,34.3
+Sirsa,Haryana,rabi,1,Oct-Nov,2011,32.0
+Sirsa,Haryana,rabi,2,Dec-Jan,2011,22.6
+Sirsa,Haryana,rabi,3,Feb-Mar,2011,28.6
+Sirsa,Haryana,kharif,1,Jun-Jul,2011,41.2
+Sirsa,Haryana,kharif,2,Aug-Sep,2011,34.8
+Sirsa,Haryana,kharif,3,Oct,2011,33.6
+Sirsa,Haryana,rabi,1,Oct-Nov,2012,30.9
+Sirsa,Haryana,rabi,2,Dec-Jan,2012,22.4
+Sirsa,Haryana,rabi,3,Feb-Mar,2012,28.1
+Sirsa,Haryana,kharif,1,Jun-Jul,2012,43.0
+Sirsa,Haryana,kharif,2,Aug-Sep,2012,35.7
+Sirsa,Haryana,kharif,3,Oct,2012,33.1
+Sirsa,Haryana,rabi,1,Oct-Nov,2013,31.8
+Sirsa,Haryana,rabi,2,Dec-Jan,2013,23.1
+Sirsa,Haryana,rabi,3,Feb-Mar,2013,27.3
+Sirsa,Haryana,kharif,1,Jun-Jul,2013,40.8
+Sirsa,Haryana,kharif,2,Aug-Sep,2013,36.6
+Sirsa,Haryana,kharif,3,Oct,2013,34.6
+Sirsa,Haryana,rabi,1,Oct-Nov,2014,31.6
+Sirsa,Haryana,rabi,2,Dec-Jan,2014,22.4
+Sirsa,Haryana,rabi,3,Feb-Mar,2014,27.8
+Sirsa,Haryana,kharif,1,Jun-Jul,2014,42.1
+Sirsa,Haryana,kharif,2,Aug-Sep,2014,37.6
+Sirsa,Haryana,kharif,3,Oct,2014,33.7
+Sirsa,Haryana,rabi,1,Oct-Nov,2015,32.0
+Sirsa,Haryana,rabi,2,Dec-Jan,2015,23.7
+Sirsa,Haryana,rabi,3,Feb-Mar,2015,29.9
+Sirsa,Haryana,kharif,1,Jun-Jul,2015,39.0
+Sirsa,Haryana,kharif,2,Aug-Sep,2015,37.5
+Sirsa,Haryana,kharif,3,Oct,2015,35.0
+Sirsa,Haryana,rabi,1,Oct-Nov,2016,33.3
+Sirsa,Haryana,rabi,2,Dec-Jan,2016,23.9
+Sirsa,Haryana,rabi,3,Feb-Mar,2016,29.4
+Sirsa,Haryana,kharif,1,Jun-Jul,2016,40.5
+Sirsa,Haryana,kharif,2,Aug-Sep,2016,37.3
+Sirsa,Haryana,kharif,3,Oct,2016,36.1
+Sirsa,Haryana,rabi,1,Oct-Nov,2017,32.8
+Sirsa,Haryana,rabi,2,Dec-Jan,2017,23.5
+Sirsa,Haryana,rabi,3,Feb-Mar,2017,31.0
+Sirsa,Haryana,kharif,1,Jun-Jul,2017,39.0
+Sirsa,Haryana,kharif,2,Aug-Sep,2017,38.3
+Sirsa,Haryana,kharif,3,Oct,2017,37.0
+Sirsa,Haryana,rabi,1,Oct-Nov,2018,31.7
+Sirsa,Haryana,rabi,2,Dec-Jan,2018,22.1
+Sirsa,Haryana,rabi,3,Feb-Mar,2018,26.7
+Sirsa,Haryana,kharif,1,Jun-Jul,2018,39.6
+Sirsa,Haryana,kharif,2,Aug-Sep,2018,37.2
+Sirsa,Haryana,kharif,3,Oct,2018,33.8
+Sirsa,Haryana,rabi,1,Oct-Nov,2019,31.0
+Sirsa,Haryana,rabi,2,Dec-Jan,2019,19.7
+Sirsa,Haryana,rabi,3,Feb-Mar,2019,26.7
+Sirsa,Haryana,kharif,1,Jun-Jul,2019,41.4
+Sirsa,Haryana,kharif,2,Aug-Sep,2019,37.8
+Sirsa,Haryana,kharif,3,Oct,2019,34.3
+Sirsa,Haryana,rabi,1,Oct-Nov,2020,31.8
+Sirsa,Haryana,rabi,2,Dec-Jan,2020,21.7
+Sirsa,Haryana,rabi,3,Feb-Mar,2020,31.6
+Sirsa,Haryana,kharif,1,Jun-Jul,2020,40.3
+Sirsa,Haryana,kharif,2,Aug-Sep,2020,37.8
+Sirsa,Haryana,kharif,3,Oct,2020,36.3
+Sirsa,Haryana,rabi,1,Oct-Nov,2021,30.9
+Sirsa,Haryana,rabi,2,Dec-Jan,2021,21.1
+Sirsa,Haryana,rabi,3,Feb-Mar,2021,30.7
+Sirsa,Haryana,kharif,1,Jun-Jul,2021,39.9
+Sirsa,Haryana,kharif,2,Aug-Sep,2021,36.0
+Sirsa,Haryana,kharif,3,Oct,2021,33.3
+Sirsa,Haryana,rabi,1,Oct-Nov,2022,31.5
+Sirsa,Haryana,rabi,2,Dec-Jan,2022,23.1
+Sirsa,Haryana,rabi,3,Feb-Mar,2022,30.6
+Sirsa,Haryana,kharif,1,Jun-Jul,2022,38.9
+Sirsa,Haryana,kharif,2,Aug-Sep,2022,34.6
+Sirsa,Haryana,kharif,3,Oct,2022,33.5
+Sirsa,Haryana,rabi,1,Oct-Nov,2023,30.5
+Sirsa,Haryana,rabi,2,Dec-Jan,2023,22.5
+Sirsa,Haryana,rabi,3,Feb-Mar,2023,28.0
+Sirsa,Haryana,kharif,1,Jun-Jul,2023,37.6
+Sirsa,Haryana,kharif,2,Aug-Sep,2023,37.7
+Sirsa,Haryana,kharif,3,Oct,2023,33.8
+Sonipat,Haryana,rabi,1,Oct-Nov,normal_1991_2008,31.5
+Sonipat,Haryana,rabi,2,Dec-Jan,normal_1991_2008,23.7
+Sonipat,Haryana,rabi,3,Feb-Mar,normal_1991_2008,29.7
+Sonipat,Haryana,kharif,1,Jun-Jul,normal_1991_2008,40.1
+Sonipat,Haryana,kharif,2,Aug-Sep,normal_1991_2008,35.0
+Sonipat,Haryana,kharif,3,Oct,normal_1991_2008,33.6
+Sonipat,Haryana,rabi,1,Oct-Nov,2009,30.2
+Sonipat,Haryana,rabi,2,Dec-Jan,2009,23.4
+Sonipat,Haryana,rabi,3,Feb-Mar,2009,31.8
+Sonipat,Haryana,kharif,1,Jun-Jul,2009,42.2
+Sonipat,Haryana,kharif,2,Aug-Sep,2009,35.4
+Sonipat,Haryana,kharif,3,Oct,2009,32.7
+Sonipat,Haryana,rabi,1,Oct-Nov,2010,28.2
+Sonipat,Haryana,rabi,2,Dec-Jan,2010,20.6
+Sonipat,Haryana,rabi,3,Feb-Mar,2010,28.5
+Sonipat,Haryana,kharif,1,Jun-Jul,2010,40.0
+Sonipat,Haryana,kharif,2,Aug-Sep,2010,31.6
+Sonipat,Haryana,kharif,3,Oct,2010,30.2
+Sonipat,Haryana,rabi,1,Oct-Nov,2011,30.4
+Sonipat,Haryana,rabi,2,Dec-Jan,2011,22.2
+Sonipat,Haryana,rabi,3,Feb-Mar,2011,29.1
+Sonipat,Haryana,kharif,1,Jun-Jul,2011,38.6
+Sonipat,Haryana,kharif,2,Aug-Sep,2011,32.5
+Sonipat,Haryana,kharif,3,Oct,2011,32.0
+Sonipat,Haryana,rabi,1,Oct-Nov,2012,30.3
+Sonipat,Haryana,rabi,2,Dec-Jan,2012,22.3
+Sonipat,Haryana,rabi,3,Feb-Mar,2012,27.8
+Sonipat,Haryana,kharif,1,Jun-Jul,2012,42.3
+Sonipat,Haryana,kharif,2,Aug-Sep,2012,33.5
+Sonipat,Haryana,kharif,3,Oct,2012,32.6
+Sonipat,Haryana,rabi,1,Oct-Nov,2013,28.8
+Sonipat,Haryana,rabi,2,Dec-Jan,2013,22.2
+Sonipat,Haryana,rabi,3,Feb-Mar,2013,26.6
+Sonipat,Haryana,kharif,1,Jun-Jul,2013,38.1
+Sonipat,Haryana,kharif,2,Aug-Sep,2013,32.3
+Sonipat,Haryana,kharif,3,Oct,2013,30.6
+Sonipat,Haryana,rabi,1,Oct-Nov,2014,31.6
+Sonipat,Haryana,rabi,2,Dec-Jan,2014,21.9
+Sonipat,Haryana,rabi,3,Feb-Mar,2014,27.8
+Sonipat,Haryana,kharif,1,Jun-Jul,2014,41.8
+Sonipat,Haryana,kharif,2,Aug-Sep,2014,36.9
+Sonipat,Haryana,kharif,3,Oct,2014,33.6
+Sonipat,Haryana,rabi,1,Oct-Nov,2015,32.0
+Sonipat,Haryana,rabi,2,Dec-Jan,2015,24.0
+Sonipat,Haryana,rabi,3,Feb-Mar,2015,30.6
+Sonipat,Haryana,kharif,1,Jun-Jul,2015,38.2
+Sonipat,Haryana,kharif,2,Aug-Sep,2015,35.6
+Sonipat,Haryana,kharif,3,Oct,2015,34.5
+Sonipat,Haryana,rabi,1,Oct-Nov,2016,32.4
+Sonipat,Haryana,rabi,2,Dec-Jan,2016,24.2
+Sonipat,Haryana,rabi,3,Feb-Mar,2016,29.6
+Sonipat,Haryana,kharif,1,Jun-Jul,2016,39.2
+Sonipat,Haryana,kharif,2,Aug-Sep,2016,34.3
+Sonipat,Haryana,kharif,3,Oct,2016,34.6
+Sonipat,Haryana,rabi,1,Oct-Nov,2017,31.3
+Sonipat,Haryana,rabi,2,Dec-Jan,2017,23.7
+Sonipat,Haryana,rabi,3,Feb-Mar,2017,31.5
+Sonipat,Haryana,kharif,1,Jun-Jul,2017,38.3
+Sonipat,Haryana,kharif,2,Aug-Sep,2017,35.6
+Sonipat,Haryana,kharif,3,Oct,2017,34.6
+Sonipat,Haryana,rabi,1,Oct-Nov,2018,29.3
+Sonipat,Haryana,rabi,2,Dec-Jan,2018,21.5
+Sonipat,Haryana,rabi,3,Feb-Mar,2018,26.6
+Sonipat,Haryana,kharif,1,Jun-Jul,2018,38.5
+Sonipat,Haryana,kharif,2,Aug-Sep,2018,32.5
+Sonipat,Haryana,kharif,3,Oct,2018,31.1
+Sonipat,Haryana,rabi,1,Oct-Nov,2019,30.3
+Sonipat,Haryana,rabi,2,Dec-Jan,2019,20.2
+Sonipat,Haryana,rabi,3,Feb-Mar,2019,26.5
+Sonipat,Haryana,kharif,1,Jun-Jul,2019,41.1
+Sonipat,Haryana,kharif,2,Aug-Sep,2019,34.6
+Sonipat,Haryana,kharif,3,Oct,2019,32.5
+Sonipat,Haryana,rabi,1,Oct-Nov,2020,30.8
+Sonipat,Haryana,rabi,2,Dec-Jan,2020,22.3
+Sonipat,Haryana,rabi,3,Feb-Mar,2020,31.3
+Sonipat,Haryana,kharif,1,Jun-Jul,2020,39.0
+Sonipat,Haryana,kharif,2,Aug-Sep,2020,34.2
+Sonipat,Haryana,kharif,3,Oct,2020,34.3
+Sonipat,Haryana,rabi,1,Oct-Nov,2021,27.4
+Sonipat,Haryana,rabi,2,Dec-Jan,2021,19.2
+Sonipat,Haryana,rabi,3,Feb-Mar,2021,28.5
+Sonipat,Haryana,kharif,1,Jun-Jul,2021,38.0
+Sonipat,Haryana,kharif,2,Aug-Sep,2021,31.9
+Sonipat,Haryana,kharif,3,Oct,2021,29.8
+Sonipat,Haryana,rabi,1,Oct-Nov,2022,27.8
+Sonipat,Haryana,rabi,2,Dec-Jan,2022,21.7
+Sonipat,Haryana,rabi,3,Feb-Mar,2022,29.7
+Sonipat,Haryana,kharif,1,Jun-Jul,2022,39.1
+Sonipat,Haryana,kharif,2,Aug-Sep,2022,34.1
+Sonipat,Haryana,kharif,3,Oct,2022,29.4
+Sonipat,Haryana,rabi,1,Oct-Nov,2023,30.7
+Sonipat,Haryana,rabi,2,Dec-Jan,2023,22.8
+Sonipat,Haryana,rabi,3,Feb-Mar,2023,28.4
+Sonipat,Haryana,kharif,1,Jun-Jul,2023,36.4
+Sonipat,Haryana,kharif,2,Aug-Sep,2023,34.7
+Sonipat,Haryana,kharif,3,Oct,2023,33.6
+Yamunanagar,Haryana,rabi,1,Oct-Nov,normal_1991_2008,29.0
+Yamunanagar,Haryana,rabi,2,Dec-Jan,normal_1991_2008,22.7
+Yamunanagar,Haryana,rabi,3,Feb-Mar,normal_1991_2008,28.5
+Yamunanagar,Haryana,kharif,1,Jun-Jul,normal_1991_2008,38.2
+Yamunanagar,Haryana,kharif,2,Aug-Sep,normal_1991_2008,32.1
+Yamunanagar,Haryana,kharif,3,Oct,normal_1991_2008,30.6
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2009,28.0
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2009,22.7
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2009,30.6
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2009,40.7
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2009,32.3
+Yamunanagar,Haryana,kharif,3,Oct,2009,29.8
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2010,26.7
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2010,19.4
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2010,27.0
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2010,37.9
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2010,30.2
+Yamunanagar,Haryana,kharif,3,Oct,2010,28.4
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2011,26.7
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2011,20.7
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2011,27.7
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2011,34.7
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2011,30.4
+Yamunanagar,Haryana,kharif,3,Oct,2011,28.5
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2012,27.1
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2012,21.0
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2012,25.9
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2012,40.4
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2012,31.2
+Yamunanagar,Haryana,kharif,3,Oct,2012,29.0
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2013,26.7
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2013,21.1
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2013,24.9
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2013,34.8
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2013,30.4
+Yamunanagar,Haryana,kharif,3,Oct,2013,28.3
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2014,30.0
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2014,22.0
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2014,27.0
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2014,40.6
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2014,33.0
+Yamunanagar,Haryana,kharif,3,Oct,2014,31.2
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2015,30.3
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2015,23.1
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2015,29.9
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2015,37.3
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2015,32.0
+Yamunanagar,Haryana,kharif,3,Oct,2015,31.8
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2016,31.0
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2016,23.5
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2016,29.2
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2016,38.1
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2016,32.0
+Yamunanagar,Haryana,kharif,3,Oct,2016,32.7
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2017,29.3
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2017,23.2
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2017,30.4
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2017,36.7
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2017,31.7
+Yamunanagar,Haryana,kharif,3,Oct,2017,31.8
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2018,26.5
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2018,20.3
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2018,25.1
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2018,36.9
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2018,30.5
+Yamunanagar,Haryana,kharif,3,Oct,2018,28.1
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2019,27.9
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2019,19.2
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2019,24.7
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2019,39.8
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2019,32.1
+Yamunanagar,Haryana,kharif,3,Oct,2019,29.4
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2020,29.7
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2020,22.6
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2020,30.4
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2020,37.1
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2020,31.9
+Yamunanagar,Haryana,kharif,3,Oct,2020,32.5
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2021,26.5
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2021,18.7
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2021,26.9
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2021,36.7
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2021,31.1
+Yamunanagar,Haryana,kharif,3,Oct,2021,28.7
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2022,26.0
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2022,20.9
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2022,28.5
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2022,37.4
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2022,31.6
+Yamunanagar,Haryana,kharif,3,Oct,2022,27.6
+Yamunanagar,Haryana,rabi,1,Oct-Nov,2023,27.3
+Yamunanagar,Haryana,rabi,2,Dec-Jan,2023,21.8
+Yamunanagar,Haryana,rabi,3,Feb-Mar,2023,26.8
+Yamunanagar,Haryana,kharif,1,Jun-Jul,2023,34.9
+Yamunanagar,Haryana,kharif,2,Aug-Sep,2023,31.2
+Yamunanagar,Haryana,kharif,3,Oct,2023,28.5
+Amritsar,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.3
+Amritsar,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.4
+Amritsar,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.6
+Amritsar,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.6
+Amritsar,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.0
+Amritsar,Punjab,kharif,3,Oct,normal_1991_2008,33.9
+Amritsar,Punjab,rabi,1,Oct-Nov,2009,30.8
+Amritsar,Punjab,rabi,2,Dec-Jan,2009,22.9
+Amritsar,Punjab,rabi,3,Feb-Mar,2009,30.5
+Amritsar,Punjab,kharif,1,Jun-Jul,2009,42.9
+Amritsar,Punjab,kharif,2,Aug-Sep,2009,37.9
+Amritsar,Punjab,kharif,3,Oct,2009,34.1
+Amritsar,Punjab,rabi,1,Oct-Nov,2010,30.3
+Amritsar,Punjab,rabi,2,Dec-Jan,2010,20.7
+Amritsar,Punjab,rabi,3,Feb-Mar,2010,27.4
+Amritsar,Punjab,kharif,1,Jun-Jul,2010,40.7
+Amritsar,Punjab,kharif,2,Aug-Sep,2010,34.1
+Amritsar,Punjab,kharif,3,Oct,2010,32.7
+Amritsar,Punjab,rabi,1,Oct-Nov,2011,30.7
+Amritsar,Punjab,rabi,2,Dec-Jan,2011,20.8
+Amritsar,Punjab,rabi,3,Feb-Mar,2011,26.4
+Amritsar,Punjab,kharif,1,Jun-Jul,2011,40.0
+Amritsar,Punjab,kharif,2,Aug-Sep,2011,33.6
+Amritsar,Punjab,kharif,3,Oct,2011,32.8
+Amritsar,Punjab,rabi,1,Oct-Nov,2012,30.1
+Amritsar,Punjab,rabi,2,Dec-Jan,2012,21.8
+Amritsar,Punjab,rabi,3,Feb-Mar,2012,27.0
+Amritsar,Punjab,kharif,1,Jun-Jul,2012,43.3
+Amritsar,Punjab,kharif,2,Aug-Sep,2012,36.6
+Amritsar,Punjab,kharif,3,Oct,2012,32.8
+Amritsar,Punjab,rabi,1,Oct-Nov,2013,29.8
+Amritsar,Punjab,rabi,2,Dec-Jan,2013,21.7
+Amritsar,Punjab,rabi,3,Feb-Mar,2013,25.9
+Amritsar,Punjab,kharif,1,Jun-Jul,2013,40.7
+Amritsar,Punjab,kharif,2,Aug-Sep,2013,33.9
+Amritsar,Punjab,kharif,3,Oct,2013,32.5
+Amritsar,Punjab,rabi,1,Oct-Nov,2014,28.8
+Amritsar,Punjab,rabi,2,Dec-Jan,2014,21.0
+Amritsar,Punjab,rabi,3,Feb-Mar,2014,25.2
+Amritsar,Punjab,kharif,1,Jun-Jul,2014,42.4
+Amritsar,Punjab,kharif,2,Aug-Sep,2014,35.6
+Amritsar,Punjab,kharif,3,Oct,2014,30.2
+Amritsar,Punjab,rabi,1,Oct-Nov,2015,30.5
+Amritsar,Punjab,rabi,2,Dec-Jan,2015,22.7
+Amritsar,Punjab,rabi,3,Feb-Mar,2015,28.6
+Amritsar,Punjab,kharif,1,Jun-Jul,2015,39.8
+Amritsar,Punjab,kharif,2,Aug-Sep,2015,37.1
+Amritsar,Punjab,kharif,3,Oct,2015,33.2
+Amritsar,Punjab,rabi,1,Oct-Nov,2016,31.8
+Amritsar,Punjab,rabi,2,Dec-Jan,2016,22.8
+Amritsar,Punjab,rabi,3,Feb-Mar,2016,27.8
+Amritsar,Punjab,kharif,1,Jun-Jul,2016,40.6
+Amritsar,Punjab,kharif,2,Aug-Sep,2016,35.6
+Amritsar,Punjab,kharif,3,Oct,2016,34.3
+Amritsar,Punjab,rabi,1,Oct-Nov,2017,31.2
+Amritsar,Punjab,rabi,2,Dec-Jan,2017,22.8
+Amritsar,Punjab,rabi,3,Feb-Mar,2017,29.4
+Amritsar,Punjab,kharif,1,Jun-Jul,2017,38.9
+Amritsar,Punjab,kharif,2,Aug-Sep,2017,36.5
+Amritsar,Punjab,kharif,3,Oct,2017,35.0
+Amritsar,Punjab,rabi,1,Oct-Nov,2018,28.9
+Amritsar,Punjab,rabi,2,Dec-Jan,2018,19.9
+Amritsar,Punjab,rabi,3,Feb-Mar,2018,23.9
+Amritsar,Punjab,kharif,1,Jun-Jul,2018,39.1
+Amritsar,Punjab,kharif,2,Aug-Sep,2018,35.5
+Amritsar,Punjab,kharif,3,Oct,2018,31.0
+Amritsar,Punjab,rabi,1,Oct-Nov,2019,28.2
+Amritsar,Punjab,rabi,2,Dec-Jan,2019,18.2
+Amritsar,Punjab,rabi,3,Feb-Mar,2019,23.7
+Amritsar,Punjab,kharif,1,Jun-Jul,2019,41.1
+Amritsar,Punjab,kharif,2,Aug-Sep,2019,35.1
+Amritsar,Punjab,kharif,3,Oct,2019,30.8
+Amritsar,Punjab,rabi,1,Oct-Nov,2020,29.3
+Amritsar,Punjab,rabi,2,Dec-Jan,2020,20.7
+Amritsar,Punjab,rabi,3,Feb-Mar,2020,29.1
+Amritsar,Punjab,kharif,1,Jun-Jul,2020,39.8
+Amritsar,Punjab,kharif,2,Aug-Sep,2020,34.6
+Amritsar,Punjab,kharif,3,Oct,2020,33.3
+Amritsar,Punjab,rabi,1,Oct-Nov,2021,28.3
+Amritsar,Punjab,rabi,2,Dec-Jan,2021,19.4
+Amritsar,Punjab,rabi,3,Feb-Mar,2021,27.3
+Amritsar,Punjab,kharif,1,Jun-Jul,2021,40.5
+Amritsar,Punjab,kharif,2,Aug-Sep,2021,35.0
+Amritsar,Punjab,kharif,3,Oct,2021,30.4
+Amritsar,Punjab,rabi,1,Oct-Nov,2022,29.0
+Amritsar,Punjab,rabi,2,Dec-Jan,2022,21.2
+Amritsar,Punjab,rabi,3,Feb-Mar,2022,28.2
+Amritsar,Punjab,kharif,1,Jun-Jul,2022,39.0
+Amritsar,Punjab,kharif,2,Aug-Sep,2022,33.0
+Amritsar,Punjab,kharif,3,Oct,2022,31.3
+Amritsar,Punjab,rabi,1,Oct-Nov,2023,26.9
+Amritsar,Punjab,rabi,2,Dec-Jan,2023,20.2
+Amritsar,Punjab,rabi,3,Feb-Mar,2023,25.3
+Amritsar,Punjab,kharif,1,Jun-Jul,2023,36.1
+Amritsar,Punjab,kharif,2,Aug-Sep,2023,33.2
+Amritsar,Punjab,kharif,3,Oct,2023,29.1
+Barnala,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.8
+Barnala,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.9
+Barnala,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.6
+Barnala,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.2
+Barnala,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.0
+Barnala,Punjab,kharif,3,Oct,normal_1991_2008,34.3
+Barnala,Punjab,rabi,1,Oct-Nov,2009,30.7
+Barnala,Punjab,rabi,2,Dec-Jan,2009,23.1
+Barnala,Punjab,rabi,3,Feb-Mar,2009,31.3
+Barnala,Punjab,kharif,1,Jun-Jul,2009,42.5
+Barnala,Punjab,kharif,2,Aug-Sep,2009,37.7
+Barnala,Punjab,kharif,3,Oct,2009,33.9
+Barnala,Punjab,rabi,1,Oct-Nov,2010,30.7
+Barnala,Punjab,rabi,2,Dec-Jan,2010,21.1
+Barnala,Punjab,rabi,3,Feb-Mar,2010,28.5
+Barnala,Punjab,kharif,1,Jun-Jul,2010,40.1
+Barnala,Punjab,kharif,2,Aug-Sep,2010,34.1
+Barnala,Punjab,kharif,3,Oct,2010,33.0
+Barnala,Punjab,rabi,1,Oct-Nov,2011,30.7
+Barnala,Punjab,rabi,2,Dec-Jan,2011,21.3
+Barnala,Punjab,rabi,3,Feb-Mar,2011,27.9
+Barnala,Punjab,kharif,1,Jun-Jul,2011,39.8
+Barnala,Punjab,kharif,2,Aug-Sep,2011,33.9
+Barnala,Punjab,kharif,3,Oct,2011,32.8
+Barnala,Punjab,rabi,1,Oct-Nov,2012,30.3
+Barnala,Punjab,rabi,2,Dec-Jan,2012,22.2
+Barnala,Punjab,rabi,3,Feb-Mar,2012,27.6
+Barnala,Punjab,kharif,1,Jun-Jul,2012,43.1
+Barnala,Punjab,kharif,2,Aug-Sep,2012,36.0
+Barnala,Punjab,kharif,3,Oct,2012,32.9
+Barnala,Punjab,rabi,1,Oct-Nov,2013,30.6
+Barnala,Punjab,rabi,2,Dec-Jan,2013,22.4
+Barnala,Punjab,rabi,3,Feb-Mar,2013,26.5
+Barnala,Punjab,kharif,1,Jun-Jul,2013,40.4
+Barnala,Punjab,kharif,2,Aug-Sep,2013,35.0
+Barnala,Punjab,kharif,3,Oct,2013,33.5
+Barnala,Punjab,rabi,1,Oct-Nov,2014,30.1
+Barnala,Punjab,rabi,2,Dec-Jan,2014,21.4
+Barnala,Punjab,rabi,3,Feb-Mar,2014,26.8
+Barnala,Punjab,kharif,1,Jun-Jul,2014,42.6
+Barnala,Punjab,kharif,2,Aug-Sep,2014,36.7
+Barnala,Punjab,kharif,3,Oct,2014,32.2
+Barnala,Punjab,rabi,1,Oct-Nov,2015,31.2
+Barnala,Punjab,rabi,2,Dec-Jan,2015,23.3
+Barnala,Punjab,rabi,3,Feb-Mar,2015,29.4
+Barnala,Punjab,kharif,1,Jun-Jul,2015,38.9
+Barnala,Punjab,kharif,2,Aug-Sep,2015,36.7
+Barnala,Punjab,kharif,3,Oct,2015,33.9
+Barnala,Punjab,rabi,1,Oct-Nov,2016,32.5
+Barnala,Punjab,rabi,2,Dec-Jan,2016,23.2
+Barnala,Punjab,rabi,3,Feb-Mar,2016,28.3
+Barnala,Punjab,kharif,1,Jun-Jul,2016,40.4
+Barnala,Punjab,kharif,2,Aug-Sep,2016,36.6
+Barnala,Punjab,kharif,3,Oct,2016,35.0
+Barnala,Punjab,rabi,1,Oct-Nov,2017,31.1
+Barnala,Punjab,rabi,2,Dec-Jan,2017,22.8
+Barnala,Punjab,rabi,3,Feb-Mar,2017,30.0
+Barnala,Punjab,kharif,1,Jun-Jul,2017,39.1
+Barnala,Punjab,kharif,2,Aug-Sep,2017,36.2
+Barnala,Punjab,kharif,3,Oct,2017,34.9
+Barnala,Punjab,rabi,1,Oct-Nov,2018,29.0
+Barnala,Punjab,rabi,2,Dec-Jan,2018,20.5
+Barnala,Punjab,rabi,3,Feb-Mar,2018,24.9
+Barnala,Punjab,kharif,1,Jun-Jul,2018,38.5
+Barnala,Punjab,kharif,2,Aug-Sep,2018,35.0
+Barnala,Punjab,kharif,3,Oct,2018,31.2
+Barnala,Punjab,rabi,1,Oct-Nov,2019,28.7
+Barnala,Punjab,rabi,2,Dec-Jan,2019,18.7
+Barnala,Punjab,rabi,3,Feb-Mar,2019,25.0
+Barnala,Punjab,kharif,1,Jun-Jul,2019,40.9
+Barnala,Punjab,kharif,2,Aug-Sep,2019,34.1
+Barnala,Punjab,kharif,3,Oct,2019,31.3
+Barnala,Punjab,rabi,1,Oct-Nov,2020,30.8
+Barnala,Punjab,rabi,2,Dec-Jan,2020,21.4
+Barnala,Punjab,rabi,3,Feb-Mar,2020,30.7
+Barnala,Punjab,kharif,1,Jun-Jul,2020,39.6
+Barnala,Punjab,kharif,2,Aug-Sep,2020,36.4
+Barnala,Punjab,kharif,3,Oct,2020,34.9
+Barnala,Punjab,rabi,1,Oct-Nov,2021,29.7
+Barnala,Punjab,rabi,2,Dec-Jan,2021,19.8
+Barnala,Punjab,rabi,3,Feb-Mar,2021,28.5
+Barnala,Punjab,kharif,1,Jun-Jul,2021,39.7
+Barnala,Punjab,kharif,2,Aug-Sep,2021,35.1
+Barnala,Punjab,kharif,3,Oct,2021,32.0
+Barnala,Punjab,rabi,1,Oct-Nov,2022,29.2
+Barnala,Punjab,rabi,2,Dec-Jan,2022,21.6
+Barnala,Punjab,rabi,3,Feb-Mar,2022,29.2
+Barnala,Punjab,kharif,1,Jun-Jul,2022,38.5
+Barnala,Punjab,kharif,2,Aug-Sep,2022,33.2
+Barnala,Punjab,kharif,3,Oct,2022,31.0
+Barnala,Punjab,rabi,1,Oct-Nov,2023,28.2
+Barnala,Punjab,rabi,2,Dec-Jan,2023,21.0
+Barnala,Punjab,rabi,3,Feb-Mar,2023,26.5
+Barnala,Punjab,kharif,1,Jun-Jul,2023,36.4
+Barnala,Punjab,kharif,2,Aug-Sep,2023,33.2
+Barnala,Punjab,kharif,3,Oct,2023,30.6
+Bathinda,Punjab,rabi,1,Oct-Nov,normal_1991_2008,32.8
+Bathinda,Punjab,rabi,2,Dec-Jan,normal_1991_2008,23.5
+Bathinda,Punjab,rabi,3,Feb-Mar,normal_1991_2008,29.1
+Bathinda,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.5
+Bathinda,Punjab,kharif,2,Aug-Sep,normal_1991_2008,38.1
+Bathinda,Punjab,kharif,3,Oct,normal_1991_2008,35.5
+Bathinda,Punjab,rabi,1,Oct-Nov,2009,31.6
+Bathinda,Punjab,rabi,2,Dec-Jan,2009,23.6
+Bathinda,Punjab,rabi,3,Feb-Mar,2009,31.6
+Bathinda,Punjab,kharif,1,Jun-Jul,2009,42.6
+Bathinda,Punjab,kharif,2,Aug-Sep,2009,38.7
+Bathinda,Punjab,kharif,3,Oct,2009,34.9
+Bathinda,Punjab,rabi,1,Oct-Nov,2010,31.6
+Bathinda,Punjab,rabi,2,Dec-Jan,2010,21.8
+Bathinda,Punjab,rabi,3,Feb-Mar,2010,29.4
+Bathinda,Punjab,kharif,1,Jun-Jul,2010,40.5
+Bathinda,Punjab,kharif,2,Aug-Sep,2010,34.6
+Bathinda,Punjab,kharif,3,Oct,2010,33.8
+Bathinda,Punjab,rabi,1,Oct-Nov,2011,31.5
+Bathinda,Punjab,rabi,2,Dec-Jan,2011,22.3
+Bathinda,Punjab,rabi,3,Feb-Mar,2011,28.4
+Bathinda,Punjab,kharif,1,Jun-Jul,2011,41.2
+Bathinda,Punjab,kharif,2,Aug-Sep,2011,34.6
+Bathinda,Punjab,kharif,3,Oct,2011,33.2
+Bathinda,Punjab,rabi,1,Oct-Nov,2012,30.7
+Bathinda,Punjab,rabi,2,Dec-Jan,2012,22.4
+Bathinda,Punjab,rabi,3,Feb-Mar,2012,27.7
+Bathinda,Punjab,kharif,1,Jun-Jul,2012,43.2
+Bathinda,Punjab,kharif,2,Aug-Sep,2012,36.0
+Bathinda,Punjab,kharif,3,Oct,2012,32.8
+Bathinda,Punjab,rabi,1,Oct-Nov,2013,31.9
+Bathinda,Punjab,rabi,2,Dec-Jan,2013,23.0
+Bathinda,Punjab,rabi,3,Feb-Mar,2013,27.0
+Bathinda,Punjab,kharif,1,Jun-Jul,2013,41.0
+Bathinda,Punjab,kharif,2,Aug-Sep,2013,36.7
+Bathinda,Punjab,kharif,3,Oct,2013,34.9
+Bathinda,Punjab,rabi,1,Oct-Nov,2014,30.9
+Bathinda,Punjab,rabi,2,Dec-Jan,2014,22.1
+Bathinda,Punjab,rabi,3,Feb-Mar,2014,27.4
+Bathinda,Punjab,kharif,1,Jun-Jul,2014,42.5
+Bathinda,Punjab,kharif,2,Aug-Sep,2014,37.2
+Bathinda,Punjab,kharif,3,Oct,2014,32.7
+Bathinda,Punjab,rabi,1,Oct-Nov,2015,31.8
+Bathinda,Punjab,rabi,2,Dec-Jan,2015,23.6
+Bathinda,Punjab,rabi,3,Feb-Mar,2015,29.5
+Bathinda,Punjab,kharif,1,Jun-Jul,2015,39.3
+Bathinda,Punjab,kharif,2,Aug-Sep,2015,37.5
+Bathinda,Punjab,kharif,3,Oct,2015,34.5
+Bathinda,Punjab,rabi,1,Oct-Nov,2016,33.4
+Bathinda,Punjab,rabi,2,Dec-Jan,2016,23.7
+Bathinda,Punjab,rabi,3,Feb-Mar,2016,29.1
+Bathinda,Punjab,kharif,1,Jun-Jul,2016,40.9
+Bathinda,Punjab,kharif,2,Aug-Sep,2016,37.3
+Bathinda,Punjab,kharif,3,Oct,2016,36.3
+Bathinda,Punjab,rabi,1,Oct-Nov,2017,32.5
+Bathinda,Punjab,rabi,2,Dec-Jan,2017,23.4
+Bathinda,Punjab,rabi,3,Feb-Mar,2017,30.7
+Bathinda,Punjab,kharif,1,Jun-Jul,2017,39.2
+Bathinda,Punjab,kharif,2,Aug-Sep,2017,38.1
+Bathinda,Punjab,kharif,3,Oct,2017,36.7
+Bathinda,Punjab,rabi,1,Oct-Nov,2018,31.1
+Bathinda,Punjab,rabi,2,Dec-Jan,2018,21.8
+Bathinda,Punjab,rabi,3,Feb-Mar,2018,26.1
+Bathinda,Punjab,kharif,1,Jun-Jul,2018,39.4
+Bathinda,Punjab,kharif,2,Aug-Sep,2018,37.3
+Bathinda,Punjab,kharif,3,Oct,2018,33.2
+Bathinda,Punjab,rabi,1,Oct-Nov,2019,30.3
+Bathinda,Punjab,rabi,2,Dec-Jan,2019,19.3
+Bathinda,Punjab,rabi,3,Feb-Mar,2019,26.1
+Bathinda,Punjab,kharif,1,Jun-Jul,2019,41.5
+Bathinda,Punjab,kharif,2,Aug-Sep,2019,37.2
+Bathinda,Punjab,kharif,3,Oct,2019,33.5
+Bathinda,Punjab,rabi,1,Oct-Nov,2020,31.6
+Bathinda,Punjab,rabi,2,Dec-Jan,2020,21.2
+Bathinda,Punjab,rabi,3,Feb-Mar,2020,31.2
+Bathinda,Punjab,kharif,1,Jun-Jul,2020,40.4
+Bathinda,Punjab,kharif,2,Aug-Sep,2020,37.5
+Bathinda,Punjab,kharif,3,Oct,2020,36.1
+Bathinda,Punjab,rabi,1,Oct-Nov,2021,30.5
+Bathinda,Punjab,rabi,2,Dec-Jan,2021,20.7
+Bathinda,Punjab,rabi,3,Feb-Mar,2021,30.1
+Bathinda,Punjab,kharif,1,Jun-Jul,2021,40.2
+Bathinda,Punjab,kharif,2,Aug-Sep,2021,36.5
+Bathinda,Punjab,kharif,3,Oct,2021,33.0
+Bathinda,Punjab,rabi,1,Oct-Nov,2022,30.9
+Bathinda,Punjab,rabi,2,Dec-Jan,2022,22.9
+Bathinda,Punjab,rabi,3,Feb-Mar,2022,30.2
+Bathinda,Punjab,kharif,1,Jun-Jul,2022,38.8
+Bathinda,Punjab,kharif,2,Aug-Sep,2022,33.7
+Bathinda,Punjab,kharif,3,Oct,2022,32.9
+Bathinda,Punjab,rabi,1,Oct-Nov,2023,29.4
+Bathinda,Punjab,rabi,2,Dec-Jan,2023,21.8
+Bathinda,Punjab,rabi,3,Feb-Mar,2023,27.6
+Bathinda,Punjab,kharif,1,Jun-Jul,2023,37.2
+Bathinda,Punjab,kharif,2,Aug-Sep,2023,36.2
+Bathinda,Punjab,kharif,3,Oct,2023,32.6
+Faridkot,Punjab,rabi,1,Oct-Nov,normal_1991_2008,32.4
+Faridkot,Punjab,rabi,2,Dec-Jan,normal_1991_2008,23.1
+Faridkot,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.7
+Faridkot,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.7
+Faridkot,Punjab,kharif,2,Aug-Sep,normal_1991_2008,38.0
+Faridkot,Punjab,kharif,3,Oct,normal_1991_2008,35.1
+Faridkot,Punjab,rabi,1,Oct-Nov,2009,31.4
+Faridkot,Punjab,rabi,2,Dec-Jan,2009,23.3
+Faridkot,Punjab,rabi,3,Feb-Mar,2009,31.3
+Faridkot,Punjab,kharif,1,Jun-Jul,2009,42.8
+Faridkot,Punjab,kharif,2,Aug-Sep,2009,38.6
+Faridkot,Punjab,kharif,3,Oct,2009,34.7
+Faridkot,Punjab,rabi,1,Oct-Nov,2010,31.2
+Faridkot,Punjab,rabi,2,Dec-Jan,2010,21.4
+Faridkot,Punjab,rabi,3,Feb-Mar,2010,28.9
+Faridkot,Punjab,kharif,1,Jun-Jul,2010,40.7
+Faridkot,Punjab,kharif,2,Aug-Sep,2010,34.9
+Faridkot,Punjab,kharif,3,Oct,2010,33.6
+Faridkot,Punjab,rabi,1,Oct-Nov,2011,31.3
+Faridkot,Punjab,rabi,2,Dec-Jan,2011,21.7
+Faridkot,Punjab,rabi,3,Feb-Mar,2011,27.9
+Faridkot,Punjab,kharif,1,Jun-Jul,2011,40.9
+Faridkot,Punjab,kharif,2,Aug-Sep,2011,34.6
+Faridkot,Punjab,kharif,3,Oct,2011,33.3
+Faridkot,Punjab,rabi,1,Oct-Nov,2012,30.4
+Faridkot,Punjab,rabi,2,Dec-Jan,2012,22.2
+Faridkot,Punjab,rabi,3,Feb-Mar,2012,27.5
+Faridkot,Punjab,kharif,1,Jun-Jul,2012,43.5
+Faridkot,Punjab,kharif,2,Aug-Sep,2012,36.5
+Faridkot,Punjab,kharif,3,Oct,2012,32.8
+Faridkot,Punjab,rabi,1,Oct-Nov,2013,31.3
+Faridkot,Punjab,rabi,2,Dec-Jan,2013,22.7
+Faridkot,Punjab,rabi,3,Feb-Mar,2013,26.6
+Faridkot,Punjab,kharif,1,Jun-Jul,2013,41.1
+Faridkot,Punjab,kharif,2,Aug-Sep,2013,36.2
+Faridkot,Punjab,kharif,3,Oct,2013,34.4
+Faridkot,Punjab,rabi,1,Oct-Nov,2014,30.1
+Faridkot,Punjab,rabi,2,Dec-Jan,2014,21.6
+Faridkot,Punjab,rabi,3,Feb-Mar,2014,26.9
+Faridkot,Punjab,kharif,1,Jun-Jul,2014,42.8
+Faridkot,Punjab,kharif,2,Aug-Sep,2014,36.8
+Faridkot,Punjab,kharif,3,Oct,2014,32.0
+Faridkot,Punjab,rabi,1,Oct-Nov,2015,31.4
+Faridkot,Punjab,rabi,2,Dec-Jan,2015,23.4
+Faridkot,Punjab,rabi,3,Feb-Mar,2015,29.2
+Faridkot,Punjab,kharif,1,Jun-Jul,2015,39.6
+Faridkot,Punjab,kharif,2,Aug-Sep,2015,37.6
+Faridkot,Punjab,kharif,3,Oct,2015,34.1
+Faridkot,Punjab,rabi,1,Oct-Nov,2016,33.1
+Faridkot,Punjab,rabi,2,Dec-Jan,2016,23.4
+Faridkot,Punjab,rabi,3,Feb-Mar,2016,28.7
+Faridkot,Punjab,kharif,1,Jun-Jul,2016,41.1
+Faridkot,Punjab,kharif,2,Aug-Sep,2016,37.2
+Faridkot,Punjab,kharif,3,Oct,2016,35.9
+Faridkot,Punjab,rabi,1,Oct-Nov,2017,32.1
+Faridkot,Punjab,rabi,2,Dec-Jan,2017,23.2
+Faridkot,Punjab,rabi,3,Feb-Mar,2017,30.2
+Faridkot,Punjab,kharif,1,Jun-Jul,2017,39.5
+Faridkot,Punjab,kharif,2,Aug-Sep,2017,37.8
+Faridkot,Punjab,kharif,3,Oct,2017,36.1
+Faridkot,Punjab,rabi,1,Oct-Nov,2018,30.5
+Faridkot,Punjab,rabi,2,Dec-Jan,2018,21.2
+Faridkot,Punjab,rabi,3,Feb-Mar,2018,25.4
+Faridkot,Punjab,kharif,1,Jun-Jul,2018,39.2
+Faridkot,Punjab,kharif,2,Aug-Sep,2018,36.9
+Faridkot,Punjab,kharif,3,Oct,2018,32.7
+Faridkot,Punjab,rabi,1,Oct-Nov,2019,29.5
+Faridkot,Punjab,rabi,2,Dec-Jan,2019,19.0
+Faridkot,Punjab,rabi,3,Feb-Mar,2019,25.5
+Faridkot,Punjab,kharif,1,Jun-Jul,2019,41.6
+Faridkot,Punjab,kharif,2,Aug-Sep,2019,36.3
+Faridkot,Punjab,kharif,3,Oct,2019,32.5
+Faridkot,Punjab,rabi,1,Oct-Nov,2020,31.0
+Faridkot,Punjab,rabi,2,Dec-Jan,2020,21.0
+Faridkot,Punjab,rabi,3,Feb-Mar,2020,30.6
+Faridkot,Punjab,kharif,1,Jun-Jul,2020,40.4
+Faridkot,Punjab,kharif,2,Aug-Sep,2020,36.9
+Faridkot,Punjab,kharif,3,Oct,2020,35.3
+Faridkot,Punjab,rabi,1,Oct-Nov,2021,29.9
+Faridkot,Punjab,rabi,2,Dec-Jan,2021,20.1
+Faridkot,Punjab,rabi,3,Feb-Mar,2021,29.2
+Faridkot,Punjab,kharif,1,Jun-Jul,2021,40.5
+Faridkot,Punjab,kharif,2,Aug-Sep,2021,36.6
+Faridkot,Punjab,kharif,3,Oct,2021,32.4
+Faridkot,Punjab,rabi,1,Oct-Nov,2022,30.4
+Faridkot,Punjab,rabi,2,Dec-Jan,2022,22.3
+Faridkot,Punjab,rabi,3,Feb-Mar,2022,29.7
+Faridkot,Punjab,kharif,1,Jun-Jul,2022,38.9
+Faridkot,Punjab,kharif,2,Aug-Sep,2022,33.5
+Faridkot,Punjab,kharif,3,Oct,2022,32.7
+Faridkot,Punjab,rabi,1,Oct-Nov,2023,28.7
+Faridkot,Punjab,rabi,2,Dec-Jan,2023,21.3
+Faridkot,Punjab,rabi,3,Feb-Mar,2023,26.9
+Faridkot,Punjab,kharif,1,Jun-Jul,2023,36.8
+Faridkot,Punjab,kharif,2,Aug-Sep,2023,34.6
+Faridkot,Punjab,kharif,3,Oct,2023,31.4
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.1
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.9
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.5
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,normal_1991_2008,40.3
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,normal_1991_2008,35.5
+Fatehgarh Sahib,Punjab,kharif,3,Oct,normal_1991_2008,33.4
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2009,30.2
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2009,23.1
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2009,31.2
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2009,42.0
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2009,36.1
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2009,33.1
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2010,29.8
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2010,21.1
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2010,28.1
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2010,38.7
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2010,32.5
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2010,31.5
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2011,29.8
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2011,21.3
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2011,27.9
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2011,38.2
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2011,32.5
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2011,31.4
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2012,30.4
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2012,22.0
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2012,27.4
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2012,42.5
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2012,35.2
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2012,32.9
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2013,29.8
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2013,22.1
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2013,26.0
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2013,38.8
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2013,33.0
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2013,32.5
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2014,30.4
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2014,21.4
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2014,26.7
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2014,42.6
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2014,36.5
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2014,32.3
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2015,31.0
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2015,23.1
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2015,29.4
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2015,38.2
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2015,35.3
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2015,33.6
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2016,32.1
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2016,23.2
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2016,28.2
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2016,39.8
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2016,35.3
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2016,34.3
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2017,30.2
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2017,22.7
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2017,29.8
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2017,38.6
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2017,33.7
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2017,33.5
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2018,27.6
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2018,20.0
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2018,24.3
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2018,37.6
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2018,32.6
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2018,29.4
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2019,28.0
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2019,18.7
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2019,24.6
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2019,40.2
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2019,32.7
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2019,30.3
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2020,30.6
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2020,21.7
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2020,30.5
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2020,38.4
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2020,34.8
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2020,34.4
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2021,29.3
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2021,19.7
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2021,27.8
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2021,38.8
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2021,33.2
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2021,31.2
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2022,27.8
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2022,21.4
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2022,28.7
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2022,37.9
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2022,32.3
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2022,29.2
+Fatehgarh Sahib,Punjab,rabi,1,Oct-Nov,2023,27.9
+Fatehgarh Sahib,Punjab,rabi,2,Dec-Jan,2023,21.3
+Fatehgarh Sahib,Punjab,rabi,3,Feb-Mar,2023,26.4
+Fatehgarh Sahib,Punjab,kharif,1,Jun-Jul,2023,35.7
+Fatehgarh Sahib,Punjab,kharif,2,Aug-Sep,2023,32.1
+Fatehgarh Sahib,Punjab,kharif,3,Oct,2023,29.6
+Fazilka,Punjab,rabi,1,Oct-Nov,normal_1991_2008,33.2
+Fazilka,Punjab,rabi,2,Dec-Jan,normal_1991_2008,23.3
+Fazilka,Punjab,rabi,3,Feb-Mar,normal_1991_2008,29.0
+Fazilka,Punjab,kharif,1,Jun-Jul,normal_1991_2008,43.0
+Fazilka,Punjab,kharif,2,Aug-Sep,normal_1991_2008,40.1
+Fazilka,Punjab,kharif,3,Oct,normal_1991_2008,36.1
+Fazilka,Punjab,rabi,1,Oct-Nov,2009,32.0
+Fazilka,Punjab,rabi,2,Dec-Jan,2009,23.6
+Fazilka,Punjab,rabi,3,Feb-Mar,2009,31.5
+Fazilka,Punjab,kharif,1,Jun-Jul,2009,43.4
+Fazilka,Punjab,kharif,2,Aug-Sep,2009,40.4
+Fazilka,Punjab,kharif,3,Oct,2009,35.8
+Fazilka,Punjab,rabi,1,Oct-Nov,2010,32.9
+Fazilka,Punjab,rabi,2,Dec-Jan,2010,22.1
+Fazilka,Punjab,rabi,3,Feb-Mar,2010,29.1
+Fazilka,Punjab,kharif,1,Jun-Jul,2010,42.0
+Fazilka,Punjab,kharif,2,Aug-Sep,2010,37.3
+Fazilka,Punjab,kharif,3,Oct,2010,35.9
+Fazilka,Punjab,rabi,1,Oct-Nov,2011,32.7
+Fazilka,Punjab,rabi,2,Dec-Jan,2011,22.1
+Fazilka,Punjab,rabi,3,Feb-Mar,2011,27.9
+Fazilka,Punjab,kharif,1,Jun-Jul,2011,42.8
+Fazilka,Punjab,kharif,2,Aug-Sep,2011,36.7
+Fazilka,Punjab,kharif,3,Oct,2011,34.8
+Fazilka,Punjab,rabi,1,Oct-Nov,2012,30.8
+Fazilka,Punjab,rabi,2,Dec-Jan,2012,22.3
+Fazilka,Punjab,rabi,3,Feb-Mar,2012,27.4
+Fazilka,Punjab,kharif,1,Jun-Jul,2012,44.3
+Fazilka,Punjab,kharif,2,Aug-Sep,2012,38.1
+Fazilka,Punjab,kharif,3,Oct,2012,33.2
+Fazilka,Punjab,rabi,1,Oct-Nov,2013,32.4
+Fazilka,Punjab,rabi,2,Dec-Jan,2013,22.7
+Fazilka,Punjab,rabi,3,Feb-Mar,2013,27.3
+Fazilka,Punjab,kharif,1,Jun-Jul,2013,42.7
+Fazilka,Punjab,kharif,2,Aug-Sep,2013,39.4
+Fazilka,Punjab,kharif,3,Oct,2013,35.9
+Fazilka,Punjab,rabi,1,Oct-Nov,2014,31.2
+Fazilka,Punjab,rabi,2,Dec-Jan,2014,22.3
+Fazilka,Punjab,rabi,3,Feb-Mar,2014,27.3
+Fazilka,Punjab,kharif,1,Jun-Jul,2014,43.6
+Fazilka,Punjab,kharif,2,Aug-Sep,2014,38.6
+Fazilka,Punjab,kharif,3,Oct,2014,33.3
+Fazilka,Punjab,rabi,1,Oct-Nov,2015,31.3
+Fazilka,Punjab,rabi,2,Dec-Jan,2015,23.4
+Fazilka,Punjab,rabi,3,Feb-Mar,2015,29.2
+Fazilka,Punjab,kharif,1,Jun-Jul,2015,41.1
+Fazilka,Punjab,kharif,2,Aug-Sep,2015,39.0
+Fazilka,Punjab,kharif,3,Oct,2015,33.8
+Fazilka,Punjab,rabi,1,Oct-Nov,2016,33.8
+Fazilka,Punjab,rabi,2,Dec-Jan,2016,23.7
+Fazilka,Punjab,rabi,3,Feb-Mar,2016,29.5
+Fazilka,Punjab,kharif,1,Jun-Jul,2016,43.2
+Fazilka,Punjab,kharif,2,Aug-Sep,2016,38.9
+Fazilka,Punjab,kharif,3,Oct,2016,36.9
+Fazilka,Punjab,rabi,1,Oct-Nov,2017,32.8
+Fazilka,Punjab,rabi,2,Dec-Jan,2017,23.8
+Fazilka,Punjab,rabi,3,Feb-Mar,2017,30.7
+Fazilka,Punjab,kharif,1,Jun-Jul,2017,41.2
+Fazilka,Punjab,kharif,2,Aug-Sep,2017,40.0
+Fazilka,Punjab,kharif,3,Oct,2017,37.1
+Fazilka,Punjab,rabi,1,Oct-Nov,2018,32.4
+Fazilka,Punjab,rabi,2,Dec-Jan,2018,21.7
+Fazilka,Punjab,rabi,3,Feb-Mar,2018,26.0
+Fazilka,Punjab,kharif,1,Jun-Jul,2018,40.4
+Fazilka,Punjab,kharif,2,Aug-Sep,2018,39.7
+Fazilka,Punjab,kharif,3,Oct,2018,35.0
+Fazilka,Punjab,rabi,1,Oct-Nov,2019,30.4
+Fazilka,Punjab,rabi,2,Dec-Jan,2019,19.7
+Fazilka,Punjab,rabi,3,Feb-Mar,2019,26.0
+Fazilka,Punjab,kharif,1,Jun-Jul,2019,42.9
+Fazilka,Punjab,kharif,2,Aug-Sep,2019,40.1
+Fazilka,Punjab,kharif,3,Oct,2019,33.7
+Fazilka,Punjab,rabi,1,Oct-Nov,2020,31.3
+Fazilka,Punjab,rabi,2,Dec-Jan,2020,20.5
+Fazilka,Punjab,rabi,3,Feb-Mar,2020,30.1
+Fazilka,Punjab,kharif,1,Jun-Jul,2020,41.7
+Fazilka,Punjab,kharif,2,Aug-Sep,2020,38.2
+Fazilka,Punjab,kharif,3,Oct,2020,36.0
+Fazilka,Punjab,rabi,1,Oct-Nov,2021,31.8
+Fazilka,Punjab,rabi,2,Dec-Jan,2021,21.1
+Fazilka,Punjab,rabi,3,Feb-Mar,2021,30.5
+Fazilka,Punjab,kharif,1,Jun-Jul,2021,41.9
+Fazilka,Punjab,kharif,2,Aug-Sep,2021,39.5
+Fazilka,Punjab,kharif,3,Oct,2021,34.3
+Fazilka,Punjab,rabi,1,Oct-Nov,2022,32.5
+Fazilka,Punjab,rabi,2,Dec-Jan,2022,23.1
+Fazilka,Punjab,rabi,3,Feb-Mar,2022,30.0
+Fazilka,Punjab,kharif,1,Jun-Jul,2022,39.4
+Fazilka,Punjab,kharif,2,Aug-Sep,2022,34.8
+Fazilka,Punjab,kharif,3,Oct,2022,35.3
+Fazilka,Punjab,rabi,1,Oct-Nov,2023,30.5
+Fazilka,Punjab,rabi,2,Dec-Jan,2023,22.6
+Fazilka,Punjab,rabi,3,Feb-Mar,2023,27.7
+Fazilka,Punjab,kharif,1,Jun-Jul,2023,38.2
+Fazilka,Punjab,kharif,2,Aug-Sep,2023,39.1
+Fazilka,Punjab,kharif,3,Oct,2023,34.0
+Ferozepur,Punjab,rabi,1,Oct-Nov,normal_1991_2008,32.3
+Ferozepur,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.8
+Ferozepur,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.3
+Ferozepur,Punjab,kharif,1,Jun-Jul,normal_1991_2008,42.3
+Ferozepur,Punjab,kharif,2,Aug-Sep,normal_1991_2008,38.6
+Ferozepur,Punjab,kharif,3,Oct,normal_1991_2008,35.1
+Ferozepur,Punjab,rabi,1,Oct-Nov,2009,31.4
+Ferozepur,Punjab,rabi,2,Dec-Jan,2009,23.2
+Ferozepur,Punjab,rabi,3,Feb-Mar,2009,31.0
+Ferozepur,Punjab,kharif,1,Jun-Jul,2009,43.1
+Ferozepur,Punjab,kharif,2,Aug-Sep,2009,39.4
+Ferozepur,Punjab,kharif,3,Oct,2009,35.0
+Ferozepur,Punjab,rabi,1,Oct-Nov,2010,31.5
+Ferozepur,Punjab,rabi,2,Dec-Jan,2010,21.3
+Ferozepur,Punjab,rabi,3,Feb-Mar,2010,28.3
+Ferozepur,Punjab,kharif,1,Jun-Jul,2010,41.3
+Ferozepur,Punjab,kharif,2,Aug-Sep,2010,36.1
+Ferozepur,Punjab,kharif,3,Oct,2010,34.2
+Ferozepur,Punjab,rabi,1,Oct-Nov,2011,31.6
+Ferozepur,Punjab,rabi,2,Dec-Jan,2011,21.4
+Ferozepur,Punjab,rabi,3,Feb-Mar,2011,27.2
+Ferozepur,Punjab,kharif,1,Jun-Jul,2011,41.2
+Ferozepur,Punjab,kharif,2,Aug-Sep,2011,35.3
+Ferozepur,Punjab,kharif,3,Oct,2011,34.0
+Ferozepur,Punjab,rabi,1,Oct-Nov,2012,30.3
+Ferozepur,Punjab,rabi,2,Dec-Jan,2012,21.9
+Ferozepur,Punjab,rabi,3,Feb-Mar,2012,27.3
+Ferozepur,Punjab,kharif,1,Jun-Jul,2012,43.9
+Ferozepur,Punjab,kharif,2,Aug-Sep,2012,37.4
+Ferozepur,Punjab,kharif,3,Oct,2012,32.9
+Ferozepur,Punjab,rabi,1,Oct-Nov,2013,31.2
+Ferozepur,Punjab,rabi,2,Dec-Jan,2013,22.5
+Ferozepur,Punjab,rabi,3,Feb-Mar,2013,26.5
+Ferozepur,Punjab,kharif,1,Jun-Jul,2013,41.6
+Ferozepur,Punjab,kharif,2,Aug-Sep,2013,36.9
+Ferozepur,Punjab,kharif,3,Oct,2013,34.3
+Ferozepur,Punjab,rabi,1,Oct-Nov,2014,29.8
+Ferozepur,Punjab,rabi,2,Dec-Jan,2014,21.5
+Ferozepur,Punjab,rabi,3,Feb-Mar,2014,26.4
+Ferozepur,Punjab,kharif,1,Jun-Jul,2014,43.1
+Ferozepur,Punjab,kharif,2,Aug-Sep,2014,37.0
+Ferozepur,Punjab,kharif,3,Oct,2014,31.9
+Ferozepur,Punjab,rabi,1,Oct-Nov,2015,31.2
+Ferozepur,Punjab,rabi,2,Dec-Jan,2015,23.1
+Ferozepur,Punjab,rabi,3,Feb-Mar,2015,28.9
+Ferozepur,Punjab,kharif,1,Jun-Jul,2015,40.6
+Ferozepur,Punjab,kharif,2,Aug-Sep,2015,38.6
+Ferozepur,Punjab,kharif,3,Oct,2015,33.9
+Ferozepur,Punjab,rabi,1,Oct-Nov,2016,32.9
+Ferozepur,Punjab,rabi,2,Dec-Jan,2016,23.3
+Ferozepur,Punjab,rabi,3,Feb-Mar,2016,28.6
+Ferozepur,Punjab,kharif,1,Jun-Jul,2016,41.8
+Ferozepur,Punjab,kharif,2,Aug-Sep,2016,37.4
+Ferozepur,Punjab,kharif,3,Oct,2016,35.6
+Ferozepur,Punjab,rabi,1,Oct-Nov,2017,32.0
+Ferozepur,Punjab,rabi,2,Dec-Jan,2017,23.3
+Ferozepur,Punjab,rabi,3,Feb-Mar,2017,30.0
+Ferozepur,Punjab,kharif,1,Jun-Jul,2017,40.1
+Ferozepur,Punjab,kharif,2,Aug-Sep,2017,38.8
+Ferozepur,Punjab,kharif,3,Oct,2017,36.2
+Ferozepur,Punjab,rabi,1,Oct-Nov,2018,31.0
+Ferozepur,Punjab,rabi,2,Dec-Jan,2018,21.0
+Ferozepur,Punjab,rabi,3,Feb-Mar,2018,25.2
+Ferozepur,Punjab,kharif,1,Jun-Jul,2018,39.6
+Ferozepur,Punjab,kharif,2,Aug-Sep,2018,38.2
+Ferozepur,Punjab,kharif,3,Oct,2018,33.4
+Ferozepur,Punjab,rabi,1,Oct-Nov,2019,29.5
+Ferozepur,Punjab,rabi,2,Dec-Jan,2019,19.1
+Ferozepur,Punjab,rabi,3,Feb-Mar,2019,25.2
+Ferozepur,Punjab,kharif,1,Jun-Jul,2019,41.9
+Ferozepur,Punjab,kharif,2,Aug-Sep,2019,37.8
+Ferozepur,Punjab,kharif,3,Oct,2019,32.5
+Ferozepur,Punjab,rabi,1,Oct-Nov,2020,30.0
+Ferozepur,Punjab,rabi,2,Dec-Jan,2020,20.4
+Ferozepur,Punjab,rabi,3,Feb-Mar,2020,29.4
+Ferozepur,Punjab,kharif,1,Jun-Jul,2020,40.8
+Ferozepur,Punjab,kharif,2,Aug-Sep,2020,36.2
+Ferozepur,Punjab,kharif,3,Oct,2020,34.3
+Ferozepur,Punjab,rabi,1,Oct-Nov,2021,29.6
+Ferozepur,Punjab,rabi,2,Dec-Jan,2021,20.0
+Ferozepur,Punjab,rabi,3,Feb-Mar,2021,28.8
+Ferozepur,Punjab,kharif,1,Jun-Jul,2021,41.4
+Ferozepur,Punjab,kharif,2,Aug-Sep,2021,37.4
+Ferozepur,Punjab,kharif,3,Oct,2021,31.9
+Ferozepur,Punjab,rabi,1,Oct-Nov,2022,31.0
+Ferozepur,Punjab,rabi,2,Dec-Jan,2022,22.2
+Ferozepur,Punjab,rabi,3,Feb-Mar,2022,29.5
+Ferozepur,Punjab,kharif,1,Jun-Jul,2022,39.3
+Ferozepur,Punjab,kharif,2,Aug-Sep,2022,34.1
+Ferozepur,Punjab,kharif,3,Oct,2022,33.7
+Ferozepur,Punjab,rabi,1,Oct-Nov,2023,28.5
+Ferozepur,Punjab,rabi,2,Dec-Jan,2023,21.2
+Ferozepur,Punjab,rabi,3,Feb-Mar,2023,26.5
+Ferozepur,Punjab,kharif,1,Jun-Jul,2023,37.0
+Ferozepur,Punjab,kharif,2,Aug-Sep,2023,35.6
+Ferozepur,Punjab,kharif,3,Oct,2023,31.4
+Gurdaspur,Punjab,rabi,1,Oct-Nov,normal_1991_2008,29.6
+Gurdaspur,Punjab,rabi,2,Dec-Jan,normal_1991_2008,21.4
+Gurdaspur,Punjab,rabi,3,Feb-Mar,normal_1991_2008,26.2
+Gurdaspur,Punjab,kharif,1,Jun-Jul,normal_1991_2008,39.7
+Gurdaspur,Punjab,kharif,2,Aug-Sep,normal_1991_2008,34.8
+Gurdaspur,Punjab,kharif,3,Oct,normal_1991_2008,32.1
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2009,29.5
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2009,22.0
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2009,29.1
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2009,41.1
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2009,35.8
+Gurdaspur,Punjab,kharif,3,Oct,2009,32.5
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2010,28.6
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2010,20.1
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2010,26.0
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2010,38.9
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2010,31.7
+Gurdaspur,Punjab,kharif,3,Oct,2010,30.4
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2011,29.0
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2011,20.0
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2011,25.1
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2011,37.9
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2011,32.0
+Gurdaspur,Punjab,kharif,3,Oct,2011,30.9
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2012,29.3
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2012,21.0
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2012,25.8
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2012,41.5
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2012,34.6
+Gurdaspur,Punjab,kharif,3,Oct,2012,31.7
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2013,28.0
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2013,20.7
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2013,24.6
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2013,38.6
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2013,31.6
+Gurdaspur,Punjab,kharif,3,Oct,2013,30.5
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2014,27.9
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2014,20.3
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2014,24.0
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2014,40.6
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2014,34.0
+Gurdaspur,Punjab,kharif,3,Oct,2014,29.2
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2015,29.2
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2015,21.6
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2015,27.2
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2015,37.6
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2015,34.4
+Gurdaspur,Punjab,kharif,3,Oct,2015,31.7
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2016,29.9
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2016,21.3
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2016,25.8
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2016,38.4
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2016,32.6
+Gurdaspur,Punjab,kharif,3,Oct,2016,32.0
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2017,29.5
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2017,21.8
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2017,27.8
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2017,37.0
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2017,33.2
+Gurdaspur,Punjab,kharif,3,Oct,2017,32.9
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2018,26.7
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2018,18.4
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2018,21.9
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2018,37.4
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2018,32.0
+Gurdaspur,Punjab,kharif,3,Oct,2018,28.7
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2019,26.4
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2019,17.0
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2019,22.1
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2019,39.1
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2019,32.3
+Gurdaspur,Punjab,kharif,3,Oct,2019,28.5
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2020,27.7
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2020,20.2
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2020,27.7
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2020,37.1
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2020,32.4
+Gurdaspur,Punjab,kharif,3,Oct,2020,31.2
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2021,27.3
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2021,18.4
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2021,25.7
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2021,37.9
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2021,32.2
+Gurdaspur,Punjab,kharif,3,Oct,2021,29.3
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2022,26.4
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2022,19.7
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2022,25.7
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2022,37.1
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2022,31.4
+Gurdaspur,Punjab,kharif,3,Oct,2022,28.4
+Gurdaspur,Punjab,rabi,1,Oct-Nov,2023,26.0
+Gurdaspur,Punjab,rabi,2,Dec-Jan,2023,19.4
+Gurdaspur,Punjab,rabi,3,Feb-Mar,2023,23.5
+Gurdaspur,Punjab,kharif,1,Jun-Jul,2023,34.5
+Gurdaspur,Punjab,kharif,2,Aug-Sep,2023,31.9
+Gurdaspur,Punjab,kharif,3,Oct,2023,27.8
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,normal_1991_2008,30.7
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.1
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.3
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,normal_1991_2008,40.7
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,normal_1991_2008,35.9
+Hoshiarpur,Punjab,kharif,3,Oct,normal_1991_2008,33.1
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2009,30.2
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2009,22.5
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2009,30.3
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2009,42.2
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2009,36.8
+Hoshiarpur,Punjab,kharif,3,Oct,2009,33.3
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2010,29.7
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2010,20.5
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2010,27.1
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2010,39.8
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2010,33.3
+Hoshiarpur,Punjab,kharif,3,Oct,2010,31.8
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2011,29.9
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2011,20.6
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2011,26.2
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2011,38.9
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2011,32.8
+Hoshiarpur,Punjab,kharif,3,Oct,2011,31.9
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2012,29.8
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2012,21.5
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2012,26.7
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2012,42.7
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2012,35.8
+Hoshiarpur,Punjab,kharif,3,Oct,2012,32.5
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2013,29.1
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2013,21.3
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2013,25.6
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2013,39.6
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2013,32.7
+Hoshiarpur,Punjab,kharif,3,Oct,2013,31.8
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2014,28.7
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2014,20.6
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2014,25.0
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2014,41.9
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2014,35.0
+Hoshiarpur,Punjab,kharif,3,Oct,2014,30.2
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2015,30.1
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2015,22.2
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2015,28.4
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2015,38.6
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2015,35.5
+Hoshiarpur,Punjab,kharif,3,Oct,2015,32.7
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2016,30.9
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2016,22.1
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2016,27.3
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2016,39.7
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2016,34.3
+Hoshiarpur,Punjab,kharif,3,Oct,2016,33.3
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2017,30.3
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2017,22.3
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2017,28.8
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2017,38.3
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2017,34.5
+Hoshiarpur,Punjab,kharif,3,Oct,2017,33.9
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2018,27.6
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2018,19.2
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2018,23.0
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2018,38.2
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2018,33.2
+Hoshiarpur,Punjab,kharif,3,Oct,2018,29.6
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2019,27.4
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2019,17.7
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2019,23.2
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2019,40.3
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2019,33.0
+Hoshiarpur,Punjab,kharif,3,Oct,2019,29.6
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2020,29.1
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2020,20.8
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2020,29.0
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2020,38.5
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2020,33.7
+Hoshiarpur,Punjab,kharif,3,Oct,2020,32.9
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2021,28.3
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2021,19.1
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2021,26.7
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2021,39.3
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2021,33.6
+Hoshiarpur,Punjab,kharif,3,Oct,2021,30.4
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2022,27.7
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2022,20.6
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2022,27.3
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2022,38.2
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2022,32.1
+Hoshiarpur,Punjab,kharif,3,Oct,2022,29.7
+Hoshiarpur,Punjab,rabi,1,Oct-Nov,2023,26.9
+Hoshiarpur,Punjab,rabi,2,Dec-Jan,2023,20.0
+Hoshiarpur,Punjab,rabi,3,Feb-Mar,2023,24.9
+Hoshiarpur,Punjab,kharif,1,Jun-Jul,2023,35.5
+Hoshiarpur,Punjab,kharif,2,Aug-Sep,2023,32.2
+Hoshiarpur,Punjab,kharif,3,Oct,2023,28.7
+Jalandhar,Punjab,rabi,1,Oct-Nov,normal_1991_2008,30.7
+Jalandhar,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.1
+Jalandhar,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.3
+Jalandhar,Punjab,kharif,1,Jun-Jul,normal_1991_2008,40.7
+Jalandhar,Punjab,kharif,2,Aug-Sep,normal_1991_2008,35.9
+Jalandhar,Punjab,kharif,3,Oct,normal_1991_2008,33.1
+Jalandhar,Punjab,rabi,1,Oct-Nov,2009,30.2
+Jalandhar,Punjab,rabi,2,Dec-Jan,2009,22.5
+Jalandhar,Punjab,rabi,3,Feb-Mar,2009,30.3
+Jalandhar,Punjab,kharif,1,Jun-Jul,2009,42.2
+Jalandhar,Punjab,kharif,2,Aug-Sep,2009,36.8
+Jalandhar,Punjab,kharif,3,Oct,2009,33.3
+Jalandhar,Punjab,rabi,1,Oct-Nov,2010,29.7
+Jalandhar,Punjab,rabi,2,Dec-Jan,2010,20.5
+Jalandhar,Punjab,rabi,3,Feb-Mar,2010,27.1
+Jalandhar,Punjab,kharif,1,Jun-Jul,2010,39.8
+Jalandhar,Punjab,kharif,2,Aug-Sep,2010,33.3
+Jalandhar,Punjab,kharif,3,Oct,2010,31.8
+Jalandhar,Punjab,rabi,1,Oct-Nov,2011,29.9
+Jalandhar,Punjab,rabi,2,Dec-Jan,2011,20.6
+Jalandhar,Punjab,rabi,3,Feb-Mar,2011,26.2
+Jalandhar,Punjab,kharif,1,Jun-Jul,2011,38.9
+Jalandhar,Punjab,kharif,2,Aug-Sep,2011,32.8
+Jalandhar,Punjab,kharif,3,Oct,2011,31.9
+Jalandhar,Punjab,rabi,1,Oct-Nov,2012,29.8
+Jalandhar,Punjab,rabi,2,Dec-Jan,2012,21.5
+Jalandhar,Punjab,rabi,3,Feb-Mar,2012,26.7
+Jalandhar,Punjab,kharif,1,Jun-Jul,2012,42.7
+Jalandhar,Punjab,kharif,2,Aug-Sep,2012,35.8
+Jalandhar,Punjab,kharif,3,Oct,2012,32.5
+Jalandhar,Punjab,rabi,1,Oct-Nov,2013,29.1
+Jalandhar,Punjab,rabi,2,Dec-Jan,2013,21.3
+Jalandhar,Punjab,rabi,3,Feb-Mar,2013,25.6
+Jalandhar,Punjab,kharif,1,Jun-Jul,2013,39.6
+Jalandhar,Punjab,kharif,2,Aug-Sep,2013,32.7
+Jalandhar,Punjab,kharif,3,Oct,2013,31.8
+Jalandhar,Punjab,rabi,1,Oct-Nov,2014,28.7
+Jalandhar,Punjab,rabi,2,Dec-Jan,2014,20.6
+Jalandhar,Punjab,rabi,3,Feb-Mar,2014,25.0
+Jalandhar,Punjab,kharif,1,Jun-Jul,2014,41.9
+Jalandhar,Punjab,kharif,2,Aug-Sep,2014,35.0
+Jalandhar,Punjab,kharif,3,Oct,2014,30.2
+Jalandhar,Punjab,rabi,1,Oct-Nov,2015,30.1
+Jalandhar,Punjab,rabi,2,Dec-Jan,2015,22.2
+Jalandhar,Punjab,rabi,3,Feb-Mar,2015,28.4
+Jalandhar,Punjab,kharif,1,Jun-Jul,2015,38.6
+Jalandhar,Punjab,kharif,2,Aug-Sep,2015,35.5
+Jalandhar,Punjab,kharif,3,Oct,2015,32.7
+Jalandhar,Punjab,rabi,1,Oct-Nov,2016,30.9
+Jalandhar,Punjab,rabi,2,Dec-Jan,2016,22.1
+Jalandhar,Punjab,rabi,3,Feb-Mar,2016,27.3
+Jalandhar,Punjab,kharif,1,Jun-Jul,2016,39.7
+Jalandhar,Punjab,kharif,2,Aug-Sep,2016,34.3
+Jalandhar,Punjab,kharif,3,Oct,2016,33.3
+Jalandhar,Punjab,rabi,1,Oct-Nov,2017,30.3
+Jalandhar,Punjab,rabi,2,Dec-Jan,2017,22.3
+Jalandhar,Punjab,rabi,3,Feb-Mar,2017,28.8
+Jalandhar,Punjab,kharif,1,Jun-Jul,2017,38.3
+Jalandhar,Punjab,kharif,2,Aug-Sep,2017,34.5
+Jalandhar,Punjab,kharif,3,Oct,2017,33.9
+Jalandhar,Punjab,rabi,1,Oct-Nov,2018,27.6
+Jalandhar,Punjab,rabi,2,Dec-Jan,2018,19.2
+Jalandhar,Punjab,rabi,3,Feb-Mar,2018,23.0
+Jalandhar,Punjab,kharif,1,Jun-Jul,2018,38.2
+Jalandhar,Punjab,kharif,2,Aug-Sep,2018,33.2
+Jalandhar,Punjab,kharif,3,Oct,2018,29.6
+Jalandhar,Punjab,rabi,1,Oct-Nov,2019,27.4
+Jalandhar,Punjab,rabi,2,Dec-Jan,2019,17.7
+Jalandhar,Punjab,rabi,3,Feb-Mar,2019,23.2
+Jalandhar,Punjab,kharif,1,Jun-Jul,2019,40.3
+Jalandhar,Punjab,kharif,2,Aug-Sep,2019,33.0
+Jalandhar,Punjab,kharif,3,Oct,2019,29.6
+Jalandhar,Punjab,rabi,1,Oct-Nov,2020,29.1
+Jalandhar,Punjab,rabi,2,Dec-Jan,2020,20.8
+Jalandhar,Punjab,rabi,3,Feb-Mar,2020,29.0
+Jalandhar,Punjab,kharif,1,Jun-Jul,2020,38.5
+Jalandhar,Punjab,kharif,2,Aug-Sep,2020,33.7
+Jalandhar,Punjab,kharif,3,Oct,2020,32.9
+Jalandhar,Punjab,rabi,1,Oct-Nov,2021,28.3
+Jalandhar,Punjab,rabi,2,Dec-Jan,2021,19.1
+Jalandhar,Punjab,rabi,3,Feb-Mar,2021,26.7
+Jalandhar,Punjab,kharif,1,Jun-Jul,2021,39.3
+Jalandhar,Punjab,kharif,2,Aug-Sep,2021,33.6
+Jalandhar,Punjab,kharif,3,Oct,2021,30.4
+Jalandhar,Punjab,rabi,1,Oct-Nov,2022,27.7
+Jalandhar,Punjab,rabi,2,Dec-Jan,2022,20.6
+Jalandhar,Punjab,rabi,3,Feb-Mar,2022,27.3
+Jalandhar,Punjab,kharif,1,Jun-Jul,2022,38.2
+Jalandhar,Punjab,kharif,2,Aug-Sep,2022,32.1
+Jalandhar,Punjab,kharif,3,Oct,2022,29.7
+Jalandhar,Punjab,rabi,1,Oct-Nov,2023,26.9
+Jalandhar,Punjab,rabi,2,Dec-Jan,2023,20.0
+Jalandhar,Punjab,rabi,3,Feb-Mar,2023,24.9
+Jalandhar,Punjab,kharif,1,Jun-Jul,2023,35.5
+Jalandhar,Punjab,kharif,2,Aug-Sep,2023,32.2
+Jalandhar,Punjab,kharif,3,Oct,2023,28.7
+Kapurthala,Punjab,rabi,1,Oct-Nov,normal_1991_2008,30.7
+Kapurthala,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.1
+Kapurthala,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.3
+Kapurthala,Punjab,kharif,1,Jun-Jul,normal_1991_2008,40.7
+Kapurthala,Punjab,kharif,2,Aug-Sep,normal_1991_2008,35.9
+Kapurthala,Punjab,kharif,3,Oct,normal_1991_2008,33.1
+Kapurthala,Punjab,rabi,1,Oct-Nov,2009,30.2
+Kapurthala,Punjab,rabi,2,Dec-Jan,2009,22.5
+Kapurthala,Punjab,rabi,3,Feb-Mar,2009,30.3
+Kapurthala,Punjab,kharif,1,Jun-Jul,2009,42.2
+Kapurthala,Punjab,kharif,2,Aug-Sep,2009,36.8
+Kapurthala,Punjab,kharif,3,Oct,2009,33.3
+Kapurthala,Punjab,rabi,1,Oct-Nov,2010,29.7
+Kapurthala,Punjab,rabi,2,Dec-Jan,2010,20.5
+Kapurthala,Punjab,rabi,3,Feb-Mar,2010,27.1
+Kapurthala,Punjab,kharif,1,Jun-Jul,2010,39.8
+Kapurthala,Punjab,kharif,2,Aug-Sep,2010,33.3
+Kapurthala,Punjab,kharif,3,Oct,2010,31.8
+Kapurthala,Punjab,rabi,1,Oct-Nov,2011,29.9
+Kapurthala,Punjab,rabi,2,Dec-Jan,2011,20.6
+Kapurthala,Punjab,rabi,3,Feb-Mar,2011,26.2
+Kapurthala,Punjab,kharif,1,Jun-Jul,2011,38.9
+Kapurthala,Punjab,kharif,2,Aug-Sep,2011,32.8
+Kapurthala,Punjab,kharif,3,Oct,2011,31.9
+Kapurthala,Punjab,rabi,1,Oct-Nov,2012,29.8
+Kapurthala,Punjab,rabi,2,Dec-Jan,2012,21.5
+Kapurthala,Punjab,rabi,3,Feb-Mar,2012,26.7
+Kapurthala,Punjab,kharif,1,Jun-Jul,2012,42.7
+Kapurthala,Punjab,kharif,2,Aug-Sep,2012,35.8
+Kapurthala,Punjab,kharif,3,Oct,2012,32.5
+Kapurthala,Punjab,rabi,1,Oct-Nov,2013,29.1
+Kapurthala,Punjab,rabi,2,Dec-Jan,2013,21.3
+Kapurthala,Punjab,rabi,3,Feb-Mar,2013,25.6
+Kapurthala,Punjab,kharif,1,Jun-Jul,2013,39.6
+Kapurthala,Punjab,kharif,2,Aug-Sep,2013,32.7
+Kapurthala,Punjab,kharif,3,Oct,2013,31.8
+Kapurthala,Punjab,rabi,1,Oct-Nov,2014,28.7
+Kapurthala,Punjab,rabi,2,Dec-Jan,2014,20.6
+Kapurthala,Punjab,rabi,3,Feb-Mar,2014,25.0
+Kapurthala,Punjab,kharif,1,Jun-Jul,2014,41.9
+Kapurthala,Punjab,kharif,2,Aug-Sep,2014,35.0
+Kapurthala,Punjab,kharif,3,Oct,2014,30.2
+Kapurthala,Punjab,rabi,1,Oct-Nov,2015,30.1
+Kapurthala,Punjab,rabi,2,Dec-Jan,2015,22.2
+Kapurthala,Punjab,rabi,3,Feb-Mar,2015,28.4
+Kapurthala,Punjab,kharif,1,Jun-Jul,2015,38.6
+Kapurthala,Punjab,kharif,2,Aug-Sep,2015,35.5
+Kapurthala,Punjab,kharif,3,Oct,2015,32.7
+Kapurthala,Punjab,rabi,1,Oct-Nov,2016,30.9
+Kapurthala,Punjab,rabi,2,Dec-Jan,2016,22.1
+Kapurthala,Punjab,rabi,3,Feb-Mar,2016,27.3
+Kapurthala,Punjab,kharif,1,Jun-Jul,2016,39.7
+Kapurthala,Punjab,kharif,2,Aug-Sep,2016,34.3
+Kapurthala,Punjab,kharif,3,Oct,2016,33.3
+Kapurthala,Punjab,rabi,1,Oct-Nov,2017,30.3
+Kapurthala,Punjab,rabi,2,Dec-Jan,2017,22.3
+Kapurthala,Punjab,rabi,3,Feb-Mar,2017,28.8
+Kapurthala,Punjab,kharif,1,Jun-Jul,2017,38.3
+Kapurthala,Punjab,kharif,2,Aug-Sep,2017,34.5
+Kapurthala,Punjab,kharif,3,Oct,2017,33.9
+Kapurthala,Punjab,rabi,1,Oct-Nov,2018,27.6
+Kapurthala,Punjab,rabi,2,Dec-Jan,2018,19.2
+Kapurthala,Punjab,rabi,3,Feb-Mar,2018,23.0
+Kapurthala,Punjab,kharif,1,Jun-Jul,2018,38.2
+Kapurthala,Punjab,kharif,2,Aug-Sep,2018,33.2
+Kapurthala,Punjab,kharif,3,Oct,2018,29.6
+Kapurthala,Punjab,rabi,1,Oct-Nov,2019,27.4
+Kapurthala,Punjab,rabi,2,Dec-Jan,2019,17.7
+Kapurthala,Punjab,rabi,3,Feb-Mar,2019,23.2
+Kapurthala,Punjab,kharif,1,Jun-Jul,2019,40.3
+Kapurthala,Punjab,kharif,2,Aug-Sep,2019,33.0
+Kapurthala,Punjab,kharif,3,Oct,2019,29.6
+Kapurthala,Punjab,rabi,1,Oct-Nov,2020,29.1
+Kapurthala,Punjab,rabi,2,Dec-Jan,2020,20.8
+Kapurthala,Punjab,rabi,3,Feb-Mar,2020,29.0
+Kapurthala,Punjab,kharif,1,Jun-Jul,2020,38.5
+Kapurthala,Punjab,kharif,2,Aug-Sep,2020,33.7
+Kapurthala,Punjab,kharif,3,Oct,2020,32.9
+Kapurthala,Punjab,rabi,1,Oct-Nov,2021,28.3
+Kapurthala,Punjab,rabi,2,Dec-Jan,2021,19.1
+Kapurthala,Punjab,rabi,3,Feb-Mar,2021,26.7
+Kapurthala,Punjab,kharif,1,Jun-Jul,2021,39.3
+Kapurthala,Punjab,kharif,2,Aug-Sep,2021,33.6
+Kapurthala,Punjab,kharif,3,Oct,2021,30.4
+Kapurthala,Punjab,rabi,1,Oct-Nov,2022,27.7
+Kapurthala,Punjab,rabi,2,Dec-Jan,2022,20.6
+Kapurthala,Punjab,rabi,3,Feb-Mar,2022,27.3
+Kapurthala,Punjab,kharif,1,Jun-Jul,2022,38.2
+Kapurthala,Punjab,kharif,2,Aug-Sep,2022,32.1
+Kapurthala,Punjab,kharif,3,Oct,2022,29.7
+Kapurthala,Punjab,rabi,1,Oct-Nov,2023,26.9
+Kapurthala,Punjab,rabi,2,Dec-Jan,2023,20.0
+Kapurthala,Punjab,rabi,3,Feb-Mar,2023,24.9
+Kapurthala,Punjab,kharif,1,Jun-Jul,2023,35.5
+Kapurthala,Punjab,kharif,2,Aug-Sep,2023,32.2
+Kapurthala,Punjab,kharif,3,Oct,2023,28.7
+Ludhiana,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.4
+Ludhiana,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.7
+Ludhiana,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.1
+Ludhiana,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.1
+Ludhiana,Punjab,kharif,2,Aug-Sep,normal_1991_2008,36.7
+Ludhiana,Punjab,kharif,3,Oct,normal_1991_2008,33.9
+Ludhiana,Punjab,rabi,1,Oct-Nov,2009,30.6
+Ludhiana,Punjab,rabi,2,Dec-Jan,2009,23.0
+Ludhiana,Punjab,rabi,3,Feb-Mar,2009,31.0
+Ludhiana,Punjab,kharif,1,Jun-Jul,2009,42.5
+Ludhiana,Punjab,kharif,2,Aug-Sep,2009,37.4
+Ludhiana,Punjab,kharif,3,Oct,2009,33.8
+Ludhiana,Punjab,rabi,1,Oct-Nov,2010,30.4
+Ludhiana,Punjab,rabi,2,Dec-Jan,2010,20.9
+Ludhiana,Punjab,rabi,3,Feb-Mar,2010,27.9
+Ludhiana,Punjab,kharif,1,Jun-Jul,2010,40.1
+Ludhiana,Punjab,kharif,2,Aug-Sep,2010,34.3
+Ludhiana,Punjab,kharif,3,Oct,2010,32.7
+Ludhiana,Punjab,rabi,1,Oct-Nov,2011,30.5
+Ludhiana,Punjab,rabi,2,Dec-Jan,2011,21.0
+Ludhiana,Punjab,rabi,3,Feb-Mar,2011,27.2
+Ludhiana,Punjab,kharif,1,Jun-Jul,2011,39.4
+Ludhiana,Punjab,kharif,2,Aug-Sep,2011,33.5
+Ludhiana,Punjab,kharif,3,Oct,2011,32.6
+Ludhiana,Punjab,rabi,1,Oct-Nov,2012,30.2
+Ludhiana,Punjab,rabi,2,Dec-Jan,2012,22.0
+Ludhiana,Punjab,rabi,3,Feb-Mar,2012,27.3
+Ludhiana,Punjab,kharif,1,Jun-Jul,2012,43.2
+Ludhiana,Punjab,kharif,2,Aug-Sep,2012,36.2
+Ludhiana,Punjab,kharif,3,Oct,2012,32.9
+Ludhiana,Punjab,rabi,1,Oct-Nov,2013,30.0
+Ludhiana,Punjab,rabi,2,Dec-Jan,2013,21.9
+Ludhiana,Punjab,rabi,3,Feb-Mar,2013,26.2
+Ludhiana,Punjab,kharif,1,Jun-Jul,2013,40.2
+Ludhiana,Punjab,kharif,2,Aug-Sep,2013,34.1
+Ludhiana,Punjab,kharif,3,Oct,2013,32.9
+Ludhiana,Punjab,rabi,1,Oct-Nov,2014,29.6
+Ludhiana,Punjab,rabi,2,Dec-Jan,2014,21.1
+Ludhiana,Punjab,rabi,3,Feb-Mar,2014,26.0
+Ludhiana,Punjab,kharif,1,Jun-Jul,2014,42.5
+Ludhiana,Punjab,kharif,2,Aug-Sep,2014,36.0
+Ludhiana,Punjab,kharif,3,Oct,2014,31.4
+Ludhiana,Punjab,rabi,1,Oct-Nov,2015,30.8
+Ludhiana,Punjab,rabi,2,Dec-Jan,2015,22.9
+Ludhiana,Punjab,rabi,3,Feb-Mar,2015,29.1
+Ludhiana,Punjab,kharif,1,Jun-Jul,2015,38.9
+Ludhiana,Punjab,kharif,2,Aug-Sep,2015,36.3
+Ludhiana,Punjab,kharif,3,Oct,2015,33.5
+Ludhiana,Punjab,rabi,1,Oct-Nov,2016,31.9
+Ludhiana,Punjab,rabi,2,Dec-Jan,2016,22.9
+Ludhiana,Punjab,rabi,3,Feb-Mar,2016,28.1
+Ludhiana,Punjab,kharif,1,Jun-Jul,2016,40.3
+Ludhiana,Punjab,kharif,2,Aug-Sep,2016,35.9
+Ludhiana,Punjab,kharif,3,Oct,2016,34.3
+Ludhiana,Punjab,rabi,1,Oct-Nov,2017,30.8
+Ludhiana,Punjab,rabi,2,Dec-Jan,2017,22.7
+Ludhiana,Punjab,rabi,3,Feb-Mar,2017,29.5
+Ludhiana,Punjab,kharif,1,Jun-Jul,2017,38.9
+Ludhiana,Punjab,kharif,2,Aug-Sep,2017,35.6
+Ludhiana,Punjab,kharif,3,Oct,2017,34.5
+Ludhiana,Punjab,rabi,1,Oct-Nov,2018,28.5
+Ludhiana,Punjab,rabi,2,Dec-Jan,2018,20.0
+Ludhiana,Punjab,rabi,3,Feb-Mar,2018,24.1
+Ludhiana,Punjab,kharif,1,Jun-Jul,2018,38.4
+Ludhiana,Punjab,kharif,2,Aug-Sep,2018,34.3
+Ludhiana,Punjab,kharif,3,Oct,2018,30.5
+Ludhiana,Punjab,rabi,1,Oct-Nov,2019,28.2
+Ludhiana,Punjab,rabi,2,Dec-Jan,2019,18.5
+Ludhiana,Punjab,rabi,3,Feb-Mar,2019,24.3
+Ludhiana,Punjab,kharif,1,Jun-Jul,2019,40.8
+Ludhiana,Punjab,kharif,2,Aug-Sep,2019,33.5
+Ludhiana,Punjab,kharif,3,Oct,2019,30.6
+Ludhiana,Punjab,rabi,1,Oct-Nov,2020,30.3
+Ludhiana,Punjab,rabi,2,Dec-Jan,2020,21.3
+Ludhiana,Punjab,rabi,3,Feb-Mar,2020,30.1
+Ludhiana,Punjab,kharif,1,Jun-Jul,2020,39.4
+Ludhiana,Punjab,kharif,2,Aug-Sep,2020,35.5
+Ludhiana,Punjab,kharif,3,Oct,2020,34.2
+Ludhiana,Punjab,rabi,1,Oct-Nov,2021,29.3
+Ludhiana,Punjab,rabi,2,Dec-Jan,2021,19.7
+Ludhiana,Punjab,rabi,3,Feb-Mar,2021,27.7
+Ludhiana,Punjab,kharif,1,Jun-Jul,2021,39.8
+Ludhiana,Punjab,kharif,2,Aug-Sep,2021,34.8
+Ludhiana,Punjab,kharif,3,Oct,2021,31.5
+Ludhiana,Punjab,rabi,1,Oct-Nov,2022,29.0
+Ludhiana,Punjab,rabi,2,Dec-Jan,2022,21.4
+Ludhiana,Punjab,rabi,3,Feb-Mar,2022,28.6
+Ludhiana,Punjab,kharif,1,Jun-Jul,2022,38.6
+Ludhiana,Punjab,kharif,2,Aug-Sep,2022,32.9
+Ludhiana,Punjab,kharif,3,Oct,2022,30.9
+Ludhiana,Punjab,rabi,1,Oct-Nov,2023,27.6
+Ludhiana,Punjab,rabi,2,Dec-Jan,2023,20.8
+Ludhiana,Punjab,rabi,3,Feb-Mar,2023,25.9
+Ludhiana,Punjab,kharif,1,Jun-Jul,2023,36.1
+Ludhiana,Punjab,kharif,2,Aug-Sep,2023,32.6
+Ludhiana,Punjab,kharif,3,Oct,2023,29.6
+Malerkotla,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.8
+Malerkotla,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.9
+Malerkotla,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.6
+Malerkotla,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.2
+Malerkotla,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.0
+Malerkotla,Punjab,kharif,3,Oct,normal_1991_2008,34.3
+Malerkotla,Punjab,rabi,1,Oct-Nov,2009,30.7
+Malerkotla,Punjab,rabi,2,Dec-Jan,2009,23.1
+Malerkotla,Punjab,rabi,3,Feb-Mar,2009,31.3
+Malerkotla,Punjab,kharif,1,Jun-Jul,2009,42.5
+Malerkotla,Punjab,kharif,2,Aug-Sep,2009,37.7
+Malerkotla,Punjab,kharif,3,Oct,2009,33.9
+Malerkotla,Punjab,rabi,1,Oct-Nov,2010,30.7
+Malerkotla,Punjab,rabi,2,Dec-Jan,2010,21.1
+Malerkotla,Punjab,rabi,3,Feb-Mar,2010,28.5
+Malerkotla,Punjab,kharif,1,Jun-Jul,2010,40.1
+Malerkotla,Punjab,kharif,2,Aug-Sep,2010,34.1
+Malerkotla,Punjab,kharif,3,Oct,2010,33.0
+Malerkotla,Punjab,rabi,1,Oct-Nov,2011,30.7
+Malerkotla,Punjab,rabi,2,Dec-Jan,2011,21.3
+Malerkotla,Punjab,rabi,3,Feb-Mar,2011,27.9
+Malerkotla,Punjab,kharif,1,Jun-Jul,2011,39.8
+Malerkotla,Punjab,kharif,2,Aug-Sep,2011,33.9
+Malerkotla,Punjab,kharif,3,Oct,2011,32.8
+Malerkotla,Punjab,rabi,1,Oct-Nov,2012,30.3
+Malerkotla,Punjab,rabi,2,Dec-Jan,2012,22.2
+Malerkotla,Punjab,rabi,3,Feb-Mar,2012,27.6
+Malerkotla,Punjab,kharif,1,Jun-Jul,2012,43.1
+Malerkotla,Punjab,kharif,2,Aug-Sep,2012,36.0
+Malerkotla,Punjab,kharif,3,Oct,2012,32.9
+Malerkotla,Punjab,rabi,1,Oct-Nov,2013,30.6
+Malerkotla,Punjab,rabi,2,Dec-Jan,2013,22.4
+Malerkotla,Punjab,rabi,3,Feb-Mar,2013,26.5
+Malerkotla,Punjab,kharif,1,Jun-Jul,2013,40.4
+Malerkotla,Punjab,kharif,2,Aug-Sep,2013,35.0
+Malerkotla,Punjab,kharif,3,Oct,2013,33.5
+Malerkotla,Punjab,rabi,1,Oct-Nov,2014,30.1
+Malerkotla,Punjab,rabi,2,Dec-Jan,2014,21.4
+Malerkotla,Punjab,rabi,3,Feb-Mar,2014,26.8
+Malerkotla,Punjab,kharif,1,Jun-Jul,2014,42.6
+Malerkotla,Punjab,kharif,2,Aug-Sep,2014,36.7
+Malerkotla,Punjab,kharif,3,Oct,2014,32.2
+Malerkotla,Punjab,rabi,1,Oct-Nov,2015,31.2
+Malerkotla,Punjab,rabi,2,Dec-Jan,2015,23.3
+Malerkotla,Punjab,rabi,3,Feb-Mar,2015,29.4
+Malerkotla,Punjab,kharif,1,Jun-Jul,2015,38.9
+Malerkotla,Punjab,kharif,2,Aug-Sep,2015,36.7
+Malerkotla,Punjab,kharif,3,Oct,2015,33.9
+Malerkotla,Punjab,rabi,1,Oct-Nov,2016,32.5
+Malerkotla,Punjab,rabi,2,Dec-Jan,2016,23.2
+Malerkotla,Punjab,rabi,3,Feb-Mar,2016,28.3
+Malerkotla,Punjab,kharif,1,Jun-Jul,2016,40.4
+Malerkotla,Punjab,kharif,2,Aug-Sep,2016,36.6
+Malerkotla,Punjab,kharif,3,Oct,2016,35.0
+Malerkotla,Punjab,rabi,1,Oct-Nov,2017,31.1
+Malerkotla,Punjab,rabi,2,Dec-Jan,2017,22.8
+Malerkotla,Punjab,rabi,3,Feb-Mar,2017,30.0
+Malerkotla,Punjab,kharif,1,Jun-Jul,2017,39.1
+Malerkotla,Punjab,kharif,2,Aug-Sep,2017,36.2
+Malerkotla,Punjab,kharif,3,Oct,2017,34.9
+Malerkotla,Punjab,rabi,1,Oct-Nov,2018,29.0
+Malerkotla,Punjab,rabi,2,Dec-Jan,2018,20.5
+Malerkotla,Punjab,rabi,3,Feb-Mar,2018,24.9
+Malerkotla,Punjab,kharif,1,Jun-Jul,2018,38.5
+Malerkotla,Punjab,kharif,2,Aug-Sep,2018,35.0
+Malerkotla,Punjab,kharif,3,Oct,2018,31.2
+Malerkotla,Punjab,rabi,1,Oct-Nov,2019,28.7
+Malerkotla,Punjab,rabi,2,Dec-Jan,2019,18.7
+Malerkotla,Punjab,rabi,3,Feb-Mar,2019,25.0
+Malerkotla,Punjab,kharif,1,Jun-Jul,2019,40.9
+Malerkotla,Punjab,kharif,2,Aug-Sep,2019,34.1
+Malerkotla,Punjab,kharif,3,Oct,2019,31.3
+Malerkotla,Punjab,rabi,1,Oct-Nov,2020,30.8
+Malerkotla,Punjab,rabi,2,Dec-Jan,2020,21.4
+Malerkotla,Punjab,rabi,3,Feb-Mar,2020,30.7
+Malerkotla,Punjab,kharif,1,Jun-Jul,2020,39.6
+Malerkotla,Punjab,kharif,2,Aug-Sep,2020,36.4
+Malerkotla,Punjab,kharif,3,Oct,2020,34.9
+Malerkotla,Punjab,rabi,1,Oct-Nov,2021,29.7
+Malerkotla,Punjab,rabi,2,Dec-Jan,2021,19.8
+Malerkotla,Punjab,rabi,3,Feb-Mar,2021,28.5
+Malerkotla,Punjab,kharif,1,Jun-Jul,2021,39.7
+Malerkotla,Punjab,kharif,2,Aug-Sep,2021,35.1
+Malerkotla,Punjab,kharif,3,Oct,2021,32.0
+Malerkotla,Punjab,rabi,1,Oct-Nov,2022,29.2
+Malerkotla,Punjab,rabi,2,Dec-Jan,2022,21.6
+Malerkotla,Punjab,rabi,3,Feb-Mar,2022,29.2
+Malerkotla,Punjab,kharif,1,Jun-Jul,2022,38.5
+Malerkotla,Punjab,kharif,2,Aug-Sep,2022,33.2
+Malerkotla,Punjab,kharif,3,Oct,2022,31.0
+Malerkotla,Punjab,rabi,1,Oct-Nov,2023,28.2
+Malerkotla,Punjab,rabi,2,Dec-Jan,2023,21.0
+Malerkotla,Punjab,rabi,3,Feb-Mar,2023,26.5
+Malerkotla,Punjab,kharif,1,Jun-Jul,2023,36.4
+Malerkotla,Punjab,kharif,2,Aug-Sep,2023,33.2
+Malerkotla,Punjab,kharif,3,Oct,2023,30.6
+Mansa,Punjab,rabi,1,Oct-Nov,normal_1991_2008,32.2
+Mansa,Punjab,rabi,2,Dec-Jan,normal_1991_2008,23.3
+Mansa,Punjab,rabi,3,Feb-Mar,normal_1991_2008,29.0
+Mansa,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.1
+Mansa,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.2
+Mansa,Punjab,kharif,3,Oct,normal_1991_2008,34.7
+Mansa,Punjab,rabi,1,Oct-Nov,2009,31.0
+Mansa,Punjab,rabi,2,Dec-Jan,2009,23.4
+Mansa,Punjab,rabi,3,Feb-Mar,2009,31.5
+Mansa,Punjab,kharif,1,Jun-Jul,2009,42.5
+Mansa,Punjab,kharif,2,Aug-Sep,2009,37.9
+Mansa,Punjab,kharif,3,Oct,2009,34.2
+Mansa,Punjab,rabi,1,Oct-Nov,2010,31.0
+Mansa,Punjab,rabi,2,Dec-Jan,2010,21.5
+Mansa,Punjab,rabi,3,Feb-Mar,2010,29.1
+Mansa,Punjab,kharif,1,Jun-Jul,2010,40.2
+Mansa,Punjab,kharif,2,Aug-Sep,2010,33.7
+Mansa,Punjab,kharif,3,Oct,2010,33.2
+Mansa,Punjab,rabi,1,Oct-Nov,2011,31.0
+Mansa,Punjab,rabi,2,Dec-Jan,2011,21.8
+Mansa,Punjab,rabi,3,Feb-Mar,2011,28.4
+Mansa,Punjab,kharif,1,Jun-Jul,2011,40.2
+Mansa,Punjab,kharif,2,Aug-Sep,2011,33.9
+Mansa,Punjab,kharif,3,Oct,2011,32.7
+Mansa,Punjab,rabi,1,Oct-Nov,2012,30.5
+Mansa,Punjab,rabi,2,Dec-Jan,2012,22.4
+Mansa,Punjab,rabi,3,Feb-Mar,2012,27.8
+Mansa,Punjab,kharif,1,Jun-Jul,2012,43.0
+Mansa,Punjab,kharif,2,Aug-Sep,2012,35.4
+Mansa,Punjab,kharif,3,Oct,2012,32.8
+Mansa,Punjab,rabi,1,Oct-Nov,2013,30.9
+Mansa,Punjab,rabi,2,Dec-Jan,2013,22.7
+Mansa,Punjab,rabi,3,Feb-Mar,2013,26.8
+Mansa,Punjab,kharif,1,Jun-Jul,2013,40.4
+Mansa,Punjab,kharif,2,Aug-Sep,2013,35.4
+Mansa,Punjab,kharif,3,Oct,2013,33.8
+Mansa,Punjab,rabi,1,Oct-Nov,2014,30.8
+Mansa,Punjab,rabi,2,Dec-Jan,2014,21.8
+Mansa,Punjab,rabi,3,Feb-Mar,2014,27.3
+Mansa,Punjab,kharif,1,Jun-Jul,2014,42.5
+Mansa,Punjab,kharif,2,Aug-Sep,2014,37.1
+Mansa,Punjab,kharif,3,Oct,2014,32.8
+Mansa,Punjab,rabi,1,Oct-Nov,2015,31.7
+Mansa,Punjab,rabi,2,Dec-Jan,2015,23.5
+Mansa,Punjab,rabi,3,Feb-Mar,2015,29.6
+Mansa,Punjab,kharif,1,Jun-Jul,2015,38.7
+Mansa,Punjab,kharif,2,Aug-Sep,2015,36.9
+Mansa,Punjab,kharif,3,Oct,2015,34.5
+Mansa,Punjab,rabi,1,Oct-Nov,2016,32.9
+Mansa,Punjab,rabi,2,Dec-Jan,2016,23.5
+Mansa,Punjab,rabi,3,Feb-Mar,2016,28.7
+Mansa,Punjab,kharif,1,Jun-Jul,2016,40.2
+Mansa,Punjab,kharif,2,Aug-Sep,2016,36.8
+Mansa,Punjab,kharif,3,Oct,2016,35.5
+Mansa,Punjab,rabi,1,Oct-Nov,2017,31.7
+Mansa,Punjab,rabi,2,Dec-Jan,2017,23.0
+Mansa,Punjab,rabi,3,Feb-Mar,2017,30.6
+Mansa,Punjab,kharif,1,Jun-Jul,2017,38.9
+Mansa,Punjab,kharif,2,Aug-Sep,2017,36.8
+Mansa,Punjab,kharif,3,Oct,2017,35.6
+Mansa,Punjab,rabi,1,Oct-Nov,2018,29.8
+Mansa,Punjab,rabi,2,Dec-Jan,2018,21.1
+Mansa,Punjab,rabi,3,Feb-Mar,2018,25.7
+Mansa,Punjab,kharif,1,Jun-Jul,2018,38.8
+Mansa,Punjab,kharif,2,Aug-Sep,2018,35.6
+Mansa,Punjab,kharif,3,Oct,2018,31.8
+Mansa,Punjab,rabi,1,Oct-Nov,2019,29.6
+Mansa,Punjab,rabi,2,Dec-Jan,2019,19.2
+Mansa,Punjab,rabi,3,Feb-Mar,2019,25.7
+Mansa,Punjab,kharif,1,Jun-Jul,2019,40.9
+Mansa,Punjab,kharif,2,Aug-Sep,2019,35.1
+Mansa,Punjab,kharif,3,Oct,2019,32.4
+Mansa,Punjab,rabi,1,Oct-Nov,2020,31.2
+Mansa,Punjab,rabi,2,Dec-Jan,2020,21.6
+Mansa,Punjab,rabi,3,Feb-Mar,2020,31.1
+Mansa,Punjab,kharif,1,Jun-Jul,2020,39.7
+Mansa,Punjab,kharif,2,Aug-Sep,2020,36.8
+Mansa,Punjab,kharif,3,Oct,2020,35.5
+Mansa,Punjab,rabi,1,Oct-Nov,2021,29.9
+Mansa,Punjab,rabi,2,Dec-Jan,2021,20.2
+Mansa,Punjab,rabi,3,Feb-Mar,2021,29.3
+Mansa,Punjab,kharif,1,Jun-Jul,2021,39.6
+Mansa,Punjab,kharif,2,Aug-Sep,2021,34.6
+Mansa,Punjab,kharif,3,Oct,2021,32.2
+Mansa,Punjab,rabi,1,Oct-Nov,2022,29.5
+Mansa,Punjab,rabi,2,Dec-Jan,2022,22.1
+Mansa,Punjab,rabi,3,Feb-Mar,2022,29.7
+Mansa,Punjab,kharif,1,Jun-Jul,2022,38.6
+Mansa,Punjab,kharif,2,Aug-Sep,2022,33.5
+Mansa,Punjab,kharif,3,Oct,2022,31.2
+Mansa,Punjab,rabi,1,Oct-Nov,2023,29.1
+Mansa,Punjab,rabi,2,Dec-Jan,2023,21.5
+Mansa,Punjab,rabi,3,Feb-Mar,2023,27.1
+Mansa,Punjab,kharif,1,Jun-Jul,2023,36.8
+Mansa,Punjab,kharif,2,Aug-Sep,2023,34.9
+Mansa,Punjab,kharif,3,Oct,2023,31.9
+Moga,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.9
+Moga,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.7
+Moga,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.2
+Moga,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.7
+Moga,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.6
+Moga,Punjab,kharif,3,Oct,normal_1991_2008,34.5
+Moga,Punjab,rabi,1,Oct-Nov,2009,31.0
+Moga,Punjab,rabi,2,Dec-Jan,2009,23.0
+Moga,Punjab,rabi,3,Feb-Mar,2009,31.0
+Moga,Punjab,kharif,1,Jun-Jul,2009,42.9
+Moga,Punjab,kharif,2,Aug-Sep,2009,38.4
+Moga,Punjab,kharif,3,Oct,2009,34.4
+Moga,Punjab,rabi,1,Oct-Nov,2010,30.8
+Moga,Punjab,rabi,2,Dec-Jan,2010,21.0
+Moga,Punjab,rabi,3,Feb-Mar,2010,28.2
+Moga,Punjab,kharif,1,Jun-Jul,2010,40.8
+Moga,Punjab,kharif,2,Aug-Sep,2010,35.1
+Moga,Punjab,kharif,3,Oct,2010,33.3
+Moga,Punjab,rabi,1,Oct-Nov,2011,31.0
+Moga,Punjab,rabi,2,Dec-Jan,2011,21.1
+Moga,Punjab,rabi,3,Feb-Mar,2011,27.2
+Moga,Punjab,kharif,1,Jun-Jul,2011,40.4
+Moga,Punjab,kharif,2,Aug-Sep,2011,34.2
+Moga,Punjab,kharif,3,Oct,2011,33.3
+Moga,Punjab,rabi,1,Oct-Nov,2012,30.2
+Moga,Punjab,rabi,2,Dec-Jan,2012,22.0
+Moga,Punjab,rabi,3,Feb-Mar,2012,27.3
+Moga,Punjab,kharif,1,Jun-Jul,2012,43.5
+Moga,Punjab,kharif,2,Aug-Sep,2012,36.7
+Moga,Punjab,kharif,3,Oct,2012,32.9
+Moga,Punjab,rabi,1,Oct-Nov,2013,30.5
+Moga,Punjab,rabi,2,Dec-Jan,2013,22.2
+Moga,Punjab,rabi,3,Feb-Mar,2013,26.3
+Moga,Punjab,kharif,1,Jun-Jul,2013,41.0
+Moga,Punjab,kharif,2,Aug-Sep,2013,35.2
+Moga,Punjab,kharif,3,Oct,2013,33.5
+Moga,Punjab,rabi,1,Oct-Nov,2014,29.4
+Moga,Punjab,rabi,2,Dec-Jan,2014,21.2
+Moga,Punjab,rabi,3,Feb-Mar,2014,26.1
+Moga,Punjab,kharif,1,Jun-Jul,2014,42.7
+Moga,Punjab,kharif,2,Aug-Sep,2014,36.2
+Moga,Punjab,kharif,3,Oct,2014,31.3
+Moga,Punjab,rabi,1,Oct-Nov,2015,31.0
+Moga,Punjab,rabi,2,Dec-Jan,2015,23.0
+Moga,Punjab,rabi,3,Feb-Mar,2015,29.0
+Moga,Punjab,kharif,1,Jun-Jul,2015,39.8
+Moga,Punjab,kharif,2,Aug-Sep,2015,37.5
+Moga,Punjab,kharif,3,Oct,2015,33.7
+Moga,Punjab,rabi,1,Oct-Nov,2016,32.4
+Moga,Punjab,rabi,2,Dec-Jan,2016,23.2
+Moga,Punjab,rabi,3,Feb-Mar,2016,28.3
+Moga,Punjab,kharif,1,Jun-Jul,2016,41.0
+Moga,Punjab,kharif,2,Aug-Sep,2016,36.7
+Moga,Punjab,kharif,3,Oct,2016,35.0
+Moga,Punjab,rabi,1,Oct-Nov,2017,31.5
+Moga,Punjab,rabi,2,Dec-Jan,2017,23.0
+Moga,Punjab,rabi,3,Feb-Mar,2017,29.8
+Moga,Punjab,kharif,1,Jun-Jul,2017,39.4
+Moga,Punjab,kharif,2,Aug-Sep,2017,37.4
+Moga,Punjab,kharif,3,Oct,2017,35.5
+Moga,Punjab,rabi,1,Oct-Nov,2018,29.7
+Moga,Punjab,rabi,2,Dec-Jan,2018,20.5
+Moga,Punjab,rabi,3,Feb-Mar,2018,24.7
+Moga,Punjab,kharif,1,Jun-Jul,2018,39.1
+Moga,Punjab,kharif,2,Aug-Sep,2018,36.5
+Moga,Punjab,kharif,3,Oct,2018,32.0
+Moga,Punjab,rabi,1,Oct-Nov,2019,28.9
+Moga,Punjab,rabi,2,Dec-Jan,2019,18.7
+Moga,Punjab,rabi,3,Feb-Mar,2019,24.7
+Moga,Punjab,kharif,1,Jun-Jul,2019,41.4
+Moga,Punjab,kharif,2,Aug-Sep,2019,35.7
+Moga,Punjab,kharif,3,Oct,2019,31.7
+Moga,Punjab,rabi,1,Oct-Nov,2020,30.2
+Moga,Punjab,rabi,2,Dec-Jan,2020,20.9
+Moga,Punjab,rabi,3,Feb-Mar,2020,29.8
+Moga,Punjab,kharif,1,Jun-Jul,2020,40.3
+Moga,Punjab,kharif,2,Aug-Sep,2020,36.0
+Moga,Punjab,kharif,3,Oct,2020,34.3
+Moga,Punjab,rabi,1,Oct-Nov,2021,29.2
+Moga,Punjab,rabi,2,Dec-Jan,2021,19.8
+Moga,Punjab,rabi,3,Feb-Mar,2021,28.3
+Moga,Punjab,kharif,1,Jun-Jul,2021,40.6
+Moga,Punjab,kharif,2,Aug-Sep,2021,36.1
+Moga,Punjab,kharif,3,Oct,2021,31.4
+Moga,Punjab,rabi,1,Oct-Nov,2022,30.0
+Moga,Punjab,rabi,2,Dec-Jan,2022,21.8
+Moga,Punjab,rabi,3,Feb-Mar,2022,29.1
+Moga,Punjab,kharif,1,Jun-Jul,2022,39.0
+Moga,Punjab,kharif,2,Aug-Sep,2022,33.5
+Moga,Punjab,kharif,3,Oct,2022,32.4
+Moga,Punjab,rabi,1,Oct-Nov,2023,27.8
+Moga,Punjab,rabi,2,Dec-Jan,2023,20.8
+Moga,Punjab,rabi,3,Feb-Mar,2023,26.2
+Moga,Punjab,kharif,1,Jun-Jul,2023,36.5
+Moga,Punjab,kharif,2,Aug-Sep,2023,33.6
+Moga,Punjab,kharif,3,Oct,2023,30.2
+Pathankot,Punjab,rabi,1,Oct-Nov,normal_1991_2008,25.2
+Pathankot,Punjab,rabi,2,Dec-Jan,normal_1991_2008,17.4
+Pathankot,Punjab,rabi,3,Feb-Mar,normal_1991_2008,21.1
+Pathankot,Punjab,kharif,1,Jun-Jul,normal_1991_2008,34.6
+Pathankot,Punjab,kharif,2,Aug-Sep,normal_1991_2008,30.1
+Pathankot,Punjab,kharif,3,Oct,normal_1991_2008,27.4
+Pathankot,Punjab,rabi,1,Oct-Nov,2009,25.2
+Pathankot,Punjab,rabi,2,Dec-Jan,2009,18.5
+Pathankot,Punjab,rabi,3,Feb-Mar,2009,23.5
+Pathankot,Punjab,kharif,1,Jun-Jul,2009,35.9
+Pathankot,Punjab,kharif,2,Aug-Sep,2009,31.2
+Pathankot,Punjab,kharif,3,Oct,2009,28.0
+Pathankot,Punjab,rabi,1,Oct-Nov,2010,24.3
+Pathankot,Punjab,rabi,2,Dec-Jan,2010,16.6
+Pathankot,Punjab,rabi,3,Feb-Mar,2010,21.0
+Pathankot,Punjab,kharif,1,Jun-Jul,2010,34.0
+Pathankot,Punjab,kharif,2,Aug-Sep,2010,27.5
+Pathankot,Punjab,kharif,3,Oct,2010,25.6
+Pathankot,Punjab,rabi,1,Oct-Nov,2011,25.0
+Pathankot,Punjab,rabi,2,Dec-Jan,2011,16.0
+Pathankot,Punjab,rabi,3,Feb-Mar,2011,20.0
+Pathankot,Punjab,kharif,1,Jun-Jul,2011,32.7
+Pathankot,Punjab,kharif,2,Aug-Sep,2011,28.0
+Pathankot,Punjab,kharif,3,Oct,2011,26.4
+Pathankot,Punjab,rabi,1,Oct-Nov,2012,24.9
+Pathankot,Punjab,rabi,2,Dec-Jan,2012,17.3
+Pathankot,Punjab,rabi,3,Feb-Mar,2012,20.7
+Pathankot,Punjab,kharif,1,Jun-Jul,2012,36.1
+Pathankot,Punjab,kharif,2,Aug-Sep,2012,29.6
+Pathankot,Punjab,kharif,3,Oct,2012,27.0
+Pathankot,Punjab,rabi,1,Oct-Nov,2013,23.8
+Pathankot,Punjab,rabi,2,Dec-Jan,2013,17.0
+Pathankot,Punjab,rabi,3,Feb-Mar,2013,19.4
+Pathankot,Punjab,kharif,1,Jun-Jul,2013,33.6
+Pathankot,Punjab,kharif,2,Aug-Sep,2013,27.5
+Pathankot,Punjab,kharif,3,Oct,2013,26.0
+Pathankot,Punjab,rabi,1,Oct-Nov,2014,23.9
+Pathankot,Punjab,rabi,2,Dec-Jan,2014,17.2
+Pathankot,Punjab,rabi,3,Feb-Mar,2014,19.3
+Pathankot,Punjab,kharif,1,Jun-Jul,2014,35.1
+Pathankot,Punjab,kharif,2,Aug-Sep,2014,29.3
+Pathankot,Punjab,kharif,3,Oct,2014,25.1
+Pathankot,Punjab,rabi,1,Oct-Nov,2015,24.6
+Pathankot,Punjab,rabi,2,Dec-Jan,2015,17.5
+Pathankot,Punjab,rabi,3,Feb-Mar,2015,21.8
+Pathankot,Punjab,kharif,1,Jun-Jul,2015,32.3
+Pathankot,Punjab,kharif,2,Aug-Sep,2015,29.6
+Pathankot,Punjab,kharif,3,Oct,2015,26.8
+Pathankot,Punjab,rabi,1,Oct-Nov,2016,25.7
+Pathankot,Punjab,rabi,2,Dec-Jan,2016,17.2
+Pathankot,Punjab,rabi,3,Feb-Mar,2016,20.0
+Pathankot,Punjab,kharif,1,Jun-Jul,2016,33.1
+Pathankot,Punjab,kharif,2,Aug-Sep,2016,28.2
+Pathankot,Punjab,kharif,3,Oct,2016,27.3
+Pathankot,Punjab,rabi,1,Oct-Nov,2017,25.3
+Pathankot,Punjab,rabi,2,Dec-Jan,2017,18.3
+Pathankot,Punjab,rabi,3,Feb-Mar,2017,22.7
+Pathankot,Punjab,kharif,1,Jun-Jul,2017,31.7
+Pathankot,Punjab,kharif,2,Aug-Sep,2017,28.9
+Pathankot,Punjab,kharif,3,Oct,2017,28.3
+Pathankot,Punjab,rabi,1,Oct-Nov,2018,22.6
+Pathankot,Punjab,rabi,2,Dec-Jan,2018,14.5
+Pathankot,Punjab,rabi,3,Feb-Mar,2018,16.8
+Pathankot,Punjab,kharif,1,Jun-Jul,2018,32.6
+Pathankot,Punjab,kharif,2,Aug-Sep,2018,27.8
+Pathankot,Punjab,kharif,3,Oct,2018,24.4
+Pathankot,Punjab,rabi,1,Oct-Nov,2019,22.2
+Pathankot,Punjab,rabi,2,Dec-Jan,2019,13.3
+Pathankot,Punjab,rabi,3,Feb-Mar,2019,17.7
+Pathankot,Punjab,kharif,1,Jun-Jul,2019,33.6
+Pathankot,Punjab,kharif,2,Aug-Sep,2019,28.3
+Pathankot,Punjab,kharif,3,Oct,2019,24.3
+Pathankot,Punjab,rabi,1,Oct-Nov,2020,23.5
+Pathankot,Punjab,rabi,2,Dec-Jan,2020,16.6
+Pathankot,Punjab,rabi,3,Feb-Mar,2020,22.5
+Pathankot,Punjab,kharif,1,Jun-Jul,2020,31.8
+Pathankot,Punjab,kharif,2,Aug-Sep,2020,28.5
+Pathankot,Punjab,kharif,3,Oct,2020,26.8
+Pathankot,Punjab,rabi,1,Oct-Nov,2021,23.4
+Pathankot,Punjab,rabi,2,Dec-Jan,2021,14.6
+Pathankot,Punjab,rabi,3,Feb-Mar,2021,21.1
+Pathankot,Punjab,kharif,1,Jun-Jul,2021,32.4
+Pathankot,Punjab,kharif,2,Aug-Sep,2021,28.1
+Pathankot,Punjab,kharif,3,Oct,2021,25.2
+Pathankot,Punjab,rabi,1,Oct-Nov,2022,22.6
+Pathankot,Punjab,rabi,2,Dec-Jan,2022,16.2
+Pathankot,Punjab,rabi,3,Feb-Mar,2022,20.6
+Pathankot,Punjab,kharif,1,Jun-Jul,2022,32.1
+Pathankot,Punjab,kharif,2,Aug-Sep,2022,27.5
+Pathankot,Punjab,kharif,3,Oct,2022,24.5
+Pathankot,Punjab,rabi,1,Oct-Nov,2023,22.4
+Pathankot,Punjab,rabi,2,Dec-Jan,2023,17.0
+Pathankot,Punjab,rabi,3,Feb-Mar,2023,18.4
+Pathankot,Punjab,kharif,1,Jun-Jul,2023,29.6
+Pathankot,Punjab,kharif,2,Aug-Sep,2023,28.3
+Pathankot,Punjab,kharif,3,Oct,2023,24.1
+Patiala,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.1
+Patiala,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.9
+Patiala,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.5
+Patiala,Punjab,kharif,1,Jun-Jul,normal_1991_2008,40.3
+Patiala,Punjab,kharif,2,Aug-Sep,normal_1991_2008,35.5
+Patiala,Punjab,kharif,3,Oct,normal_1991_2008,33.4
+Patiala,Punjab,rabi,1,Oct-Nov,2009,30.2
+Patiala,Punjab,rabi,2,Dec-Jan,2009,23.1
+Patiala,Punjab,rabi,3,Feb-Mar,2009,31.2
+Patiala,Punjab,kharif,1,Jun-Jul,2009,42.0
+Patiala,Punjab,kharif,2,Aug-Sep,2009,36.1
+Patiala,Punjab,kharif,3,Oct,2009,33.1
+Patiala,Punjab,rabi,1,Oct-Nov,2010,29.8
+Patiala,Punjab,rabi,2,Dec-Jan,2010,21.1
+Patiala,Punjab,rabi,3,Feb-Mar,2010,28.1
+Patiala,Punjab,kharif,1,Jun-Jul,2010,38.7
+Patiala,Punjab,kharif,2,Aug-Sep,2010,32.5
+Patiala,Punjab,kharif,3,Oct,2010,31.5
+Patiala,Punjab,rabi,1,Oct-Nov,2011,29.8
+Patiala,Punjab,rabi,2,Dec-Jan,2011,21.3
+Patiala,Punjab,rabi,3,Feb-Mar,2011,27.9
+Patiala,Punjab,kharif,1,Jun-Jul,2011,38.2
+Patiala,Punjab,kharif,2,Aug-Sep,2011,32.5
+Patiala,Punjab,kharif,3,Oct,2011,31.4
+Patiala,Punjab,rabi,1,Oct-Nov,2012,30.4
+Patiala,Punjab,rabi,2,Dec-Jan,2012,22.0
+Patiala,Punjab,rabi,3,Feb-Mar,2012,27.4
+Patiala,Punjab,kharif,1,Jun-Jul,2012,42.5
+Patiala,Punjab,kharif,2,Aug-Sep,2012,35.2
+Patiala,Punjab,kharif,3,Oct,2012,32.9
+Patiala,Punjab,rabi,1,Oct-Nov,2013,29.8
+Patiala,Punjab,rabi,2,Dec-Jan,2013,22.1
+Patiala,Punjab,rabi,3,Feb-Mar,2013,26.0
+Patiala,Punjab,kharif,1,Jun-Jul,2013,38.8
+Patiala,Punjab,kharif,2,Aug-Sep,2013,33.0
+Patiala,Punjab,kharif,3,Oct,2013,32.5
+Patiala,Punjab,rabi,1,Oct-Nov,2014,30.4
+Patiala,Punjab,rabi,2,Dec-Jan,2014,21.4
+Patiala,Punjab,rabi,3,Feb-Mar,2014,26.7
+Patiala,Punjab,kharif,1,Jun-Jul,2014,42.6
+Patiala,Punjab,kharif,2,Aug-Sep,2014,36.5
+Patiala,Punjab,kharif,3,Oct,2014,32.3
+Patiala,Punjab,rabi,1,Oct-Nov,2015,31.0
+Patiala,Punjab,rabi,2,Dec-Jan,2015,23.1
+Patiala,Punjab,rabi,3,Feb-Mar,2015,29.4
+Patiala,Punjab,kharif,1,Jun-Jul,2015,38.2
+Patiala,Punjab,kharif,2,Aug-Sep,2015,35.3
+Patiala,Punjab,kharif,3,Oct,2015,33.6
+Patiala,Punjab,rabi,1,Oct-Nov,2016,32.1
+Patiala,Punjab,rabi,2,Dec-Jan,2016,23.2
+Patiala,Punjab,rabi,3,Feb-Mar,2016,28.2
+Patiala,Punjab,kharif,1,Jun-Jul,2016,39.8
+Patiala,Punjab,kharif,2,Aug-Sep,2016,35.3
+Patiala,Punjab,kharif,3,Oct,2016,34.3
+Patiala,Punjab,rabi,1,Oct-Nov,2017,30.2
+Patiala,Punjab,rabi,2,Dec-Jan,2017,22.7
+Patiala,Punjab,rabi,3,Feb-Mar,2017,29.8
+Patiala,Punjab,kharif,1,Jun-Jul,2017,38.6
+Patiala,Punjab,kharif,2,Aug-Sep,2017,33.7
+Patiala,Punjab,kharif,3,Oct,2017,33.5
+Patiala,Punjab,rabi,1,Oct-Nov,2018,27.6
+Patiala,Punjab,rabi,2,Dec-Jan,2018,20.0
+Patiala,Punjab,rabi,3,Feb-Mar,2018,24.3
+Patiala,Punjab,kharif,1,Jun-Jul,2018,37.6
+Patiala,Punjab,kharif,2,Aug-Sep,2018,32.6
+Patiala,Punjab,kharif,3,Oct,2018,29.4
+Patiala,Punjab,rabi,1,Oct-Nov,2019,28.0
+Patiala,Punjab,rabi,2,Dec-Jan,2019,18.7
+Patiala,Punjab,rabi,3,Feb-Mar,2019,24.6
+Patiala,Punjab,kharif,1,Jun-Jul,2019,40.2
+Patiala,Punjab,kharif,2,Aug-Sep,2019,32.7
+Patiala,Punjab,kharif,3,Oct,2019,30.3
+Patiala,Punjab,rabi,1,Oct-Nov,2020,30.6
+Patiala,Punjab,rabi,2,Dec-Jan,2020,21.7
+Patiala,Punjab,rabi,3,Feb-Mar,2020,30.5
+Patiala,Punjab,kharif,1,Jun-Jul,2020,38.4
+Patiala,Punjab,kharif,2,Aug-Sep,2020,34.8
+Patiala,Punjab,kharif,3,Oct,2020,34.4
+Patiala,Punjab,rabi,1,Oct-Nov,2021,29.3
+Patiala,Punjab,rabi,2,Dec-Jan,2021,19.7
+Patiala,Punjab,rabi,3,Feb-Mar,2021,27.8
+Patiala,Punjab,kharif,1,Jun-Jul,2021,38.8
+Patiala,Punjab,kharif,2,Aug-Sep,2021,33.2
+Patiala,Punjab,kharif,3,Oct,2021,31.2
+Patiala,Punjab,rabi,1,Oct-Nov,2022,27.8
+Patiala,Punjab,rabi,2,Dec-Jan,2022,21.4
+Patiala,Punjab,rabi,3,Feb-Mar,2022,28.7
+Patiala,Punjab,kharif,1,Jun-Jul,2022,37.9
+Patiala,Punjab,kharif,2,Aug-Sep,2022,32.3
+Patiala,Punjab,kharif,3,Oct,2022,29.2
+Patiala,Punjab,rabi,1,Oct-Nov,2023,27.9
+Patiala,Punjab,rabi,2,Dec-Jan,2023,21.3
+Patiala,Punjab,rabi,3,Feb-Mar,2023,26.4
+Patiala,Punjab,kharif,1,Jun-Jul,2023,35.7
+Patiala,Punjab,kharif,2,Aug-Sep,2023,32.1
+Patiala,Punjab,kharif,3,Oct,2023,29.6
+Rupnagar,Punjab,rabi,1,Oct-Nov,normal_1991_2008,30.6
+Rupnagar,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.5
+Rupnagar,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.7
+Rupnagar,Punjab,kharif,1,Jun-Jul,normal_1991_2008,39.7
+Rupnagar,Punjab,kharif,2,Aug-Sep,normal_1991_2008,34.8
+Rupnagar,Punjab,kharif,3,Oct,normal_1991_2008,32.8
+Rupnagar,Punjab,rabi,1,Oct-Nov,2009,29.8
+Rupnagar,Punjab,rabi,2,Dec-Jan,2009,22.7
+Rupnagar,Punjab,rabi,3,Feb-Mar,2009,30.6
+Rupnagar,Punjab,kharif,1,Jun-Jul,2009,41.4
+Rupnagar,Punjab,kharif,2,Aug-Sep,2009,35.4
+Rupnagar,Punjab,kharif,3,Oct,2009,32.6
+Rupnagar,Punjab,rabi,1,Oct-Nov,2010,29.3
+Rupnagar,Punjab,rabi,2,Dec-Jan,2010,21.0
+Rupnagar,Punjab,rabi,3,Feb-Mar,2010,27.4
+Rupnagar,Punjab,kharif,1,Jun-Jul,2010,38.2
+Rupnagar,Punjab,kharif,2,Aug-Sep,2010,32.1
+Rupnagar,Punjab,kharif,3,Oct,2010,30.9
+Rupnagar,Punjab,rabi,1,Oct-Nov,2011,29.3
+Rupnagar,Punjab,rabi,2,Dec-Jan,2011,21.0
+Rupnagar,Punjab,rabi,3,Feb-Mar,2011,27.0
+Rupnagar,Punjab,kharif,1,Jun-Jul,2011,37.5
+Rupnagar,Punjab,kharif,2,Aug-Sep,2011,31.9
+Rupnagar,Punjab,kharif,3,Oct,2011,30.8
+Rupnagar,Punjab,rabi,1,Oct-Nov,2012,29.9
+Rupnagar,Punjab,rabi,2,Dec-Jan,2012,21.7
+Rupnagar,Punjab,rabi,3,Feb-Mar,2012,26.8
+Rupnagar,Punjab,kharif,1,Jun-Jul,2012,41.9
+Rupnagar,Punjab,kharif,2,Aug-Sep,2012,34.7
+Rupnagar,Punjab,kharif,3,Oct,2012,32.4
+Rupnagar,Punjab,rabi,1,Oct-Nov,2013,29.2
+Rupnagar,Punjab,rabi,2,Dec-Jan,2013,21.6
+Rupnagar,Punjab,rabi,3,Feb-Mar,2013,25.5
+Rupnagar,Punjab,kharif,1,Jun-Jul,2013,38.1
+Rupnagar,Punjab,kharif,2,Aug-Sep,2013,31.9
+Rupnagar,Punjab,kharif,3,Oct,2013,31.7
+Rupnagar,Punjab,rabi,1,Oct-Nov,2014,29.5
+Rupnagar,Punjab,rabi,2,Dec-Jan,2014,21.0
+Rupnagar,Punjab,rabi,3,Feb-Mar,2014,25.8
+Rupnagar,Punjab,kharif,1,Jun-Jul,2014,41.8
+Rupnagar,Punjab,kharif,2,Aug-Sep,2014,35.1
+Rupnagar,Punjab,kharif,3,Oct,2014,31.1
+Rupnagar,Punjab,rabi,1,Oct-Nov,2015,30.5
+Rupnagar,Punjab,rabi,2,Dec-Jan,2015,22.6
+Rupnagar,Punjab,rabi,3,Feb-Mar,2015,28.7
+Rupnagar,Punjab,kharif,1,Jun-Jul,2015,37.7
+Rupnagar,Punjab,kharif,2,Aug-Sep,2015,34.5
+Rupnagar,Punjab,kharif,3,Oct,2015,32.9
+Rupnagar,Punjab,rabi,1,Oct-Nov,2016,31.4
+Rupnagar,Punjab,rabi,2,Dec-Jan,2016,22.8
+Rupnagar,Punjab,rabi,3,Feb-Mar,2016,27.6
+Rupnagar,Punjab,kharif,1,Jun-Jul,2016,39.3
+Rupnagar,Punjab,kharif,2,Aug-Sep,2016,34.3
+Rupnagar,Punjab,kharif,3,Oct,2016,33.7
+Rupnagar,Punjab,rabi,1,Oct-Nov,2017,30.1
+Rupnagar,Punjab,rabi,2,Dec-Jan,2017,22.5
+Rupnagar,Punjab,rabi,3,Feb-Mar,2017,29.0
+Rupnagar,Punjab,kharif,1,Jun-Jul,2017,38.0
+Rupnagar,Punjab,kharif,2,Aug-Sep,2017,33.2
+Rupnagar,Punjab,kharif,3,Oct,2017,33.3
+Rupnagar,Punjab,rabi,1,Oct-Nov,2018,27.3
+Rupnagar,Punjab,rabi,2,Dec-Jan,2018,19.7
+Rupnagar,Punjab,rabi,3,Feb-Mar,2018,23.5
+Rupnagar,Punjab,kharif,1,Jun-Jul,2018,37.2
+Rupnagar,Punjab,kharif,2,Aug-Sep,2018,31.9
+Rupnagar,Punjab,kharif,3,Oct,2018,29.2
+Rupnagar,Punjab,rabi,1,Oct-Nov,2019,27.7
+Rupnagar,Punjab,rabi,2,Dec-Jan,2019,18.5
+Rupnagar,Punjab,rabi,3,Feb-Mar,2019,24.0
+Rupnagar,Punjab,kharif,1,Jun-Jul,2019,39.8
+Rupnagar,Punjab,kharif,2,Aug-Sep,2019,32.2
+Rupnagar,Punjab,kharif,3,Oct,2019,29.8
+Rupnagar,Punjab,rabi,1,Oct-Nov,2020,30.1
+Rupnagar,Punjab,rabi,2,Dec-Jan,2020,21.6
+Rupnagar,Punjab,rabi,3,Feb-Mar,2020,29.6
+Rupnagar,Punjab,kharif,1,Jun-Jul,2020,37.8
+Rupnagar,Punjab,kharif,2,Aug-Sep,2020,34.0
+Rupnagar,Punjab,kharif,3,Oct,2020,33.7
+Rupnagar,Punjab,rabi,1,Oct-Nov,2021,29.0
+Rupnagar,Punjab,rabi,2,Dec-Jan,2021,19.5
+Rupnagar,Punjab,rabi,3,Feb-Mar,2021,27.1
+Rupnagar,Punjab,kharif,1,Jun-Jul,2021,38.5
+Rupnagar,Punjab,kharif,2,Aug-Sep,2021,33.0
+Rupnagar,Punjab,kharif,3,Oct,2021,30.9
+Rupnagar,Punjab,rabi,1,Oct-Nov,2022,27.7
+Rupnagar,Punjab,rabi,2,Dec-Jan,2022,21.3
+Rupnagar,Punjab,rabi,3,Feb-Mar,2022,27.9
+Rupnagar,Punjab,kharif,1,Jun-Jul,2022,37.5
+Rupnagar,Punjab,kharif,2,Aug-Sep,2022,31.6
+Rupnagar,Punjab,kharif,3,Oct,2022,29.2
+Rupnagar,Punjab,rabi,1,Oct-Nov,2023,27.6
+Rupnagar,Punjab,rabi,2,Dec-Jan,2023,21.1
+Rupnagar,Punjab,rabi,3,Feb-Mar,2023,25.6
+Rupnagar,Punjab,kharif,1,Jun-Jul,2023,35.0
+Rupnagar,Punjab,kharif,2,Aug-Sep,2023,31.5
+Rupnagar,Punjab,kharif,3,Oct,2023,29.0
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,normal_1991_2008,29.5
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.5
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.5
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,normal_1991_2008,38.1
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,normal_1991_2008,32.5
+S.A.S Nagar,Punjab,kharif,3,Oct,normal_1991_2008,31.3
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2009,28.7
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2009,22.8
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2009,30.0
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2009,40.2
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2009,33.0
+S.A.S Nagar,Punjab,kharif,3,Oct,2009,30.8
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2010,27.2
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2010,20.2
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2010,26.9
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2010,36.7
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2010,30.2
+S.A.S Nagar,Punjab,kharif,3,Oct,2010,28.5
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2011,27.5
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2011,20.6
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2011,26.8
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2011,35.1
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2011,30.2
+S.A.S Nagar,Punjab,kharif,3,Oct,2011,28.8
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2012,28.6
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2012,21.4
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2012,25.9
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2012,40.2
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2012,31.8
+S.A.S Nagar,Punjab,kharif,3,Oct,2012,30.4
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2013,27.5
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2013,21.3
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2013,24.5
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2013,35.3
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2013,30.4
+S.A.S Nagar,Punjab,kharif,3,Oct,2013,29.4
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2014,29.4
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2014,21.3
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2014,25.8
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2014,40.6
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2014,33.9
+S.A.S Nagar,Punjab,kharif,3,Oct,2014,30.8
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2015,29.8
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2015,22.3
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2015,28.4
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2015,36.5
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2015,32.2
+S.A.S Nagar,Punjab,kharif,3,Oct,2015,31.7
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2016,30.7
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2016,22.8
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2016,27.4
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2016,37.7
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2016,32.2
+S.A.S Nagar,Punjab,kharif,3,Oct,2016,32.6
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2017,28.8
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2017,22.6
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2017,28.8
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2017,36.3
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2017,31.1
+S.A.S Nagar,Punjab,kharif,3,Oct,2017,31.3
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2018,26.1
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2018,19.5
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2018,23.5
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2018,35.7
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2018,30.1
+S.A.S Nagar,Punjab,kharif,3,Oct,2018,27.9
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2019,27.0
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2019,18.6
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2019,23.6
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2019,38.6
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2019,31.3
+S.A.S Nagar,Punjab,kharif,3,Oct,2019,28.7
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2020,29.6
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2020,22.0
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2020,29.3
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2020,36.2
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2020,32.2
+S.A.S Nagar,Punjab,kharif,3,Oct,2020,32.8
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2021,27.4
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2021,19.1
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2021,26.6
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2021,36.6
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2021,30.9
+S.A.S Nagar,Punjab,kharif,3,Oct,2021,29.0
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2022,26.2
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2022,21.3
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2022,27.6
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2022,36.4
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2022,30.7
+S.A.S Nagar,Punjab,kharif,3,Oct,2022,27.6
+S.A.S Nagar,Punjab,rabi,1,Oct-Nov,2023,27.2
+S.A.S Nagar,Punjab,rabi,2,Dec-Jan,2023,21.5
+S.A.S Nagar,Punjab,rabi,3,Feb-Mar,2023,25.7
+S.A.S Nagar,Punjab,kharif,1,Jun-Jul,2023,34.1
+S.A.S Nagar,Punjab,kharif,2,Aug-Sep,2023,30.7
+S.A.S Nagar,Punjab,kharif,3,Oct,2023,28.4
+Sangrur,Punjab,rabi,1,Oct-Nov,normal_1991_2008,32.2
+Sangrur,Punjab,rabi,2,Dec-Jan,normal_1991_2008,23.3
+Sangrur,Punjab,rabi,3,Feb-Mar,normal_1991_2008,29.0
+Sangrur,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.1
+Sangrur,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.2
+Sangrur,Punjab,kharif,3,Oct,normal_1991_2008,34.7
+Sangrur,Punjab,rabi,1,Oct-Nov,2009,31.0
+Sangrur,Punjab,rabi,2,Dec-Jan,2009,23.4
+Sangrur,Punjab,rabi,3,Feb-Mar,2009,31.5
+Sangrur,Punjab,kharif,1,Jun-Jul,2009,42.5
+Sangrur,Punjab,kharif,2,Aug-Sep,2009,37.9
+Sangrur,Punjab,kharif,3,Oct,2009,34.2
+Sangrur,Punjab,rabi,1,Oct-Nov,2010,31.0
+Sangrur,Punjab,rabi,2,Dec-Jan,2010,21.5
+Sangrur,Punjab,rabi,3,Feb-Mar,2010,29.1
+Sangrur,Punjab,kharif,1,Jun-Jul,2010,40.2
+Sangrur,Punjab,kharif,2,Aug-Sep,2010,33.7
+Sangrur,Punjab,kharif,3,Oct,2010,33.2
+Sangrur,Punjab,rabi,1,Oct-Nov,2011,31.0
+Sangrur,Punjab,rabi,2,Dec-Jan,2011,21.8
+Sangrur,Punjab,rabi,3,Feb-Mar,2011,28.4
+Sangrur,Punjab,kharif,1,Jun-Jul,2011,40.2
+Sangrur,Punjab,kharif,2,Aug-Sep,2011,33.9
+Sangrur,Punjab,kharif,3,Oct,2011,32.7
+Sangrur,Punjab,rabi,1,Oct-Nov,2012,30.5
+Sangrur,Punjab,rabi,2,Dec-Jan,2012,22.4
+Sangrur,Punjab,rabi,3,Feb-Mar,2012,27.8
+Sangrur,Punjab,kharif,1,Jun-Jul,2012,43.0
+Sangrur,Punjab,kharif,2,Aug-Sep,2012,35.4
+Sangrur,Punjab,kharif,3,Oct,2012,32.8
+Sangrur,Punjab,rabi,1,Oct-Nov,2013,30.9
+Sangrur,Punjab,rabi,2,Dec-Jan,2013,22.7
+Sangrur,Punjab,rabi,3,Feb-Mar,2013,26.8
+Sangrur,Punjab,kharif,1,Jun-Jul,2013,40.4
+Sangrur,Punjab,kharif,2,Aug-Sep,2013,35.4
+Sangrur,Punjab,kharif,3,Oct,2013,33.8
+Sangrur,Punjab,rabi,1,Oct-Nov,2014,30.8
+Sangrur,Punjab,rabi,2,Dec-Jan,2014,21.8
+Sangrur,Punjab,rabi,3,Feb-Mar,2014,27.3
+Sangrur,Punjab,kharif,1,Jun-Jul,2014,42.5
+Sangrur,Punjab,kharif,2,Aug-Sep,2014,37.1
+Sangrur,Punjab,kharif,3,Oct,2014,32.8
+Sangrur,Punjab,rabi,1,Oct-Nov,2015,31.7
+Sangrur,Punjab,rabi,2,Dec-Jan,2015,23.5
+Sangrur,Punjab,rabi,3,Feb-Mar,2015,29.6
+Sangrur,Punjab,kharif,1,Jun-Jul,2015,38.7
+Sangrur,Punjab,kharif,2,Aug-Sep,2015,36.9
+Sangrur,Punjab,kharif,3,Oct,2015,34.5
+Sangrur,Punjab,rabi,1,Oct-Nov,2016,32.9
+Sangrur,Punjab,rabi,2,Dec-Jan,2016,23.5
+Sangrur,Punjab,rabi,3,Feb-Mar,2016,28.7
+Sangrur,Punjab,kharif,1,Jun-Jul,2016,40.2
+Sangrur,Punjab,kharif,2,Aug-Sep,2016,36.8
+Sangrur,Punjab,kharif,3,Oct,2016,35.5
+Sangrur,Punjab,rabi,1,Oct-Nov,2017,31.7
+Sangrur,Punjab,rabi,2,Dec-Jan,2017,23.0
+Sangrur,Punjab,rabi,3,Feb-Mar,2017,30.6
+Sangrur,Punjab,kharif,1,Jun-Jul,2017,38.9
+Sangrur,Punjab,kharif,2,Aug-Sep,2017,36.8
+Sangrur,Punjab,kharif,3,Oct,2017,35.6
+Sangrur,Punjab,rabi,1,Oct-Nov,2018,29.8
+Sangrur,Punjab,rabi,2,Dec-Jan,2018,21.1
+Sangrur,Punjab,rabi,3,Feb-Mar,2018,25.7
+Sangrur,Punjab,kharif,1,Jun-Jul,2018,38.8
+Sangrur,Punjab,kharif,2,Aug-Sep,2018,35.6
+Sangrur,Punjab,kharif,3,Oct,2018,31.8
+Sangrur,Punjab,rabi,1,Oct-Nov,2019,29.6
+Sangrur,Punjab,rabi,2,Dec-Jan,2019,19.2
+Sangrur,Punjab,rabi,3,Feb-Mar,2019,25.7
+Sangrur,Punjab,kharif,1,Jun-Jul,2019,40.9
+Sangrur,Punjab,kharif,2,Aug-Sep,2019,35.1
+Sangrur,Punjab,kharif,3,Oct,2019,32.4
+Sangrur,Punjab,rabi,1,Oct-Nov,2020,31.2
+Sangrur,Punjab,rabi,2,Dec-Jan,2020,21.6
+Sangrur,Punjab,rabi,3,Feb-Mar,2020,31.1
+Sangrur,Punjab,kharif,1,Jun-Jul,2020,39.7
+Sangrur,Punjab,kharif,2,Aug-Sep,2020,36.8
+Sangrur,Punjab,kharif,3,Oct,2020,35.5
+Sangrur,Punjab,rabi,1,Oct-Nov,2021,29.9
+Sangrur,Punjab,rabi,2,Dec-Jan,2021,20.2
+Sangrur,Punjab,rabi,3,Feb-Mar,2021,29.3
+Sangrur,Punjab,kharif,1,Jun-Jul,2021,39.6
+Sangrur,Punjab,kharif,2,Aug-Sep,2021,34.6
+Sangrur,Punjab,kharif,3,Oct,2021,32.2
+Sangrur,Punjab,rabi,1,Oct-Nov,2022,29.5
+Sangrur,Punjab,rabi,2,Dec-Jan,2022,22.1
+Sangrur,Punjab,rabi,3,Feb-Mar,2022,29.7
+Sangrur,Punjab,kharif,1,Jun-Jul,2022,38.6
+Sangrur,Punjab,kharif,2,Aug-Sep,2022,33.5
+Sangrur,Punjab,kharif,3,Oct,2022,31.2
+Sangrur,Punjab,rabi,1,Oct-Nov,2023,29.1
+Sangrur,Punjab,rabi,2,Dec-Jan,2023,21.5
+Sangrur,Punjab,rabi,3,Feb-Mar,2023,27.1
+Sangrur,Punjab,kharif,1,Jun-Jul,2023,36.8
+Sangrur,Punjab,kharif,2,Aug-Sep,2023,34.9
+Sangrur,Punjab,kharif,3,Oct,2023,31.9
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,normal_1991_2008,30.6
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.5
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.7
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,normal_1991_2008,39.7
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,normal_1991_2008,34.8
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,normal_1991_2008,32.8
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2009,29.8
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2009,22.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2009,30.6
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2009,41.4
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2009,35.4
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2009,32.6
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2010,29.3
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2010,21.0
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2010,27.4
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2010,38.2
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2010,32.1
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2010,30.9
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2011,29.3
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2011,21.0
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2011,27.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2011,37.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2011,31.9
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2011,30.8
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2012,29.9
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2012,21.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2012,26.8
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2012,41.9
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2012,34.7
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2012,32.4
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2013,29.2
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2013,21.6
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2013,25.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2013,38.1
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2013,31.9
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2013,31.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2014,29.5
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2014,21.0
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2014,25.8
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2014,41.8
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2014,35.1
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2014,31.1
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2015,30.5
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2015,22.6
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2015,28.7
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2015,37.7
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2015,34.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2015,32.9
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2016,31.4
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2016,22.8
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2016,27.6
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2016,39.3
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2016,34.3
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2016,33.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2017,30.1
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2017,22.5
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2017,29.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2017,38.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2017,33.2
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2017,33.3
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2018,27.3
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2018,19.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2018,23.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2018,37.2
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2018,31.9
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2018,29.2
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2019,27.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2019,18.5
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2019,24.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2019,39.8
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2019,32.2
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2019,29.8
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2020,30.1
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2020,21.6
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2020,29.6
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2020,37.8
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2020,34.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2020,33.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2021,29.0
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2021,19.5
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2021,27.1
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2021,38.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2021,33.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2021,30.9
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2022,27.7
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2022,21.3
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2022,27.9
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2022,37.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2022,31.6
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2022,29.2
+Shahid Bhagat Singh Nagar,Punjab,rabi,1,Oct-Nov,2023,27.6
+Shahid Bhagat Singh Nagar,Punjab,rabi,2,Dec-Jan,2023,21.1
+Shahid Bhagat Singh Nagar,Punjab,rabi,3,Feb-Mar,2023,25.6
+Shahid Bhagat Singh Nagar,Punjab,kharif,1,Jun-Jul,2023,35.0
+Shahid Bhagat Singh Nagar,Punjab,kharif,2,Aug-Sep,2023,31.5
+Shahid Bhagat Singh Nagar,Punjab,kharif,3,Oct,2023,29.0
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,normal_1991_2008,32.9
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,normal_1991_2008,23.2
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,normal_1991_2008,28.8
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,normal_1991_2008,42.3
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,normal_1991_2008,39.0
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,normal_1991_2008,35.7
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2009,31.8
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2009,23.5
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2009,31.4
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2009,43.1
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2009,39.5
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2009,35.3
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2010,32.0
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2010,21.8
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2010,29.0
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2010,41.2
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2010,36.0
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2010,34.5
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2011,32.0
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2011,21.9
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2011,27.9
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2011,41.9
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2011,35.5
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2011,33.9
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2012,30.6
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2012,22.2
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2012,27.5
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2012,43.9
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2012,37.2
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2012,32.9
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2013,31.9
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2013,22.8
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2013,27.0
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2013,41.9
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2013,37.9
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2013,35.2
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2014,30.4
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2014,22.0
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2014,27.1
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2014,43.1
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2014,37.5
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2014,32.4
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2015,31.4
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2015,23.4
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2015,29.2
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2015,40.4
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2015,38.5
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2015,34.0
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2016,33.5
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2016,23.6
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2016,29.1
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2016,42.2
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2016,37.8
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2016,36.4
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2017,32.5
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2017,23.6
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2017,30.5
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2017,40.2
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2017,39.1
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2017,36.8
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2018,31.7
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2018,21.6
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2018,25.7
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2018,39.8
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2018,38.6
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2018,34.0
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2019,30.1
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2019,19.4
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2019,25.8
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2019,42.2
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2019,38.5
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2019,33.3
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2020,31.0
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2020,20.6
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2020,30.2
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2020,41.1
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2020,37.4
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2020,35.6
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2021,30.6
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2021,20.6
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2021,29.9
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2021,41.2
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2021,38.2
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2021,33.1
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2022,31.5
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2022,22.8
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2022,29.9
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2022,39.1
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2022,33.9
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2022,34.0
+Sri Muktsar Sahib,Punjab,rabi,1,Oct-Nov,2023,29.5
+Sri Muktsar Sahib,Punjab,rabi,2,Dec-Jan,2023,21.9
+Sri Muktsar Sahib,Punjab,rabi,3,Feb-Mar,2023,27.3
+Sri Muktsar Sahib,Punjab,kharif,1,Jun-Jul,2023,37.4
+Sri Muktsar Sahib,Punjab,kharif,2,Aug-Sep,2023,36.8
+Sri Muktsar Sahib,Punjab,kharif,3,Oct,2023,32.7
+Tarn Taran,Punjab,rabi,1,Oct-Nov,normal_1991_2008,31.3
+Tarn Taran,Punjab,rabi,2,Dec-Jan,normal_1991_2008,22.4
+Tarn Taran,Punjab,rabi,3,Feb-Mar,normal_1991_2008,27.6
+Tarn Taran,Punjab,kharif,1,Jun-Jul,normal_1991_2008,41.6
+Tarn Taran,Punjab,kharif,2,Aug-Sep,normal_1991_2008,37.0
+Tarn Taran,Punjab,kharif,3,Oct,normal_1991_2008,33.9
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2009,30.8
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2009,22.9
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2009,30.5
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2009,42.9
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2009,37.9
+Tarn Taran,Punjab,kharif,3,Oct,2009,34.1
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2010,30.3
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2010,20.7
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2010,27.4
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2010,40.7
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2010,34.1
+Tarn Taran,Punjab,kharif,3,Oct,2010,32.7
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2011,30.7
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2011,20.8
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2011,26.4
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2011,40.0
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2011,33.6
+Tarn Taran,Punjab,kharif,3,Oct,2011,32.8
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2012,30.1
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2012,21.8
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2012,27.0
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2012,43.3
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2012,36.6
+Tarn Taran,Punjab,kharif,3,Oct,2012,32.8
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2013,29.8
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2013,21.7
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2013,25.9
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2013,40.7
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2013,33.9
+Tarn Taran,Punjab,kharif,3,Oct,2013,32.5
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2014,28.8
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2014,21.0
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2014,25.2
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2014,42.4
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2014,35.6
+Tarn Taran,Punjab,kharif,3,Oct,2014,30.2
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2015,30.5
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2015,22.7
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2015,28.6
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2015,39.8
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2015,37.1
+Tarn Taran,Punjab,kharif,3,Oct,2015,33.2
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2016,31.8
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2016,22.8
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2016,27.8
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2016,40.6
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2016,35.6
+Tarn Taran,Punjab,kharif,3,Oct,2016,34.3
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2017,31.2
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2017,22.8
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2017,29.4
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2017,38.9
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2017,36.5
+Tarn Taran,Punjab,kharif,3,Oct,2017,35.0
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2018,28.9
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2018,19.9
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2018,23.9
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2018,39.1
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2018,35.5
+Tarn Taran,Punjab,kharif,3,Oct,2018,31.0
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2019,28.2
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2019,18.2
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2019,23.7
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2019,41.1
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2019,35.1
+Tarn Taran,Punjab,kharif,3,Oct,2019,30.8
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2020,29.3
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2020,20.7
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2020,29.1
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2020,39.8
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2020,34.6
+Tarn Taran,Punjab,kharif,3,Oct,2020,33.3
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2021,28.3
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2021,19.4
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2021,27.3
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2021,40.5
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2021,35.0
+Tarn Taran,Punjab,kharif,3,Oct,2021,30.4
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2022,29.0
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2022,21.2
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2022,28.2
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2022,39.0
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2022,33.0
+Tarn Taran,Punjab,kharif,3,Oct,2022,31.3
+Tarn Taran,Punjab,rabi,1,Oct-Nov,2023,26.9
+Tarn Taran,Punjab,rabi,2,Dec-Jan,2023,20.2
+Tarn Taran,Punjab,rabi,3,Feb-Mar,2023,25.3
+Tarn Taran,Punjab,kharif,1,Jun-Jul,2023,36.1
+Tarn Taran,Punjab,kharif,2,Aug-Sep,2023,33.2
+Tarn Taran,Punjab,kharif,3,Oct,2023,29.1

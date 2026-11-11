@@ -280,7 +280,7 @@ def test_outlook_stale_price_and_other_states(tables):
 def test_outlook_request_real_tables():
     res = service.outlook_request({"district": "Bathinda"}, now="2026-11-02", with_model=False)
     assert res["ok"] and res["outlook"][0]["key"] == "wheat"
-    assert "Not a recommendation" in res["text_en"]
+    assert "district averages and market prices" in res["text_en"]
     bad = service.outlook_request({"district": "Ujjain"}, now="2026-11-02")
     assert not bad["ok"] and "Haryana and Punjab only" in bad["error"]
     assert not service.outlook_request({"district": "Nowhere"}, with_model=False)["ok"]

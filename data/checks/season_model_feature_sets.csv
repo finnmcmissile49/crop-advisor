@@ -1,0 +1,4 @@
+feature_set,validation_mae_q_acre,last5_mae_q_acre,crops_beating_last5
+"as shipped on 2 Nov (rain only, crop columns missing)",1.512,1.383,"Bajra, Maize"
+in use: rain + crop columns,1.501,1.383,Maize
+"tested, not used: rain + temperature + crop columns",1.505,1.383,Maize

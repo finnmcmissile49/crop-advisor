@@ -84,7 +84,14 @@ def test_scenarios_pair_crops_and_count_wins(fake_tables):
         assert v["income_low"] <= v["income_rs_acre"] <= v["income_high"]
     assert 0 <= so["wins"]["mustard|wheat"] <= 1
     en, hi = sm.text(so)
-    assert "likely seasons" in en[0] and any("beats" in line for line in en)
+    assert en[0].startswith("Crop recommendation") and "ranked by expected gross income" in en[0]
+    assert so["ranking"][0] == so["recommended"] and set(so["ranking"]) == {"wheat", "mustard"}
+    best, other = so["ranking"]
+    assert c[best]["score_rs_acre"] >= c[other]["score_rs_acre"]
+    assert en[1].startswith("1. ") and en[2].startswith("2. ")
+    assert any(line.startswith("Recommended: ") and "of 10" in line for line in en)
+    assert all(v["risk"] in ("low", "medium", "high") for v in c.values())
+    assert "not advice" not in "\n".join(en).lower() and len(en) == len(hi)
     assert any("संभावित मौसमों" in line for line in hi)
     assert "before costs" in en[-1]
 
@@ -102,7 +109,35 @@ def test_real_tables_end_to_end():
     so = res["season_model"]
     assert {"wheat", "mustard"} <= set(so["crops"]) and "mustard|wheat" in so["wins"]
     assert so["crops"]["wheat"]["method"] in ("ensemble", "last5")
-    assert "Season-start model" in res["text_en"] and "Last harvest prices" in res["text_en"]
+    assert "Crop recommendation" in res["text_en"] and "Last harvest prices" in res["text_en"]
+    assert so["recommended"] in so["crops"] and "Recommended: " in res["text_en"]
     bad = service.outlook_request({"district": "Bathinda", "season": "summer"},
                                   now="2026-11-02")
     assert not bad["ok"]
+
+
+def test_risk_score_can_rank_a_steadier_crop_first():
+    steady = {"method": "last5", "income": __import__("numpy").array([50000.0] * 10),
+              "yield_market": __import__("numpy").array([20.0] * 10),
+              "price": {"price": 2500, "latest_season": "2025"}, "rain_years": [2009, 2023],
+              "own_years": 14}
+    wild = {**steady, "income": __import__("numpy").array([10000.0] * 5 + [94000.0] * 5)}
+    per_crop, _ = sm.summarise({"wheat": steady, "mustard": wild})
+    assert per_crop["mustard"]["income_rs_acre"] > per_crop["wheat"]["income_rs_acre"]
+    assert sm.ranking(per_crop) == ["wheat", "mustard"]
+    assert per_crop["wheat"]["risk"] == "low" and per_crop["mustard"]["risk"] == "high"
+
+
+def test_the_model_sees_which_crop_a_row_is():
+    """Until 11 November 2026 the crop columns never reached the model (cut off by a comment)."""
+    assert set(sm.CROP_FEATURES) <= set(sm.FEATURES)
+    assert not set(sm.TEMP_FEATURES) & set(sm.FEATURES)       # tested on validation, not adopted
+    assert set(sm.TEMP_FEATURES) <= set(sm.WITH_TEMP_FEATURES)
+
+
+def test_temperature_departures_use_the_1991_2008_base():
+    t = sm.temp_features("Hisar", "rabi", 2021)               # Feb-Mar 2022, the heat year
+    assert t["tmax_p3"] == pytest.approx(30.5 - 29.6, abs=0.01)
+    assert sm.temp_features("Hisar", "rabi", 2030) is None
+    assert sm.temp_or_normal("Nowhere", "rabi", 2021) == sm.NORMAL_TEMP
+    assert sm.gate()["Maize"] is True

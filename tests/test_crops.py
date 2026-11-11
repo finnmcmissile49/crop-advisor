@@ -253,7 +253,7 @@ def test_wheat_path_unchanged():
     a = av.advise(HISAR, "2026-11-15", "2026-11-25", [], w)
     assert "crop" not in a and a["status"] == "first_upcoming"
     en, _ = av.render(a)
-    assert en.startswith("Crop Advisor: wheat irrigation")
+    assert en.startswith("Crop Advisor: wheat, today's advice")
 
 
 # ------------------------------------------------------------------------- FAO-56 Kc ini option

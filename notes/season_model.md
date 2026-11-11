@@ -97,14 +97,23 @@ scenarios in which one earns more, rounded to "N of 10".
 - **Gross income of a district-average acre, before costs.** Costs differ a lot between crops
   (paddy and cotton cost more to grow than bajra), so "beats" in gross income is not "pays more".
   Adding cost of cultivation (CACP state data) is the obvious next step.
-- **Not crop advice.** Assured procurement at the minimum support price (wheat, paddy), water, the
+- **A recommendation on gross income only (from 11 November 2026 the output ranks the crops and
+  names one).** Assured procurement at the minimum support price (wheat, paddy), water, the
   previous crop, machinery and labour are not in it. An agronomist and the field partner should
   review it before farmers see it (ml-limitations section 6).
-- **Weather is rain only.** There is no temperature, so a heat wave like March 2022 enters only
-  through the model's error for that year.
+- **Weather is rain only.** Temperature was tested on 11 November 2026 and did not lower the
+  validation error, so a heat wave like March 2022 still enters only through the model's error for
+  that year.
 - Past price changes include years of MSP increases, so future prices are assumed to move as they
   did in 2016-2025.
 - Districts are small samples: chickpea 6 test districts, groundnut 3. Results for those are weak.
 - Kharif 2020 rain is a scaled-up estimate (IMD has 16 of 31 July days).
 - Yields end in 2022, so a 2026 rabi season is 4 years ahead of the data and a 2027 kharif season
   is 5 years ahead.
+
+## Update, 11 November 2026
+
+See `notes/final_version.md`, "Which crops use the ensemble": the crop columns now reach the model
+(they were cut off by a comment), temperature was tested and left out, the ensemble is used for
+maize only, and the output is a ranked crop recommendation (score = average of expected and
+poor-season income). The numbers earlier in this note are those of 2 November.
