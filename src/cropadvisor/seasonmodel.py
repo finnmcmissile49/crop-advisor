@@ -45,6 +45,7 @@ from cropadvisor import outlook as ol
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 YIELDS = os.path.join(ROOT, "data", "reference", "district_yields_all.csv")
 RAIN = os.path.join(ROOT, "data", "reference", "district_rain_monthly.csv")
+TEMP = os.path.join(ROOT, "data", "reference", "district_temperature_periods.csv")
 
 MIN_AREA_HA = 1000          # smaller district crops have rounded, noisy yields
 HISTORY_YEARS = 5
@@ -70,8 +71,24 @@ PERIODS = {
     "kharif": [((0, 6), (0, 7)), ((0, 8), (0, 9)), ((0, 10), (0, 10))],
 }
 SEASON_SPAN = {"rabi": ((0, 10), (1, 3)), "kharif": ((0, 6), (0, 9))}
-FEATURES = ["lag_mean5", "last_ratio", "trend10", "rain_dep", "rain_p1", "rain_p2", "rain_p3",
-            "punjab"]   # no "year": tree models cannot carry a year beyond the years they saw + [f"crop_{c}" for c in sorted({v[0] for v in CROPS.values()})]
+# Temperature (added 11 November 2026): mean daily maximum temperature of the same three periods as
+# the rain, as a departure in deg C from the district's 1991-2008 mean (NASA POWER). The 1991-2008
+# base ends before the first target year, so no later year leaks into it.
+TEMP_FEATURES = ["tmax_p1", "tmax_p2", "tmax_p3"]
+# no "year": tree models cannot carry a year beyond the years they saw
+BASE_FEATURES = ["lag_mean5", "last_ratio", "trend10", "rain_dep", "rain_p1", "rain_p2", "rain_p3",
+                 "punjab"]
+# Which crop the row is. Until 11 November 2026 these columns were built but never reached the
+# model (the list was cut off by a comment on the same line), so the pooled model could not tell
+# wheat from bajra. OLD_FEATURES keeps that version for the before/after check.
+CROP_FEATURES = [f"crop_{c}" for c in sorted({v[0] for v in CROPS.values()})]
+OLD_FEATURES = list(BASE_FEATURES)
+WITH_TEMP_FEATURES = BASE_FEATURES + TEMP_FEATURES + CROP_FEATURES
+# The model in use. Temperature was tested on the validation years (rolling 2014-2016) and did not
+# lower the error (pooled 1.505 against 1.501 quintal per acre without it), so it is not used: with
+# about 14 years of data every extra feature has to earn its place. scripts/check_season_model.py
+# prints the comparison.
+FEATURES = BASE_FEATURES + CROP_FEATURES
 
 
 # ------------------------------------------------------------------------------- data
@@ -88,6 +105,44 @@ def load_rain(path=None):
     ok = r["coverage"] >= 0.5          # July 2020 has 16 of 31 days: scaled up, as elsewhere
     r["rain_full"] = np.where(ok, r["rain_mm"] / r["coverage"].clip(lower=0.5), np.nan)
     return r.set_index(["district", "year", "month"])
+
+
+@functools.lru_cache(maxsize=4)
+def load_temp(path=None):
+    """{(district, season, period, year or "normal"): mean daily Tmax, deg C} from NASA POWER."""
+    t = pd.read_csv(path or TEMP, dtype={"year": str})
+    out = {}
+    for r in t.itertuples():
+        yr = "normal" if r.year.startswith("normal") else int(r.year)
+        out[(r.district, r.season, int(r.period), yr)] = float(r.tmax_mean_c)
+    return out
+
+
+def temp_features(district, season, year, temp=None):
+    """Departure of each period's mean daily maximum temperature from the district's 1991-2008
+    mean, deg C, for the season that starts in `year`; None when a period is missing."""
+    temp = load_temp() if temp is None else temp
+    out = {}
+    for i in (1, 2, 3):
+        v, n = temp.get((district, season, i, int(year))), temp.get((district, season, i, "normal"))
+        if v is None or n is None:
+            return None
+        out[f"tmax_p{i}"] = round(v - n, 2)
+    return out
+
+
+NORMAL_TEMP = {f: 0.0 for f in TEMP_FEATURES}
+
+
+def temp_or_normal(district, season, year, temp=None):
+    """temp_features, except that a district with no temperature record at all (not one of the 45
+    Haryana and Punjab districts) is treated as normal temperature. A known district with a
+    missing year still gives None."""
+    temp = load_temp() if temp is None else temp
+    t = temp_features(district, season, year, temp)
+    if t is None and not any(k[0] == district for k in temp):
+        return dict(NORMAL_TEMP)
+    return t
 
 
 def _months(year, start, end):
@@ -150,11 +205,12 @@ def build_rows(horizon=1, yields_path=None, rain_path=None):
         for yr, actual in s[s.index >= FIRST_RAIN_YEAR].items():
             h = history_features(s, yr - horizon)
             r = rain_features(district, season_of[crop], yr, rain)
-            if h is None or r is None:
+            t = temp_or_normal(district, season_of[crop], yr)
+            if h is None or r is None or t is None:
                 continue
             rows.append({"district": district, "crop": crop, "year": int(yr), "actual": actual,
                          "ratio": actual / h["lag_mean5"], "punjab": float(state == "Punjab"),
-                         **h, **r, **_crop_cols(crop)})
+                         **h, **r, **t, **_crop_cols(crop)})
     return pd.DataFrame(rows)
 
 
@@ -164,7 +220,8 @@ class Ensemble:
     """Average of Random Forest, XGBoost and LightGBM regressors (the JISEM paper's ensemble),
     small and regularised for about 3,000 rows. Fixed settings, not tuned on the test years."""
 
-    def __init__(self, seed=0):
+    def __init__(self, seed=0, features=None):
+        self.features = list(features or FEATURES)
         from lightgbm import LGBMRegressor
         from sklearn.ensemble import RandomForestRegressor
         from xgboost import XGBRegressor
@@ -181,16 +238,16 @@ class Ensemble:
 
     def fit(self, X, y):
         for m in self.models:
-            m.fit(X[FEATURES], y)
+            m.fit(X[self.features], y)
         return self
 
     def predict(self, X):
-        p = np.mean([m.predict(X[FEATURES]) for m in self.models], axis=0)
+        p = np.mean([m.predict(X[self.features]) for m in self.models], axis=0)
         return np.clip(p, *RATIO_CLIP)
 
     def importance(self):
         rf = self.models[0].feature_importances_
-        return pd.Series(rf, index=FEATURES).sort_values(ascending=False)
+        return pd.Series(rf, index=self.features).sort_values(ascending=False)
 
 
 def baselines(rows, yields_path=None, horizon=1):
@@ -208,12 +265,12 @@ def baselines(rows, yields_path=None, horizon=1):
     return np.array(mean), np.array(trend)
 
 
-def evaluate(horizon=1, split=TEST, yields_path=None, rain_path=None):
+def evaluate(horizon=1, split=TEST, yields_path=None, rain_path=None, features=None):
     """Errors in quintal per acre on the split's scored years, per crop and method."""
     rows = build_rows(horizon, yields_path, rain_path)
     tr = rows[rows["year"].isin(split[0])]
     te = rows[rows["year"].isin(split[1])].copy()
-    model = Ensemble().fit(tr, tr["ratio"])
+    model = Ensemble(features=features).fit(tr, tr["ratio"])
     te["pred_ensemble"] = te["lag_mean5"] * model.predict(te)
     te["pred_last5"] = te["lag_mean5"]
     te["pred_mean"], te["pred_trend"] = baselines(te, yields_path, horizon)
@@ -228,7 +285,7 @@ def evaluate(horizon=1, split=TEST, yields_path=None, rain_path=None):
     return pd.DataFrame(out), te, model
 
 
-def rolling_validation(horizon=1, years=VAL[1], yields_path=None, rain_path=None):
+def rolling_validation(horizon=1, years=VAL[1], yields_path=None, rain_path=None, features=None):
     """Each validation year predicted by a model trained on all target years before it (rolling
     origin), so the validation sees the training sizes the model really has. Errors in quintal per
     acre per crop and method."""
@@ -239,7 +296,8 @@ def rolling_validation(horizon=1, years=VAL[1], yields_path=None, rain_path=None
         te = rows[rows["year"] == yr].copy()
         if tr.empty or te.empty:
             continue
-        te["pred_ensemble"] = te["lag_mean5"] * Ensemble().fit(tr, tr["ratio"]).predict(te)
+        te["pred_ensemble"] = te["lag_mean5"] * Ensemble(features=features).fit(
+            tr, tr["ratio"]).predict(te)
         te["pred_last5"] = te["lag_mean5"]
         parts.append(te)
     te = pd.concat(parts)
@@ -334,7 +392,8 @@ def season_scenarios(district, state, season, today, keys=None, yields_path=None
     use_model = gate(yields_path, rain_path)
     rain = load_rain(rain_path)
     rain_years = [yr for yr in range(FIRST_RAIN_YEAR, today.year + 1)
-                  if rain_features(district, season, yr, rain) is not None]
+                  if rain_features(district, season, yr, rain) is not None
+                  and temp_or_normal(district, season, yr) is not None]
     crops = {}
     for k in keys:
         crop = CROPS[k][0]
@@ -351,7 +410,7 @@ def season_scenarios(district, state, season, today, keys=None, yields_path=None
         own = [ratios[(crop, dname, r)] for r in rain_years if (crop, dname, r) in ratios]
         if use_model.get(crop, False):
             X = pd.DataFrame([{**h, **rain_features(dname, season, r, rain),
-                               "punjab": float(state == "Punjab"), **_crop_cols(crop)}
+                               **temp_or_normal(dname, season, r), "punjab": float(state == "Punjab"), **_crop_cols(crop)}
                               for r in rain_years])
             ratio = model.predict(X) + np.array([resid.get((crop, dname, r), 0.0)
                                                  for r in rain_years])

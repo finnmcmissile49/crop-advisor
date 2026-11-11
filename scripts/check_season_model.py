@@ -27,6 +27,23 @@ OUT = os.path.join(HERE, "..", "data", "checks")
 
 
 def main():
+    sets = {"as shipped on 2 Nov (rain only, crop columns missing)": sm.OLD_FEATURES,
+            "in use: rain + crop columns": sm.FEATURES,
+            "tested, not used: rain + temperature + crop columns": sm.WITH_TEMP_FEATURES}
+    cmp_rows = []
+    for name, feats in sets.items():
+        v = sm.rolling_validation(sm.GATE_HORIZON, features=feats)
+        e = v[v["method"] == "ensemble"]
+        b = v[v["method"] == "last5"]
+        pooled = float((e["mae_q_acre"] * e["n"]).sum() / e["n"].sum())
+        base = float((b["mae_q_acre"] * b["n"]).sum() / b["n"].sum())
+        wins = sorted(set(e["crop"][e["mae_q_acre"].values < b["mae_q_acre"].values]))
+        cmp_rows.append({"feature_set": name, "validation_mae_q_acre": round(pooled, 3),
+                         "last5_mae_q_acre": round(base, 3), "crops_beating_last5": ", ".join(wins)})
+    cmp = pd.DataFrame(cmp_rows)
+    cmp.to_csv(os.path.join(OUT, "season_model_feature_sets.csv"), index=False)
+    print("Feature sets on the validation years (2014-2016, one year ahead, all crops pooled):")
+    print(cmp.to_string(index=False), "\n")
     val = sm.rolling_validation(sm.GATE_HORIZON).assign(horizon=sm.GATE_HORIZON)
     gate = sm.gate()
     tests, model = [], None
