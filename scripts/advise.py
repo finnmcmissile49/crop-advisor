@@ -1,4 +1,10 @@
-"""Irrigation calculator: when should this field be watered next?
+"""Crop Advisor in the terminal (notes/final_version.md).
+
+Before sowing: which crop, ranked by expected income and risk (Haryana and Punjab)
+    python scripts/advise.py --outlook --district Hisar
+
+After sowing: when and how much to water, when to give fertiliser and how much, and when pest
+risk is rising
 
     python scripts/advise.py --district Hisar --sowing 2026-11-10
     python scripts/advise.py --district Hisar --sowing 2026-11-10 --watered 2026-12-08 2027-01-10

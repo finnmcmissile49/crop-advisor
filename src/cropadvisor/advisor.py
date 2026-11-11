@@ -596,7 +596,7 @@ def render(a):
     cm = a["depth_mm"] / 10
     inch = round(cm / 2.54)
     zone = ir.ZONES[s.zone]["label"]
-    head = [f"Crop Advisor: wheat irrigation (test version, public data only)",
+    head = ["Crop Advisor: wheat, today's advice (from public data)",
             f"District: {s.name}, {s.state} ({zone})",
             f"Sown {_en(a['sowing'])}. Today {_en(today)} is day {a['das']} of about "
             f"{a['season_days']}."]
@@ -878,7 +878,7 @@ def _amount(a):
 def render_crop(a):
     """English and Hindi text for a non-wheat crop."""
     s, today, spec = a["site"], a["today"], a["spec"]
-    head = [f"Crop Advisor: {spec.en.lower()} irrigation (test version, public data only)",
+    head = [f"Crop Advisor: {spec.en.lower()}, today's advice (from public data)",
             f"District: {s.name}, {s.state}",
             f"Sown {_en(a['sowing'])}. Today {_en(today)} is day {a['das']} of about "
             f"{a['season_days']}."]

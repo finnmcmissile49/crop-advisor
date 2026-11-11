@@ -101,9 +101,9 @@ def text(name, s):
             en.append(f"Too few tests for {', '.join(NUTRIENTS[k][0] for k in few)}.")
             hi.append(f"{', '.join(NUTRIENTS[k][1] for k in few)} की जाँचें बहुत कम हैं।")
     en.append("These are district figures, not your field. Get your own field tested (Soil Health "
-              "Card) and ask your agriculture office for the fertiliser dose for your result.")
+              "Card) and give its ratings with --soil-card so the fertiliser doses follow them.")
     hi.append("ये ज़िले के आँकड़े हैं, आपके खेत के नहीं। अपने खेत की मिट्टी जाँच (सॉइल हेल्थ कार्ड) "
-              "करवाएँ और खाद की मात्रा के लिए कृषि विभाग से पूछें।")
+              "करवाएँ और उसकी रेटिंग --soil-card से दें ताकि खाद की मात्रा उसी के हिसाब से आए।")
     return en, hi
 
 

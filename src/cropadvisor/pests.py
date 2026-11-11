@@ -74,6 +74,8 @@ def fetch_hourly(lat, lon, today, now=None, raw_path=None):
         "temperature_2m": "temp", "relative_humidity_2m": "rh", "precipitation": "rain",
         "cloud_cover": "cloud"})
     h["time"] = pd.to_datetime(h["time"])
+    for col in ("temp", "rh", "rain", "cloud"):     # hours the service left empty become NaN
+        h[col] = pd.to_numeric(h[col], errors="coerce") if col in h else np.nan
     return h[["time", "temp", "rh", "rain", "cloud"]]
 
 

@@ -476,8 +476,10 @@ def text(s):
                       f"{d['fallback_das']} दिन बाद) छिड़क दें।")
     nxt = s["next"]
     if nxt is None:
-        en.append("All fertiliser doses for this crop are behind you.")
-        hi.append("इस फ़सल की सभी खाद की ख़ुराकें निकल चुकी हैं।")
+        en.append("The time for every fertiliser dose of this crop has passed. If you missed one, "
+                  "check with your Krishi Vigyan Kendra before giving it late.")
+        hi.append("इस फ़सल की हर खाद की ख़ुराक का समय निकल चुका है। कोई ख़ुराक छूट गई हो तो देर से "
+                  "देने से पहले अपने कृषि विज्ञान केंद्र से पूछ लें।")
     elif nxt["status"] == "due_now":
         en.append(f"Fertiliser now: {_items(nxt['items'], 'en')} per acre, "
                   f"{_when(nxt, 'en')}.")

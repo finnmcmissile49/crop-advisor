@@ -190,3 +190,22 @@ evaluation 2008-09, https://krishi.icar.gov.in/jspui/bitstream/123456789/7924/1/
 | data.gov.in, Agmarknet daily prices (resource 9ef84268-d588-465a-a308-a864a43d0070) | "price now" in the outlook (`prices.live_price`) | free API key in `DATA_GOV_IN_KEY` | Whole state feed, matched on commodity names without spaces. |
 | IMD 0.25 degree gridded daily rain (Pai et al. 2014) | recorded rain at the field cell, ahead of NASA POWER (`imd.point_rain`) | imdlib download, cached | A year's file appears months late; years not yet published are retried once a day. |
 | Soil Health Card nutrient dashboard, https://soilhealth.dac.gov.in | district table refresh (`scripts/refresh_soil_health_card.py`); farmer's own card ratings | saved JSON download (no documented API) | Parser gives the same counts as the current processed file (2,758 district-cycles). |
+
+## Fertiliser, pest watch and temperature (added 11 November 2026)
+
+| Source | What it gave | Link |
+|---|---|---|
+| PAU, Package of Practices for Crops of Punjab, Rabi 2025-26 | fertiliser doses and timing for wheat (pp. 9-10), barley (24-25), spring maize (28), gram (36), summer moong (44), raya (52); soil-test rule and table (106-107); weather congenial for yellow rust (19), gram blight and grey mould (38), mustard diseases (55); mustard aphid (54), wheat aphid (18), maize shoot fly (30), moong thrips (44) | https://www.pau.edu/content/ccil/pf/pp_rabi.pdf |
+| PAU, Package of Practices for Crops of Punjab, Kharif 2026 | fertiliser for maize (pp. 32-33), bajra (42-43), cotton (49), moong (65), groundnut (98); soil-test table (152); maydis leaf blight and stalk rot (39), bajra ergot (44), cotton sucking pests (53) and leaf spots (60), moong leaf spot and web blight (67), groundnut tikka (100) | https://www.pau.edu/content/ccil/pf/pp_kharif.pdf |
+| PAU, Package of Practices for Cultivation of Vegetables 2021 | potato fertiliser and earthing-up (p. 111) | https://www.pau.edu/content/ccil/pf/pp_veg.pdf |
+| Arora, Ahmad and Singh (2012), Forecasting late blight of potato in Punjab using JHULSACAST model, Potato Journal 39(2) | late blight rule: 7-day sums of 90 hours above 85% humidity and 115 hours at 7.2-26.6 deg C, blight within 10 days; calibrated on Punjab weather 1997-2012 | https://epubs.icar.org.in/index.php/PotatoJ/article/view/32182 |
+| ICAR wheat package of practices (Vikaspedia), and ICAR-IIWBR trial doses | wheat outside Punjab and Haryana: 150:60:40 kg N:P2O5:K2O per ha in NWPZ and NEPZ, 120:60:40 in CZ; one third N basal, the rest at first node, 40-45 days | https://en.vikaspedia.in/viewcontent/agriculture/crop-production/package-of-practices/cereals-and-millets/wheat |
+| NASA POWER daily T2M_MAX, 1991 to March 2024 | `data/reference/district_temperature_periods.csv`: mean daily maximum temperature per season period, 45 districts; tested in the season model and not used | https://power.larc.nasa.gov/api/temporal/daily/point |
+| Open-Meteo geocoding (GeoNames) | `data/reference/district_points.csv`: the district town used as each district's point | https://geocoding-api.open-meteo.com/v1/search |
+| Open-Meteo forecast and archive, hourly temperature, humidity, rain, cloud cover | weather for the pest watch | https://api.open-meteo.com/v1/forecast |
+
+The PAU PDFs were read in a browser with pdf.js on 11 November 2026 (the automated reader cannot
+open them); page numbers are the printed pages. The temperature file was computed in the browser
+from NASA POWER's daily values and copied here with two checksums per district;
+`scripts/fetch_temperature_periods.py` rebuilds it. NASA POWER's grid is about 0.5 x 0.625 degrees,
+so the 45 districts fall in 32 cells and some neighbours share values.

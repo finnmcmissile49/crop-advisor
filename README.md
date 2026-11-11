@@ -1,8 +1,18 @@
 # Crop Advisor
 
-Irrigation advice for smallholder farmers in Punjab and Haryana (Hindi and English), from free
-public weather and soil data and official crop guidance, with an on-farm sensor station to come.
-(The Maharashtra locations further down were only used to build the data pipeline.)
+A crop and irrigation advisor for smallholder farmers in North India (Hindi and English), from free
+public weather, soil, price and yield data and official crop guidance, with an on-farm sensor
+station to come. (The Maharashtra locations further down were only used to build the data
+pipeline.)
+
+## The final terminal version (11 November 2026)
+
+```
+python scripts/advise.py --outlook --district Hisar              # before sowing: which crop, ranked by income and risk
+python scripts/advise.py --district Hisar --sowing 2026-11-10    # after sowing: water, fertiliser, pest watch
+```
+
+`notes/final_version.md` explains every option, what each part is built on, and its limits.
 
 ## Irrigation calculator: 12 crops
 
@@ -37,7 +47,7 @@ Farm station, satellite and checks (`notes/live_data_and_features.md`):
 - `--station readings.csv` fuses on-farm soil-moisture and rain readings with the water balance
   (Kalman filter; keeps working if a sensor fails) and says what the date would be without them.
 - `--soil-card n=low zn=deficient ...` adds the farmer's own Soil Health Card.
-- `--lat/--lon` adds Sentinel-2 crop greenness at the field.
+- `--lat/--lon --satellite` adds Sentinel-2 crop greenness at the field (off by default).
 - `python scripts/run_digital_twin.py --district Hisar --crop wheat --years 2021-2023` plays past
   seasons in AquaCrop under the advice, the calendar, no irrigation and frequent irrigation.
 - `python scripts/check_soil_samples.py --samples samples.csv --station readings.csv ...` checks
