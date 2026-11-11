@@ -20,7 +20,7 @@ import pandas as pd
 from cropadvisor import advisor
 from cropadvisor import crops as cr
 
-from cropadvisor import extras, fusion, imd, nasapower, sites, station
+from cropadvisor import extras, fertiliser, fusion, imd, nasapower, pests, sites, station
 from cropadvisor import irrigation as ir
 from cropadvisor import outlook as ol
 from cropadvisor import sentinel
@@ -29,10 +29,14 @@ from cropadvisor import soilcard as sc
 
 def advise_request(req, now=None, fetch_history=None, fetch_forecast=None, fetch_soil=None,
                    locations=sites.LOCATIONS, soil_files=sites.SOIL_FILES, fetch_power="auto",
-                   with_extras=True, fetch_imd="auto", fetch_sentinel="auto"):
+                   with_extras=True, fetch_imd="auto", fetch_sentinel="auto", fetch_pest="auto"):
     """fetch_power: "auto" uses NASA POWER for recorded rain, except when made-up Open-Meteo
     fetchers are passed (offline tests) or req["rain_source"] == "openmeteo"; None turns it off;
-    or pass a fetcher."""
+    or pass a fetcher.
+    fetch_pest: "auto" reads Open-Meteo's hourly weather for the pest watch (off when made-up
+    fetchers are passed); None leaves the pest watch out; or pass a fetcher (lat, lon, today, now).
+    Satellite crop health (Sentinel-2) is not in the project brief's first version, so it runs
+    only when req["satellite"] is set (--satellite)."""
     off = fetch_history is not None or fetch_forecast is not None or \
         req.get("rain_source") == "openmeteo"
     if fetch_power == "auto":
@@ -41,7 +45,10 @@ def advise_request(req, now=None, fetch_history=None, fetch_forecast=None, fetch
         fetch_imd = None if off else (lambda la, lo, s, e: imd.point_rain(
             la, lo, s, e, cache_dir=os.path.join(sites.ROOT, "data", "raw", "imd")))
     if fetch_sentinel == "auto":   # only for a real field point; a district point means nothing
-        fetch_sentinel = None if off else sentinel.field_ndvi
+        fetch_sentinel = sentinel.field_ndvi if (req.get("satellite") and not off) else None
+    if fetch_pest == "auto":
+        fetch_pest = None if (fetch_history is not None or fetch_forecast is not None) \
+            else pests.fetch_hourly
     try:
         crop = req.get("crop") or "wheat"
         if crop != "wheat" and crop not in cr.CROPS:
@@ -50,6 +57,7 @@ def advise_request(req, now=None, fetch_history=None, fetch_forecast=None, fetch
         if not req.get("district") or not req.get("sowing"):
             raise advisor.AdviceError("district and sowing date are needed.")
         card = sc.farmer_card(parse_card(req.get("soil_card")))
+        want = req.get("parts") or ("water", "fertiliser", "pests")
         site, notes = sites.build_site(req["district"], req.get("lat"), req.get("lon"),
                                        req.get("soil_type") or None, locations, soil_files,
                                        fetch_soil)
@@ -88,6 +96,20 @@ def advise_request(req, now=None, fetch_history=None, fetch_forecast=None, fetch
         a["notes"] = notes
         en, hi = advisor.render(a)
         res = {"ok": True, "advice": advisor.to_json(a)}
+        if "fertiliser" in want:
+            fert = fertiliser.schedule(crop, site.state, sowing, today, watered,
+                                       next_watering=key_date(a), card=card, zone=site.zone)
+            f_en, f_hi = fertiliser.text(fert)
+            if f_en:
+                en, hi = en + "\n\n" + "\n".join(f_en), hi + "\n\n" + "\n".join(f_hi)
+            res["fertiliser"] = fertiliser.to_json(fert)
+        if "pests" in want and fetch_pest is not None:
+            pw = pests.watch(crop, site.state, sowing, today, site.lat, site.lon, zone=site.zone,
+                             now=now_ts, fetch=fetch_pest)
+            p_en, p_hi = pests.text(pw)
+            if p_en:
+                en, hi = en + "\n\n" + "\n".join(p_en), hi + "\n\n" + "\n".join(p_hi)
+            res["pests"] = pests.to_json(pw)
         if with_extras:
             x = extras.build(a, soil_card=card)
             if fetch_sentinel is not None and req.get("lat") is not None and \
@@ -97,8 +119,8 @@ def advise_request(req, now=None, fetch_history=None, fetch_forecast=None, fetch
                 except Exception as e:   # satellite is background: never block the advice
                     x["sentinel"] = {"error": str(e)[:150]}
             x_en, x_hi = extras.text(a, x)
-            en, hi = en + "\n" + "\n".join(x_en) if x_en else en, \
-                hi + "\n" + "\n".join(x_hi) if x_hi else hi
+            en, hi = en + "\n\n" + "\n".join(x_en) if x_en else en, \
+                hi + "\n\n" + "\n".join(x_hi) if x_hi else hi
             res["extras"] = advisor._jsonable(x)
         return {**res, "text_en": en, "text_hi": hi}
     except advisor.AdviceError as e:

@@ -442,18 +442,36 @@ def season_scenarios(district, state, season, today, keys=None, yields_path=None
     return table, s_year, horizon
 
 
+# Ranking "by expected income and risk" (11 November 2026): each crop's score is the average of
+# its expected gross income and its income in a poor season (the 10th percentile of the likely
+# seasons), so a crop that earns a little less but holds up in bad years can rank above a riskier
+# one. The risk label is the spread between a good and a poor season as a share of the expected
+# income. The score and the label limits are our choices.
+RISK_LIMITS = (0.25, 0.50)     # spread below 25 percent: low; up to 50 percent: medium; else high
+
+
+def risk_level(mean, low, high):
+    spread = (high - low) / mean if mean else 0.0
+    return "low" if spread < RISK_LIMITS[0] else ("medium" if spread < RISK_LIMITS[1] else "high")
+
+
 def summarise(table):
-    """Per crop: expected yield and income with 10th-90th percentile; pairwise wins of 10."""
+    """Per crop: expected yield and income with 10th-90th percentile, risk and ranking score;
+    pairwise wins of 10."""
     out = {}
     for k, c in table.items():
         inc, yl = c["income"], c["yield_market"]
+        mean, low, high = float(np.mean(inc)), float(np.percentile(inc, 10)), \
+            float(np.percentile(inc, 90))
         out[k] = {"method": c["method"], "n_scenarios": int(len(inc)),
                   "yield_q_acre": round(float(np.mean(yl)), 1),
                   "yield_low": round(float(np.percentile(yl, 10)), 1),
                   "yield_high": round(float(np.percentile(yl, 90)), 1),
-                  "income_rs_acre": int(round(float(np.mean(inc)), -2)),
-                  "income_low": int(round(float(np.percentile(inc, 10)), -2)),
-                  "income_high": int(round(float(np.percentile(inc, 90)), -2)),
+                  "income_rs_acre": int(round(mean, -2)),
+                  "income_low": int(round(low, -2)),
+                  "income_high": int(round(high, -2)),
+                  "risk": risk_level(mean, low, high),
+                  "score_rs_acre": int(round((mean + low) / 2, -2)),
                   "price": c["price"]["price"], "price_season": c["price"]["latest_season"],
                   "rain_years": (min(c["rain_years"]), max(c["rain_years"])),
                   "past_seasons_with_data": int(c["own_years"])}
@@ -465,6 +483,12 @@ def summarise(table):
                 share = float(np.mean(table[a]["income"] > table[b]["income"]))
                 wins[f"{a}|{b}"] = round(share, 3)
     return out, wins
+
+
+def ranking(per_crop):
+    """Crop keys, best first, by score (expected income and poor-season income averaged)."""
+    return [k for k, _ in sorted(per_crop.items(),
+                                 key=lambda kv: (-kv[1]["score_rs_acre"], -kv[1]["income_rs_acre"]))]
 
 
 # ------------------------------------------------------------------------------- text
@@ -481,65 +505,104 @@ def season_outlook(district, state, season, today, yields_path=None, rain_path=N
     if not table:
         return None
     per_crop, wins = summarise(table)
+    order = ranking(per_crop)
     return {"district": district, "state": state, "season": season, "season_year": s_year,
-            "years_ahead_of_data": horizon, "crops": per_crop, "wins": wins,
+            "years_ahead_of_data": horizon, "crops": per_crop, "wins": wins, "ranking": order,
+            "recommended": order[0],
             "units": {k: UNIT_EN.get(CROPS[k][0], "quintal") for k in per_crop}}
 
 
+RISK_WORD = {"low": ("low", "कम"), "medium": ("medium", "मध्यम"), "high": ("high", "ज़्यादा")}
+
+
 def text(so):
-    """English and Hindi lines."""
+    """English and Hindi lines: the crop recommendation, ranked by expected income and risk."""
     if not so:
         return [], []
     season_en = "winter (rabi)" if so["season"] == "rabi" else "summer (kharif)"
     season_hi = "रबी" if so["season"] == "rabi" else "ख़रीफ़"
-    n = next(iter(so["crops"].values()))["n_scenarios"]
-    ry = next(iter(so["crops"].values()))["rain_years"]
-    en = [f"Season-start model, {season_en} {so['season_year']}, {so['district']}: "
-          f"{n} likely seasons (the weather of {ry[0]}-{ry[1]} x past price changes)."]
-    hi = [f"मौसम-शुरुआत मॉडल, {season_hi} {so['season_year']}, {so['district']}: {n} संभावित "
-          f"मौसम ({ry[0]}-{ry[1]} का मौसम x पिछले भाव-बदलाव)।"]
-    ranked = sorted(so["crops"].items(), key=lambda kv: -kv[1]["income_rs_acre"])
-    for k, c in ranked:
+    crops = so["crops"]
+    order = so.get("ranking") or ranking(crops)
+    n = next(iter(crops.values()))["n_scenarios"]
+    ry = next(iter(crops.values()))["rain_years"]
+    en = [f"Crop recommendation, {season_en} {so['season_year']}, {so['district']}: crops ranked "
+          "by expected gross income and risk."]
+    hi = [f"फ़सल की सिफ़ारिश, {season_hi} {so['season_year']}, {so['district']}: फ़सलें अनुमानित कुल "
+          "आमदनी और जोखिम के क्रम में।"]
+    for i, k in enumerate(order, 1):
+        c = crops[k]
         name_en, name_hi = NAMES[k]
         crop = CROPS[k][0]
-        tag = (f" (only {c['past_seasons_with_data']} past seasons of data)"
-               if c["past_seasons_with_data"] < FEW_SEASONS else "")
-        en.append(f"{name_en}: about {c['yield_q_acre']:g} {UNIT_EN.get(crop, 'quintal')} per acre "
-                  f"({c['yield_low']:g}-{c['yield_high']:g}); gross income about "
-                  f"Rs {c['income_rs_acre']:,} per acre (Rs {c['income_low']:,} to "
-                  f"Rs {c['income_high']:,} in 8 of 10 seasons){tag}.")
-        hi.append(f"{name_hi}: लगभग {c['yield_q_acre']:g} {UNIT_HI.get(crop, 'क्विंटल')} प्रति एकड़; "
-                  f"कुल आमदनी लगभग {c['income_rs_acre']:,} रुपये प्रति एकड़ (10 में से 8 मौसमों में "
-                  f"{c['income_low']:,} से {c['income_high']:,} रुपये)।")
-    best = ranked[0][0]
-    for k, _ in ranked[1:]:
-        a, b = sorted((best, k))
-        share = so["wins"].get(f"{a}|{b}")
-        if share is None:
-            continue
-        s_best = share if a == best else 1 - share
-        n10 = int(round(10 * s_best))
-        en.append(f"{NAMES[best][0]} beats {NAMES[k][0].lower()} in {n10} of 10 likely seasons.")
-        hi.append(f"10 में से {n10} संभावित मौसमों में {NAMES[best][1]} की आमदनी "
-                  f"{NAMES[k][1]} से ज़्यादा रहती है।")
-    model_en = [NAMES[k][0] for k, c in so["crops"].items() if c["method"] == "ensemble"]
-    base_en = [NAMES[k][0] for k, c in so["crops"].items() if c["method"] != "ensemble"]
-    model_hi = [NAMES[k][1] for k, c in so["crops"].items() if c["method"] == "ensemble"]
-    if model_en:
-        en.append(f"Yield from the ensemble model (Random Forest, XGBoost, LightGBM) for "
-                  f"{', '.join(model_en)}, where it beat the 5-year average in validation"
-                  + (f"; {', '.join(base_en)} from the 5-year average and its past spread, "
-                     "because the model did not beat it." if base_en else "."))
-        hi.append(f"पैदावार: {', '.join(model_hi)} के लिए एन्सेम्बल मॉडल से; बाक़ी फ़सलों के लिए "
-                  "5 साल के औसत से।")
+        tag_en = (f" Only {c['past_seasons_with_data']} past seasons of data."
+                  if c["past_seasons_with_data"] < FEW_SEASONS else "")
+        tag_hi = (f" केवल {c['past_seasons_with_data']} पिछले मौसमों के आँकड़े।"
+                  if c["past_seasons_with_data"] < FEW_SEASONS else "")
+        en.append(f"{i}. {name_en}: expected gross income about Rs {c['income_rs_acre']:,} per "
+                  f"acre; about Rs {c['income_low']:,} in a poor season and Rs "
+                  f"{c['income_high']:,} in a good one; risk {RISK_WORD[c['risk']][0]}. Yield "
+                  f"about {c['yield_q_acre']:g} {UNIT_EN.get(crop, 'quintal')} per acre "
+                  f"({c['yield_low']:g}-{c['yield_high']:g}).{tag_en}")
+        hi.append(f"{i}. {name_hi}: अनुमानित कुल आमदनी लगभग {c['income_rs_acre']:,} रुपये प्रति "
+                  f"एकड़; ख़राब मौसम में लगभग {c['income_low']:,} और अच्छे मौसम में "
+                  f"{c['income_high']:,} रुपये; जोखिम {RISK_WORD[c['risk']][1]}। पैदावार लगभग "
+                  f"{c['yield_q_acre']:g} {UNIT_HI.get(crop, 'क्विंटल')} प्रति एकड़ "
+                  f"({c['yield_low']:g}-{c['yield_high']:g})।{tag_hi}")
+    best = order[0]
+    if len(order) == 1:
+        en.append(f"Recommended: {NAMES[best][0]} (the only crop of this season with enough "
+                  "district data here).")
+        hi.append(f"सिफ़ारिश: {NAMES[best][1]} (इस मौसम की अकेली फ़सल जिसके यहाँ काफ़ी ज़िला "
+                  "आँकड़े हैं)।")
     else:
-        en.append("Yield from the 5-year average and its past spread: the ensemble model did not "
-                  "beat it in validation for these crops.")
-        hi.append("पैदावार 5 साल के औसत से, क्योंकि इन फ़सलों के लिए मॉडल उससे बेहतर नहीं निकला।")
-    en.append("Gross income of a district-average acre, before costs, from past weather, past "
-              "price changes and the model's past errors; not a forecast for your field, and not "
-              "advice on what to grow (procurement, water, the previous crop and costs are not "
-              "in it).")
-    hi.append("यह ज़िले के औसत एक एकड़ की कुल आमदनी है, लागत घटाने से पहले, पिछले मौसम, पिछले भाव और "
-              "मॉडल की पिछली ग़लतियों से; आपके खेत का अनुमान नहीं, और क्या बोएँ इसकी सलाह नहीं।")
+        beats_en, beats_hi = [], []
+        for k in order[1:]:
+            a, b = sorted((best, k))
+            share = so["wins"].get(f"{a}|{b}")
+            if share is None:
+                continue
+            n10 = int(round(10 * (share if a == best else 1 - share)))
+            beats_en.append(f"{NAMES[k][0].lower()} in {n10} of 10")
+            beats_hi.append(f"{NAMES[k][1]} से 10 में से {n10}")
+        en.append(f"Recommended: {NAMES[best][0]}."
+                  + (f" In likely seasons it earns more than {', '.join(beats_en)}."
+                     if beats_en else ""))
+        hi.append(f"सिफ़ारिश: {NAMES[best][1]}।"
+                  + (f" संभावित मौसमों में इसकी आमदनी ज़्यादा रहती है: {', '.join(beats_hi)} "
+                     "मौसमों में।" if beats_hi else ""))
+        by_income = max(order, key=lambda k: crops[k]["income_rs_acre"])
+        if by_income != best:
+            en.append(f"{NAMES[by_income][0]} has the highest expected income, but "
+                      f"{NAMES[best][0].lower()} holds up better in a poor season, so it ranks "
+                      "first.")
+            hi.append(f"{NAMES[by_income][1]} की अनुमानित आमदनी सबसे ज़्यादा है, पर ख़राब मौसम में "
+                      f"{NAMES[best][1]} बेहतर टिकती है, इसलिए वह पहले नंबर पर है।")
+    en.append(f"How the ranking is made: {n} likely seasons (the weather of {ry[0]}-{ry[1]} with "
+              "past price changes). A crop's score is the average of its expected income and its "
+              "poor-season income (the level it beats in 9 of 10 seasons); a good season is the "
+              "level it beats in 1 of 10.")
+    hi.append(f"क्रम कैसे बना: {n} संभावित मौसम ({ry[0]}-{ry[1]} का मौसम और पिछले भाव-बदलाव)। "
+              "फ़सल का अंक उसकी अनुमानित आमदनी और ख़राब मौसम की आमदनी (जिससे वह 10 में से 9 मौसमों "
+              "में ऊपर रहती है) का औसत है।")
+    model_en = [NAMES[k][0] for k in order if crops[k]["method"] == "ensemble"]
+    model_hi = [NAMES[k][1] for k in order if crops[k]["method"] == "ensemble"]
+    base_en = [NAMES[k][0] for k in order if crops[k]["method"] != "ensemble"]
+    base_hi = [NAMES[k][1] for k in order if crops[k]["method"] != "ensemble"]
+    parts_en, parts_hi = [], []
+    if model_en:
+        parts_en.append("the ensemble model (Random Forest, XGBoost, LightGBM) for "
+                        + ", ".join(model_en))
+        parts_hi.append(", ".join(model_hi) + " के लिए एन्सेम्बल मॉडल")
+    if base_en:
+        parts_en.append("the district's last-5-year average for " + ", ".join(base_en))
+        parts_hi.append(", ".join(base_hi) + " के लिए ज़िले का पिछले 5 साल का औसत")
+    en.append("Yield comes from " + " and ".join(parts_en) + ": for each crop, whichever was "
+              "more accurate on years it had not seen.")
+    hi.append("पैदावार का आधार: " + " और ".join(parts_hi) + "; हर फ़सल के लिए वही तरीक़ा जो अनदेखे "
+              "सालों पर ज़्यादा सही निकला।")
+    en.append("Income is gross (before costs) for a district-average acre, from ICRISAT/DES "
+              "district yields, IMD rain and CEDA/Agmarknet mandi prices. Set your own costs, "
+              "water and buyer against it.")
+    hi.append("आमदनी कुल है (लागत घटाने से पहले), ज़िले के औसत एक एकड़ की, ICRISAT/DES की ज़िला "
+              "पैदावार, IMD की बारिश और CEDA/एगमार्कनेट के मंडी भाव से। अपनी लागत, पानी और "
+              "ख़रीदार को इसके सामने रखकर देखें।")
     return en, hi

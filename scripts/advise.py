@@ -52,7 +52,9 @@ def load_site(name, locations, soil_csv):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="When should this wheat field be watered next?")
+    ap = argparse.ArgumentParser(
+        description="Crop Advisor: which crop to sow (--outlook), and for a sown field when to "
+                    "water and how much, when to give fertiliser, and when pest risk is rising.")
     ap.add_argument("--crop", default=None, choices=["wheat", "paddy"] + list(cr.CROPS),
                     help="crop (default wheat; see --crops; paddy only with --outlook)")
     ap.add_argument("--district", help="district name, e.g. Hisar (see --list)")
@@ -74,7 +76,8 @@ def main():
     ap.add_argument("--list", action="store_true", help="list the districts that are set up")
     ap.add_argument("--crops", action="store_true", help="list the crops and their sowing times")
     ap.add_argument("--outlook", action="store_true",
-                    help="season-start outlook for the district: usual yield, last harvest price")
+                    help="season start: which crop to sow in the district, ranked by expected "
+                         "income and risk, with last harvest prices")
     ap.add_argument("--season", choices=["rabi", "kharif"],
                     help="with --outlook: which season (default: the next one to be sown)")
     ap.add_argument("--rain-source", choices=["auto", "openmeteo"], default="auto",
@@ -87,6 +90,12 @@ def main():
                          "oc=low zn=deficient s=sufficient ph=alkaline ec=non-saline")
     ap.add_argument("--no-extras", action="store_true",
                     help="leave out the district background (IMD, Soil Health Card, prices)")
+    ap.add_argument("--only", nargs="+", choices=["water", "fertiliser", "pests"], default=None,
+                    help="show only these parts of the daily advice (default: all three; the "
+                         "watering advice is always worked out)")
+    ap.add_argument("--satellite", action="store_true",
+                    help="add Sentinel-2 crop health at the field (needs --lat/--lon; an extra "
+                         "beyond the project brief's first version, off by default)")
     a = ap.parse_args()
 
     if hasattr(sys.stdout, "reconfigure"):
@@ -117,12 +126,14 @@ def main():
             ap.error("--district and --sowing are needed (or --list, or --outlook)")
         crop = a.crop or "wheat"
         if crop == "paddy":
-            ap.error("paddy irrigation is not set up (it needs a flooded-field model); use "
-                     "--outlook for paddy")
+            ap.error("the daily advice covers wheat and the 11 crops listed by --crops; for "
+                     "paddy use --outlook (crop recommendation and prices)")
         req = {"district": a.district, "sowing": a.sowing, "watered": a.watered, "crop": crop,
                "today": a.today, "depth_cm": a.depth_cm, "lat": a.lat, "lon": a.lon,
                "soil_type": a.soil_type, "rain_source": a.rain_source, "station": a.station,
-               "field_capacity": a.field_capacity, "soil_card": a.soil_card}
+               "field_capacity": a.field_capacity, "soil_card": a.soil_card,
+               "satellite": a.satellite,
+               "parts": tuple(set(a.only) | {"water"}) if a.only else None}
         res = service.advise_request(req, soil_files=(a.soil,) + sites.SOIL_FILES[1:],
                                      locations=a.locations, with_extras=not a.no_extras)
     if a.json:

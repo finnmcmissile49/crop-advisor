@@ -464,7 +464,8 @@ def text(s):
         opt_en = " (optional, for higher yield)" if d["optional"] else ""
         opt_hi = " (वैकल्पिक, ज़्यादा पैदावार के लिए)" if d["optional"] else ""
         st = STATUS[d["status"]]
-        en.append(f"  - {_when(d, 'en').capitalize()}: {_items(d['items'], 'en')}{opt_en}. "
+        w_en = _when(d, "en")
+        en.append(f"  - {w_en[0].upper() + w_en[1:]}: {_items(d['items'], 'en')}{opt_en}. "
                   f"[{st[0]}]")
         hi.append(f"  - {_when(d, 'hi')}: {_items(d['items'], 'hi')}{opt_hi}। [{st[1]}]")
         if d["fallback_das"] and not d["with_watering_given"]:

@@ -175,7 +175,9 @@ def farmer_card_text(card, district_summary=None):
             extra = f" (district: {_pct(s)}% of fields low)"
         parts_en.append(f"{en_name} {v}{extra}")
         parts_hi.append(f"{hi_name} {RATING_HI[v]}")
-    return ([f"Your Soil Health Card: {', '.join(parts_en)}. Ask your agriculture office for the "
-             "fertiliser dose for these ratings."],
-            [f"आपका सॉइल हेल्थ कार्ड: {', '.join(parts_hi)}। इन नतीजों के हिसाब से खाद की मात्रा "
-             "कृषि विभाग से पूछें।"])
+    return ([f"Your Soil Health Card: {', '.join(parts_en)}. In Punjab and Haryana the fertiliser "
+             "doses above follow the organic carbon (or nitrogen), phosphorus and potash ratings "
+             "by PAU's soil-test rule."],
+            [f"आपका सॉइल हेल्थ कार्ड: {', '.join(parts_hi)}। पंजाब और हरियाणा में ऊपर दी गई खाद की "
+             "मात्रा जैविक कार्बन (या नाइट्रोजन), फ़ॉस्फ़ोरस और पोटाश की रेटिंग के हिसाब से PAU के "
+             "मिट्टी-जाँच नियम से तय हुई है।"])

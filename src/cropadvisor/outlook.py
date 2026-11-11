@@ -312,10 +312,8 @@ def render(outlooks, district, state, prices_only=False):
         head_en = [f"Last harvest prices in {district}, {state} (mandi averages):"]
         head_hi = [f"{district}, {state} में पिछली फ़सल के भाव (मंडी औसत):"]
     else:
-        head_en = [f"Crop Advisor: season outlook for {district}, {state} (district data, not "
-                   "advice)"]
-        head_hi = [f"क्रॉप एडवाइज़र: {district}, {state} के लिए मौसम की जानकारी (ज़िले के आँकड़े, "
-                   "सलाह नहीं)"]
+        head_en = [f"Crop Advisor: season outlook for {district}, {state} (district data)"]
+        head_hi = [f"क्रॉप एडवाइज़र: {district}, {state} के लिए मौसम की जानकारी (ज़िले के आँकड़े)"]
     en, hi = list(head_en), list(head_hi)
     for o in outlooks:
         if prices_only:
@@ -330,10 +328,7 @@ def render(outlooks, district, state, prices_only=False):
         hi += [""] + h
     en += ["", "Yields: ICRISAT and DES district averages (production divided by area). Prices: "
            "CEDA / Agmarknet monthly mandi prices. These are district averages and market prices, "
-           "not your field or your sale price, and next season's price is not predicted. Not a "
-           "recommendation of what to grow: procurement, water, the previous crop and costs "
-           "matter and are not included."]
+           "not your field or your sale price; the price shown is the last harvest's."]
     hi += ["", "पैदावार: ICRISAT और DES के ज़िला औसत। भाव: CEDA / एगमार्कनेट के मंडी भाव। ये ज़िले के "
-           "औसत हैं, आपके खेत के नहीं, और अगले मौसम का भाव नहीं बताया गया है। क्या उगाएँ, इसकी सलाह "
-           "नहीं: सरकारी ख़रीद, पानी, पिछली फ़सल और लागत इसमें शामिल नहीं हैं।"]
+           "औसत हैं, आपके खेत के नहीं; दिखाया गया भाव पिछली फ़सल का है।"]
     return "\n".join(en), "\n".join(hi)
